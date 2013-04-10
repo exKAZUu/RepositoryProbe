@@ -8,3 +8,4 @@ src/main/generated-sources
 src/test/generated-sources
 
 account_info
+.properties

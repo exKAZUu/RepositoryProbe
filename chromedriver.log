@@ -1,232 +1,173 @@
-[0.000][INFO]:      ChromeDriver 26.0.1383.0 C:\Users\exKAZUu\Dropbox\Private\Tools\Development\ChromeDriver\chromedriver.exe
-[1.153][FINE]:      Initializing session with capabilities {
-   "browserName": "chrome",
-   "chrome.switches": [  ],
-   "chromeOptions": {
-      "args": [  ],
-      "extensions": [  ]
-   },
-   "platform": "ANY",
-   "version": ""
-}
-
-[1.153][INFO]:      Launching chrome: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-hang-monitor --disable-prompt-on-repost --dom-automation --full-memory-crash-report --no-default-browser-check --no-first-run --disable-background-networking --disable-sync --disable-translate --disable-web-resources --safebrowsing-disable-auto-update --safebrowsing-disable-download-protection --disable-client-side-phishing-detection --disable-component-update --disable-default-apps --enable-logging --log-level=1 --ignore-certificate-errors about:blank
-[1.338][INFO]:      Connected to Chrome successfully. Version: 25.0.1364.97
-[1.353][FINE]:      Command received (/session/7a95aca1da0dcb7792d9f39f1234fd34)
-[1.353][FINE]:      Command finished (/session/7a95aca1da0dcb7792d9f39f1234fd34) with response {
-   "sessionId": "7a95aca1da0dcb7792d9f39f1234fd34",
-   "status": 0,
-   "value": {
-      "acceptSslCerts": false,
-      "applicationCacheEnabled": false,
-      "browserConnectionEnabled": false,
-      "browserName": "chrome",
-      "chrome.chromedriverVersion": "26.0.1383.0",
-      "cssSelectorsEnabled": true,
-      "databaseEnabled": false,
-      "handlesAlerts": true,
-      "javascriptEnabled": true,
-      "locationContextEnabled": false,
-      "nativeEvents": true,
-      "platform": "windows",
-      "rotatable": false,
-      "takesScreenshot": true,
-      "version": "25.0.1364.97",
-      "webStorageEnabled": true
-   }
-}
-
-[1.377][FINE]:      Command received (/session/7a95aca1da0dcb7792d9f39f1234fd34/url) with params {
-   "url": "https://github.com/search?l=XML&p=1&q=%3CgroupId%3Eorg.seleniumhq.selenium%3C%2FgroupId%3E&s=inde..."
-}
-
-[1.377][FINER]:     Waiting for all views to stop loading...
-[1.378][FINER]:     Done waiting for all views to stop loading
-[7.251][FINER]:     Waiting for all views to stop loading...
-[7.260][FINER]:     Done waiting for all views to stop loading
-[7.260][FINE]:      Command finished (/session/7a95aca1da0dcb7792d9f39f1234fd34/url) with response {
-   "sessionId": "7a95aca1da0dcb7792d9f39f1234fd34",
-   "status": 0,
-   "value": {
-
-   }
-}
-
-[7.347][FINE]:      Command received (/session/7a95aca1da0dcb7792d9f39f1234fd34/elements) with params {
-   "using": "xpath",
-   "value": "//p[@class=\"title\"]/a[1]"
-}
-
-[7.347][FINER]:     Waiting for all views to stop loading...
-[7.347][FINER]:     Done waiting for all views to stop loading
-[7.365][FINER]:     Waiting for all views to stop loading...
-[7.365][FINER]:     Done waiting for all views to stop loading
-[7.366][FINE]:      Command finished (/session/7a95aca1da0dcb7792d9f39f1234fd34/elements) with response {
-   "sessionId": "7a95aca1da0dcb7792d9f39f1234fd34",
-   "status": 0,
-   "value": [ {
-      "ELEMENT": ":wdc:1361884952852"
-   }, {
-      "ELEMENT": ":wdc:1361884952853"
-   }, {
-      "ELEMENT": ":wdc:1361884952854"
-   }, {
-      "ELEMENT": ":wdc:1361884952855"
-   }, {
-      "ELEMENT": ":wdc:1361884952856"
-   }, {
-      "ELEMENT": ":wdc:1361884952857"
-   }, {
-      "ELEMENT": ":wdc:1361884952858"
-   }, {
-      "ELEMENT": ":wdc:1361884952859"
-   }, {
-      "ELEMENT": ":wdc:1361884952860"
-   }, {
-      "ELEMENT": ":wdc:1361884952861"
-   } ]
-}
-
-[7.374][FINE]:      Command received (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952852/text)
-[7.374][FINER]:     Waiting for all views to stop loading...
-[7.374][FINER]:     Done waiting for all views to stop loading
-[7.394][FINER]:     Waiting for all views to stop loading...
-[7.395][FINER]:     Done waiting for all views to stop loading
-[7.395][FINE]:      Command finished (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952852/text) with response {
-   "sessionId": "7a95aca1da0dcb7792d9f39f1234fd34",
-   "status": 0,
-   "value": "vmi/selenese-runner-java"
-}
-
-[7.397][FINE]:      Command received (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952853/text)
-[7.397][FINER]:     Waiting for all views to stop loading...
-[7.398][FINER]:     Done waiting for all views to stop loading
-[7.417][FINER]:     Waiting for all views to stop loading...
-[7.417][FINER]:     Done waiting for all views to stop loading
-[7.417][FINE]:      Command finished (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952853/text) with response {
-   "sessionId": "7a95aca1da0dcb7792d9f39f1234fd34",
-   "status": 0,
-   "value": "craigstaniforth/furry-octo-dangerzone"
-}
-
-[7.419][FINE]:      Command received (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952854/text)
-[7.419][FINER]:     Waiting for all views to stop loading...
-[7.420][FINER]:     Done waiting for all views to stop loading
-[7.439][FINER]:     Waiting for all views to stop loading...
-[7.440][FINER]:     Done waiting for all views to stop loading
-[7.440][FINE]:      Command finished (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952854/text) with response {
-   "sessionId": "7a95aca1da0dcb7792d9f39f1234fd34",
-   "status": 0,
-   "value": "gxa/atlas"
-}
-
-[7.441][FINE]:      Command received (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952855/text)
-[7.441][FINER]:     Waiting for all views to stop loading...
-[7.442][FINER]:     Done waiting for all views to stop loading
-[7.462][FINER]:     Waiting for all views to stop loading...
-[7.462][FINER]:     Done waiting for all views to stop loading
-[7.462][FINE]:      Command finished (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952855/text) with response {
-   "sessionId": "7a95aca1da0dcb7792d9f39f1234fd34",
-   "status": 0,
-   "value": "perepelytsya/team-task-QA"
-}
-
-[7.463][FINE]:      Command received (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952856/text)
-[7.463][FINER]:     Waiting for all views to stop loading...
-[7.464][FINER]:     Done waiting for all views to stop loading
-[7.483][FINER]:     Waiting for all views to stop loading...
-[7.484][FINER]:     Done waiting for all views to stop loading
-[7.484][FINE]:      Command finished (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952856/text) with response {
-   "sessionId": "7a95aca1da0dcb7792d9f39f1234fd34",
-   "status": 0,
-   "value": "thomasletsch/javaee-addon"
-}
-
-[7.485][FINE]:      Command received (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952857/text)
-[7.485][FINER]:     Waiting for all views to stop loading...
-[7.487][FINER]:     Done waiting for all views to stop loading
-[7.508][FINER]:     Waiting for all views to stop loading...
-[7.508][FINER]:     Done waiting for all views to stop loading
-[7.508][FINE]:      Command finished (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952857/text) with response {
-   "sessionId": "7a95aca1da0dcb7792d9f39f1234fd34",
-   "status": 0,
-   "value": "papousek/selenium-phantomjs-driver"
-}
-
-[7.510][FINE]:      Command received (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952858/text)
-[7.510][FINER]:     Waiting for all views to stop loading...
-[7.510][FINER]:     Done waiting for all views to stop loading
-[7.529][FINER]:     Waiting for all views to stop loading...
-[7.530][FINER]:     Done waiting for all views to stop loading
-[7.530][FINE]:      Command finished (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952858/text) with response {
-   "sessionId": "7a95aca1da0dcb7792d9f39f1234fd34",
-   "status": 0,
-   "value": "softwaremill/softwaremill-common"
-}
-
-[7.532][FINE]:      Command received (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952859/text)
-[7.532][FINER]:     Waiting for all views to stop loading...
-[7.532][FINER]:     Done waiting for all views to stop loading
-[7.552][FINER]:     Waiting for all views to stop loading...
-[7.552][FINER]:     Done waiting for all views to stop loading
-[7.552][FINE]:      Command finished (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952859/text) with response {
-   "sessionId": "7a95aca1da0dcb7792d9f39f1234fd34",
-   "status": 0,
-   "value": "kszymanski/SWC"
-}
-
-[7.554][FINE]:      Command received (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952860/text)
-[7.554][FINER]:     Waiting for all views to stop loading...
-[7.554][FINER]:     Done waiting for all views to stop loading
-[7.574][FINER]:     Waiting for all views to stop loading...
-[7.575][FINER]:     Done waiting for all views to stop loading
-[7.575][FINE]:      Command finished (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952860/text) with response {
-   "sessionId": "7a95aca1da0dcb7792d9f39f1234fd34",
-   "status": 0,
-   "value": "zanata/zanata"
-}
-
-[7.577][FINE]:      Command received (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952861/text)
-[7.577][FINER]:     Waiting for all views to stop loading...
-[7.577][FINER]:     Done waiting for all views to stop loading
-[7.597][FINER]:     Waiting for all views to stop loading...
-[7.597][FINER]:     Done waiting for all views to stop loading
-[7.598][FINE]:      Command finished (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952861/text) with response {
-   "sessionId": "7a95aca1da0dcb7792d9f39f1234fd34",
-   "status": 0,
-   "value": "xebia/Xebium"
-}
-
-[7.600][FINE]:      Command received (/session/7a95aca1da0dcb7792d9f39f1234fd34/elements) with params {
-   "using": "class name",
-   "value": "next_page"
-}
-
-[7.600][FINER]:     Waiting for all views to stop loading...
-[7.600][FINER]:     Done waiting for all views to stop loading
-[7.617][FINER]:     Waiting for all views to stop loading...
-[7.618][FINER]:     Done waiting for all views to stop loading
-[7.618][FINE]:      Command finished (/session/7a95aca1da0dcb7792d9f39f1234fd34/elements) with response {
-   "sessionId": "7a95aca1da0dcb7792d9f39f1234fd34",
-   "status": 0,
-   "value": [ {
-      "ELEMENT": ":wdc:1361884952862"
-   } ]
-}
-
-[7.620][FINE]:      Command received (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952862/click) with params {
-   "id": ":wdc:1361884952862"
-}
-
-[7.620][FINER]:     Waiting for all views to stop loading...
-[7.621][FINER]:     Done waiting for all views to stop loading
-[7.750][FINER]:     Waiting for all views to stop loading...
-[7.751][FINER]:     Done waiting for all views to stop loading
-[7.751][FINE]:      Command finished (/session/7a95aca1da0dcb7792d9f39f1234fd34/element/:wdc:1361884952862/click) with response {
-   "sessionId": "7a95aca1da0dcb7792d9f39f1234fd34",
-   "status": 0,
-   "value": {
-
-   }
-}
-
+[0411/081256:INFO:chromedriver_server.cc(76)] Handling request: /status 
+[0411/081256:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"","status":0,"value":{"build":{"version":"alpha"},"os":{"arch":"x86","name":"Windows NT","version":"6.1 SP1"}}}
+[0411/081256:INFO:chromedriver_server.cc(76)] Handling request: /session {"desiredCapabilities":{"platform":"ANY","browserName":"chrome","chromeOptions":{"args":[],"extensions":[]},"version":"","chrome.switches":[]}}
+[0411/081256:INFO:chrome_desktop_impl.cc(49)] Using chrome from C:\Program Files\Google\Chrome\Application\chrome.exe
+[0411/081257:INFO:chromedriver_server.cc(81)] Done handling request: 303 
+[0411/081257:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b 
+[0411/081257:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":{"acceptSslCerts":true,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"browserName":"chrome","cssSelectorsEnabled":true,"databaseEnabled":true,"driverVersion":"0.5","handlesAlerts":true,"javascriptEnabled":true,"locationContextEnabled":true,"nativeEvents":true,"platform":"Windows NT","rotatable":false,"takesScreenshot":true,"version":"26.0.1410.64","webStorageEnabled":true}}
+[0411/081257:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/url {"url":"https://github.com/search?l=XML&p=1&q=%3CgroupId%3Eorg.seleniumhq.selenium%3C%2FgroupId%3E&s=indexed&type=Code"}
+[0411/081302:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":null}
+[0411/081302:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/elements {"using":"xpath","value":"//p[@class=\"title\"]/a[1]"}
+[0411/081302:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":[{"ELEMENT":"1"},{"ELEMENT":"2"},{"ELEMENT":"3"},{"ELEMENT":"4"},{"ELEMENT":"5"},{"ELEMENT":"6"},{"ELEMENT":"7"},{"ELEMENT":"8"},{"ELEMENT":"9"},{"ELEMENT":"10"}]}
+[0411/081302:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/1/text 
+[0411/081302:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"synyker/PKode"}
+[0411/081302:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/2/text 
+[0411/081302:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"ozoneplatform/ozp-owf"}
+[0411/081302:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/3/text 
+[0411/081302:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"jenkinsci/sauce-ondemand-plugin"}
+[0411/081302:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/4/text 
+[0411/081302:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"WASP-System/central"}
+[0411/081302:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/5/text 
+[0411/081302:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"WASP-System/central"}
+[0411/081302:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/6/text 
+[0411/081302:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"WASP-System/central"}
+[0411/081302:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/7/text 
+[0411/081302:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"SeleniumHQ/selenium"}
+[0411/081302:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/8/text 
+[0411/081302:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"ArcBees/GWTP"}
+[0411/081302:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/9/text 
+[0411/081302:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"srid99/quadcart"}
+[0411/081302:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/10/text 
+[0411/081302:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"artkoshelev/htmlelements-junit-example"}
+[0411/081302:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/elements {"using":"class name","value":"next_page"}
+[0411/081302:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":[{"ELEMENT":"11"}]}
+[0411/081302:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/11/click {"id":"11"}
+[0411/081302:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":null}
+[0411/081305:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element {"using":"class name","value":"context-loader"}
+[0411/081305:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":{"ELEMENT":"12"}}
+[0411/081305:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/12/displayed 
+[0411/081305:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":false}
+[0411/081305:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/elements {"using":"xpath","value":"//p[@class=\"title\"]/a[1]"}
+[0411/081305:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":[{"ELEMENT":"13"},{"ELEMENT":"14"},{"ELEMENT":"15"},{"ELEMENT":"16"},{"ELEMENT":"17"},{"ELEMENT":"18"},{"ELEMENT":"19"},{"ELEMENT":"20"},{"ELEMENT":"21"},{"ELEMENT":"22"}]}
+[0411/081305:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/13/text 
+[0411/081305:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"chocolateboy/pmsencoder"}
+[0411/081305:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/14/text 
+[0411/081305:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"nobutnk/webdriver"}
+[0411/081305:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/15/text 
+[0411/081305:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"Arquisoft/Entrecine4"}
+[0411/081305:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/16/text 
+[0411/081305:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"rikniitt/ohtu-cyberEagles"}
+[0411/081305:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/17/text 
+[0411/081305:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"societies/SOCIETIES-Platform"}
+[0411/081305:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/18/text 
+[0411/081305:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"rossrowe/selenium-builder-plugin"}
+[0411/081305:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/19/text 
+[0411/081305:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"jlhoelter/test"}
+[0411/081305:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/20/text 
+[0411/081305:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"roydekleijn/webdriver_java_example"}
+[0411/081305:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/21/text 
+[0411/081305:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"saucelabs/ci-sauce"}
+[0411/081305:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/22/text 
+[0411/081305:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"crawljax/crawljax"}
+[0411/081305:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/elements {"using":"class name","value":"next_page"}
+[0411/081305:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":[{"ELEMENT":"23"}]}
+[0411/081305:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/23/click {"id":"23"}
+[0411/081305:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":null}
+[0411/081307:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element {"using":"class name","value":"context-loader"}
+[0411/081307:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":{"ELEMENT":"12"}}
+[0411/081307:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/12/displayed 
+[0411/081307:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":true}
+[0411/081308:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element {"using":"class name","value":"context-loader"}
+[0411/081308:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":{"ELEMENT":"12"}}
+[0411/081308:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/12/displayed 
+[0411/081308:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":true}
+[0411/081308:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element {"using":"class name","value":"context-loader"}
+[0411/081308:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":{"ELEMENT":"12"}}
+[0411/081308:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/12/displayed 
+[0411/081309:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":true}
+[0411/081309:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element {"using":"class name","value":"context-loader"}
+[0411/081309:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":{"ELEMENT":"24"}}
+[0411/081309:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/24/displayed 
+[0411/081309:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":false}
+[0411/081309:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/elements {"using":"xpath","value":"//p[@class=\"title\"]/a[1]"}
+[0411/081309:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":[{"ELEMENT":"25"},{"ELEMENT":"26"},{"ELEMENT":"27"},{"ELEMENT":"28"},{"ELEMENT":"29"},{"ELEMENT":"30"},{"ELEMENT":"31"},{"ELEMENT":"32"},{"ELEMENT":"33"},{"ELEMENT":"34"}]}
+[0411/081309:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/25/text 
+[0411/081309:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"jgsavola/kevatpaiva"}
+[0411/081309:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/26/text 
+[0411/081309:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"celeskyking/s-tea"}
+[0411/081309:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/27/text 
+[0411/081309:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"TeeAaTeeUu/ohtaajat"}
+[0411/081309:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/28/text 
+[0411/081309:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"Arquisoft/Entrecine3"}
+[0411/081309:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/29/text 
+[0411/081309:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"induktio/omicron"}
+[0411/081309:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/30/text 
+[0411/081309:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"momoplan/msgcenter"}
+[0411/081309:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/31/text 
+[0411/081309:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"cucumber/cucumber-jvm"}
+[0411/081309:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/32/text 
+[0411/081309:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"motech/TAMA-Web"}
+[0411/081309:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/33/text 
+[0411/081309:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"metawidget/metawidget"}
+[0411/081309:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/34/text 
+[0411/081309:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"ShilpiJain/ClassDemo"}
+[0411/081309:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/elements {"using":"class name","value":"next_page"}
+[0411/081309:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":[{"ELEMENT":"35"}]}
+[0411/081309:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/35/click {"id":"35"}
+[0411/081310:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":null}
+[0411/081312:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element {"using":"class name","value":"context-loader"}
+[0411/081312:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":{"ELEMENT":"36"}}
+[0411/081312:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/36/displayed 
+[0411/081312:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":false}
+[0411/081312:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/elements {"using":"xpath","value":"//p[@class=\"title\"]/a[1]"}
+[0411/081312:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":[{"ELEMENT":"37"},{"ELEMENT":"38"},{"ELEMENT":"39"},{"ELEMENT":"40"},{"ELEMENT":"41"},{"ELEMENT":"42"},{"ELEMENT":"43"},{"ELEMENT":"44"},{"ELEMENT":"45"},{"ELEMENT":"46"}]}
+[0411/081312:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/37/text 
+[0411/081312:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"patrickjoly/dddzer"}
+[0411/081312:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/38/text 
+[0411/081312:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"adamfisk/LittleProxy"}
+[0411/081312:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/39/text 
+[0411/081312:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"mcarnine/Dice"}
+[0411/081312:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/40/text 
+[0411/081312:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"artokaik/ketterat"}
+[0411/081312:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/41/text 
+[0411/081312:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"rwirdemann/gotanswer"}
+[0411/081312:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/42/text 
+[0411/081312:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"Sch3lp/ducking-octo-archer"}
+[0411/081312:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/43/text 
+[0411/081312:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"kaliberdas/yahoo"}
+[0411/081312:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/44/text 
+[0411/081312:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"thomasletsch/javaee-addon"}
+[0411/081312:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/45/text 
+[0411/081312:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"Leroy-Merlin-France/lm-labs"}
+[0411/081312:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/46/text 
+[0411/081312:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"davidmoten/xsd-forms"}
+[0411/081312:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/elements {"using":"class name","value":"next_page"}
+[0411/081312:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":[{"ELEMENT":"47"}]}
+[0411/081312:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/47/click {"id":"47"}
+[0411/081312:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":null}
+[0411/081314:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element {"using":"class name","value":"context-loader"}
+[0411/081314:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":{"ELEMENT":"48"}}
+[0411/081314:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/48/displayed 
+[0411/081314:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":false}
+[0411/081314:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/elements {"using":"xpath","value":"//p[@class=\"title\"]/a[1]"}
+[0411/081314:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":[{"ELEMENT":"49"},{"ELEMENT":"50"},{"ELEMENT":"51"},{"ELEMENT":"52"},{"ELEMENT":"53"},{"ELEMENT":"54"},{"ELEMENT":"55"},{"ELEMENT":"56"},{"ELEMENT":"57"},{"ELEMENT":"58"}]}
+[0411/081314:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/49/text 
+[0411/081314:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"juzu/juzu"}
+[0411/081314:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/50/text 
+[0411/081314:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"juzu/juzu"}
+[0411/081314:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/51/text 
+[0411/081314:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"juzu/juzu"}
+[0411/081315:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/52/text 
+[0411/081315:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"motech/TAMA-Web"}
+[0411/081315:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/53/text 
+[0411/081315:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"yudady/SeleniumTestHinet"}
+[0411/081315:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/54/text 
+[0411/081315:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"diogovfranca/Inscricao"}
+[0411/081315:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/55/text 
+[0411/081315:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"gxa/atlas"}
+[0411/081315:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/56/text 
+[0411/081315:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"gatein/gatein-pc"}
+[0411/081315:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/57/text 
+[0411/081315:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"gatein/gatein-pc"}
+[0411/081315:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/58/text 
+[0411/081315:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":"brooklyncentral/brooklyn"}
+[0411/081315:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/elements {"using":"class name","value":"next_page"}
+[0411/081315:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":[{"ELEMENT":"59"}]}
+[0411/081315:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element/59/click {"id":"59"}
+[0411/081315:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":null}
+[0411/081317:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/element {"using":"class name","value":"context-loader"}
+[0411/081317:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":7,"value":{"message":"no such element\n  (Session info: chrome=26.0.1410.64)\n  (Driver info: chromedriver=0.5,platform=Windows NT 6.1 SP1 x86)"}}
+[0411/081317:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/elements {"using":"xpath","value":"//p[@class=\"title\"]/a[1]"}
+[0411/081317:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":[]}
+[0411/081317:INFO:chromedriver_server.cc(76)] Handling request: /session/1f959ba7f825f9d7e298afe8b508204b/elements {"using":"class name","value":"next_page"}
+[0411/081317:INFO:chromedriver_server.cc(81)] Done handling request: 200 {"sessionId":"1f959ba7f825f9d7e298afe8b508204b","status":0,"value":[]}

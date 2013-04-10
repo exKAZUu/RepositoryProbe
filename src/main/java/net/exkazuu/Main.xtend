@@ -11,6 +11,8 @@ import java.util.HashSet
 import com.google.common.io.Files
 import java.nio.charset.Charset
 import java.io.File
+import java.util.Properties
+import java.io.FileInputStream
 
 class RepositoryInfo {
 	@Property String owner;
@@ -33,9 +35,11 @@ class Main {
 	}
 
 	def static main(String[] args) {
-		val userAndPass = Files::readLines(new File("account_info"), Charset::defaultCharset)
-		val user = userAndPass.get(0)
-		val password = userAndPass.get(1)
+		// Load user and pass from property file
+		val userAndPass = new Properties;
+		userAndPass.load(new FileInputStream(".properties"))
+		val user = userAndPass.getProperty("name")
+		val password = userAndPass.getProperty("pass")
 
 		val repoInfos = new ArrayList<RepositoryInfo>();
 
