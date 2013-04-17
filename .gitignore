@@ -9,3 +9,4 @@ src/test/generated-sources
 
 account_info
 .properties
+chromedriver.log
