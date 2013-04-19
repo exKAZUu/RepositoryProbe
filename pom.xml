@@ -21,7 +21,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <encoding>UTF-8</encoding>
 
-    <xtend.version>2.4.0</xtend.version>
+    <xtend.version>2.4.1</xtend.version>
   </properties>
 
   <repositories>
