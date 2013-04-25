@@ -1,6 +1,7 @@
 package net.exkazuu;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -22,20 +23,29 @@ public class GitManager {
 	public void clone(String address, String name) {
 		String command = ("git clone " + address + " C:/" + name);
 		try {
-			rt.exec(command);
+			Process p = rt.exec(command);
+			p.waitFor();
+			BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+			String line;
+			while((line = br.readLine()) != null) {
+				System.out.println(line);
+			}			
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 	
 	public Boolean test(String name) {
-		String command = "mvn test C:/" + name;
+		String command = "cmd /c mvn test";
+		String path = "C:\\Study\\" + name;
 		try {
-			Process p =rt.exec(command);
-			InputStream is = p.getInputStream();
-			InputStreamReader isr = new InputStreamReader(is);
-			BufferedReader br = new BufferedReader(isr);
+			Process p =rt.exec(command, null, new File(path));
+			p.waitFor();
+			BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
 			
 			String res;
 			Boolean flag = false;
@@ -49,6 +59,9 @@ public class GitManager {
 				System.out.println(name);
 			}
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

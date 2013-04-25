@@ -7,12 +7,18 @@ import java.util.ArrayList
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.support.ui.WebDriverWait
 import org.openqa.selenium.support.ui.ExpectedConditions
+import org.openqa.selenium.support.ui.Select
 import java.util.HashSet
 import com.google.common.io.Files
 import java.nio.charset.Charset
 import java.io.File
 import java.util.Properties
 import java.io.FileInputStream
+import org.openqa.selenium.support.ui.SystemClock
+import java.io.FileWriter
+import java.io.BufferedWriter
+import java.io.PrintWriter
+import java.lang.Runtime
 
 class RepositoryInfo {
 	@Property String owner;
@@ -23,6 +29,7 @@ class RepositoryInfo {
 		this.name = name;
 	}
 }
+
 
 class NewMain {
 
@@ -36,7 +43,8 @@ class NewMain {
 
 	def static main(String[] args) {
 		// For "git clone", "mvn test", and "Thread.sleep(300000)"
-		// GitManager gm = GitManager.getInstance
+		GitManager gm = GitManager.getInstance
+		val rt = Runtime::getRuntime
 		
 		// Load user and pass from property file
 		val userAndPass = new Properties
@@ -52,24 +60,21 @@ class NewMain {
 		
 		var hasNext = false
 		
+		val file = new File("C:\\Study\\output.txt")
+		val pw = new PrintWriter(new BufferedWriter(new FileWriter(file)))	
+
+		var repoStrings = new HashSet<String>
+		var count = 0;
+		val sc = new SystemClock		
 		do {
 			val service = new RepositoryService
 			service.client.setCredentials(user, pass)
 			
 			val elems = driver.findElements(By::xpath('//p[@class="title"]/a[1]'))
-			val repoStrings = new HashSet<String>
 			for(elem : elems) {
 				repoStrings += elem.text
 			}
 			hasNext = nextPage(driver)
-			
-			for(repoString : repoStrings) {
-				val strs = repoString.split("/")
-				val author = strs.get(0)
-				val name = strs.get(1)
-				val addr = "git://github.com/" + author + "/" + name + ".git"
-				System::out.println(name + "," + addr)
-			}
 			
 			new WebDriverWait(driver, 20).until(
 				ExpectedConditions::invisibilityOfElementLocated(
@@ -77,8 +82,27 @@ class NewMain {
 				)
 			)
 			
-		} while(hasNext)
+			val tm = sc.laterBy(15000)
+			
+			while(sc.now < tm) {
+				
+			}
+			count = count + 1;
+		} while(count < 100)
 		driver.close
+	
+		for(repoString : repoStrings) {
+			val strs = repoString.split("/")
+			val author = strs.get(0)
+			val name = strs.get(1)
+			val addr = "git://github.com/" + author + "/" + name + ".git"
+			pw.println(name)
+			pw.println(addr)
+			System::out.println(name)
+			System::out.println(addr)
+		}
+		
+		pw.close			
 	}
 	
 
