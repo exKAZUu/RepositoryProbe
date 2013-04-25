@@ -30,7 +30,6 @@ class RepositoryInfo {
 	}
 }
 
-
 class NewMain {
 
 	def static nextPage(WebDriver driver) {
@@ -43,8 +42,7 @@ class NewMain {
 
 	def static main(String[] args) {
 		// For "git clone", "mvn test", and "Thread.sleep(300000)"
-		GitManager gm = GitManager.getInstance
-		val rt = Runtime::getRuntime
+		 val gm = GitManager::getInstance
 		
 		// Load user and pass from property file
 		val userAndPass = new Properties
