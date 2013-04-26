@@ -1,39 +1,40 @@
 package net.exkazuu
 
 import java.io.File
+import java.util.List
 
 class GitManager {
-	private static GitManager gm
 	private Runtime rt
 	
 	new() {
 		this.rt = Runtime::getRuntime
 	}
 	
-	def static GitManager getInstance() {
-		if (gm == null) {
-			gm = new GitManager();
-		}
-		return gm
+	def readAllInputStream(Process p) {
+		val ist = new InputStreamThread(p.getInputStream)
+		ist.start
+		p.waitFor
+		ist.join
+		ist.getStringList
 	}
 	
-	def void clone(String address, String name) {
+	def List<String> clone(String address, String name) {
 		val command = "git clone " + address + " C:\\Study\\" + name
 		
 		val p = rt.exec(command)
-		p.waitFor
-		
+		val result = readAllInputStream(p)		
 		System::out.println(name + " cloned!")
+		return result
 	}
 	
-	def Boolean test(String name) {
+	def List<String> test(String name) {
 		val command = "cmd /c mvn test"
 		val path = "C:\\Study\\" + name
 		
 		val p = rt.exec(command, null, new File(path))
-		p.waitFor
-		
-		return true;
+		val result = readAllInputStream(p)		
+		System::out.println(name + " tested!")
+		return result
 	}
 }
 
