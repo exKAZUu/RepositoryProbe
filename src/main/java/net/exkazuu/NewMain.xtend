@@ -49,8 +49,8 @@ class NewMain {
 		// git clone and maven test
 		val gm = new GitManager()
 		
-		for (repoString : repoStrings) {
-			val strs = repoString.split("/")
+		repoStrings.forEach[
+			val strs = it.split("/")
 			val author = strs.get(0)
 			val name = strs.get(1)
 			val addr = "git://github.com/" + author + "/" + name + ".git"
@@ -63,7 +63,7 @@ class NewMain {
 			for (str : listt) {
 				System::out.println(str)
 			}
-		}
+		]
 
 		pw.close()
 	}
