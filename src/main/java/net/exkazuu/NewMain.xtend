@@ -44,10 +44,11 @@ class NewMain {
 		val file = new File("C:\\Study\\output.txt")
 		val pw = new PrintWriter(new BufferedWriter(new FileWriter(file)))
 
-		var repoStrings = gatherRepositories(user, pass, 100)
+		var repoStrings = gatherRepositories(user, pass, 1)
 
 		// git clone and maven test
 		val gm = new GitManager()
+		val mm = new MvnManager()
 		
 		repoStrings.forEach[
 			val strs = it.split("/")
@@ -59,9 +60,13 @@ class NewMain {
 			for (str : listc) {
 				System::out.println(str)
 			}
-			val listt = gm.test(name)
+			val listt = mm.test(name)
 			for (str : listt) {
 				System::out.println(str)
+				if(str.contains("SUCCESSFUL")) {
+					pw.println(name)
+					pw.println(addr)
+				}
 			}
 		]
 
