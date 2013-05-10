@@ -1,10 +1,9 @@
 package net.exkazuu
 
-import java.io.File
 import java.util.List
 
 class GitManager {
-	private Runtime rt
+	Runtime rt
 	
 	new() {
 		this.rt = Runtime::getRuntime
@@ -15,26 +14,16 @@ class GitManager {
 		ist.start
 		p.waitFor
 		ist.join
-		ist.getStringList
+		
+		return ist.getStringList
 	}
 	
 	def List<String> clone(String address, String name) {
 		val command = "git clone " + address + " C:\\Study\\" + name
-		
 		val p = rt.exec(command)
 		val result = readAllInputStream(p)		
-		System::out.println(name + " cloned!")
-		return result
-	}
-	
-	def List<String> test(String name) {
-		val command = "cmd /c mvn test"
-		val path = "C:\\Study\\" + name
+		System::out.println(name + " cloning...")
 		
-		val p = rt.exec(command, null, new File(path))
-		val result = readAllInputStream(p)		
-		System::out.println(name + " tested!")
 		return result
 	}
 }
-
