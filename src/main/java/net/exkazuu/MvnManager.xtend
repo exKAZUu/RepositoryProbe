@@ -4,7 +4,7 @@ import java.io.File
 import java.util.List
 
 class MvnManager {
-	private Runtime rt
+	Runtime rt
 	
 	new() {
 		this.rt = Runtime::getRuntime
@@ -31,7 +31,7 @@ class MvnManager {
 		return result
 	}
 	
-	def clean(String path) {
+	def void clean(String path) {
 		val file = new File(path)
 		
 		if(file.isFile) {

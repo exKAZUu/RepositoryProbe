@@ -7,8 +7,8 @@ import java.io.InputStream
 import java.io.InputStreamReader
 
 class InputStreamThread extends Thread {
-	private BufferedReader br
-	private List<String> list = new ArrayList<String>
+	BufferedReader br
+	List<String> list = new ArrayList<String>
 	
 	new(InputStream is) {
 		br = new BufferedReader(new InputStreamReader(is))

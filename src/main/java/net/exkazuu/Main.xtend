@@ -1,28 +1,15 @@
 package net.exkazuu
 
-import org.eclipse.egit.github.core.service.RepositoryService
-import org.openqa.selenium.chrome.ChromeDriver
-import org.openqa.selenium.By
-import java.util.ArrayList
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.support.ui.WebDriverWait
-import org.openqa.selenium.support.ui.ExpectedConditions
-import java.util.HashSet
-import com.google.common.io.Files
-import java.nio.charset.Charset
-import java.io.File
-import java.util.Properties
 import java.io.FileInputStream
-
-class RepositoryInfo {
-	@Property String owner;
-	@Property String name;
-
-	new(String user, String name) {
-		this.owner = user;
-		this.name = name;
-	}
-}
+import java.util.ArrayList
+import java.util.HashSet
+import java.util.Properties
+import org.eclipse.egit.github.core.service.RepositoryService
+import org.openqa.selenium.By
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.support.ui.ExpectedConditions
+import org.openqa.selenium.support.ui.WebDriverWait
 
 class Main {
 

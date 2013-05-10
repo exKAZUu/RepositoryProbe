@@ -1,10 +1,9 @@
 package net.exkazuu
 
-import java.io.File
 import java.util.List
 
 class GitManager {
-	private Runtime rt
+	Runtime rt
 	
 	new() {
 		this.rt = Runtime::getRuntime
@@ -28,4 +27,3 @@ class GitManager {
 		return result
 	}
 }
-
