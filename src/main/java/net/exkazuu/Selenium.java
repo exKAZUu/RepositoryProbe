@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 import com.google.common.io.Resources;
 
 public class Selenium {
-	public static void main(String[] args) {
-	    ChromeDriver driver = new ChromeDriver();
-	}
+  public static void main(String[] args) {
+    ChromeDriver driver = new ChromeDriver();
+  }
 }

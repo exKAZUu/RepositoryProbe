@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.support.ui.WebDriverWait
+import org.eclipse.jetty.util.component.AggregateLifeCycle$Bean
 
 class RepositoryInfo {
 	@Property String owner;
@@ -35,6 +36,7 @@ class SearchReposUsingMaven {
 	}
 
 	def static main(String[] args) {
+
 		// Load user and pass from property file
 		val userAndPass = new Properties()
 		userAndPass.load(new FileInputStream(".properties"))
@@ -49,13 +51,12 @@ class SearchReposUsingMaven {
 		// git clone and maven test
 		val gm = new GitManager()
 		val mm = new MvnManager()
-		
-		repoStrings.forEach[
+
+		repoStrings.forEach [
 			val strs = it.split("/")
 			val author = strs.get(0)
 			val name = strs.get(1)
 			val addr = "git://github.com/" + author + "/" + name + ".git"
-
 			val listc = gm.clone(addr, name)
 			for (str : listc) {
 				System::out.println(str)
@@ -63,7 +64,7 @@ class SearchReposUsingMaven {
 			val listt = mm.test(name)
 			for (str : listt) {
 				System::out.println(str)
-				if(str.contains("SUCCESSFUL")) {
+				if (str.contains("SUCCESSFUL")) {
 					pw.println(name)
 					pw.println(addr)
 				}
@@ -75,28 +76,26 @@ class SearchReposUsingMaven {
 
 	def static gatherRepositories(String user, String pass, int maxCount) {
 		val driver = new ChromeDriver()
+
 		// Using Java and existing pom.xml
 		val url = "https://github.com/search?l=java&q=pom.xml&ref=cmdform&type=Code"
 		driver.get(url)
-		
+
 		val repoStrings = new HashSet<String>()
 
-		(0..maxCount).forEach[
+		(0 .. maxCount).forEach [
 			val service = new RepositoryService
 			service.client.setCredentials(user, pass)
-
 			val elems = driver.findElements(By::xpath('//p[@class="title"]/a[1]'))
 			for (elem : elems) {
 				repoStrings += elem.text
 			}
 			nextPage(driver)
-
 			new WebDriverWait(driver, 20).until(
 				ExpectedConditions::invisibilityOfElementLocated(
 					By::className('context-loader')
 				)
 			)
-
 			Thread::sleep(15 * 1000)
 		]
 		driver.close
