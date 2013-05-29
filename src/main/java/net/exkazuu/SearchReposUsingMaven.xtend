@@ -49,8 +49,8 @@ class SearchReposUsingMaven {
 		var repoStrings = gatherRepositories(user, pass, 1)
 
 		// git clone and maven test
-		val gm = new GitManager()
-		val mm = new MvnManager()
+		val gm = new GitManager("C:\\Study")
+		val mm = new MvnManager("C:\\Study")
 
 		repoStrings.forEach [
 			val strs = it.split("/")
