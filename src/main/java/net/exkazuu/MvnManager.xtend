@@ -23,9 +23,16 @@ class MvnManager {
 		val result = p.readInputStreamIgnoringErrors()
 		System::out.println(name + " testing...")
 		
+		return result
+	}
+	
+	def delete(String name) {
+		val path = root + "\\" + name
+		val dir = new File(path)
+		System::out.println(name + " deleting...")
 		clean(path)
 		
-		return result
+		return !dir.exists
 	}
 	
 	def void clean(String path) {
@@ -33,11 +40,12 @@ class MvnManager {
 		
 		if(file.isFile) {
 			file.delete
-		} else {
+		} else if(file.isDirectory) {
 			val files = file.listFiles
 			for(f : files) {
 				clean(f.getAbsolutePath)
 			}
+			file.delete
 		}
 	}
 	
@@ -57,8 +65,8 @@ class MvnManager {
 				
 					for(s : strs) {
 						if(s.contains("()")) {
-							val methodName = s.substring(s.length-2)
-							result += file.getAbsolutePath + "/" + methodName
+							val methodName = s.substring(0, s.length-2)
+							result += file.getAbsolutePath + "\\" + methodName
 						}
 					}
 				}
