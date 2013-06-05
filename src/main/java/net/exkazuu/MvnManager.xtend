@@ -82,4 +82,39 @@ class MvnManager {
 		
 		return result
 	}
+	
+	def List<String> getTestMethodRelativePath(String path, String name) {
+		val result = new ArrayList<String>
+		val file = new File(path)
+		
+		if(file.isFile) {
+			val fr = new FileReader(file)
+			val br = new BufferedReader(fr)
+			
+			var str = br.readLine
+			while(str != null) {
+				if(str.contains("@Test")) {
+					str = br.readLine
+					val strs = str.split(" ")
+					
+					for(s : strs) {
+						if(s.contains("()")) {
+							val methodName = s.substring(0, s.length-2)
+							val absolutePath = file.getAbsolutePath + "\\" + methodName
+							val home = root + "\\" + name
+							result += absolutePath.substring(home.length+1, absolutePath.length)
+						}
+					}
+				}
+				str = br.readLine
+			}
+		} else {
+			val files = file.listFiles
+			for(f : files) {
+				result += getTestMethodRelativePath(f.getAbsolutePath, name)
+			}
+		}
+		
+		return result		
+	}
 }

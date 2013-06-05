@@ -20,4 +20,20 @@ class GitManager {
 
 		return result
 	}
+	
+	def String getAuthorName(String path) {
+		val relativePath = path.substring(0, path.lastIndexOf('\\'))
+		val methodName = path.substring(path.lastIndexOf('\\')+1, path.length)
+		
+		val command = "git blame " + relativePath
+		val p = rt.exec(command)
+		val result = p.readInputStreamIgnoringErrors
+		
+		for(str : result) {
+			System::out.println(str)
+		}
+		
+		return "Ryohei Takasawa"
+	}
+	
 }
