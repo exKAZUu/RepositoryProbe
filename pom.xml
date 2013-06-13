@@ -24,10 +24,16 @@
   </properties>
 
   <repositories>
+    <!-- XTend repository -->
     <repository>
       <id>xtend-repos</id>
       <url>http://build.eclipse.org/common/xtend/maven/</url>
     </repository>
+    <!-- JGit repository -->
+    <repository>
+      <id>jgit-repository</id>
+      <url>http://download.eclipse.org/jgit/maven</url>
+    </repository>    
   </repositories>
 
   <pluginRepositories>
@@ -84,7 +90,32 @@
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>2.30.0</version>
-    </dependency>  
+    </dependency>
+    <!-- JGit dependencies -->
+    <!-- Core Library -->
+    <dependency>
+      <groupId>org.eclipse.jgit</groupId>
+      <artifactId>org.eclipse.jgit</artifactId>
+      <version>2.3.1.201302201838-r</version>
+    </dependency>
+    <!-- Smart HTTP Servlet -->
+    <dependency>
+      <groupId>org.eclipse.jgit</groupId>
+      <artifactId>org.eclipse.jgit.http.server</artifactId>
+      <version>2.3.1.201302201838-r</version>
+    </dependency>
+    <!-- AWT UI Helpers -->
+    <dependency>
+      <groupId>org.eclipse.jgit</groupId>
+      <artifactId>org.eclipse.jgit.ui</artifactId>
+      <version>2.3.1.201302201838-r</version>
+    </dependency>
+    <!-- JUnit Test Support -->
+    <dependency>
+      <groupId>org.eclipse.jgit</groupId>
+      <artifactId>org.eclipse.jgit.junit</artifactId>
+      <version>2.3.1.201302201838-r</version>
+    </dependency>
   </dependencies>
 
   <build>

@@ -13,13 +13,21 @@ class GitManager {
 	}
 
 	def List<String> clone(String address, String name) {
+		System::out.println(name + " cloning...")
 		val command = "git clone " + address + " " + root + "\\" + name
 		val p = rt.exec(command)
 		val result = p.readInputStreamIgnoringErrors()
-		System::out.println(name + " cloning...")
 
 		return result
 	}
+	
+	def List<String> clone(String address) {
+		val repoName = address.substring(address.lastIndexOf('/')+1, address.length)
+		val result = clone(address, repoName)
+		
+		return result
+	}
+	
 	
 	def String getAuthorName(String path) {
 		val relativePath = path.substring(0, path.lastIndexOf('\\'))

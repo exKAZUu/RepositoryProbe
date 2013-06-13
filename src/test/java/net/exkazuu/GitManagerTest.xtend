@@ -18,4 +18,18 @@ class GitManagerTest {
 			assertEquals(gm.getAuthorName(str), "Ryohei Takasawa")
 		}
 	}
+	
+	@Test
+	def void testCloneByAddress() {
+		val gm = new GitManager("C:\\Study")
+		val address = "https://github.com/ocwajbaum/jenkins"
+		val list = gm.clone(address)
+		
+		val str = address.substring(address.lastIndexOf('/')+1, address.length)
+		System::out.println(str)
+		for (s : list) {
+			System::out.println()
+		}
+		
+	}
 }
