@@ -2,6 +2,7 @@ package net.exkazuu
 
 import java.util.List
 import static extension net.exkazuu.ProcessExtensions.*
+import java.io.File
 
 class GitManager {
 	Runtime rt
@@ -43,5 +44,4 @@ class GitManager {
 		
 		return "Ryohei Takasawa"
 	}
-	
 }
