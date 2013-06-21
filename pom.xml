@@ -24,7 +24,7 @@
   </properties>
 
   <repositories>
-    <!-- XTend repository -->
+    <!-- Xtend repository -->
     <repository>
       <id>xtend-repos</id>
       <url>http://build.eclipse.org/common/xtend/maven/</url>

@@ -26,28 +26,28 @@ class SearchRepositoryAddressAndClone {
 	}
 
 	def static void main(String[] args) {
-//		val userAndPass = new Properties()
-//		userAndPass.load(new FileInputStream(".properties"))
-//		val user = userAndPass.getProperty("name")
-//		val pass = userAndPass.getProperty("pass")
 
-//		val repoStrings = gatherRepositoryAddress(user, pass, 100)
-//		val file = new File("C:\\Study\\address.txt")
-//		val pw = new PrintWriter(new BufferedWriter(new FileWriter(file)))
-//		for (str : repoStrings) {
-//			pw.println(str)
-//		}
-//		pw.close
-//		System::out.println("Number of repositories : " + repoStrings.size)
+		//		val userAndPass = new Properties()
+		//		userAndPass.load(new FileInputStream(".properties"))
+		//		val user = userAndPass.getProperty("name")
+		//		val pass = userAndPass.getProperty("pass")
+		//		val repoStrings = gatherRepositoryAddress(user, pass, 100)
+		//		val file = new File("C:\\Study\\address.txt")
+		//		val pw = new PrintWriter(new BufferedWriter(new FileWriter(file)))
+		//		for (str : repoStrings) {
+		//			pw.println(str)
+		//		}
+		//		pw.close
+		//		System::out.println("Number of repositories : " + repoStrings.size)
 		val gm = new GitManager("C:\\Study")
 
 		val br = new BufferedReader(new FileReader("C:\\Study\\address.txt"))
 		var count = 0;
-		while(count < 549) {
+		while (count < 549) {
 			val str = br.readLine()
-			if(count > 542) {
+			if (count > 542) {
 				val message = gm.clone(str)
-				Thread::sleep(15*1000)
+				Thread::sleep(15 * 1000)
 			}
 			count = count + 1
 		}
