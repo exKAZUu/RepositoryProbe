@@ -29,11 +29,28 @@ class GitManager {
 
 		return result
 	}
+	
+	def String getGitBlameResult(String filePath, String methodName) {
+		val dirPath = filePath.substring(0, filePath.lastIndexOf('\\'))
+		val command = "git blame master " + filePath
+	
+		val p = rt.exec(command, null, new File(dirPath))
+		val result = p.readInputStreamIgnoringErrors()
+
+		var lineResult = new String()
+		for (str : result) {
+			if (str.contains(methodName)) {
+				lineResult = str
+			}
+		}
+
+		return lineResult		
+	}
 
 	def String getAuthorName(String filePath, String methodName) {
 		val dirPath = filePath.substring(0, filePath.lastIndexOf('\\'))
-		val command = "git blame " + filePath
-
+		val command = "git blame master " + filePath
+	
 		val p = rt.exec(command, null, new File(dirPath))
 		val result = p.readInputStreamIgnoringErrors()
 

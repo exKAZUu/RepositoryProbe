@@ -20,25 +20,33 @@ class GetNumberOfTesters {
 
 		var repoName = br.readLine()
 		while (repoName != null) {
-			val dir = "C:\\Study\\" + repoName
-			val list = mm.getTestMethodRelativePath(dir, repoName)
-			val names = new HashSet<String>()
-			var notCommittedYet = false
+			try {
+				val dir = "C:\\Study\\" + repoName + "\\"
+				val list = mm.getTestMethodRelativePath(dir, repoName)
+				val names = new HashSet<String>()
+				var success = true
 
-			for (str : list) {
-				val filePath = dir + "\\" + str.substring(0, str.lastIndexOf('\\'))
-				val methodName = str.substring(str.lastIndexOf('\\') + 1, str.length - 1)
+				for (str : list) {
+					val filePath = dir + str.substring(0, str.lastIndexOf('\\'))
+					val methodName = str.substring(str.lastIndexOf('\\') + 1, str.length - 1)
 
-				val authorName = gm.getAuthorName(filePath, methodName)
-				if (authorName == "Not Committed Yet ") {
-					notCommittedYet = true;
+					val authorName = gm.getAuthorName(filePath, methodName)
+					if (authorName == "Not Committed Yet ") {
+						success = false;
+					}
+					names += authorName
 				}
-				names += authorName
-			}
 
-			val result = repoName + "," + names.size + "," + notCommittedYet.toString
-			pw.println(result)
-			repoName = br.readLine()
+				val result = repoName + "," + names.size + "," + success.toString
+				System::out.println(result)
+				pw.println(result)
+			} catch (Exception e) {
+				val result = repoName + ",0," + e.toString
+				System::out.println(result)
+				pw.println(result) 				
+			} finally {
+				repoName = br.readLine()
+			}
 		}
 		pw.close
 	}

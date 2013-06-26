@@ -11,13 +11,18 @@ class GitManagerTest {
 		val mm = new MvnManager("C:\\Study")
 		mm.test("TestSample")
 
-		val list = mm.getTestMethodRelativePath("C:\\Study\\TestSample", "TestSample")
+		val list = mm.getTestMethodRelativePath("C:\\Study\\TestSample\\", "TestSample")
 
 		for (str : list) {
-			val filePath = "C:\\Study\\TestSample" + str.substring(0, str.lastIndexOf('\\'))
-			val methodName = str.substring(str.lastIndexOf('\\') + 1, str.length - 1)
+			System::out.println(str)
+			
+			val filePath = "C:\\Study\\TestSample\\" + str.substring(0, str.lastIndexOf('\\'))
+			val methodName = str.substring(str.lastIndexOf('\\') + 1, str.length)
 
-			assertEquals(gm.getAuthorName(filePath, methodName), "Ryohei Takasawa")
+			System::out.println(filePath)
+			System::out.println(methodName)
+
+			assertEquals(gm.getAuthorName(filePath, methodName), "Ryohei Takasawa ")
 		}
 	}
 
