@@ -16,3 +16,12 @@ RepositoryProbe
 
 #Set up project with Eclipse
   1. Open Eclipse > Menu > Import > Existing Maven Projects
+
+#Clone repositories
+  1. java src.main.java.net.exkazuu.SearchRepositoryAddressAndClone
+
+#Get the data of test methods
+  1. java src.main.java.net.exkazuu.SearchTestedRepos
+
+#Get the data of number of testers
+  1. java.net.exkazuu.getNumberOfTesters
