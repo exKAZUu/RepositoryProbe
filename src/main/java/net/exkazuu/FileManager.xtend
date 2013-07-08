@@ -22,12 +22,8 @@ class FileManager {
 		val file = new File(path)
 
 		if (file.isFile) {
-			val fileName = file.getName
-			if (fileName.contains(".java")) {
-				val length = fileName.length
-				if (fileName.substring(length - 5, length).equals(".java")) {
-					result += file.getAbsolutePath
-				}
+			if (file.getName.endsWith(".java")) {
+				result += file.getAbsolutePath
 			}
 		} else {
 			val files = file.listFiles
