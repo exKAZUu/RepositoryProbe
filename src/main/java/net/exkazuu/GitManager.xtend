@@ -32,6 +32,14 @@ class GitManager {
 		return result
 	}
 
+	def List<String> reset(String path) {
+		val command = "git reset"
+		val p = rt.exec(command, null, new File(path))
+		val result = p.readInputStreamIgnoringErrors()
+
+		return result
+	}
+
 	def String getGitBlameResult(String filePath, String methodName) {
 		val dirPath = filePath.substring(0, filePath.lastIndexOf('\\'))
 		val command = "git blame master " + filePath
