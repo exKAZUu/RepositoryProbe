@@ -2,6 +2,7 @@ package net.exkazuu
 
 import org.junit.Test
 import static org.junit.Assert.*
+import java.util.ArrayList
 
 class FileManagerTest {
 	@Test
@@ -12,6 +13,23 @@ class FileManagerTest {
 		val result = fm.getSourceCodeAbsolutePath("C:\\DirectoryForTest\\TestSample", "TestSample")
 
 		assertEquals(result.length, 9)
+	}
+
+	@Test
+	def void testCouneTestCode() {
+		val gm = new GitManager("C:\\DirectoryForTest")
+		gm.clone("https://github.com/gumfum/TestSample", "TestSample")
+		val fm = new FileManager("C:\\DirectoryForTest")
+		val result = fm.getSourceCodeAbsolutePath("C:\\DirectoryForTest\\TestSample", "TestSample")
+
+		val testFilePath = new ArrayList<String>
+		for (path : result) {
+			if (path.contains("\\test\\")) {
+				testFilePath += path
+			}
+		}
+
+		assertEquals(testFilePath.size, 4)
 	}
 
 	@Test

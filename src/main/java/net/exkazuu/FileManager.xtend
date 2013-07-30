@@ -17,6 +17,24 @@ class FileManager {
 		return new File(root).listFiles
 	}
 
+	def List<String> getSourceCodeAbsolutePath(String absolutePath) {
+		val result = new ArrayList<String>
+		val file = new File(absolutePath)
+
+		if (file.isFile) {
+			if (file.getName.endsWith(".java")) {
+				result += file.getAbsolutePath
+			}
+		} else {
+			val files = file.listFiles
+			for (f : files) {
+				result += getSourceCodeAbsolutePath(f.absolutePath)
+			}
+		}
+
+		return result
+	}
+
 	def List<String> getSourceCodeAbsolutePath(String path, String name) {
 		val result = new ArrayList<String>
 		val file = new File(path)
