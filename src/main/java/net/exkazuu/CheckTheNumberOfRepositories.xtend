@@ -15,21 +15,24 @@ class CheckTheNumberOfRepositories {
 
 		//		val path = userAndPass.getProperty("path")
 		val driver = new ChromeDriver()
-		var maxCount = 10;
+		val minCount = 0;
+		val maxCount = 100;
 
-		(1 .. maxCount).forEach [
+		(minCount .. maxCount).forEach [
 			val service = new RepositoryService()
 			service.client.setCredentials(user, pass)
-			val min = it-1
-			
-			val url = "https://github.com/search?p=1&q=size%3A" + min + ".." + it +
-				"+path%3Apom.xml&ref=searchresults&type=Code" //			driver.get(url)
-			//			
-			//			val elem = driver.findElements(By.xpath('h3'))
-			//			System.out.println(elem)
-			System.out.println(url)
-			]
-			driver.close
-		}
+			val url = "https://github.com/search?p=1&q=size%3A" + it + ".." + it +
+				"+path%3Apom.xml&ref=searchresults&type=Code"
+			driver.get(url)
+			val elem = driver.findElements(By.xpath('//a[@class="selected"]'))
+			val str = elem.get(0).text.split('\n')
+			if (str.size > 1) {
+				System.out.println(it + "," + str.get(1))
+			} else {
+				System.out.println(it + "," + 0)
+			}
+			Thread.sleep(20 * 1000)
+		]
+		driver.close
 	}
-	
+}
