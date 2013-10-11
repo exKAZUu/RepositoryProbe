@@ -122,4 +122,24 @@ class MvnManager {
 		val file = new File(root)
 		return file.listFiles
 	}
+
+	def List<String> sonar(String name) {
+		val command = "cmd /c mvn sonar:sonar"
+		val path = root + "\\" + name
+		System::out.println(name + " sonaring...")
+		val p = rt.exec(command, null, new File(path))
+		val result = p.readInputStreamIgnoringErrors()
+
+		return result
+	}
+
+	def List<String> pit(String name) {
+		val command = "cmd /c mvn org.pitest:pitest-maven:mutationCoverage"
+		val path = root + "\\" + name
+		System::out.println(name + " mutating...")
+		val p = rt.exec(command, null, new File(path))
+		val result = p.readInputStreamIgnoringErrors()
+
+		return result
+	}
 }
