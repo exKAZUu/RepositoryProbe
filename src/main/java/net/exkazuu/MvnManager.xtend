@@ -20,6 +20,7 @@ class MvnManager {
 		val command = "cmd /c mvn test"
 		val path = root + "\\" + name
 		System::out.println(name + " testing...")
+		System.out.println(path)
 		val p = rt.exec(command, null, new File(path))
 		val result = p.readInputStreamIgnoringErrors()
 
