@@ -14,6 +14,11 @@ class GitManager {
 	new(String root) {
 		this.rt = Runtime::getRuntime
 		this.root = root
+
+		val file = new File(root)
+		if (!file.exists) {
+			file.mkdir
+		}
 	}
 
 	def List<String> clone(String address, String name) {
@@ -26,7 +31,7 @@ class GitManager {
 	}
 
 	def List<String> clone(String address) {
-		val repoName = address.substring(address.lastIndexOf('/') + 1, address.length)
+		val repoName = address.substring(address.lastIndexOf('/') + 1, address.lastIndexOf('.'))
 		val result = clone(address, repoName)
 
 		return result
