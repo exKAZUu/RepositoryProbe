@@ -7,18 +7,20 @@ import static extension net.exkazuu.ProcessExtensions.*
 import java.util.HashSet
 import java.util.ArrayList
 
-class GitManager extends RuntimeManager {
+class GitManager {
 	Runtime rt
 	String root
 
-	new(String rootAbsorutePath) {
-		super(rootAbsorutePath)
+	new(String root) {
+		this.rt = Runtime::getRuntime
+		this.root = root
 	}
 
 	def List<String> clone(String address, String name) {
 		System::out.println(name + " cloning...")
 		val command = "git clone " + address + " " + root + "\\" + name
-		val result = execute(command)
+		val p = rt.exec(command)
+		val result = p.readInputStreamIgnoringErrors()
 
 		return result
 	}
@@ -117,5 +119,4 @@ class GitManager extends RuntimeManager {
 
 		return authorNames
 	}
-
 }
