@@ -20,7 +20,6 @@ class SearchTestedRepos {
 
 			if (dirName.contains(".txt")) {
 			} else {
-
 				val result = mm.test(dirName)
 				var testsAreSkipped = false
 				var run = 0;

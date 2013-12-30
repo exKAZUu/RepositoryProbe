@@ -3,6 +3,7 @@ package net.exkazuu
 import org.junit.Test
 import static org.junit.Assert.*
 import java.util.ArrayList
+import java.util.HashSet
 
 class FileManagerTest {
 	@Test
