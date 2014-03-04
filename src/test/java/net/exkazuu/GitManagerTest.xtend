@@ -26,7 +26,7 @@ class GitManagerTest {
 			System::out.println(filePath)
 			System::out.println(methodName)
 
-			assertEquals(gm.getAuthorName(filePath, methodName), "Ryohei Takasawa ")
+			assertEquals(gm.getAuthorName(filePath, methodName), "Ryohei Takasawa")
 		}
 	}
 
