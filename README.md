@@ -1,7 +1,7 @@
-RepositoryProbe
+RepositoryProbe [![Build Status](https://secure.travis-ci.org/exKAZUu/RepositoryProbe.png?branch=master)](http://travis-ci.org/exKAZUu/RepositoryProbe)
 ===============
 
-#Requirements
+## Requirements
 * ChromeDriver
   1. Download ChromeDriver on https://code.google.com/p/chromedriver/downloads/list
   1. Deploy an executable file and set PATH environment variable for the file
@@ -14,14 +14,16 @@ RepositoryProbe
   1. Create a file with the name of "account_info" at the root directory ("RepositoryProbe")
   1. Write your GitHub account name and password at first and second lines, respectively
 
-#Set up project with Eclipse
+## Usage
+
+### How to set up project with Eclipse
   1. Open Eclipse > Menu > Import > Existing Maven Projects
 
-#Clone repositories
+### How to clone repositories
   1. java src.main.java.net.exkazuu.SearchRepositoryAddressAndClone
 
-#Get the data of test methods
+### How to get the data of test methods
   1. java src.main.java.net.exkazuu.SearchTestedRepos
 
-#Get the data of number of testers
+### How to get the data of number of testers
   1. java.net.exkazuu.getNumberOfTesters
