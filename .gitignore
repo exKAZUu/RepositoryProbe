@@ -45,3 +45,5 @@ account_info
 chromedriver.log
 
 data/
+
+DirectoryForTest/

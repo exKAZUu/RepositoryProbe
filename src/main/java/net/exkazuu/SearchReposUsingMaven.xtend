@@ -13,7 +13,6 @@ import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.support.ui.WebDriverWait
-import org.eclipse.jetty.util.component.AggregateLifeCycle$Bean
 
 class RepositoryInfo {
 	@Property String owner;
@@ -50,7 +49,7 @@ class SearchReposUsingMaven {
 
 		// git clone and maven test
 		val gm = new GitManager("C:\\Study")
-		val mm = new MvnManager("C:\\Study")
+		val mm = new MavenManager("C:\\Study")
 
 		repoStrings.forEach [
 			val strs = it.split("/")

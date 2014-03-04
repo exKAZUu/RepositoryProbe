@@ -22,6 +22,7 @@ class Main {
 	}
 
 	def static main(String[] args) {
+
 		// Load user and pass from property file
 		val userAndPass = new Properties;
 		userAndPass.load(new FileInputStream(".properties"))

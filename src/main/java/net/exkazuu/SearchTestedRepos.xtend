@@ -1,15 +1,13 @@
 package net.exkazuu
 
-import java.io.File
-import java.io.PrintWriter
-import java.io.FileWriter
 import java.io.BufferedWriter
-
-import java.lang.Integer
+import java.io.File
+import java.io.FileWriter
+import java.io.PrintWriter
 
 class SearchTestedRepos {
 	def static void main(String[] args) {
-		val mm = new MvnManager("C:\\Study")
+		val mm = new MavenManager("C:\\Study")
 		val list = mm.getDirList()
 		val file = new File("C:\\Study\\testResult.txt")
 		val pw = new PrintWriter(new BufferedWriter(new FileWriter(file)))

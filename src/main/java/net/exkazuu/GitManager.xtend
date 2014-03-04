@@ -1,18 +1,17 @@
 package net.exkazuu
 
+import com.google.common.base.Preconditions
 import java.io.File
+import java.util.ArrayList
+import java.util.HashSet
 import java.util.List
 
-import static extension net.exkazuu.ProcessExtensions.*
-import java.util.HashSet
-import java.util.ArrayList
+import static extension net.exkazuu.utils.ProcessExtensions.*
 
 class GitManager {
-	Runtime rt
 	String root
 
 	new(String root) {
-		this.rt = Runtime::getRuntime
 		this.root = root
 
 		val file = new File(root)
@@ -23,15 +22,18 @@ class GitManager {
 
 	def List<String> clone(String address, String name) {
 		System::out.println(name + " cloning...")
-		val command = "git clone " + address + " " + root + "\\" + name
-		val p = rt.exec(command)
-		val result = p.readInputStreamIgnoringErrors()
+		val command = "git clone " + address + " " + root + "/" + name
+		val p = Runtime.runtime.exec(command)
+		val result = p.readAllOutputsIgnoringErrors()
 
 		return result
 	}
 
 	def List<String> clone(String address) {
-		val repoName = address.substring(address.lastIndexOf('/') + 1, address.lastIndexOf('.'))
+		Preconditions.checkArgument(address.endsWith(".git") || address.startsWith("http"))
+		val startIndex = address.lastIndexOf('/') + 1
+		val endIndex = address.lastIndexOf('.')
+		val repoName = address.substring(startIndex, if (startIndex < endIndex) endIndex else address.length)
 		val result = clone(address, repoName)
 
 		return result
@@ -39,18 +41,18 @@ class GitManager {
 
 	def List<String> reset(String path) {
 		val command = "git reset"
-		val p = rt.exec(command, null, new File(path))
-		val result = p.readInputStreamIgnoringErrors()
+		val p = Runtime.runtime.exec(command, null, new File(path))
+		val result = p.readAllOutputsIgnoringErrors()
 
 		return result
 	}
 
 	def String getGitBlameResult(String filePath, String methodName) {
-		val dirPath = filePath.substring(0, filePath.lastIndexOf('\\'))
+		val dirPath = filePath.substring(0, filePath.lastIndexOf('/'))
 		val command = "git blame master " + filePath
 
-		val p = rt.exec(command, null, new File(dirPath))
-		val result = p.readInputStreamIgnoringErrors()
+		val p = Runtime.runtime.exec(command, null, new File(dirPath))
+		val result = p.readAllOutputsIgnoringErrors()
 
 		var lineResult = new String()
 		for (str : result) {
@@ -64,11 +66,11 @@ class GitManager {
 
 	@Deprecated
 	def String getAuthorName(String filePath, String methodName) {
-		val dirPath = filePath.substring(0, filePath.lastIndexOf('\\'))
+		val dirPath = filePath.substring(0, filePath.lastIndexOf('/'))
 		val command = "git blame master " + filePath
 
-		val p = rt.exec(command, null, new File(dirPath))
-		val result = p.readInputStreamIgnoringErrors()
+		val p = Runtime.runtime.exec(command, null, new File(dirPath))
+		val result = p.readAllOutputsIgnoringErrors()
 
 		var lineResult = new String()
 		for (str : result) {
@@ -96,30 +98,17 @@ class GitManager {
 	}
 
 	def HashSet<String> getAuthorNames(String filePath) {
-		val dirPath = filePath.substring(0, filePath.lastIndexOf('\\'))
-		val command = "git blame master " + filePath
+		val dirPath = filePath.substring(0, filePath.lastIndexOf('/'))
+		val command = "git blame master " + filePath.substring(dirPath.length + 1)
 
-		val p = rt.exec(command, null, new File(dirPath))
-		val result = p.readInputStreamIgnoringErrors()
+		val p = Runtime.runtime.exec(command, null, new File(dirPath))
+		val result = p.readAllOutputsIgnoringErrors()
 		val authorNames = new HashSet<String>
 
 		for (line : result) {
 			val systemResult = line.substring(line.indexOf('(') + 1, line.indexOf(')'))
-			val split = systemResult.split(' ')
-			var list = new ArrayList<String>
-			for (str : split) {
-				list += str.trim
-			}
-
-			list.removeAll("")
-			var pos = 0
-			var authorName = new String()
-			while (pos < list.size - 4) {
-				authorName = authorName + split.get(pos) + " "
-				pos = pos + 1
-			}
-
-			authorNames += authorName.trim
+			var list = systemResult.split(' ').map[it.trim].filter[!it.nullOrEmpty]
+			authorNames += list.take(list.size - 4).join(' ')
 		}
 
 		return authorNames

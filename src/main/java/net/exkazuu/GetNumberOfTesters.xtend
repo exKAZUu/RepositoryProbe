@@ -11,7 +11,7 @@ import java.util.HashSet
 class GetNumberOfTesters {
 	def static void main(String[] args) {
 		val gm = new GitManager("C:\\Study")
-		val mm = new MvnManager("C:\\Study")
+		val mm = new MavenManager("C:\\Study")
 		val inputFile = new File("C:\\Study\\testedRepos.txt")
 		val br = new BufferedReader(new FileReader(inputFile))
 
@@ -43,7 +43,7 @@ class GetNumberOfTesters {
 			} catch (Exception e) {
 				val result = repoName + ",0," + e.toString
 				System::out.println(result)
-				pw.println(result) 				
+				pw.println(result)
 			} finally {
 				repoName = br.readLine()
 			}

@@ -1,10 +1,12 @@
 package net.exkazuu
 
 import java.io.File
-import java.util.List
-import java.util.ArrayList
 import java.io.FileReader
-import java.io.LineNumberReader
+import java.util.ArrayList
+import java.util.List
+
+import static extension com.google.common.io.CharStreams.*
+import static extension net.exkazuu.utils.FileExtensions.*
 
 class FileManager {
 	String root
@@ -23,12 +25,12 @@ class FileManager {
 
 		if (file.isFile) {
 			if (file.getName.endsWith(".java")) {
-				result += file.getAbsolutePath
+				result += file.absolutePathUsingSlash
 			}
 		} else {
 			val files = file.listFiles
 			for (f : files) {
-				result += getSourceCodeAbsolutePath(f.absolutePath)
+				result += getSourceCodeAbsolutePath(f.absolutePathUsingSlash)
 			}
 		}
 
@@ -41,27 +43,19 @@ class FileManager {
 
 		if (file.isFile) {
 			if (file.getName.endsWith(".java")) {
-				result += file.getAbsolutePath
+				result += file.absolutePathUsingSlash
 			}
 		} else {
 			val files = file.listFiles
 			for (f : files) {
-				result += getSourceCodeAbsolutePath(f.getAbsolutePath, name)
+				result += getSourceCodeAbsolutePath(f.absolutePathUsingSlash, name)
 			}
 		}
 
 		return result
 	}
 
-	def int getSourceCodeLOC(String absolutePath) {
-		val reader = new LineNumberReader(new FileReader(absolutePath))
-
-		while (null != reader.readLine) {
-		}
-
-		val result = reader.getLineNumber
-		reader.close
-
-		return result
+	def getSourceCodeLOC(String absolutePath) {
+		new FileReader(absolutePath).readLines().size
 	}
 }

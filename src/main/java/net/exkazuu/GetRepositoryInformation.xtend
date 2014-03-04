@@ -104,7 +104,7 @@ class GetRepositoryInformation {
 				printWriter2.print(tag + ",")
 			}
 			printWriter2.println("")
-			val mm = new MvnManager(dirPath)
+			val mm = new MavenManager(dirPath)
 			for (address : addressBook) {
 				val name = address.substring(address.lastIndexOf('/') + 1, address.lastIndexOf('.'))
 				mm.test(name)
@@ -118,7 +118,7 @@ class GetRepositoryInformation {
 					for (tag : sonarTags) {
 						val id = '//span[@id="' + tag + '"]'
 						val value = driver.findElements(By.xpath(id))
-						if(value.size != 0) {
+						if (value.size != 0) {
 							printWriter2.print(value.get(0).text)
 						}
 						printWriter2.print(",")

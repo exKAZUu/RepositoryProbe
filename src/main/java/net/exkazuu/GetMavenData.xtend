@@ -11,7 +11,6 @@ import org.openqa.selenium.chrome.ChromeDriver
 /*
  *	Script for Existing repositories
  */
-
 class GetMavenData {
 	def static void main(String[] args) {
 		val driver = new ChromeDriver
@@ -71,10 +70,11 @@ class GetMavenData {
 			printWriter.println("")
 			val fileManager = new FileManager(dirPath)
 			val dirList = fileManager.dirList
-			val mvnManager = new MvnManager(dirPath)
+			val mvnManager = new MavenManager(dirPath)
 			dirList.forEach [
 				val folderPath = it.toString
 				if (!folderPath.contains(".txt")) {
+
 					/* mvn test */
 					val name = folderPath.substring(folderPath.lastIndexOf('\\') + 1)
 					val testResult = mvnManager.test(name)
@@ -105,7 +105,7 @@ class GetMavenData {
 					val repos = driver.findElements(By.xpath('//td[@class=" nowrap"]/a[1]'))
 					if (repos.size != 0) {
 						System.out.println("OK")
-						
+
 						/* output values */
 						printWriter.print(name + ",")
 						repos.get(0).click
@@ -120,7 +120,7 @@ class GetMavenData {
 							printWriter.print("\",")
 						]
 						printWriter.println("")
-						
+
 						/* delete */
 						val deleteURL = driver.currentUrl.replace("dashboard/index", "project/deletion")
 						driver.get(deleteURL)

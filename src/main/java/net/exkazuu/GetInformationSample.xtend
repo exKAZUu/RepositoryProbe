@@ -1,13 +1,13 @@
 package net.exkazuu
 
-import java.util.Properties
 import java.io.FileInputStream
-import org.eclipse.egit.github.core.service.RepositoryService
-import org.openqa.selenium.chrome.ChromeDriver
-import org.openqa.selenium.By
 import java.sql.Timestamp
 import java.util.HashSet
+import java.util.Properties
+import org.eclipse.egit.github.core.service.RepositoryService
+import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
+import org.openqa.selenium.chrome.ChromeDriver
 
 class GetInformationSample {
 	def static void main(String[] args) {
@@ -60,7 +60,7 @@ class GetInformationSample {
 		val timestamp3 = new Timestamp(System.currentTimeMillis)
 		System.out.println(timestamp3)
 
-		val mm = new MvnManager(rootDirPath)
+		val mm = new MavenManager(rootDirPath)
 		for (address : addressBook) {
 			val name = address.substring(address.lastIndexOf('/') + 1, address.lastIndexOf('.'))
 			mm.test(name)

@@ -1,7 +1,7 @@
-package net.exkazuu
+package net.exkazuu.utils
 
 class ProcessExtensions {
-	def static readInputStreamIgnoringErrors(Process p) {
+	def static readAllOutputsIgnoringErrors(Process p) {
 		val ist = new InputStreamThread(p.inputStream)
 		val est = new InputStreamThread(p.errorStream)
 		ist.start

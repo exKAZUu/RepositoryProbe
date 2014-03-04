@@ -1,20 +1,14 @@
 package net.exkazuu
 
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.By
-import java.util.Properties
-import java.io.FileInputStream
-import org.openqa.selenium.chrome.ChromeDriver
+import java.io.BufferedReader
+import java.io.FileReader
 import java.util.HashSet
 import org.eclipse.egit.github.core.service.RepositoryService
+import org.openqa.selenium.By
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.support.ui.WebDriverWait
-import java.io.File
-import java.io.PrintWriter
-import java.io.BufferedWriter
-import java.io.FileWriter
-import java.io.FileReader
-import java.io.BufferedReader
 
 class SearchRepositoryAddressAndClone {
 	def static nextPage(WebDriver driver) {

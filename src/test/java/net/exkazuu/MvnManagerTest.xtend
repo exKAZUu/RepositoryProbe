@@ -1,33 +1,34 @@
 package net.exkazuu
 
 import org.junit.Test
+
+import static org.hamcrest.Matchers.*
 import static org.junit.Assert.*
 
 class MvnManagerTest {
+	val gm = new GitManager("DirectoryForTest")
+	val mm = new MavenManager("DirectoryForTest")
+
 	@Test
-	def void testCommonsAts() {
-		val gm = new GitManager("C:\\Study")
-		gm.clone("git://github.com/after-the-sunrise/commons-ats.git", "commons-ats")
-		val mm = new MvnManager("C:\\Study")
+	def void commonsAts() {
+		gm.clone("https://github.com/after-the-sunrise/commons-ats.git", "commons-ats")
 		mm.test("commons-ats")
 
-		assertEquals(mm.delete("commons-ats"), true)
+		assertThat(mm.delete("commons-ats"), is(true))
 	}
-	
+
 	@Test
-	def void testGetTestMethodRelativePath() {
-		val gm = new GitManager("C:\\Study")
+	def void getTestMethodRelativePath() {
 		gm.clone("https://github.com/gumfum/TestSample", "TestSample")
-		val mm = new MvnManager("C:\\Study")
 		mm.test("TestSample")
-		
-		val list = mm.getTestMethodRelativePath("C:\\Study\\TestSample", "TestSample")
-		
-		for(str : list) {
-			System::out.println(str)
+
+		val list = mm.getTestMethodRelativePath("DirectoryForTest/TestSample", "TestSample")
+
+		for (str : list) {
+			System.out.println(str)
 		}
-		
+
 		mm.delete("TestSample")
-		assertEquals(list.size, 11)
+		assertThat(list.size, is(11))
 	}
 }

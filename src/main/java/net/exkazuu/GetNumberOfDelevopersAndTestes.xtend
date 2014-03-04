@@ -1,9 +1,9 @@
 package net.exkazuu
 
-import java.util.HashSet
 import java.io.File
 import java.io.FileWriter
 import java.io.PrintWriter
+import java.util.HashSet
 
 class GetNumberOfDelevopersAndTestes {
 	def static void main(String[] args) {

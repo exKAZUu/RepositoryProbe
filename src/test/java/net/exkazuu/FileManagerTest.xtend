@@ -1,27 +1,31 @@
 package net.exkazuu
 
-import org.junit.Test
-import static org.junit.Assert.*
 import java.util.ArrayList
-import java.util.HashSet
+import org.junit.Before
+import org.junit.Test
+
+import static org.hamcrest.Matchers.*
+import static org.junit.Assert.*
 
 class FileManagerTest {
-	@Test
-	def void testCountSourceCode() {
-		val gm = new GitManager("C:\\DirectoryForTest")
-		gm.clone("https://github.com/gumfum/TestSample", "TestSample")
-		val fm = new FileManager("C:\\DirectoryForTest")
-		val result = fm.getSourceCodeAbsolutePath("C:\\DirectoryForTest\\TestSample", "TestSample")
+	val gm = new GitManager("DirectoryForTest")
+	val fm = new FileManager("DirectoryForTest")
 
-		assertEquals(result.length, 9)
+	@Before
+	def void before() {
+		gm.clone("https://github.com/gumfum/TestSample", "TestSample")
 	}
 
 	@Test
-	def void testCouneTestCode() {
-		val gm = new GitManager("C:\\DirectoryForTest")
-		gm.clone("https://github.com/gumfum/TestSample", "TestSample")
-		val fm = new FileManager("C:\\DirectoryForTest")
-		val result = fm.getSourceCodeAbsolutePath("C:\\DirectoryForTest\\TestSample", "TestSample")
+	def void countSourceCode() {
+		val result = fm.getSourceCodeAbsolutePath("DirectoryForTest/TestSample", "TestSample")
+
+		assertThat(result.length, is(9))
+	}
+
+	@Test
+	def void couneTestCode() {
+		val result = fm.getSourceCodeAbsolutePath("DirectoryForTest/TestSample", "TestSample")
 
 		val testFilePath = new ArrayList<String>
 		for (path : result) {
@@ -30,16 +34,13 @@ class FileManagerTest {
 			}
 		}
 
-		assertEquals(testFilePath.size, 4)
+		assertThat(testFilePath.size, is(4))
 	}
 
 	@Test
-	def void testCountLOC() {
-		val gm = new GitManager("C:\\DirectoryForTest")
-		gm.clone("https://github.com/gumfum/TestSample", "TestSample")
-		val fm = new FileManager("C:\\DirectoryForTest")
-		val result = fm.getSourceCodeLOC("C:\\DirectoryForTest\\TestSample\\src\\main\\IfDoWhile.java")
+	def void countLOC() {
+		val result = fm.getSourceCodeLOC("DirectoryForTest/TestSample/src/main/IfDoWhile.java")
 
-		assertEquals(result, 19)
+		assertThat(result, is(19))
 	}
 }
