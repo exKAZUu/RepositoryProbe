@@ -5,6 +5,20 @@ import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.WebElement
 
+class GithubProjectInformation {
+	@Property String url
+	@Property String mainBranch
+	@Property int starCount
+	@Property int forkCount
+	@Property int commitCount
+	@Property int branchCount
+	@Property int releaseCount
+	@Property int contributorCount
+	@Property int openIssueCount
+	@Property int closedIssueCount
+	@Property int openPullRequestCount
+}
+
 /**
  * A class for scraping project information from GitHub pages.
  * Note that this class assume that you don't login GitHub. 
@@ -69,6 +83,22 @@ class GithubProjectPageScraper {
 		driver.findElements(By.className("num"))
 	}
 
+	def getInformation() {
+		val info = new GithubProjectInformation()
+		info.url = topUrl
+		info.mainBranch = mainBranchName
+		info.starCount = starCount
+		info.forkCount = forkCount
+		info.commitCount = commitCount
+		info.branchCount = branchCount
+		info.releaseCount = releaseCount
+		info.contributorCount = contributorCount
+		info.openIssueCount = openIssueCount
+		info.closedIssueCount = closedIssueCount
+		info.openPullRequestCount = openPullRequestCount
+		info
+	}
+
 	def getMainBranchName() {
 		moveTopPage()
 		driver.findElements(By.className("js-select-button")).last.text
@@ -99,14 +129,29 @@ class GithubProjectPageScraper {
 	}
 
 	def getOpenIssueCount() {
-		issueAndPullRequestElements.get(0).extractInteger
+		val elems = issueAndPullRequestElements
+		if (elems.length > 1) {
+			elems.get(0).extractInteger
+		} else {
+			0
+		}
 	}
 
 	def getOpenPullRequestCount() {
-		issueAndPullRequestElements.get(1).extractInteger
+		val elems = issueAndPullRequestElements
+		if (elems.length > 1) {
+			elems.get(1).extractInteger
+		} else {
+			elems.get(0).extractInteger
+		}
 	}
 
 	def getClosedIssueCount() {
-		openCloseButtonElements.get(1).extractInteger
+		val elems = issueAndPullRequestElements
+		if (elems.length > 1) {
+			openCloseButtonElements.get(1).extractInteger
+		} else {
+			0
+		}
 	}
 }
