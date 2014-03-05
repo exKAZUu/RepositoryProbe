@@ -3,9 +3,7 @@ package net.exkazuu.scraper
 import java.io.File
 import java.io.FileReader
 import java.io.FileWriter
-import java.util.ArrayList
-import java.util.List
-import java.util.Set
+import java.util.HashMap
 import net.exkazuu.utils.Idioms
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
@@ -16,15 +14,25 @@ import org.supercsv.io.CsvBeanWriter
 import org.supercsv.prefs.CsvPreference
 
 class GithubProjectInformationScraper {
-	val static sleepTime = 10 * 1000
+	val static leastElapsedTime = 10 * 1000
+	val static header = #["url", "mainBranch", "starCount", "forkCount", "commitCount", "branchCount", "releaseCount",
+		"contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount", "searchResult"]
+	val static processors = #[null, null, new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(),
+		new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt()]
 
-	def static void main(String[] args) {
-		val file = new File("repository.csv")
-		val header = #["url", "mainBranch", "starCount", "forkCount", "commitCount", "branchCount", "releaseCount",
-			"contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount", "searchResult"]
-		val processors = #[null, null, new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(),
-			new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt()]
-		val infos = new ArrayList<GithubProjectInformation>()
+	val WebDriver driver
+	val String language
+	val String keyword
+	val String searchKeyword
+	val int minSize
+	val int maxSize
+	val int maxPageCount
+	val file = new File("repository.csv")
+	val infos = loadExistingInfos(file)
+	var lastSearchTime = 0L
+
+	def static loadExistingInfos(File file) {
+		val infos = new HashMap<String, GithubProjectInformation>()
 		if (file.exists) {
 			val reader = new FileReader(file)
 			val csvReader = new CsvBeanReader(reader, CsvPreference.STANDARD_PREFERENCE)
@@ -32,87 +40,95 @@ class GithubProjectInformationScraper {
 			csvReader.getHeader(true)
 
 			while ((info = csvReader.read(typeof(GithubProjectInformation), header, processors)) != null) {
-				infos += info
+				infos.put(info.url, info)
 			}
 			csvReader.close
 			reader.close
 		}
+		infos
+	}
 
-		val driver = new FirefoxDriver()
-		for (size : 1 .. 1000 * 1000) {
+	new(WebDriver driver, String language, String keyword, String searchKeyword, int minSize, int maxSize,
+		int maxPageCount) {
+		this.driver = driver
+		this.language = language
+		this.keyword = keyword
+		this.searchKeyword = searchKeyword
+		this.minSize = minSize
+		this.maxSize = maxSize
+		this.maxPageCount = maxPageCount
+	}
+
+	def static void main(String[] args) {
+		val scraper = new GithubProjectInformationScraper(new FirefoxDriver(), "ruby", "Capybara find", "click", 1,
+			1000 * 1000, 1)
+		scraper.start()
+	}
+
+	def void start() {
+		for (size : minSize .. maxSize) {
+			System.out.println("File size: " + minSize)
 			val lastCount = infos.size
-			infos += gatherRepositoryAddress(driver, "ruby", "Capybara new", "click", size, size, 100, infos)
+			gatherRepositoryAddress(size)
 			if (lastCount != infos.size) {
 				val writer = new FileWriter(file)
 				val csvWriter = new CsvBeanWriter(writer, CsvPreference.STANDARD_PREFERENCE)
 				csvWriter.writeHeader(header)
-				for (info : infos) {
+				for (info : infos.values) {
 					csvWriter.write(info, header)
 				}
 				csvWriter.close
 				writer.close
 			}
-			if (size % 5 == 0) {
-				Thread::sleep(60 * 1000)
-			}
 		}
 		driver.quit
 	}
 
-	def static gatherRepositoryAddress(WebDriver driver, String language, String keyword, String searchKeyword,
-		int maxPageCount, List<GithubProjectInformation> infos) {
-		gatherRepositoryAddress(driver,
-			"https://github.com/search?l=" + language + "&q=" + keyword + "&ref=cmdform&type=Code", searchKeyword,
-			maxPageCount, infos)
+	def openSearchResultPage(String url) {
+		val elapsed = System.currentTimeMillis - lastSearchTime
+		if (elapsed < leastElapsedTime) {
+			Thread.sleep(leastElapsedTime - elapsed)
+		}
+		driver.get(url)
+		lastSearchTime = System.currentTimeMillis
 	}
 
-	def static gatherRepositoryAddress(WebDriver driver, String language, String keyword, String searchKeyword,
-		int minSize, int maxSize, int maxPageCount, List<GithubProjectInformation> infos) {
-		gatherRepositoryAddress(driver,
-			"https://github.com/search?l=" + language + "&q=" + keyword + "+size:" + minSize + ".." + maxSize +
-				"&ref=cmdform&type=Code", searchKeyword, maxPageCount, infos)
+	def gatherRepositoryAddress(int size) {
+		gatherRepositoryAddress(
+			"https://github.com/search?l=" + language + "&q=" + keyword + "+size:" + size +
+				"&ref=cmdform&type=Code")
 	}
 
-	def static gatherRepositoryAddress(WebDriver driver, String firstPageUrl, String searchKeyword, int maxPageCount,
-		List<GithubProjectInformation> infos) {
-		val visitedUrls = infos.map[it.url].toSet
+	def gatherRepositoryAddress(String firstPageUrl) {
 		var url = firstPageUrl
 		var pageCount = 1
-		var currentSleepTime = 0
 		while (url != null && pageCount <= maxPageCount) {
-			Thread::sleep(currentSleepTime)
-			currentSleepTime = sleepTime
-
 			System.out.print("page " + pageCount + " ")
 
 			val searchResultUrl = url
 			url = Idioms.retry(
 				[ |
-					driver.get(searchResultUrl)
+					openSearchResultPage(searchResultUrl)
 					val nextPageUrl = getNextPageUrl(driver)
-					infos += scrapeProjectInformation(driver, searchKeyword, visitedUrls)
+					scrapeProjectInformation()
 					nextPageUrl
 				], 10, null, true, true)
 
 			System.out.println(" done")
 			pageCount = pageCount + 1
 		}
-		infos
 	}
 
-	def static scrapeProjectInformation(WebDriver driver, String searchKeyword, Set<String> visitedUrls) {
+	def scrapeProjectInformation() {
 		val urlSuffixes = driver.findElements(By::xpath('//p[@class="title"]/a[1]')).map[it.text].toArray
-		val projectInfos = new ArrayList<GithubProjectInformation>()
-
 		for (urlSuffix : urlSuffixes) {
 			val url = "https://github.com/" + urlSuffix
-			if (!visitedUrls.contains(url)) {
+			if (!infos.containsKey(url)) {
 				System.out.print(".")
-				visitedUrls += url
-				projectInfos += new GithubProjectPageScraper(driver, url, searchKeyword).information
+				val info = new GithubProjectPageScraper(driver, url, searchKeyword).information
+				infos.put(info.url, info)
 			}
 		}
-		projectInfos
 	}
 
 	def static getNextPageUrl(WebDriver driver) {
