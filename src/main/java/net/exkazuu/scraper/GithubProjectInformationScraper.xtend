@@ -30,7 +30,6 @@ class GithubProjectInformationScraper {
 			var GithubProjectInformation info = null
 			csvReader.getHeader(true)
 
-			// TODO: this ugly code is caused by a Xtend bug (https://bugs.eclipse.org/bugs/show_bug.cgi?id=371011)
 			while ((info = csvReader.read(typeof(GithubProjectInformation), header, processors)) != null) {
 				infos += info
 			}
