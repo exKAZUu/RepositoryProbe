@@ -21,9 +21,9 @@ class GithubProjectInformationScraper {
 	def static void main(String[] args) {
 		val file = new File("repository.csv")
 		val header = #["url", "mainBranch", "starCount", "forkCount", "commitCount", "branchCount", "releaseCount",
-			"contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount"]
+			"contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount", "searchResult"]
 		val processors = #[null, null, new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(),
-			new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt()]
+			new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt()]
 		val infos = new ArrayList<GithubProjectInformation>()
 		if (file.exists) {
 			val reader = new FileReader(file)
@@ -37,29 +37,52 @@ class GithubProjectInformationScraper {
 			csvReader.close
 			reader.close
 		}
-		infos += gatherRepositoryAddress("ruby", "Capybara new", 100, infos)
-		val writer = new FileWriter(file)
-		val csvWriter = new CsvBeanWriter(writer, CsvPreference.STANDARD_PREFERENCE)
-		csvWriter.writeHeader(header)
-		for (info : infos) {
-			csvWriter.write(info, header)
+
+		val driver = new FirefoxDriver()
+		for (size : 1 .. 1000 * 1000) {
+			val lastCount = infos.size
+			infos += gatherRepositoryAddress(driver, "ruby", "Capybara new", "click", size, size, 100, infos)
+			if (lastCount != infos.size) {
+				val writer = new FileWriter(file)
+				val csvWriter = new CsvBeanWriter(writer, CsvPreference.STANDARD_PREFERENCE)
+				csvWriter.writeHeader(header)
+				for (info : infos) {
+					csvWriter.write(info, header)
+				}
+				csvWriter.close
+				writer.close
+			}
+			if (size % 5 == 0) {
+				Thread::sleep(60 * 1000)
+			}
 		}
-		csvWriter.close
-		writer.close
+		driver.quit
 	}
 
-	def static gatherRepositoryAddress(String language, String keyword, int maxPageCount,
-		List<GithubProjectInformation> infos) {
-		gatherRepositoryAddress("https://github.com/search?l=" + language + "&q=" + keyword + "&ref=cmdform&type=Code",
+	def static gatherRepositoryAddress(WebDriver driver, String language, String keyword, String searchKeyword,
+		int maxPageCount, List<GithubProjectInformation> infos) {
+		gatherRepositoryAddress(driver,
+			"https://github.com/search?l=" + language + "&q=" + keyword + "&ref=cmdform&type=Code", searchKeyword,
 			maxPageCount, infos)
 	}
 
-	def static gatherRepositoryAddress(String firstPageUrl, int maxPageCount, List<GithubProjectInformation> infos) {
-		val driver = new FirefoxDriver()
+	def static gatherRepositoryAddress(WebDriver driver, String language, String keyword, String searchKeyword,
+		int minSize, int maxSize, int maxPageCount, List<GithubProjectInformation> infos) {
+		gatherRepositoryAddress(driver,
+			"https://github.com/search?l=" + language + "&q=" + keyword + "+size:" + minSize + ".." + maxSize +
+				"&ref=cmdform&type=Code", searchKeyword, maxPageCount, infos)
+	}
+
+	def static gatherRepositoryAddress(WebDriver driver, String firstPageUrl, String searchKeyword, int maxPageCount,
+		List<GithubProjectInformation> infos) {
 		val visitedUrls = infos.map[it.url].toSet
 		var url = firstPageUrl
 		var pageCount = 1
+		var currentSleepTime = 0
 		while (url != null && pageCount <= maxPageCount) {
+			Thread::sleep(currentSleepTime)
+			currentSleepTime = sleepTime
+
 			System.out.print("page " + pageCount + " ")
 
 			val searchResultUrl = url
@@ -67,20 +90,17 @@ class GithubProjectInformationScraper {
 				[ |
 					driver.get(searchResultUrl)
 					val nextPageUrl = getNextPageUrl(driver)
-					infos += scrapeProjectInformation(driver, visitedUrls)
+					infos += scrapeProjectInformation(driver, searchKeyword, visitedUrls)
 					nextPageUrl
 				], 10, null, true, true)
 
 			System.out.println(" done")
 			pageCount = pageCount + 1
-			Thread::sleep(sleepTime)
 		}
-
-		driver.quit
 		infos
 	}
 
-	def static scrapeProjectInformation(WebDriver driver, Set<String> visitedUrls) {
+	def static scrapeProjectInformation(WebDriver driver, String searchKeyword, Set<String> visitedUrls) {
 		val urlSuffixes = driver.findElements(By::xpath('//p[@class="title"]/a[1]')).map[it.text].toArray
 		val projectInfos = new ArrayList<GithubProjectInformation>()
 
@@ -89,7 +109,7 @@ class GithubProjectInformationScraper {
 			if (!visitedUrls.contains(url)) {
 				System.out.print(".")
 				visitedUrls += url
-				projectInfos += new GithubProjectPageScraper(driver, url).information
+				projectInfos += new GithubProjectPageScraper(driver, url, searchKeyword).information
 			}
 		}
 		projectInfos

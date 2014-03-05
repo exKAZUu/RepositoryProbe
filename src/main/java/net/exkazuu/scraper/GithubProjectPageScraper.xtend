@@ -5,7 +5,6 @@ import net.exkazuu.utils.Idioms
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.WebElement
-import org.openqa.selenium.htmlunit.HtmlUnitDriver
 
 class GithubProjectInformation {
 	@Property String url
@@ -16,9 +15,10 @@ class GithubProjectInformation {
 	@Property int branchCount
 	@Property int releaseCount
 	@Property int contributorCount
+	@Property int openPullRequestCount
 	@Property int openIssueCount
 	@Property int closedIssueCount
-	@Property int openPullRequestCount
+	@Property int searchResultCount
 }
 
 /**
@@ -31,36 +31,35 @@ class GithubProjectPageScraper {
 	val static integerPattern = Pattern.compile("[^\\d]*(\\d+).*");
 	var WebDriver driver
 	val String topUrl
+	val String searchKeyword
 
-	new(String userName, String projectName) {
-		this(new HtmlUnitDriver(true), "https://github.com/" + userName + "/" + projectName)
+	new(WebDriver driver, String userName, String projectName, String searchKeyword) {
+		this(driver, "https://github.com/" + userName + "/" + projectName, searchKeyword)
 	}
 
-	new(String url) {
-		this(new HtmlUnitDriver(true), url)
-	}
-
-	new(WebDriver driver, String userName, String projectName) {
-		this(driver, "https://github.com/" + userName + "/" + projectName)
-	}
-
-	new(WebDriver driver, String url) {
+	new(WebDriver driver, String url, String searchKeyword) {
 		this.driver = driver
-		this.topUrl = if(url.endsWith("/")) url.substring(0, url.length - 1) else url
+		this.topUrl = if (url.endsWith("/")) url.substring(0, url.length - 1) else url
+		this.searchKeyword = searchKeyword
 		driver.get(this.topUrl)
 	}
 
-	private def moveTopPage() {
-		if (driver.currentUrl != topUrl) {
-			driver.get(topUrl)
+	private def move(String url) {
+		if (driver.currentUrl != url) {
+			driver.get(url)
 		}
 	}
 
-	private def moveIssuePage() {
-		val issueUrl = topUrl + "/issues"
-		if (driver.currentUrl != issueUrl) {
-			driver.get(issueUrl)
-		}
+	private def moveToTopPage() {
+		move(topUrl)
+	}
+
+	private def moveToIssuePage() {
+		move(topUrl + "/issues")
+	}
+
+	private def moveToSearchPage() {
+		move(topUrl + "/search?ref=cmdform&q=" + searchKeyword)
 	}
 
 	private def extractInteger(WebElement e) {
@@ -72,30 +71,35 @@ class GithubProjectPageScraper {
 			throw new Exception("Failed to extract an integer from \"" + text + "\".")
 		}
 	}
-
+	
 	private def getSocialCountElements() {
-		moveTopPage()
+		moveToTopPage()
 		driver.findElements(By.className("social-count"))
 	}
 
 	private def getIssueAndPullRequestElements() {
-		moveTopPage()
+		moveToTopPage()
 		driver.findElements(By.className("counter"))
 	}
 
 	private def getOpenCloseButtonElements() {
-		moveIssuePage()
+		moveToIssuePage()
 		driver.findElement(By.className("button-group")).findElements(By.className("minibutton"))
 	}
 
 	private def getNumElements() {
-		moveTopPage()
+		moveToTopPage()
 		driver.findElements(By.className("num"))
+	}
+
+	def getCounterOfSearchResultElements() {
+		moveToSearchPage()
+		driver.findElements(By.className("counter"))
 	}
 
 	def getInformation() {
 		val info = new GithubProjectInformation()
-		info.url = topUrl
+		info.url = url
 		info.mainBranch = mainBranchName
 		info.starCount = starCount
 		info.forkCount = forkCount
@@ -106,11 +110,16 @@ class GithubProjectPageScraper {
 		info.openPullRequestCount = openPullRequestCount
 		info.openIssueCount = openIssueCount
 		info.closedIssueCount = closedIssueCount
+		info.searchResultCount = searchResultCount
 		info
+	}
+	
+	def getUrl() {
+		topUrl
 	}
 
 	def getMainBranchName() {
-		moveTopPage()
+		moveToTopPage()
 		val selected = driver.findElements(By.className("selected"))
 		val candidates = selected.filter[it.getAttribute("class") == "select-menu-item js-navigation-item selected"]
 		val url = candidates.last.findElement(By.tagName("a")).getAttribute("href")
@@ -169,6 +178,15 @@ class GithubProjectPageScraper {
 		val elems = issueAndPullRequestElements
 		if (elems.length > 1) {
 			openCloseButtonElements.get(1).extractInteger
+		} else {
+			0
+		}
+	}
+
+	def getSearchResultCount() {
+		val elems = getCounterOfSearchResultElements
+		if (elems.length > 2) {
+			elems.get(2).extractInteger
 		} else {
 			0
 		}
