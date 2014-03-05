@@ -9,12 +9,11 @@ import java.util.Set
 import net.exkazuu.utils.Idioms
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
-import org.openqa.selenium.htmlunit.HtmlUnitDriver
+import org.openqa.selenium.firefox.FirefoxDriver
 import org.supercsv.cellprocessor.ParseInt
 import org.supercsv.io.CsvBeanReader
 import org.supercsv.io.CsvBeanWriter
 import org.supercsv.prefs.CsvPreference
-import org.openqa.selenium.firefox.FirefoxDriver
 
 class GithubProjectInformationScraper {
 	val static sleepTime = 10 * 1000
@@ -66,7 +65,6 @@ class GithubProjectInformationScraper {
 			val searchResultUrl = url
 			url = Idioms.retry(
 				[ |
-					System.out.print(".")
 					driver.get(searchResultUrl)
 					val nextPageUrl = getNextPageUrl(driver)
 					infos += scrapeProjectInformation(driver, visitedUrls)
@@ -89,6 +87,7 @@ class GithubProjectInformationScraper {
 		for (urlSuffix : urlSuffixes) {
 			val url = "https://github.com/" + urlSuffix
 			if (!visitedUrls.contains(url)) {
+				System.out.print(".")
 				visitedUrls += url
 				projectInfos += new GithubProjectPageScraper(driver, url).information
 			}
