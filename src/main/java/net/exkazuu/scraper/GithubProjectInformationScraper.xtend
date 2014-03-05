@@ -16,7 +16,7 @@ import org.supercsv.prefs.CsvPreference
 class GithubProjectInformationScraper {
 	val static leastElapsedTime = 10 * 1000
 	val static header = #["url", "mainBranch", "starCount", "forkCount", "commitCount", "branchCount", "releaseCount",
-		"contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount", "searchResult"]
+		"contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount", "searchResultCount"]
 	val static processors = #[null, null, new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(),
 		new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt()]
 
