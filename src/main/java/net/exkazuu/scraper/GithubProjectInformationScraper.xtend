@@ -13,6 +13,8 @@ import org.supercsv.io.CsvBeanReader
 import org.supercsv.io.CsvBeanWriter
 import org.supercsv.prefs.CsvPreference
 
+import static extension net.exkazuu.scraper.ScraperUtil.*
+
 class GithubProjectInformationScraper {
 	val static leastElapsedTime = 10 * 1000
 	val static header = #["url", "mainBranch", "starCount", "forkCount", "commitCount", "branchCount", "releaseCount",
@@ -24,8 +26,8 @@ class GithubProjectInformationScraper {
 	val String language
 	val String keyword
 	val String searchKeyword
-	val int minSize
-	val int maxSize
+	val int minSizeForSearching
+	val int maxSizeForSearching
 	val int maxPageCount
 	val file = new File("repository.csv")
 	val infos = loadExistingInfos(file)
@@ -54,22 +56,24 @@ class GithubProjectInformationScraper {
 		this.language = language
 		this.keyword = keyword
 		this.searchKeyword = searchKeyword
-		this.minSize = minSize
-		this.maxSize = maxSize
+		this.minSizeForSearching = minSize
+		this.maxSizeForSearching = maxSize
 		this.maxPageCount = maxPageCount
 	}
 
 	def static void main(String[] args) {
-		val scraper = new GithubProjectInformationScraper(new FirefoxDriver(), "ruby", "Capybara find", "click", 100,
+		val scraper = new GithubProjectInformationScraper(new FirefoxDriver(), "ruby", "Capybara find", "click", 1,
 			1000 * 1000, 1)
 		scraper.start()
 	}
 
-	def void start() {
-		for (size : minSize .. maxSize) {
-			System.out.println("File size: " + size)
+	def start() {
+		var size = minSizeForSearching
+		while (size < maxSizeForSearching) {
+			val maxSize = findGoodMaxSize(size)
+			System.out.println("Range: " + size + " .. " + maxSize)
 			val lastCount = infos.size
-			gatherRepositoryAddress(size)
+			gatherRepositoryAddress(constructSearchResultUrl(size, maxSize))
 			if (lastCount != infos.size) {
 				val writer = new FileWriter(file)
 				val csvWriter = new CsvBeanWriter(writer, CsvPreference.STANDARD_PREFERENCE)
@@ -80,8 +84,19 @@ class GithubProjectInformationScraper {
 				csvWriter.close
 				writer.close
 			}
+			size = maxSize + 1
 		}
 		driver.quit
+	}
+
+	def findGoodMaxSize(int size) {
+		var range = 1
+		do {
+			openSearchResultPage(constructSearchResultUrl(size, size + range - 1))
+			range = range * 2
+		} while (resultCount <= maxPageCount * 10)
+		range = range / 4
+		if (range > 0) size + range - 1 else size
 	}
 
 	def openSearchResultPage(String url) {
@@ -93,10 +108,9 @@ class GithubProjectInformationScraper {
 		lastSearchTime = System.currentTimeMillis
 	}
 
-	def gatherRepositoryAddress(int size) {
-		gatherRepositoryAddress(
-			"https://github.com/search?l=" + language + "&q=" + keyword + "+size:" + size +
-				"&ref=cmdform&type=Code")
+	def constructSearchResultUrl(int minSize, int maxSize) {
+		"https://github.com/search?l=" + language + "&q=" + keyword + "+size:" + minSize + ".." + maxSize +
+			"&ref=cmdform&type=Code"
 	}
 
 	def gatherRepositoryAddress(String firstPageUrl) {
@@ -119,8 +133,15 @@ class GithubProjectInformationScraper {
 		}
 	}
 
+	def getResultCount() {
+		driver.findElement(By.className("menu")).findElements(By.tagName("li")).get(1).extractInteger(0)
+	}
+
+	def getUrlSuffixes() {
+		driver.findElements(By.xpath('//p[@class="title"]/a[1]')).map[it.text].toArray
+	}
+
 	def scrapeProjectInformation() {
-		val urlSuffixes = driver.findElements(By::xpath('//p[@class="title"]/a[1]')).map[it.text].toArray
 		for (urlSuffix : urlSuffixes) {
 			val url = "https://github.com/" + urlSuffix
 			if (!infos.containsKey(url)) {

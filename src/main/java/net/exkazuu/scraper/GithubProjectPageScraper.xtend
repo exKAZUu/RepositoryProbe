@@ -1,10 +1,10 @@
 package net.exkazuu.scraper
 
-import java.util.regex.Pattern
 import net.exkazuu.utils.Idioms
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
-import org.openqa.selenium.WebElement
+
+import static extension net.exkazuu.scraper.ScraperUtil.*
 
 class GithubProjectInformation {
 	@Property String url
@@ -28,7 +28,6 @@ class GithubProjectInformation {
  * @author Kazunori Sakamoto
  */
 class GithubProjectPageScraper {
-	val static integerPattern = Pattern.compile("[^\\d]*(\\d+).*");
 	var WebDriver driver
 	val String topUrl
 	val String searchKeyword
@@ -68,16 +67,6 @@ class GithubProjectPageScraper {
 
 	private def moveToSearchPage() {
 		move(topUrl + "/search?ref=cmdform&q=" + searchKeyword)
-	}
-
-	private def extractInteger(WebElement e) {
-		val text = e.text.replace(",", "")
-		val match = integerPattern.matcher(text)
-		if (match.find()) {
-			Integer.parseInt(match.group(1))
-		} else {
-			throw new Exception("Failed to extract an integer from \"" + text + "\".")
-		}
 	}
 
 	private def getSocialCountElements() {
