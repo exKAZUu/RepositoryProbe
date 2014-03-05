@@ -1,18 +1,93 @@
 package net.exkazuu
 
+import java.io.File
+import java.io.FileWriter
 import java.util.ArrayList
 import java.util.HashSet
+import java.util.Set
 import net.exkazuu.scraper.GithubProjectInformation
 import net.exkazuu.scraper.GithubProjectPageScraper
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.firefox.FirefoxDriver
+import org.supercsv.io.CsvBeanWriter
+import org.supercsv.prefs.CsvPreference
 
 class RepositoryInformationScraper {
 	val static sleepTime = 15 * 1000
 
 	def static void main(String[] args) {
-		gatherRepositoryAddress(100)
+		val infos = gatherRepositoryAddress("ruby", "require 'capybara'", 100)
+		val writer = new FileWriter(new File("repository.csv"))
+		val csvWriter = new CsvBeanWriter(writer, CsvPreference.STANDARD_PREFERENCE)
+		val header = #["url", "mainBranch", "starCount", "forkCount", "commitCount", "branchCount", "releaseCount",
+			"contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount"]
+		csvWriter.writeHeader(header)
+		for (info : infos) {
+			csvWriter.write(info, header)
+		}
+		csvWriter.close
+		writer.close
+	}
+
+	def static gatherRepositoryAddress(int maxPageCount) {
+		gatherRepositoryAddress("https://github.com/search?l=java&q=pom.xml&ref=cmdform&type=Code", maxPageCount)
+	}
+
+	def static gatherRepositoryAddress(String language, String keyword, int maxPageCount) {
+		gatherRepositoryAddress("https://github.com/search?l=" + language + "&q=" + keyword + "&ref=cmdform&type=Code",
+			maxPageCount)
+	}
+
+	def static <T> retry(Functions.Function0<T> func, int count) {
+		for (i : 0 ..< count) {
+			try {
+				return func.apply
+			} catch (Exception e) {
+			}
+		}
+	}
+
+	def static gatherRepositoryAddress(String firstPageUrl, int maxPageCount) {
+		val driver = new FirefoxDriver()
+		val visitedUrls = new HashSet<String>()
+		val projectInfos = new ArrayList<GithubProjectInformation>()
+		var url = firstPageUrl
+		var pageCount = 1
+		while (url != null && pageCount <= maxPageCount) {
+			System.out.print("page " + pageCount + " ")
+
+			val searchResultUrl = url
+			url = retry(
+				[ |
+					System.out.print(".")
+					driver.get(searchResultUrl)
+					val nextPageUrl = getNextPageUrl(driver)
+					projectInfos += scrapeProjectInformation(driver, visitedUrls)
+					nextPageUrl
+				], 10)
+
+			System.out.println(" done")
+			pageCount = pageCount + 1
+			Thread::sleep(sleepTime)
+		}
+
+		driver.close
+		projectInfos
+	}
+
+	def static scrapeProjectInformation(WebDriver driver, Set<String> visitedUrls) {
+		val urlSuffixes = driver.findElements(By::xpath('//p[@class="title"]/a[1]')).map[it.text].toArray
+		val projectInfos = new ArrayList<GithubProjectInformation>()
+
+		for (urlSuffix : urlSuffixes) {
+			val url = "https://github.com/" + urlSuffix
+			if (!visitedUrls.contains(url)) {
+				visitedUrls += url
+				projectInfos += new GithubProjectPageScraper(driver, url).information
+			}
+		}
+		projectInfos
 	}
 
 	def static getNextPageUrl(WebDriver driver) {
@@ -22,34 +97,5 @@ class RepositoryInformationScraper {
 		} else {
 			null
 		}
-	}
-
-	def static gatherRepositoryAddress(int maxPageCount) {
-		val driver = new FirefoxDriver()
-		val accessedUrls = new HashSet<String>()
-		val projectInfos = new ArrayList<GithubProjectInformation>()
-		var nextPageUrl = "https://github.com/search?l=java&q=pom.xml&ref=cmdform&type=Code"
-		var pageCount = 0
-
-		while (nextPageUrl != null && pageCount < maxPageCount) {
-			driver.get(nextPageUrl)
-
-			val urlSuffixes = driver.findElements(By::xpath('//p[@class="title"]/a[1]')).map[it.text].toArray
-			nextPageUrl = getNextPageUrl(driver)
-
-			for (urlSuffix : urlSuffixes) {
-				val url = "https://github.com/" + urlSuffix
-				if (!accessedUrls.contains(url)) {
-					accessedUrls += url
-					projectInfos += new GithubProjectPageScraper(driver, url).information
-				}
-			}
-
-			pageCount = pageCount + 1
-			Thread::sleep(sleepTime)
-		}
-
-		driver.close
-		projectInfos
 	}
 }

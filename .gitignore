@@ -47,3 +47,4 @@ chromedriver.log
 data/
 
 DirectoryForTest/
+*.csv
