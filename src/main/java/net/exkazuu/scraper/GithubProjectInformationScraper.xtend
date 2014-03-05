@@ -63,7 +63,7 @@ class GithubProjectInformationScraper {
 
 	def static void main(String[] args) {
 		val scraper = new GithubProjectInformationScraper(new FirefoxDriver(), "ruby", "Capybara find", "click", 1,
-			1000 * 1000, 1)
+			1000 * 1000, 100)
 		scraper.start()
 	}
 
