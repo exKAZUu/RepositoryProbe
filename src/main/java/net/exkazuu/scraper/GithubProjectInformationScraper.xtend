@@ -11,11 +11,11 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver
 import org.supercsv.io.CsvBeanWriter
 import org.supercsv.prefs.CsvPreference
 
-class RepositoryInformationScraper {
+class GithubProjectInformationScraper {
 	val static sleepTime = 15 * 1000
 
 	def static void main(String[] args) {
-		val infos = gatherRepositoryAddress("ruby", "require 'capybara'", 1)
+		val infos = gatherRepositoryAddress("ruby", "Capybara click", 100)
 		val writer = new FileWriter(new File("repository.csv"))
 		val csvWriter = new CsvBeanWriter(writer, CsvPreference.STANDARD_PREFERENCE)
 		val header = #["url", "mainBranch", "starCount", "forkCount", "commitCount", "branchCount", "releaseCount",
