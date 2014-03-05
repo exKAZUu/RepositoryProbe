@@ -36,7 +36,7 @@ class GithubProjectPageScraper {
 
 	new(WebDriver driver, String url) {
 		this.driver = driver
-		this.topUrl = if (url.endsWith("/")) url.substring(url.length - 1) else url
+		this.topUrl = if(url.endsWith("/")) url.substring(url.length - 1) else url
 		driver.get(this.topUrl)
 	}
 
@@ -101,7 +101,10 @@ class GithubProjectPageScraper {
 
 	def getMainBranchName() {
 		moveTopPage()
-		driver.findElements(By.className("js-select-button")).last.text
+		val selected = driver.findElements(By.className("selected"))
+		val candidates = selected.filter[it.getAttribute("class") == "select-menu-item js-navigation-item selected"]
+		val url = candidates.last.findElement(By.tagName("a")).getAttribute("href")
+		url.split('/').drop(6).join('/')
 	}
 
 	def getStarCount() {

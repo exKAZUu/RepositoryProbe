@@ -10,7 +10,6 @@ import static org.junit.Assert.*
 class GithubProjectPageScraperTest {
 
 	val driver = new HtmlUnitDriver()
-	val scraper = new GithubProjectPageScraper(driver, "libgit2", "libgit2")
 
 	@After
 	def void after() {
@@ -19,6 +18,7 @@ class GithubProjectPageScraperTest {
 
 	@Test
 	def void retrieveInformation() {
+	val scraper = new GithubProjectPageScraper(driver, "libgit2", "libgit2")
 		assertThat(scraper.starCount, greaterThanOrEqualTo(4203))
 		assertThat(scraper.forkCount, greaterThanOrEqualTo(924))
 
@@ -32,5 +32,23 @@ class GithubProjectPageScraperTest {
 		assertThat(scraper.openPullRequestCount, greaterThanOrEqualTo(0))
 
 		assertThat(scraper.mainBranchName, is("development"))
+	}
+
+	@Test
+	def void retrieveAbbreviatedBranchName() {
+	val scraper = new GithubProjectPageScraper(driver, "absessive", "CurrencyTracker")
+		assertThat(scraper.starCount, greaterThanOrEqualTo(1))
+		assertThat(scraper.forkCount, greaterThanOrEqualTo(0))
+
+		assertThat(scraper.commitCount, greaterThanOrEqualTo(8))
+		assertThat(scraper.branchCount, greaterThanOrEqualTo(3))
+		assertThat(scraper.releaseCount, greaterThanOrEqualTo(0))
+		assertThat(scraper.contributorCount, greaterThanOrEqualTo(1))
+
+		assertThat(scraper.openIssueCount, greaterThanOrEqualTo(0))
+		assertThat(scraper.closedIssueCount, greaterThanOrEqualTo(0))
+		assertThat(scraper.openPullRequestCount, greaterThanOrEqualTo(0))
+
+		assertThat(scraper.mainBranchName, is("multi-row-select/save"))
 	}
 }
