@@ -1,6 +1,5 @@
 package net.exkazuu
 
-import java.util.ArrayList
 import org.junit.Before
 import org.junit.Test
 
@@ -24,23 +23,14 @@ class FileManagerTest {
 	}
 
 	@Test
-	def void couneTestCode() {
+	def void countTestCode() {
 		val result = fm.getSourceCodeAbsolutePath("DirectoryForTest/TestSample", "TestSample")
-
-		val testFilePath = new ArrayList<String>
-		for (path : result) {
-			if (path.contains("\\test\\")) {
-				testFilePath += path
-			}
-		}
-
-		assertThat(testFilePath.size, is(4))
+		assertThat(result.filter[it.contains("/test/")].size, is(4))
 	}
 
 	@Test
-	def void countLOC() {
+	def void countLoc() {
 		val result = fm.getSourceCodeLOC("DirectoryForTest/TestSample/src/main/IfDoWhile.java")
-
 		assertThat(result, is(19))
 	}
 }

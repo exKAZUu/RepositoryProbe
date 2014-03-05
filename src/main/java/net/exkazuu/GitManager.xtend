@@ -2,7 +2,6 @@ package net.exkazuu
 
 import com.google.common.base.Preconditions
 import java.io.File
-import java.util.ArrayList
 import java.util.HashSet
 import java.util.List
 
@@ -33,7 +32,7 @@ class GitManager {
 		Preconditions.checkArgument(address.endsWith(".git") || address.startsWith("http"))
 		val startIndex = address.lastIndexOf('/') + 1
 		val endIndex = address.lastIndexOf('.')
-		val repoName = address.substring(startIndex, if (startIndex < endIndex) endIndex else address.length)
+		val repoName = address.substring(startIndex, if(startIndex < endIndex) endIndex else address.length)
 		val result = clone(address, repoName)
 
 		return result

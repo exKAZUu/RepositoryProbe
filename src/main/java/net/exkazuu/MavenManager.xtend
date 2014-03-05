@@ -16,8 +16,17 @@ class MavenManager {
 		this.root = root
 	}
 
+	def getMavenCommand(String... args) {
+		val prefix = if (System.getProperty("os.name").contains("Windows")) {
+				"cmd /c mvn "
+			} else {
+				"mvn "
+			}
+		prefix + args.join(' ')
+	}
+
 	def List<String> test(String name) {
-		val command = "cmd /c mvn test"
+		val command = getMavenCommand("test")
 		val path = root + "/" + name
 		System::out.println(name + " testing...")
 		val p = Runtime.runtime.exec(command, null, new File(path))
@@ -121,7 +130,7 @@ class MavenManager {
 	}
 
 	def List<String> sonar(String name) {
-		val command = "cmd /c mvn sonar:sonar"
+		val command = getMavenCommand("sonar:sonar")
 		val path = root + "/" + name
 		System::out.println(name + " sonaring...")
 		val p = Runtime.runtime.exec(command, null, new File(path))
@@ -131,7 +140,7 @@ class MavenManager {
 	}
 
 	def List<String> pit(String name) {
-		val command = "cmd /c mvn org.pitest:pitest-maven:mutationCoverage"
+		val command = getMavenCommand("org.pitest:pitest-maven:mutationCoverage")
 		val path = root + "/" + name
 		System::out.println(name + " mutating...")
 		val p = Runtime.runtime.exec(command, null, new File(path))

@@ -2,14 +2,14 @@ package net.exkazuu.scraper
 
 import org.junit.After
 import org.junit.Test
-import org.openqa.selenium.firefox.FirefoxDriver
+import org.openqa.selenium.htmlunit.HtmlUnitDriver
 
 import static org.hamcrest.Matchers.*
 import static org.junit.Assert.*
 
 class GithubProjectPageScraperTest {
 
-	val driver = new FirefoxDriver()
+	val driver = new HtmlUnitDriver()
 	val scraper = new GithubProjectPageScraper(driver, "libgit2", "libgit2")
 
 	@After

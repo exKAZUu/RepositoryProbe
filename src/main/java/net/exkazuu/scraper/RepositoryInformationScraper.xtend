@@ -1,15 +1,13 @@
-package net.exkazuu
+package net.exkazuu.scraper
 
 import java.io.File
 import java.io.FileWriter
 import java.util.ArrayList
 import java.util.HashSet
 import java.util.Set
-import net.exkazuu.scraper.GithubProjectInformation
-import net.exkazuu.scraper.GithubProjectPageScraper
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
-import org.openqa.selenium.firefox.FirefoxDriver
+import org.openqa.selenium.htmlunit.HtmlUnitDriver
 import org.supercsv.io.CsvBeanWriter
 import org.supercsv.prefs.CsvPreference
 
@@ -17,7 +15,7 @@ class RepositoryInformationScraper {
 	val static sleepTime = 15 * 1000
 
 	def static void main(String[] args) {
-		val infos = gatherRepositoryAddress("ruby", "require 'capybara'", 100)
+		val infos = gatherRepositoryAddress("ruby", "require 'capybara'", 1)
 		val writer = new FileWriter(new File("repository.csv"))
 		val csvWriter = new CsvBeanWriter(writer, CsvPreference.STANDARD_PREFERENCE)
 		val header = #["url", "mainBranch", "starCount", "forkCount", "commitCount", "branchCount", "releaseCount",
@@ -49,7 +47,7 @@ class RepositoryInformationScraper {
 	}
 
 	def static gatherRepositoryAddress(String firstPageUrl, int maxPageCount) {
-		val driver = new FirefoxDriver()
+		val driver = new HtmlUnitDriver()
 		val visitedUrls = new HashSet<String>()
 		val projectInfos = new ArrayList<GithubProjectInformation>()
 		var url = firstPageUrl
@@ -84,7 +82,7 @@ class RepositoryInformationScraper {
 			val url = "https://github.com/" + urlSuffix
 			if (!visitedUrls.contains(url)) {
 				visitedUrls += url
-				projectInfos += new GithubProjectPageScraper(driver, url).information
+				projectInfos += new GithubProjectPageScraper(driver, url).getInformation
 			}
 		}
 		projectInfos
