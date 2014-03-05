@@ -60,14 +60,14 @@ class GithubProjectInformationScraper {
 	}
 
 	def static void main(String[] args) {
-		val scraper = new GithubProjectInformationScraper(new FirefoxDriver(), "ruby", "Capybara find", "click", 1,
+		val scraper = new GithubProjectInformationScraper(new FirefoxDriver(), "ruby", "Capybara find", "click", 100,
 			1000 * 1000, 1)
 		scraper.start()
 	}
 
 	def void start() {
 		for (size : minSize .. maxSize) {
-			System.out.println("File size: " + minSize)
+			System.out.println("File size: " + size)
 			val lastCount = infos.size
 			gatherRepositoryAddress(size)
 			if (lastCount != infos.size) {
