@@ -18,7 +18,7 @@ class GithubProjectPageScraperTest {
 
 	@Test
 	def void retrieveInformation() {
-		val scraper = new GithubProjectPageScraper(driver, "libgit2", "libgit2")
+		val scraper = GithubProjectPageScraper.create(driver, "libgit2", "libgit2", "user")
 		assertThat(scraper.starCount, greaterThanOrEqualTo(4203))
 		assertThat(scraper.forkCount, greaterThanOrEqualTo(924))
 
@@ -27,16 +27,18 @@ class GithubProjectPageScraperTest {
 		assertThat(scraper.releaseCount, greaterThanOrEqualTo(15))
 		assertThat(scraper.contributorCount, greaterThanOrEqualTo(165))
 
+		assertThat(scraper.mainBranchName, is("development"))
+
+		assertThat(scraper.openPullRequestCount, greaterThanOrEqualTo(0))
 		assertThat(scraper.openIssueCount, greaterThanOrEqualTo(0))
 		assertThat(scraper.closedIssueCount, greaterThanOrEqualTo(2043))
-		assertThat(scraper.openPullRequestCount, greaterThanOrEqualTo(0))
 
-		assertThat(scraper.mainBranchName, is("development"))
+		assertThat(scraper.searchResultCount, greaterThanOrEqualTo(81))
 	}
 
 	@Test
 	def void retrieveAbbreviatedBranchName() {
-		val scraper = new GithubProjectPageScraper(driver, "absessive", "CurrencyTracker")
+		val scraper = GithubProjectPageScraper.create(driver, "absessive", "CurrencyTracker", "user")
 		assertThat(scraper.starCount, greaterThanOrEqualTo(1))
 		assertThat(scraper.forkCount, greaterThanOrEqualTo(0))
 
@@ -45,10 +47,12 @@ class GithubProjectPageScraperTest {
 		assertThat(scraper.releaseCount, greaterThanOrEqualTo(0))
 		assertThat(scraper.contributorCount, greaterThanOrEqualTo(1))
 
+		assertThat(scraper.mainBranchName, is("multi-row-select/save"))
+
+		assertThat(scraper.openPullRequestCount, greaterThanOrEqualTo(0))
 		assertThat(scraper.openIssueCount, greaterThanOrEqualTo(0))
 		assertThat(scraper.closedIssueCount, greaterThanOrEqualTo(0))
-		assertThat(scraper.openPullRequestCount, greaterThanOrEqualTo(0))
 
-		assertThat(scraper.mainBranchName, is("multi-row-select/save"))
+		assertThat(scraper.searchResultCount, greaterThanOrEqualTo(591))
 	}
 }

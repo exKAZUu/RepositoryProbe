@@ -33,15 +33,23 @@ class GithubProjectPageScraper {
 	val String topUrl
 	val String searchKeyword
 
-	new(WebDriver driver, String userName, String projectName, String searchKeyword) {
-		this(driver, "https://github.com/" + userName + "/" + projectName, searchKeyword)
+	new(WebDriver driver, String url) {
+		this(driver, url, null)
 	}
 
 	new(WebDriver driver, String url, String searchKeyword) {
 		this.driver = driver
 		this.topUrl = if (url.endsWith("/")) url.substring(0, url.length - 1) else url
-		this.searchKeyword = searchKeyword
+		this.searchKeyword = if (searchKeyword != null) searchKeyword else ""
 		driver.get(this.topUrl)
+	}
+
+	def static create(WebDriver driver, String userName, String projectName) {
+		create(driver, userName, projectName, null)
+	}
+
+	def static create(WebDriver driver, String userName, String projectName, String searchKeyword) {
+		new GithubProjectPageScraper(driver, "https://github.com/" + userName + "/" + projectName, searchKeyword)
 	}
 
 	private def move(String url) {
@@ -71,7 +79,7 @@ class GithubProjectPageScraper {
 			throw new Exception("Failed to extract an integer from \"" + text + "\".")
 		}
 	}
-	
+
 	private def getSocialCountElements() {
 		moveToTopPage()
 		driver.findElements(By.className("social-count"))
@@ -113,7 +121,7 @@ class GithubProjectPageScraper {
 		info.searchResultCount = searchResultCount
 		info
 	}
-	
+
 	def getUrl() {
 		topUrl
 	}
