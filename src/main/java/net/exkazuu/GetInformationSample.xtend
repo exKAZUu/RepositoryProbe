@@ -94,7 +94,7 @@ class GetInformationSample {
 		}
 
 		Thread.sleep(15 * 1000)
-		driver.close
+		driver.quit
 	}
 
 	def static nextPage(WebDriver driver) {

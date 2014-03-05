@@ -33,6 +33,6 @@ class CheckTheNumberOfRepositories {
 			}
 			Thread.sleep(20 * 1000)
 		]
-		driver.close
+		driver.quit
 	}
 }

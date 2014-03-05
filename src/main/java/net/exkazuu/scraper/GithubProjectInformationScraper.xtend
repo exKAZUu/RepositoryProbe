@@ -70,7 +70,7 @@ class GithubProjectInformationScraper {
 			Thread::sleep(sleepTime)
 		}
 
-		driver.close
+		driver.quit
 		projectInfos
 	}
 

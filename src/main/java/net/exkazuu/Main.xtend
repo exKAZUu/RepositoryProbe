@@ -63,6 +63,6 @@ class Main {
 					By::className('context-loader')
 				))
 		} while (hasNext)
-		driver.close()
+		driver.quit()
 	}
 }

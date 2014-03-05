@@ -76,7 +76,7 @@ class SearchRepositoryAddressAndClone {
 			Thread::sleep(15 * 1000)
 		}
 
-		driver.close
+		driver.quit
 		return repoAddress
 	}
 }
