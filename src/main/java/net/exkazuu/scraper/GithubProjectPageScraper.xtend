@@ -1,9 +1,11 @@
 package net.exkazuu.scraper
 
 import java.util.regex.Pattern
+import net.exkazuu.utils.Idioms
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.WebElement
+import org.openqa.selenium.htmlunit.HtmlUnitDriver
 
 class GithubProjectInformation {
 	@Property String url
@@ -27,8 +29,16 @@ class GithubProjectInformation {
  */
 class GithubProjectPageScraper {
 	val static integerPattern = Pattern.compile("[^\\d]*(\\d+).*");
-	val WebDriver driver
+	var WebDriver driver
 	val String topUrl
+
+	new(String userName, String projectName) {
+		this(new HtmlUnitDriver(true), "https://github.com/" + userName + "/" + projectName)
+	}
+
+	new(String url) {
+		this(new HtmlUnitDriver(true), url)
+	}
 
 	new(WebDriver driver, String userName, String projectName) {
 		this(driver, "https://github.com/" + userName + "/" + projectName)
@@ -36,7 +46,7 @@ class GithubProjectPageScraper {
 
 	new(WebDriver driver, String url) {
 		this.driver = driver
-		this.topUrl = if(url.endsWith("/")) url.substring(url.length - 1) else url
+		this.topUrl = if(url.endsWith("/")) url.substring(0, url.length - 1) else url
 		driver.get(this.topUrl)
 	}
 
@@ -59,7 +69,7 @@ class GithubProjectPageScraper {
 		if (match.find()) {
 			Integer.parseInt(match.group(1))
 		} else {
-			-1
+			throw new Exception("Failed to extract an integer from \"" + text + "\".")
 		}
 	}
 
@@ -93,9 +103,9 @@ class GithubProjectPageScraper {
 		info.branchCount = branchCount
 		info.releaseCount = releaseCount
 		info.contributorCount = contributorCount
+		info.openPullRequestCount = openPullRequestCount
 		info.openIssueCount = openIssueCount
 		info.closedIssueCount = closedIssueCount
-		info.openPullRequestCount = openPullRequestCount
 		info
 	}
 
@@ -128,7 +138,13 @@ class GithubProjectPageScraper {
 	}
 
 	def getContributorCount() {
-		numElements.get(3).extractInteger
+		Idioms.retry([|numElements.get(3).extractInteger], 10,
+			[ e, i, max |
+				if (i == max) {
+					throw e
+				}
+				Thread.sleep(500)
+			])
 	}
 
 	def getOpenIssueCount() {

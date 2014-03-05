@@ -6,6 +6,7 @@ import java.io.FileWriter
 import java.util.ArrayList
 import java.util.List
 import java.util.Set
+import net.exkazuu.utils.Idioms
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.htmlunit.HtmlUnitDriver
@@ -13,9 +14,10 @@ import org.supercsv.cellprocessor.ParseInt
 import org.supercsv.io.CsvBeanReader
 import org.supercsv.io.CsvBeanWriter
 import org.supercsv.prefs.CsvPreference
+import org.openqa.selenium.firefox.FirefoxDriver
 
 class GithubProjectInformationScraper {
-	val static sleepTime = 15 * 1000
+	val static sleepTime = 10 * 1000
 
 	def static void main(String[] args) {
 		val file = new File("repository.csv")
@@ -53,17 +55,8 @@ class GithubProjectInformationScraper {
 			maxPageCount, infos)
 	}
 
-	def static <T> retry(Functions.Function0<T> func, int count) {
-		for (i : 0 ..< count) {
-			try {
-				return func.apply
-			} catch (Exception e) {
-			}
-		}
-	}
-
 	def static gatherRepositoryAddress(String firstPageUrl, int maxPageCount, List<GithubProjectInformation> infos) {
-		val driver = new HtmlUnitDriver()
+		val driver = new FirefoxDriver()
 		val visitedUrls = infos.map[it.url].toSet
 		var url = firstPageUrl
 		var pageCount = 1
@@ -71,14 +64,14 @@ class GithubProjectInformationScraper {
 			System.out.print("page " + pageCount + " ")
 
 			val searchResultUrl = url
-			url = retry(
+			url = Idioms.retry(
 				[ |
 					System.out.print(".")
 					driver.get(searchResultUrl)
 					val nextPageUrl = getNextPageUrl(driver)
 					infos += scrapeProjectInformation(driver, visitedUrls)
 					nextPageUrl
-				], 10)
+				], 10, null, true, true)
 
 			System.out.println(" done")
 			pageCount = pageCount + 1
@@ -97,7 +90,7 @@ class GithubProjectInformationScraper {
 			val url = "https://github.com/" + urlSuffix
 			if (!visitedUrls.contains(url)) {
 				visitedUrls += url
-				projectInfos += new GithubProjectPageScraper(driver, url).getInformation
+				projectInfos += new GithubProjectPageScraper(driver, url).information
 			}
 		}
 		projectInfos

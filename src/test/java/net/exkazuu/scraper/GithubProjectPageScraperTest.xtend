@@ -2,14 +2,14 @@ package net.exkazuu.scraper
 
 import org.junit.After
 import org.junit.Test
-import org.openqa.selenium.htmlunit.HtmlUnitDriver
+import org.openqa.selenium.firefox.FirefoxDriver
 
 import static org.hamcrest.Matchers.*
 import static org.junit.Assert.*
 
 class GithubProjectPageScraperTest {
 
-	val driver = new HtmlUnitDriver()
+	val driver = new FirefoxDriver()
 
 	@After
 	def void after() {
@@ -18,7 +18,7 @@ class GithubProjectPageScraperTest {
 
 	@Test
 	def void retrieveInformation() {
-	val scraper = new GithubProjectPageScraper(driver, "libgit2", "libgit2")
+		val scraper = new GithubProjectPageScraper(driver, "libgit2", "libgit2")
 		assertThat(scraper.starCount, greaterThanOrEqualTo(4203))
 		assertThat(scraper.forkCount, greaterThanOrEqualTo(924))
 
@@ -36,7 +36,7 @@ class GithubProjectPageScraperTest {
 
 	@Test
 	def void retrieveAbbreviatedBranchName() {
-	val scraper = new GithubProjectPageScraper(driver, "absessive", "CurrencyTracker")
+		val scraper = new GithubProjectPageScraper(driver, "absessive", "CurrencyTracker")
 		assertThat(scraper.starCount, greaterThanOrEqualTo(1))
 		assertThat(scraper.forkCount, greaterThanOrEqualTo(0))
 
