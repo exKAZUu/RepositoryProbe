@@ -4,6 +4,7 @@ import java.io.File
 import java.io.FileReader
 import java.io.FileWriter
 import java.util.HashMap
+import java.util.Map
 import net.exkazuu.utils.Idioms
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
@@ -23,14 +24,13 @@ class GithubProjectInformationScraper {
 		new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt()]
 
 	val WebDriver driver
-	val String language
-	val String keyword
-	val String searchKeyword
+	val SearchQuery projectQuery
+	val SearchQuery[] repositoryQueries
 	val int minSizeForSearching
 	val int maxSizeForSearching
 	val int maxPageCount
-	val file = new File("repository.csv")
-	val infos = loadExistingInfos(file)
+	val File csvFile
+	val Map<String, GithubProjectInformation> infos
 	var lastSearchTime = 0L
 
 	def static loadExistingInfos(File file) {
@@ -50,21 +50,16 @@ class GithubProjectInformationScraper {
 		infos
 	}
 
-	new(WebDriver driver, String language, String keyword, String searchKeyword, int minSize, int maxSize,
-		int maxPageCount) {
+	new(File csvFile, WebDriver driver, SearchQuery projectQuery, int minSize, int maxSize, int maxPageCount,
+		SearchQuery... repositoryQueries) {
+		this.csvFile = csvFile
+		this.infos = loadExistingInfos(csvFile)
 		this.driver = driver
-		this.language = language
-		this.keyword = keyword
-		this.searchKeyword = searchKeyword
+		this.projectQuery = projectQuery
+		this.repositoryQueries = repositoryQueries
 		this.minSizeForSearching = minSize
 		this.maxSizeForSearching = maxSize
 		this.maxPageCount = maxPageCount
-	}
-
-	def static void main(String[] args) {
-		val scraper = new GithubProjectInformationScraper(new FirefoxDriver(), "ruby", "Capybara find", "click", 1,
-			1000 * 1000, 100)
-		scraper.start()
 	}
 
 	def start() {
@@ -75,7 +70,7 @@ class GithubProjectInformationScraper {
 			val lastCount = infos.size
 			gatherRepositoryAddress(constructSearchResultUrl(size, maxSize))
 			if (lastCount != infos.size) {
-				val writer = new FileWriter(file)
+				val writer = new FileWriter(csvFile)
 				val csvWriter = new CsvBeanWriter(writer, CsvPreference.STANDARD_PREFERENCE)
 				csvWriter.writeHeader(header)
 				for (info : infos.values) {
@@ -109,8 +104,8 @@ class GithubProjectInformationScraper {
 	}
 
 	def constructSearchResultUrl(int minSize, int maxSize) {
-		"https://github.com/search?l=" + language + "&q=" + keyword + "+size:" + minSize + ".." + maxSize +
-			"&ref=cmdform&type=Code"
+		"https://github.com/search?l=" + projectQuery.language + "&q=" + projectQuery.keyword + "+size:" + minSize +
+			".." + maxSize + "&ref=cmdform&type=Code"
 	}
 
 	def gatherRepositoryAddress(String firstPageUrl) {
@@ -146,7 +141,7 @@ class GithubProjectInformationScraper {
 			val url = "https://github.com/" + urlSuffix
 			if (!infos.containsKey(url)) {
 				System.out.print(".")
-				val info = new GithubProjectPageScraper(driver, url, searchKeyword).information
+				val info = new GithubProjectPageScraper(driver, url, repositoryQueries).information
 				infos.put(info.url, info)
 			}
 		}
@@ -159,5 +154,16 @@ class GithubProjectInformationScraper {
 		} else {
 			null
 		}
+	}
+
+	def static void main(String[] args) {
+		if (args.length != 1) {
+			System.out.println("Please sepcify one argument indicating a csv file for loading and saving results.")
+			System.exit(-1)
+		}
+		val scraper = new GithubProjectInformationScraper(new File(args.get(0)), new FirefoxDriver(),
+			new SearchQuery("Capybara find", "ruby"), 1, 1000 * 1000, 100, new SearchQuery("click", "ruby"),
+			new SearchQuery("click", "cucumber"))
+		scraper.start()
 	}
 }
