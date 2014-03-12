@@ -64,7 +64,7 @@ class GithubProjectInformationScraper {
 
 	def start() {
 		var size = minSizeForSearching
-		while (size < maxSizeForSearching) {
+		while (0 <= size && size < maxSizeForSearching) {
 			val maxSize = findGoodMaxSize(size)
 			System.out.println("Range: " + size + " .. " + maxSize)
 			val lastCount = infos.size
@@ -162,7 +162,7 @@ class GithubProjectInformationScraper {
 			System.exit(-1)
 		}
 		val scraper = new GithubProjectInformationScraper(new File(args.get(0)), new FirefoxDriver(),
-			new SearchQuery("Capybara find", "ruby"), 1, 1000 * 1000, 100, new SearchQuery("click", "ruby"),
+			new SearchQuery("Capybara find", "ruby"), 1800, 1000 * 1000, 100, new SearchQuery("click", "ruby"),
 			new SearchQuery("click", "cucumber"))
 		scraper.start()
 	}
