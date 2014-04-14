@@ -6,6 +6,28 @@ import org.openqa.selenium.WebDriver
 
 import static extension net.exkazuu.scraper.ScraperUtil.*
 
+class SearchQuery {
+	String language
+	String keyword
+
+	new(String keyword) {
+		this(keyword, null)
+	}
+
+	new(String keyword, String language) {
+		this.keyword = if(keyword != null) keyword else ""
+		this.language = if(language != null) language else ""
+	}
+
+	def getKeyword() {
+		keyword
+	}
+
+	def getLanguage() {
+		language
+	}
+}
+
 class GithubProjectInformation {
 	@Property String url
 	@Property String mainBranch
@@ -31,25 +53,17 @@ class GithubProjectInformation {
 class GithubProjectPageScraper {
 	var WebDriver driver
 	val String topUrl
-	val String searchKeyword
+	val SearchQuery[] queries
 
-	new(WebDriver driver, String url) {
-		this(driver, url, null)
-	}
-
-	new(WebDriver driver, String url, String searchKeyword) {
+	new(WebDriver driver, String url, SearchQuery... queries) {
 		this.driver = driver
 		this.topUrl = if(url.endsWith("/")) url.substring(0, url.length - 1) else url
-		this.searchKeyword = if(searchKeyword != null) searchKeyword else ""
+		this.queries = queries
 		driver.get(this.topUrl)
 	}
 
-	def static create(WebDriver driver, String userName, String projectName) {
-		create(driver, userName, projectName, null)
-	}
-
-	def static create(WebDriver driver, String userName, String projectName, String searchKeyword) {
-		new GithubProjectPageScraper(driver, "https://github.com/" + userName + "/" + projectName, searchKeyword)
+	new(WebDriver driver, String userName, String projectName, SearchQuery... queries) {
+		this(driver, "https://github.com/" + userName + "/" + projectName, queries)
 	}
 
 	private def move(String url) {
@@ -66,8 +80,8 @@ class GithubProjectPageScraper {
 		move(topUrl + "/issues")
 	}
 
-	private def moveToSearchPage() {
-		move(topUrl + "/search?ref=cmdform&q=" + searchKeyword)
+	private def moveToSearchPage(SearchQuery query) {
+		move(topUrl + "/search?ref=cmdform&l=" + query.language + "&q=" + query.keyword)
 	}
 
 	private def getSocialCountElements() {
@@ -90,8 +104,8 @@ class GithubProjectPageScraper {
 		driver.findElements(By.className("num"))
 	}
 
-	def getCounterOfSearchResultElements() {
-		moveToSearchPage()
+	def getCounterOfSearchResultElements(SearchQuery query) {
+		moveToSearchPage(query)
 		driver.findElements(By.className("counter"))
 	}
 
@@ -189,11 +203,13 @@ class GithubProjectPageScraper {
 	}
 
 	def getSearchResultCount() {
-		val elems = getCounterOfSearchResultElements
-		if (elems.length > 2) {
-			elems.get(2).extractInteger
-		} else {
-			0
-		}
+		queries.map [
+			val elems = getCounterOfSearchResultElements(it)
+			if (elems.length > 2) {
+				elems.get(2).extractInteger
+			} else {
+				0
+			}
+		].fold(0, [l, r|l + r])
 	}
 }

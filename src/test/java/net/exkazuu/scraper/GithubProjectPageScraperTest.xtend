@@ -18,7 +18,7 @@ class GithubProjectPageScraperTest {
 
 	@Test
 	def void retrieveInformation() {
-		val scraper = GithubProjectPageScraper.create(driver, "libgit2", "libgit2", "user")
+		val scraper = new GithubProjectPageScraper(driver, "libgit2", "libgit2", new SearchQuery("user"))
 		assertThat(scraper.starCount, greaterThanOrEqualTo(4203))
 		assertThat(scraper.forkCount, greaterThanOrEqualTo(924))
 
@@ -38,7 +38,7 @@ class GithubProjectPageScraperTest {
 
 	@Test
 	def void retrieveAbbreviatedBranchName() {
-		val scraper = GithubProjectPageScraper.create(driver, "absessive", "CurrencyTracker", "user")
+		val scraper = new GithubProjectPageScraper(driver, "absessive", "CurrencyTracker", new SearchQuery("user"))
 		assertThat(scraper.starCount, greaterThanOrEqualTo(1))
 		assertThat(scraper.forkCount, greaterThanOrEqualTo(0))
 
