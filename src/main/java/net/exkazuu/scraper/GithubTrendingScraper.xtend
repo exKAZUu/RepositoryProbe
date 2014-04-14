@@ -1,0 +1,51 @@
+package net.exkazuu.scraper
+
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.By
+import org.openqa.selenium.firefox.FirefoxDriver
+import java.util.HashSet
+
+/**
+ * A class for scraping trending information from GitHub pages.
+ * 
+ * @author Kazunori Sakamoto
+ */
+class GithubTrendingScraper {
+	var WebDriver driver
+	val durations = #["daily", "weekly", "monthly"]
+
+	new(WebDriver driver) {
+		this.driver = driver
+	}
+
+	def start(String[] languages) {
+		languages.forEach [ language |
+			System.out.println("-------------------" + language + "-------------------")
+			val set = new HashSet<String>()
+			durations.map [ duration |
+				driver.get("https://github.com/trending?l=" + language + "&since=" + duration)
+				driver.findElements(By.className("repository-name")).map [
+					it.getAttribute("href")
+				].toArray(#[""]).map [
+					new GithubProjectPageScraper(driver, it).information
+				]
+			].flatten.filter [
+				!set.contains(it.url)
+			].forEach [
+				set.add(it.url)
+				val code = createCSharpTestCase(it)
+				System.out.print(code)
+			]
+		]
+	}
+
+	def createCSharpTestCase(GithubProjectInformation info) '''
+		[TestCase(@"«info.url».git",
+			@"«info.latestCommitSha»")]		// Star: «info.starCount»
+	'''
+
+	def static void main(String[] args) {
+		val scraper = new GithubTrendingScraper(new FirefoxDriver())
+		scraper.start(#["python", "java", "csharp", "php", "javascript", "lua"])
+	}
+}

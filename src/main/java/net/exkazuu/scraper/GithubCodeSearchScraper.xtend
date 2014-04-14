@@ -15,12 +15,13 @@ import org.supercsv.prefs.CsvPreference
 
 import static extension net.exkazuu.scraper.ScraperUtil.*
 
-class GithubProjectInformationScraper {
+class GithubCodeSearchScraper {
 	val static leastElapsedTime = 10 * 1000
-	val static header = #["url", "mainBranch", "starCount", "forkCount", "commitCount", "branchCount", "releaseCount",
-		"contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount", "searchResultCount"]
-	val static processors = #[null, null, new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(),
-		new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt()]
+	val static header = #["url", "mainBranch", "latestCommitSha", "starCount", "forkCount", "commitCount", "branchCount",
+		"releaseCount", "contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount",
+		"searchResultCount"]
+	val static processors = #[null, null, null, new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(),
+		new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt()]
 
 	val WebDriver driver
 	val String language
@@ -62,7 +63,7 @@ class GithubProjectInformationScraper {
 	}
 
 	def static void main(String[] args) {
-		val scraper = new GithubProjectInformationScraper(new FirefoxDriver(), "ruby", "Capybara find", "click", 1,
+		val scraper = new GithubCodeSearchScraper(new FirefoxDriver(), "ruby", "Capybara find", "click", 1,
 			1000 * 1000, 100)
 		scraper.start()
 	}
@@ -96,7 +97,7 @@ class GithubProjectInformationScraper {
 			range = range * 2
 		} while (resultCount <= maxPageCount * 10)
 		range = range / 4
-		if (range > 0) size + range - 1 else size
+		if(range > 0) size + range - 1 else size
 	}
 
 	def openSearchResultPage(String url) {

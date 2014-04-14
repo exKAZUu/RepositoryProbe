@@ -9,6 +9,7 @@ import static extension net.exkazuu.scraper.ScraperUtil.*
 class GithubProjectInformation {
 	@Property String url
 	@Property String mainBranch
+	@Property String latestCommitSha
 	@Property int starCount
 	@Property int forkCount
 	@Property int commitCount
@@ -38,8 +39,8 @@ class GithubProjectPageScraper {
 
 	new(WebDriver driver, String url, String searchKeyword) {
 		this.driver = driver
-		this.topUrl = if (url.endsWith("/")) url.substring(0, url.length - 1) else url
-		this.searchKeyword = if (searchKeyword != null) searchKeyword else ""
+		this.topUrl = if(url.endsWith("/")) url.substring(0, url.length - 1) else url
+		this.searchKeyword = if(searchKeyword != null) searchKeyword else ""
 		driver.get(this.topUrl)
 	}
 
@@ -108,6 +109,7 @@ class GithubProjectPageScraper {
 		info.openIssueCount = openIssueCount
 		info.closedIssueCount = closedIssueCount
 		info.searchResultCount = searchResultCount
+		info.latestCommitSha = latestCommitSha
 		info
 	}
 
@@ -121,6 +123,12 @@ class GithubProjectPageScraper {
 		val candidates = selected.filter[it.getAttribute("class") == "select-menu-item js-navigation-item selected"]
 		val url = candidates.last.findElement(By.tagName("a")).getAttribute("href")
 		url.split('/').drop(6).join('/')
+	}
+
+	def getLatestCommitSha() {
+		moveToTopPage()
+		val shaBlock = driver.findElement(By.className("sha-block")).getAttribute("href")
+		shaBlock.substring(shaBlock.lastIndexOf('/') + 1)
 	}
 
 	def getStarCount() {
