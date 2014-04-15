@@ -39,13 +39,11 @@ class TestCaseGenerator {
 	'''
 
 	def static void main(String[] args) {
-		if (args.length != 1) {
-			System.out.println("Please specify one argument indicating a csv file for loading and saving results.")
-			System.exit(-1)
-		}
-		val code = loadExistingInfos(new File(args.get(0))).map [
-			createCSharpTestCase(it).toString.trim
-		].join("\n")
-		Files.write(code, new File("code.txt"), Charset.defaultCharset())
+		#["java", "csharp", "javascript", "python", "php", "lua"].forEach [
+			val code = loadExistingInfos(new File(it + ".csv")).map [
+				createCSharpTestCase(it).toString.trim
+			].join("\n")
+			Files.write(code, new File(it + ".txt"), Charset.defaultCharset())
+		]
 	}
 }
