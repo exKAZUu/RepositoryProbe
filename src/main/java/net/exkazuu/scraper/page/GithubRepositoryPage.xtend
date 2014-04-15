@@ -1,48 +1,12 @@
-package net.exkazuu.scraper
+package net.exkazuu.scraper.page
 
+import net.exkazuu.scraper.query.CodeSearchQuery
 import net.exkazuu.utils.Idioms
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 
 import static extension net.exkazuu.scraper.ScraperUtil.*
-
-class SearchQuery {
-	String language
-	String keyword
-
-	new(String keyword) {
-		this(keyword, null)
-	}
-
-	new(String keyword, String language) {
-		this.keyword = if(keyword != null) keyword else ""
-		this.language = if(language != null) language else ""
-	}
-
-	def getKeyword() {
-		keyword
-	}
-
-	def getLanguage() {
-		language
-	}
-}
-
-class GithubProjectInformation {
-	@Property String url
-	@Property String mainBranch
-	@Property String latestCommitSha
-	@Property int starCount
-	@Property int forkCount
-	@Property int commitCount
-	@Property int branchCount
-	@Property int releaseCount
-	@Property int contributorCount
-	@Property int openPullRequestCount
-	@Property int openIssueCount
-	@Property int closedIssueCount
-	@Property int searchResultCount
-}
+import net.exkazuu.scraper.GithubRepositoryInfo
 
 /**
  * A class for scraping project information from GitHub pages.
@@ -50,19 +14,19 @@ class GithubProjectInformation {
  * 
  * @author Kazunori Sakamoto
  */
-class GithubProjectPageScraper {
+class GithubRepositoryPage {
 	var WebDriver driver
 	val String topUrl
-	val SearchQuery[] queries
+	val CodeSearchQuery[] queries
 
-	new(WebDriver driver, String url, SearchQuery... queries) {
+	new(WebDriver driver, String url, CodeSearchQuery... queries) {
 		this.driver = driver
 		this.topUrl = if(url.endsWith("/")) url.substring(0, url.length - 1) else url
 		this.queries = queries
 		driver.get(this.topUrl)
 	}
 
-	new(WebDriver driver, String userName, String projectName, SearchQuery... queries) {
+	new(WebDriver driver, String userName, String projectName, CodeSearchQuery... queries) {
 		this(driver, "https://github.com/" + userName + "/" + projectName, queries)
 	}
 
@@ -80,7 +44,7 @@ class GithubProjectPageScraper {
 		move(topUrl + "/issues")
 	}
 
-	private def moveToSearchPage(SearchQuery query) {
+	private def moveToSearchPage(CodeSearchQuery query) {
 		move(topUrl + "/search?ref=cmdform&l=" + query.language + "&q=" + query.keyword)
 	}
 
@@ -104,26 +68,26 @@ class GithubProjectPageScraper {
 		driver.findElements(By.className("num"))
 	}
 
-	def getCounterOfSearchResultElements(SearchQuery query) {
+	def getCounterOfSearchResultElements(CodeSearchQuery query) {
 		moveToSearchPage(query)
 		driver.findElements(By.className("counter"))
 	}
 
 	def getInformation() {
-		val info = new GithubProjectInformation()
-		info.url = url
-		info.mainBranch = mainBranchName
-		info.starCount = starCount
-		info.forkCount = forkCount
-		info.commitCount = commitCount
-		info.branchCount = branchCount
-		info.releaseCount = releaseCount
-		info.contributorCount = contributorCount
-		info.openPullRequestCount = openPullRequestCount
-		info.openIssueCount = openIssueCount
-		info.closedIssueCount = closedIssueCount
-		info.searchResultCount = searchResultCount
-		info.latestCommitSha = latestCommitSha
+		val info = new GithubRepositoryInfo()
+		info.url = getUrl
+		info.mainBranch = getMainBranchName
+		info.starCount = getStarCount
+		info.forkCount = getForkCount
+		info.commitCount = getCommitCount
+		info.branchCount = getBranchCount
+		info.releaseCount = getReleaseCount
+		info.contributorCount = getContributorCount
+		info.openPullRequestCount = getOpenPullRequestCount
+		info.openIssueCount = getOpenIssueCount
+		info.closedIssueCount = getClosedIssueCount
+		info.searchResultCount = getSearchResultCount
+		info.latestCommitSha = getLatestCommitSha
 		info
 	}
 
@@ -146,27 +110,27 @@ class GithubProjectPageScraper {
 	}
 
 	def getStarCount() {
-		socialCountElements.get(0).extractInteger
+		getSocialCountElements.get(0).extractInteger
 	}
 
 	def getForkCount() {
-		socialCountElements.get(1).extractInteger
+		getSocialCountElements.get(1).extractInteger
 	}
 
 	def getCommitCount() {
-		numElements.get(0).extractInteger
+		getNumElements.get(0).extractInteger
 	}
 
 	def getBranchCount() {
-		numElements.get(1).extractInteger
+		getNumElements.get(1).extractInteger
 	}
 
 	def getReleaseCount() {
-		numElements.get(2).extractInteger
+		getNumElements.get(2).extractInteger
 	}
 
 	def getContributorCount() {
-		Idioms.retry([|numElements.get(3).extractInteger], 10,
+		Idioms.retry([|getNumElements.get(3).extractInteger], 10,
 			[ e, i, max |
 				if (i == max) {
 					throw e
@@ -176,7 +140,7 @@ class GithubProjectPageScraper {
 	}
 
 	def getOpenIssueCount() {
-		val elems = issueAndPullRequestElements
+		val elems = getIssueAndPullRequestElements
 		if (elems.length > 1) {
 			elems.get(0).extractInteger
 		} else {
@@ -185,7 +149,7 @@ class GithubProjectPageScraper {
 	}
 
 	def getOpenPullRequestCount() {
-		val elems = issueAndPullRequestElements
+		val elems = getIssueAndPullRequestElements
 		if (elems.length > 1) {
 			elems.get(1).extractInteger
 		} else {
@@ -194,9 +158,9 @@ class GithubProjectPageScraper {
 	}
 
 	def getClosedIssueCount() {
-		val elems = issueAndPullRequestElements
+		val elems = getIssueAndPullRequestElements
 		if (elems.length > 1) {
-			openCloseButtonElements.get(1).extractInteger
+			getOpenCloseButtonElements.get(1).extractInteger
 		} else {
 			0
 		}

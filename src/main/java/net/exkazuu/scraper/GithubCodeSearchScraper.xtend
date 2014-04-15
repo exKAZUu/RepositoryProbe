@@ -1,60 +1,33 @@
 package net.exkazuu.scraper
 
 import java.io.File
-import java.io.FileReader
-import java.io.FileWriter
-import java.util.HashMap
 import java.util.Map
+import net.exkazuu.scraper.page.GithubRepositoryPage
+import net.exkazuu.scraper.query.CodeSearchQuery
 import net.exkazuu.utils.Idioms
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.firefox.FirefoxDriver
-import org.supercsv.cellprocessor.ParseInt
-import org.supercsv.io.CsvBeanReader
-import org.supercsv.io.CsvBeanWriter
-import org.supercsv.prefs.CsvPreference
 
 import static extension net.exkazuu.scraper.ScraperUtil.*
 
 class GithubCodeSearchScraper {
 	val static leastElapsedTime = 10 * 1000
-	val static header = #["url", "mainBranch", "latestCommitSha", "starCount", "forkCount", "commitCount", "branchCount",
-		"releaseCount", "contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount",
-		"searchResultCount"]
-	val static processors = #[null, null, null, new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(),
-		new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt()]
 
 	val WebDriver driver
-	val SearchQuery projectQuery
-	val SearchQuery[] repositoryQueries
+	val CodeSearchQuery projectQuery
+	val CodeSearchQuery[] repositoryQueries
 	val int minSizeForSearching
 	val int maxSizeForSearching
 	val int maxPageCount
 	val File csvFile
-	val Map<String, GithubProjectInformation> infos
+	val Map<String, GithubRepositoryInfo> infos
 	var lastSearchTime = 0L
 
-	def static loadExistingInfos(File file) {
-		val infos = new HashMap<String, GithubProjectInformation>()
-		if (file.exists) {
-			val reader = new FileReader(file)
-			val csvReader = new CsvBeanReader(reader, CsvPreference.STANDARD_PREFERENCE)
-			var GithubProjectInformation info = null
-			csvReader.getHeader(true)
-
-			while ((info = csvReader.read(typeof(GithubProjectInformation), header, processors)) != null) {
-				infos.put(info.url, info)
-			}
-			csvReader.close
-			reader.close
-		}
-		infos
-	}
-
-	new(File csvFile, WebDriver driver, SearchQuery projectQuery, int minSize, int maxSize, int maxPageCount,
-		SearchQuery... repositoryQueries) {
+	new(File csvFile, WebDriver driver, CodeSearchQuery projectQuery, int minSize, int maxSize, int maxPageCount,
+		CodeSearchQuery... repositoryQueries) {
 		this.csvFile = csvFile
-		this.infos = loadExistingInfos(csvFile)
+		this.infos = GithubRepositoryInfo.readMap(csvFile)
 		this.driver = driver
 		this.projectQuery = projectQuery
 		this.repositoryQueries = repositoryQueries
@@ -71,14 +44,7 @@ class GithubCodeSearchScraper {
 			val lastCount = infos.size
 			gatherRepositoryAddress(constructSearchResultUrl(size, maxSize))
 			if (lastCount != infos.size) {
-				val writer = new FileWriter(csvFile)
-				val csvWriter = new CsvBeanWriter(writer, CsvPreference.STANDARD_PREFERENCE)
-				csvWriter.writeHeader(header)
-				for (info : infos.values) {
-					csvWriter.write(info, header)
-				}
-				csvWriter.close
-				writer.close
+				GithubRepositoryInfo.write(csvFile, infos.values)
 			}
 			size = maxSize + 1
 		}
@@ -142,7 +108,7 @@ class GithubCodeSearchScraper {
 			val url = "https://github.com/" + urlSuffix
 			if (!infos.containsKey(url)) {
 				System.out.print(".")
-				val info = new GithubProjectPageScraper(driver, url, repositoryQueries).information
+				val info = new GithubRepositoryPage(driver, url, repositoryQueries).information
 				infos.put(info.url, info)
 			}
 		}
@@ -159,12 +125,12 @@ class GithubCodeSearchScraper {
 
 	def static void main(String[] args) {
 		if (args.length != 1) {
-			System.out.println("Please sepcify one argument indicating a csv file for loading and saving results.")
+			System.out.println("Please specify one argument indicating a csv file for loading and saving results.")
 			System.exit(-1)
 		}
 		val scraper = new GithubCodeSearchScraper(new File(args.get(0)), new FirefoxDriver(),
-			new SearchQuery("Capybara find", "ruby"), 1800, 1000 * 1000, 100, new SearchQuery("click", "ruby"),
-			new SearchQuery("click", "cucumber"))
+			new CodeSearchQuery("Capybara find", "ruby"), 1800, 1000 * 1000, 100, new CodeSearchQuery("click", "ruby"),
+			new CodeSearchQuery("click", "cucumber"))
 		scraper.start()
 	}
 }

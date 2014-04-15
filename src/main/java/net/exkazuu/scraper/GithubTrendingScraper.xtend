@@ -1,9 +1,10 @@
 package net.exkazuu.scraper
 
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.By
-import org.openqa.selenium.firefox.FirefoxDriver
 import java.util.HashSet
+import net.exkazuu.scraper.page.GithubRepositoryPage
+import org.openqa.selenium.By
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.firefox.FirefoxDriver
 
 /**
  * A class for scraping trending information from GitHub pages.
@@ -27,7 +28,7 @@ class GithubTrendingScraper {
 				driver.findElements(By.className("repository-name")).map [
 					it.getAttribute("href")
 				].toArray(#[""]).map [
-					new GithubProjectPageScraper(driver, it).information
+					new GithubRepositoryPage(driver, it).information
 				]
 			].flatten.filter [
 				!set.contains(it.url)
@@ -39,7 +40,7 @@ class GithubTrendingScraper {
 		]
 	}
 
-	def createCSharpTestCase(GithubProjectInformation info) '''
+	def createCSharpTestCase(GithubRepositoryInfo info) '''
 		[TestCase(@"«info.url».git",
 			@"«info.latestCommitSha»")]		// Star: «info.starCount»
 	'''
