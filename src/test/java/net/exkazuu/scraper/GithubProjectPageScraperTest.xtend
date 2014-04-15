@@ -1,5 +1,7 @@
 package net.exkazuu.scraper
 
+import net.exkazuu.scraper.page.GithubRepositoryPage
+import net.exkazuu.scraper.query.CodeSearchQuery
 import org.junit.After
 import org.junit.Test
 import org.openqa.selenium.firefox.FirefoxDriver
@@ -18,7 +20,7 @@ class GithubProjectPageScraperTest {
 
 	@Test
 	def void retrieveInformation() {
-		val scraper = new GithubProjectPage(driver, "libgit2", "libgit2", new CodeSearchQuery("user"))
+		val scraper = new GithubRepositoryPage(driver, "libgit2", "libgit2", new CodeSearchQuery("user"))
 		assertThat(scraper.starCount, greaterThanOrEqualTo(4203))
 		assertThat(scraper.forkCount, greaterThanOrEqualTo(924))
 
@@ -38,7 +40,7 @@ class GithubProjectPageScraperTest {
 
 	@Test
 	def void retrieveAbbreviatedBranchName() {
-		val scraper = new GithubProjectPage(driver, "absessive", "CurrencyTracker", new CodeSearchQuery("user"))
+		val scraper = new GithubRepositoryPage(driver, "absessive", "CurrencyTracker", new CodeSearchQuery("user"))
 		assertThat(scraper.starCount, greaterThanOrEqualTo(1))
 		assertThat(scraper.forkCount, greaterThanOrEqualTo(0))
 
