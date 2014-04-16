@@ -35,7 +35,7 @@ class TestCaseGenerator {
 
 	def static createCSharpTestCase(GithubRepositoryInfo info) '''
 		[TestCase(@"«info.url».git",
-			@"«info.latestCommitSha»")]		// Star: «info.starCount»
+			@"«info.latestCommitSha»", «info.starCount»)]
 	'''
 
 	def static void main(String[] args) {
