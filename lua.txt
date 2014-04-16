@@ -26,90 +26,94 @@
 	@"2b565ee240c883bbb4115106eef66f9f1508a864")]		// Star: 289
 [TestCase(@"https://github.com/tylerneylon/pacpac.git",
 	@"cad99bdd64346dbc3180ee611ea502197da8b414")]		// Star: 273
-[TestCase(@"https://github.com/stevedonovan/Penlight.git",
-	@"6118a923f5ef4a21a9ae432d42707c5f4f0446a1")]		// Star: 248
-[TestCase(@"https://github.com/ignacio/LuaNode.git",
-	@"bca3678ec44334b990d026c60ac51d15a5ef2a06")]		// Star: 249
-[TestCase(@"https://github.com/CorsixTH/CorsixTH.git",
-	@"a7da0b72a7895d1e253963bb68c32ae6b226991f")]		// Star: 238
 [TestCase(@"https://github.com/exebetche/vlsub.git",
 	@"71ef0ef295cafb5477769d9ba3975c6c2ba8d609")]		// Star: 259
+[TestCase(@"https://github.com/ignacio/LuaNode.git",
+	@"bca3678ec44334b990d026c60ac51d15a5ef2a06")]		// Star: 249
+[TestCase(@"https://github.com/stevedonovan/Penlight.git",
+	@"6118a923f5ef4a21a9ae432d42707c5f4f0446a1")]		// Star: 248
 [TestCase(@"https://github.com/zedshaw/Tir.git",
 	@"4c1bdfa5b421e8eb9d3724928055da2728130d40")]		// Star: 241
+[TestCase(@"https://github.com/CorsixTH/CorsixTH.git",
+	@"a7da0b72a7895d1e253963bb68c32ae6b226991f")]		// Star: 238
 [TestCase(@"https://github.com/Olivine-Labs/busted.git",
 	@"2ded1f55a2314cee25d4a5689e34e7f92e47ac46")]		// Star: 224
 [TestCase(@"https://github.com/SpiderLabs/owasp-modsecurity-crs.git",
 	@"6b9e47e4c210a9f2824e042d54b590506982b93a")]		// Star: 215
-[TestCase(@"https://github.com/ymobe/rapanui.git",
-	@"595076d5706695a8b9b8de393b749d7d90a414a2")]		// Star: 201
 [TestCase(@"https://github.com/mirven/underscore.lua.git",
 	@"1bb487f5a0e523a4438a9d126a7ed44accea5a5a")]		// Star: 212
+[TestCase(@"https://github.com/ymobe/rapanui.git",
+	@"595076d5706695a8b9b8de393b749d7d90a414a2")]		// Star: 201
 [TestCase(@"https://github.com/keplerproject/luarocks.git",
 	@"999e27d74abd0bc53165d2ce2642fb5a7af81f40")]		// Star: 200
 [TestCase(@"https://github.com/nrk/redis-lua.git",
 	@"4408c3d686ffd1f2689c0561a166821785cc09ec")]		// Star: 186
+[TestCase(@"https://github.com/gamesys/moonshine.git",
+	@"ca6d7a57bfb676caf409e7398a448f90eb139b47")]		// Star: 167
 [TestCase(@"https://github.com/garrynewman/garrysmod.git",
 	@"1bd8973a763e4bb3f9dcb61bacc25acab2769df8")]		// Star: 162
 [TestCase(@"https://github.com/tekkub/wow-ui-source.git",
 	@"e9e777a6d1baca29d6253260a69463767d8d9b00")]		// Star: 162
 [TestCase(@"https://github.com/malkia/ufo.git",
 	@"bdcba300f91c38a2d4652d644b0de9f64ad9936c")]		// Star: 154
-[TestCase(@"https://github.com/wiremod/wire.git",
-	@"231148a4da77173768e823a64842753243ec304e")]		// Star: 148
 [TestCase(@"https://github.com/basecamp/intermission.git",
 	@"bb75e1ec83dea67e4db4a6a7c00bc4fcd477eae0")]		// Star: 150
+[TestCase(@"https://github.com/wiremod/wire.git",
+	@"231148a4da77173768e823a64842753243ec304e")]		// Star: 148
 [TestCase(@"https://github.com/minetest/minetest_game.git",
 	@"15740ffd3d1ea1af182a8607c600f3af414c2c73")]		// Star: 145
-[TestCase(@"https://github.com/justincormack/ljsyscall.git",
-	@"19eb826a46c177c2f93f9ec8985afc684beb1a78")]		// Star: 140
 [TestCase(@"https://github.com/bjc/prosody.git",
 	@"701fa72ca55909888b3fd428724128c654d8b543")]		// Star: 142
+[TestCase(@"https://github.com/vrld/hump.git",
+	@"e10fa66e60c5984a8d92801163d23811b7ac509f")]		// Star: 142
+[TestCase(@"https://github.com/justincormack/ljsyscall.git",
+	@"19eb826a46c177c2f93f9ec8985afc684beb1a78")]		// Star: 140
 [TestCase(@"https://github.com/osadchuk/Corona-SDK.tmbundle.git",
 	@"86ac8c832b0b9234a9859c5c49e704d4cd7899fb")]		// Star: 140
 [TestCase(@"https://github.com/igrigorik/tokyo-recipes.git",
 	@"b2b34fe52ca7163d964954f408d9f787c408670a")]		// Star: 139
-[TestCase(@"https://github.com/vrld/hump.git",
-	@"e10fa66e60c5984a8d92801163d23811b7ac509f")]		// Star: 142
+[TestCase(@"https://github.com/fab13n/metalua.git",
+	@"355ff0bc201e00856ba20d82c65b14ffa6fcfe4b")]		// Star: 136
+[TestCase(@"https://github.com/kikito/lua_missions.git",
+	@"330d7702417c4b18358ab822ba676058892ad889")]		// Star: 133
+[TestCase(@"https://github.com/diegonehab/luasocket.git",
+	@"6d5e40c324c84d9c1453ae88e0ad5bdd0a631448")]		// Star: 131
 [TestCase(@"https://github.com/haberman/gazelle.git",
 	@"af0fb1b2bcaae513e1ff54d70f022cdc97a93377")]		// Star: 129
 [TestCase(@"https://github.com/loveshell/ngx_lua_waf.git",
 	@"2b32a34dfc67e8bbb677987319a30357d5ae6e14")]		// Star: 127
-[TestCase(@"https://github.com/kikito/lua_missions.git",
-	@"330d7702417c4b18358ab822ba676058892ad889")]		// Star: 133
-[TestCase(@"https://github.com/FPtje/DarkRP.git",
-	@"ed1a0db0afc6302353d474a73777948f230a3d1d")]		// Star: 123
-[TestCase(@"https://github.com/fab13n/metalua.git",
-	@"355ff0bc201e00856ba20d82c65b14ffa6fcfe4b")]		// Star: 136
+[TestCase(@"https://github.com/Yonaba/Jumper.git",
+	@"2479afadf3d50e30ea9f9ab104e6229176d57339")]		// Star: 127
 [TestCase(@"https://github.com/ansca/Ghosts-vs.-Monsters.git",
 	@"7c036c0d11f279c5dace9dcda4f5ad2242a8ca77")]		// Star: 124
+[TestCase(@"https://github.com/FPtje/DarkRP.git",
+	@"ed1a0db0afc6302353d474a73777948f230a3d1d")]		// Star: 123
 [TestCase(@"https://github.com/mikar/awesome34-themes.git",
 	@"312cbc31b271afa164a81d51822de7d54b1153f3")]		// Star: 117
 [TestCase(@"https://github.com/kernelsauce/turbo.git",
 	@"d1411bbbcbe18cb20a7d91bb95505d952993c31f")]		// Star: 115
 [TestCase(@"https://github.com/oneoo/alilua.git",
 	@"7ce84488504cd364aa5d86acceff8fb8203b9b4f")]		// Star: 112
-[TestCase(@"https://github.com/daogangtang/bamboo.git",
-	@"e8e58814b1c511396589846ed3f7cb57a3222d48")]		// Star: 111
-[TestCase(@"https://github.com/Fluorohydride/ygopro.git",
-	@"16a98132749215b8ca27f6e479976ef42c4cd0fc")]		// Star: 107
-[TestCase(@"https://github.com/Yonaba/Jumper.git",
-	@"2479afadf3d50e30ea9f9ab104e6229176d57339")]		// Star: 127
-[TestCase(@"https://github.com/appwilldev/moochine.git",
-	@"9f643a5b51fb132c11ec1c870e4979cf03012992")]		// Star: 109
 [TestCase(@"https://github.com/kikito/inspect.lua.git",
 	@"e67a7471d4dd9e22e26b3620ce8701c0e479cb82")]		// Star: 112
-[TestCase(@"https://github.com/diegonehab/luasocket.git",
-	@"6d5e40c324c84d9c1453ae88e0ad5bdd0a631448")]		// Star: 131
+[TestCase(@"https://github.com/daogangtang/bamboo.git",
+	@"e8e58814b1c511396589846ed3f7cb57a3222d48")]		// Star: 111
+[TestCase(@"https://github.com/Kadoba/Advanced-Tiled-Loader.git",
+	@"0cc155d14406feb0335d455afd1c1fdd8b028671")]		// Star: 110
+[TestCase(@"https://github.com/appwilldev/moochine.git",
+	@"9f643a5b51fb132c11ec1c870e4979cf03012992")]		// Star: 109
+[TestCase(@"https://github.com/Fluorohydride/ygopro.git",
+	@"16a98132749215b8ca27f6e479976ef42c4cd0fc")]		// Star: 107
+[TestCase(@"https://github.com/fjolnir/TLC.git",
+	@"3b0300d2dac913d2d43162cde52479a2d3986ecb")]		// Star: 103
 [TestCase(@"https://github.com/NikolaiResokav/LoveFrames.git",
 	@"4dfffef2bc8fd5053e714533b7e6e701722c7a89")]		// Star: 101
 [TestCase(@"https://github.com/haste/oUF.git",
 	@"955f9424bf53b149fb03822bb2082f8888241c78")]		// Star: 99
-[TestCase(@"https://github.com/Kadoba/Advanced-Tiled-Loader.git",
-	@"0cc155d14406feb0335d455afd1c1fdd8b028671")]		// Star: 110
-[TestCase(@"https://github.com/fjolnir/TLC.git",
-	@"3b0300d2dac913d2d43162cde52479a2d3986ecb")]		// Star: 103
 [TestCase(@"https://github.com/Shestak/ShestakUI.git",
 	@"42527a9c4b81c3c1f762b73d4e777cd0fbd3a852")]		// Star: 98
+[TestCase(@"https://github.com/stevedonovan/LDoc.git",
+	@"511dfe7df01f92da03c639c5f56495c0c31b6e2b")]		// Star: 96
 [TestCase(@"https://github.com/pavouk/lgi.git",
 	@"3feb90f4c0c20312e646fb8b1106a5c44a04293e")]		// Star: 93
 [TestCase(@"https://github.com/majek/lua-channels.git",
@@ -118,376 +122,392 @@
 	@"b1a759fe9606bfc49a8df458629099be87ab86f5")]		// Star: 92
 [TestCase(@"https://github.com/virgo-agent-toolkit/rackspace-monitoring-agent.git",
 	@"5197adcd93c61db3c30b1a45a6fc6dbd1d95d66f")]		// Star: 90
-[TestCase(@"https://github.com/stevedonovan/LDoc.git",
-	@"511dfe7df01f92da03c639c5f56495c0c31b6e2b")]		// Star: 96
+[TestCase(@"https://github.com/lefcha/concurrentlua.git",
+	@"74405929dca29b2c61fcb9e94c6b6d8799bb148a")]		// Star: 90
 [TestCase(@"https://github.com/pkulchenko/MobDebug.git",
 	@"c2b9988ccda7998be466da67690316b45fd3469a")]		// Star: 88
-[TestCase(@"https://github.com/norman/telescope.git",
-	@"c80b928e306cad7195e1ce5b92ddcdcb0a2c50b2")]		// Star: 85
 [TestCase(@"https://github.com/davidm/lua-inspect.git",
 	@"ca3988019a2f5f1b3f4e94b285eb6e77e5923dd3")]		// Star: 88
 [TestCase(@"https://github.com/terceiro/awesome-freedesktop.git",
 	@"e514e742864495f23fd725f8c596f41a01d67795")]		// Star: 86
-[TestCase(@"https://github.com/lefcha/concurrentlua.git",
-	@"74405929dca29b2c61fcb9e94c6b6d8799bb148a")]		// Star: 90
+[TestCase(@"https://github.com/norman/telescope.git",
+	@"c80b928e306cad7195e1ce5b92ddcdcb0a2c50b2")]		// Star: 85
 [TestCase(@"https://github.com/kikito/tween.lua.git",
 	@"b14444fe3c6bb0a530b97109f3ce2f5e32f55839")]		// Star: 85
-[TestCase(@"https://github.com/nrk/mercury.git",
-	@"13c85348e059dd24f2c26cf9b4e259fa2d1001c8")]		// Star: 77
 [TestCase(@"https://github.com/romockee/powerarrow.git",
 	@"530d208c76280d4f6f566394e6f6a7ebf18fc61e")]		// Star: 85
+[TestCase(@"https://github.com/crosslife/LoveClear.git",
+	@"dd9a81488bbf598e3e279c545a99c562f201d41b")]		// Star: 80
+[TestCase(@"https://github.com/LuaAV/LuaAV.git",
+	@"7a5dd24de0c31f0d46b27440363408d1a987b044")]		// Star: 79
+[TestCase(@"https://github.com/nrk/mercury.git",
+	@"13c85348e059dd24f2c26cf9b4e259fa2d1001c8")]		// Star: 77
 [TestCase(@"https://github.com/richardhundt/shine.git",
 	@"a3cdf3bfc9645f90572fdd80951302edf6681ede")]		// Star: 76
-[TestCase(@"https://github.com/Cue/hop.git",
-	@"3e1b8e6bf535fb12f1ad3348473c64acd3647993")]		// Star: 72
+[TestCase(@"https://github.com/jtarchie/underscore-lua.git",
+	@"a98846874399916a8689dd5bfe7cafd373128a66")]		// Star: 75
 [TestCase(@"https://github.com/copycat-killer/lain.git",
 	@"4c3cf3c0b78624242be877a8454a3cd7c2679d45")]		// Star: 73
 [TestCase(@"https://github.com/keplerproject/xavante.git",
 	@"58188b9da0d6ad621e5da6089684c5273936b398")]		// Star: 73
-[TestCase(@"https://github.com/Kiwi/clyde.git",
-	@"dcdba8de3a3be3685a72a1fcab24080124242a7e")]		// Star: 70
-[TestCase(@"https://github.com/jtarchie/underscore-lua.git",
-	@"a98846874399916a8689dd5bfe7cafd373128a66")]		// Star: 75
-[TestCase(@"https://github.com/harningt/luajson.git",
-	@"827425b10152f8cdc515e4ffb900338506e28910")]		// Star: 71
-[TestCase(@"https://github.com/LuaAV/LuaAV.git",
-	@"7a5dd24de0c31f0d46b27440363408d1a987b044")]		// Star: 79
-[TestCase(@"https://github.com/AdamBuchweitz/CrawlSpaceLib.git",
-	@"471868fe6cad288cac57281b5218cdd711b826eb")]		// Star: 71
+[TestCase(@"https://github.com/Cue/hop.git",
+	@"3e1b8e6bf535fb12f1ad3348473c64acd3647993")]		// Star: 72
 [TestCase(@"https://github.com/vrld/HardonCollider.git",
 	@"fb8c0511cf85b86327e34f9356e1e8cf9aee8b47")]		// Star: 72
-[TestCase(@"https://github.com/mcurry/html_cache.git",
-	@"83af9d9ee24b94b99387d8171b78e388388be756")]		// Star: 68
-[TestCase(@"https://github.com/Neopallium/lua-handlers.git",
-	@"ae93f442175f4f03dd612cafa073df74a8fe626f")]		// Star: 70
-[TestCase(@"https://github.com/tony/awesome-config.git",
-	@"2957a1bd888a6a99666f3a67c87d0333474736a9")]		// Star: 71
-[TestCase(@"https://github.com/Stabyourself/mari0.git",
-	@"b1412a08a1411b2f237cdd276aee27df008cb06e")]		// Star: 69
 [TestCase(@"https://github.com/lipp/lua-websockets.git",
 	@"9ade24fc972cfc80b5d1d31e1d92ec1d28b7c4be")]		// Star: 72
-[TestCase(@"https://github.com/nmap/nmap.git",
-	@"ef328e6eed8410d4b2f18560da43f45856e269db")]		// Star: 65
-[TestCase(@"https://github.com/liseen/lua-resty-http.git",
-	@"32d951bb47ebddb82b0e3bf1a6eb0af4a6df9f1e")]		// Star: 68
-[TestCase(@"https://github.com/crosslife/LoveClear.git",
-	@"dd9a81488bbf598e3e279c545a99c562f201d41b")]		// Star: 80
-[TestCase(@"https://github.com/keplerproject/orbit.git",
-	@"123ec06e3a9fd844f28a43258227bce19ba8ab30")]		// Star: 65
-[TestCase(@"https://github.com/radamanthus/corona-game-template.git",
-	@"2d1dc125648b70b855fe5a318ad8a6ee30a4e1d2")]		// Star: 65
+[TestCase(@"https://github.com/harningt/luajson.git",
+	@"827425b10152f8cdc515e4ffb900338506e28910")]		// Star: 71
+[TestCase(@"https://github.com/AdamBuchweitz/CrawlSpaceLib.git",
+	@"471868fe6cad288cac57281b5218cdd711b826eb")]		// Star: 71
+[TestCase(@"https://github.com/tony/awesome-config.git",
+	@"2957a1bd888a6a99666f3a67c87d0333474736a9")]		// Star: 71
 [TestCase(@"https://github.com/weshoke/Lust.git",
 	@"174ee908a3b0ee4ca71c92f314fd0efa82498035")]		// Star: 71
+[TestCase(@"https://github.com/miko/Love2d-samples.git",
+	@"50a8b4b43d517081a83d036e4510904402dcd7d2")]		// Star: 71
+[TestCase(@"https://github.com/Kiwi/clyde.git",
+	@"dcdba8de3a3be3685a72a1fcab24080124242a7e")]		// Star: 70
+[TestCase(@"https://github.com/Neopallium/lua-handlers.git",
+	@"ae93f442175f4f03dd612cafa073df74a8fe626f")]		// Star: 70
+[TestCase(@"https://github.com/Stabyourself/mari0.git",
+	@"b1412a08a1411b2f237cdd276aee27df008cb06e")]		// Star: 69
+[TestCase(@"https://github.com/mcurry/html_cache.git",
+	@"83af9d9ee24b94b99387d8171b78e388388be756")]		// Star: 68
+[TestCase(@"https://github.com/liseen/lua-resty-http.git",
+	@"32d951bb47ebddb82b0e3bf1a6eb0af4a6df9f1e")]		// Star: 68
 [TestCase(@"https://github.com/cedlemo/blingbling.git",
 	@"7ac39503e2811042cf0d83a0874d230779a710ef")]		// Star: 66
 [TestCase(@"https://github.com/stevedonovan/Lake.git",
 	@"065ac452fd43be501cab587e8a30d3c9b7479726")]		// Star: 66
+[TestCase(@"https://github.com/nmap/nmap.git",
+	@"ef328e6eed8410d4b2f18560da43f45856e269db")]		// Star: 65
+[TestCase(@"https://github.com/keplerproject/orbit.git",
+	@"123ec06e3a9fd844f28a43258227bce19ba8ab30")]		// Star: 65
+[TestCase(@"https://github.com/radamanthus/corona-game-template.git",
+	@"2d1dc125648b70b855fe5a318ad8a6ee30a4e1d2")]		// Star: 65
 [TestCase(@"https://github.com/ostinelli/gin.git",
 	@"8361d2f5f16e64c65ba33d1dbbc74b97d5256f76")]		// Star: 64
-[TestCase(@"https://github.com/Jiyambi/WoW-Pro-Guides.git",
-	@"d2179d9532aec0a86c6a0e6ae548fdc1c5314a4c")]		// Star: 61
 [TestCase(@"https://github.com/ignacio/LuaOAuth.git",
 	@"3e1e6962658cbb78a5cd3e10c8f6abd35d59232a")]		// Star: 64
 [TestCase(@"https://github.com/davidm/lua2c.git",
 	@"c5b239dd5a9fad5718ffaa16e6a30cca8053ba92")]		// Star: 62
-[TestCase(@"https://github.com/henkboom/pax-britannica.git",
-	@"a7a3c0c21e5b27e6f4be3b0b817ebd29cd23fa7d")]		// Star: 60
+[TestCase(@"https://github.com/haberman/jitdemo.git",
+	@"387503c5b8db268a6236a46e491d6f756ed17d31")]		// Star: 62
+[TestCase(@"https://github.com/Jiyambi/WoW-Pro-Guides.git",
+	@"d2179d9532aec0a86c6a0e6ae548fdc1c5314a4c")]		// Star: 61
 [TestCase(@"https://github.com/Germanunkol/trAInsported.git",
 	@"9acd13435ac05ca3821688b1c5d60ba115625e8b")]		// Star: 61
-[TestCase(@"https://github.com/vincentbernat/awesome-configuration.git",
-	@"b649c57c91ba4cb624f37d3f2a4249d9806da68c")]		// Star: 59
-[TestCase(@"https://github.com/josefnpat/vapor.git",
-	@"168e91c009ad7bb270498721ff753b4eb1a33038")]		// Star: 58
-[TestCase(@"https://github.com/miko/Love2d-samples.git",
-	@"50a8b4b43d517081a83d036e4510904402dcd7d2")]		// Star: 71
-[TestCase(@"https://github.com/roaminggamer/SSKCorona.git",
-	@"a9d6dfec85c01c2d9f8d455a10dcfefcafe35694")]		// Star: 60
-[TestCase(@"https://github.com/Yonaba/30log.git",
-	@"25022b30e58f1590ca3d2bc2c17107b869c38d62")]		// Star: 57
-[TestCase(@"https://github.com/AlexChittock/SimpleShortener.git",
-	@"76462aeea14adcc0aef49c2cfa8a49951b5d460e")]		// Star: 55
-[TestCase(@"https://github.com/Nuku/Flexible-Survival.git",
-	@"4b75f275ece08e07d1325efc3205578edc0a021b")]		// Star: 56
 [TestCase(@"https://github.com/torhve/LuaWeb.git",
 	@"da1b73e7b70c938e35051a242c6fa70236e60aac")]		// Star: 61
-[TestCase(@"https://github.com/meric/l2l.git",
-	@"e9394879e9bde63b1b21e39928ac19f304fc1b39")]		// Star: 56
+[TestCase(@"https://github.com/henkboom/pax-britannica.git",
+	@"a7a3c0c21e5b27e6f4be3b0b817ebd29cd23fa7d")]		// Star: 60
+[TestCase(@"https://github.com/roaminggamer/SSKCorona.git",
+	@"a9d6dfec85c01c2d9f8d455a10dcfefcafe35694")]		// Star: 60
+[TestCase(@"https://github.com/vincentbernat/awesome-configuration.git",
+	@"b649c57c91ba4cb624f37d3f2a4249d9806da68c")]		// Star: 59
+[TestCase(@"https://github.com/kikito/love-tile-tutorial.git",
+	@"92c5ce5e7e5aa9de461f948c17ed5c8d3af1d0d4")]		// Star: 59
+[TestCase(@"https://github.com/dualface/quick-x-server.git",
+	@"2c037690610d92692744bf78fc136dec8068fddf")]		// Star: 59
+[TestCase(@"https://github.com/josefnpat/vapor.git",
+	@"168e91c009ad7bb270498721ff753b4eb1a33038")]		// Star: 58
 [TestCase(@"https://github.com/geoffleyland/luatrace.git",
 	@"6150cfd6290986adab8ea948e756ee17c80d098a")]		// Star: 58
+[TestCase(@"https://github.com/Yonaba/30log.git",
+	@"25022b30e58f1590ca3d2bc2c17107b869c38d62")]		// Star: 57
+[TestCase(@"https://github.com/SimonLarsen/mrrescue.git",
+	@"8f226413b95544d0e0744d9c3e92c68b87659483")]		// Star: 57
+[TestCase(@"https://github.com/Nuku/Flexible-Survival.git",
+	@"4b75f275ece08e07d1325efc3205578edc0a021b")]		// Star: 56
+[TestCase(@"https://github.com/meric/l2l.git",
+	@"e9394879e9bde63b1b21e39928ac19f304fc1b39")]		// Star: 56
+[TestCase(@"https://github.com/pkulchenko/serpent.git",
+	@"026f4e1a5c34f0670948a13d2182729448a260f2")]		// Star: 56
+[TestCase(@"https://github.com/AlexChittock/SimpleShortener.git",
+	@"76462aeea14adcc0aef49c2cfa8a49951b5d460e")]		// Star: 55
 [TestCase(@"https://github.com/willsteel/lcpp.git",
 	@"7fdda9a5e3eacccee7571130602dc1381c01bcd9")]		// Star: 55
+[TestCase(@"https://github.com/dmccuskey/DMC-Corona-Library.git",
+	@"8c85803e39a673cc84b6aa089b51be56f05dd062")]		// Star: 55
+[TestCase(@"https://github.com/Neopallium/lua-pb.git",
+	@"862fe3121e71f695d9a44ee1d1038069292b69f3")]		// Star: 54
 [TestCase(@"https://github.com/keplerproject/luadoc.git",
 	@"5250a12bf3bd45873a0f14305b363e53dc8b4a86")]		// Star: 53
 [TestCase(@"https://github.com/SnakeSVx/spacebuild.git",
 	@"68186b8bc7cabbb5275afd734fae9613fbd8761d")]		// Star: 53
-[TestCase(@"https://github.com/yuri/sputnik.git",
-	@"d4c41a5a6130cca259dc2f21c1d5d99ca6a225ac")]		// Star: 51
-[TestCase(@"https://github.com/kikito/love-tile-tutorial.git",
-	@"92c5ce5e7e5aa9de461f948c17ed5c8d3af1d0d4")]		// Star: 59
-[TestCase(@"https://github.com/annulen/premake.git",
-	@"c559fa4913bd86be6e415c3b193db90ae4607f5b")]		// Star: 52
 [TestCase(@"https://github.com/darklajid/ansible-communication.git",
 	@"003bc68dcbb9606a8099132a399cf21bf342e81c")]		// Star: 53
-[TestCase(@"https://github.com/haberman/jitdemo.git",
-	@"387503c5b8db268a6236a46e491d6f756ed17d31")]		// Star: 62
-[TestCase(@"https://github.com/dualface/quick-x-server.git",
-	@"2c037690610d92692744bf78fc136dec8068fddf")]		// Star: 59
 [TestCase(@"https://github.com/ansca/Corona-Comics-SDK-2.0.git",
 	@"ac2abb7ef77753bb01e76ce008d88cece46661b4")]		// Star: 53
-[TestCase(@"https://github.com/Neopallium/lua-pb.git",
-	@"862fe3121e71f695d9a44ee1d1038069292b69f3")]		// Star: 54
-[TestCase(@"https://github.com/dmccuskey/DMC-Corona-Library.git",
-	@"8c85803e39a673cc84b6aa089b51be56f05dd062")]		// Star: 55
-[TestCase(@"https://github.com/pkulchenko/serpent.git",
-	@"026f4e1a5c34f0670948a13d2182729448a260f2")]		// Star: 56
-[TestCase(@"https://github.com/mirven/luaspec.git",
-	@"c0c774b54dcc214250cc8eb8aea0dcea60dc6f7c")]		// Star: 49
+[TestCase(@"https://github.com/xolox/vim-lua-inspect.git",
+	@"d7fb876f0291cbd13c4c38177ada015fafc58770")]		// Star: 53
+[TestCase(@"https://github.com/Overtorment/NoobHub.git",
+	@"b0e44e70f44544033e3d50d7ea345fc02db76fe5")]		// Star: 53
+[TestCase(@"https://github.com/annulen/premake.git",
+	@"c559fa4913bd86be6e415c3b193db90ae4607f5b")]		// Star: 52
+[TestCase(@"https://github.com/yuri/sputnik.git",
+	@"d4c41a5a6130cca259dc2f21c1d5d99ca6a225ac")]		// Star: 51
 [TestCase(@"https://github.com/ignacio/StackTracePlus.git",
 	@"3c0d8a09670a40267104348feac19de73191d398")]		// Star: 51
+[TestCase(@"https://github.com/leafo/magick.git",
+	@"6ba5063b2fe3cf043b4247e9508a6c74b211e704")]		// Star: 51
+[TestCase(@"https://github.com/mirven/luaspec.git",
+	@"c0c774b54dcc214250cc8eb8aea0dcea60dc6f7c")]		// Star: 49
 [TestCase(@"https://github.com/iamgreaser/iceball.git",
 	@"4ae5d09ce4fd2269f4e097b63bd0fd9b83f2198f")]		// Star: 49
-[TestCase(@"https://github.com/bioe007/awesome-configs.git",
-	@"cb91a271d55a40cae6b25b0a34ded6947211353f")]		// Star: 47
-[TestCase(@"https://github.com/Bertram25/ValyriaTear.git",
-	@"a0e86da761fbc84ace9a778faf64e0f3687dbb3e")]		// Star: 46
 [TestCase(@"https://github.com/shawndumas/adventure.lua.git",
 	@"e98626163129f7c3c4fa6f23abaad1d16b524b16")]		// Star: 48
+[TestCase(@"https://github.com/Olivine-Labs/lustache.git",
+	@"3358eda141041f8998b938c242b1eda7817898e9")]		// Star: 48
+[TestCase(@"https://github.com/bioe007/awesome-configs.git",
+	@"cb91a271d55a40cae6b25b0a34ded6947211353f")]		// Star: 47
 [TestCase(@"https://github.com/xopxe/Lumen.git",
 	@"264d9d042ee9848bccfd064d69259c1d6bde0a2e")]		// Star: 47
+[TestCase(@"https://github.com/Neopallium/lualogging.git",
+	@"c85130120406b9641e96ab05f782dde819fbd102")]		// Star: 47
+[TestCase(@"https://github.com/Bertram25/ValyriaTear.git",
+	@"a0e86da761fbc84ace9a778faf64e0f3687dbb3e")]		// Star: 46
 [TestCase(@"https://github.com/keplerproject/wsapi.git",
 	@"eed8338401196cc155e59280adbe58d78933ead0")]		// Star: 46
 [TestCase(@"https://github.com/wiremod/advduplicator.git",
 	@"b00138d1b01545fbd6bdec9f7a57597b8c6da164")]		// Star: 46
-[TestCase(@"https://github.com/xolox/vim-lua-inspect.git",
-	@"d7fb876f0291cbd13c4c38177ada015fafc58770")]		// Star: 53
-[TestCase(@"https://github.com/metadeus/luv.git",
-	@"655c0efc14572d18744aff336210b30574dd7eaf")]		// Star: 44
-[TestCase(@"https://github.com/appwilldev/moochine-demo.git",
-	@"3b3f565386d43aa533793700c020c4f096ac9636")]		// Star: 45
 [TestCase(@"https://github.com/GymbylCoding/Dusk-Engine.git",
 	@"f0fcdfc2cd628966bbf208bcb6bf3c3374dd1e42")]		// Star: 46
 [TestCase(@"https://github.com/mtourne/nginx_log_by_lua.git",
 	@"adc7ecbb3107e0b2a487d851acd33464215a076a")]		// Star: 46
-[TestCase(@"https://github.com/silentbicycle/tangram.git",
-	@"85f56670ac839def04715457e1ddaaba7f340bc1")]		// Star: 45
-[TestCase(@"https://github.com/SimonLarsen/mrrescue.git",
-	@"8f226413b95544d0e0744d9c3e92c68b87659483")]		// Star: 57
-[TestCase(@"https://github.com/franko/luajit-lang-toolkit.git",
-	@"838b951f65899330a6b707cde96582b5f795abe3")]		// Star: 43
 [TestCase(@"https://github.com/Yonaba/Moses.git",
 	@"57c7b5d1d1f074cafbd570088ad8681b03c65601")]		// Star: 46
-[TestCase(@"https://github.com/Overtorment/NoobHub.git",
-	@"b0e44e70f44544033e3d50d7ea345fc02db76fe5")]		// Star: 53
-[TestCase(@"https://github.com/Elv13/tyrannical.git",
-	@"117bf645ddf015a9da63da8c33cc7da004661261")]		// Star: 43
-[TestCase(@"https://github.com/Neopallium/lualogging.git",
-	@"c85130120406b9641e96ab05f782dde819fbd102")]		// Star: 47
 [TestCase(@"https://github.com/stevedonovan/Microlight.git",
 	@"95ae73f9830aec3bb1d4773156a6f921dfbed9b4")]		// Star: 46
-[TestCase(@"https://github.com/bioe007/awesome-shifty.git",
-	@"b12b66e6a26a2c5fbec6c1119dd29b4f8faf0fe0")]		// Star: 41
+[TestCase(@"https://github.com/appwilldev/moochine-demo.git",
+	@"3b3f565386d43aa533793700c020c4f096ac9636")]		// Star: 45
+[TestCase(@"https://github.com/silentbicycle/tangram.git",
+	@"85f56670ac839def04715457e1ddaaba7f340bc1")]		// Star: 45
+[TestCase(@"https://github.com/metadeus/luv.git",
+	@"655c0efc14572d18744aff336210b30574dd7eaf")]		// Star: 44
 [TestCase(@"https://github.com/lubyk/dub.git",
 	@"b0c7087e878937399f329468bff41de9484f8b0c")]		// Star: 44
-[TestCase(@"https://github.com/lilydjwg/myawesomerc.git",
-	@"d7183f3cb533064ecc39a51e621fc556671ff449")]		// Star: 42
-[TestCase(@"https://github.com/lua-nucleo/lua-nucleo.git",
-	@"570e115dab1260ad433bd778eebb5d91fd122d5a")]		// Star: 43
-[TestCase(@"https://github.com/kikito/anim8.git",
-	@"8f110db45f63451df2589255c009ad0e2312eed6")]		// Star: 41
-[TestCase(@"https://github.com/Olivine-Labs/lustache.git",
-	@"3358eda141041f8998b938c242b1eda7817898e9")]		// Star: 48
 [TestCase(@"https://github.com/keplerproject/copas.git",
 	@"d2474ab444af5c2bff0ae23f60affb7c64f49242")]		// Star: 44
-[TestCase(@"https://github.com/ravageralpha/my_openwrt_mod.git",
-	@"70fcba54825c9da6e09e7cdeb8ba57809c36c8e1")]		// Star: 40
-[TestCase(@"https://github.com/norman/lua-haml.git",
-	@"7eb4179f9003cc4f3d1db2adbaf81cea2fc8994c")]		// Star: 39
-[TestCase(@"https://github.com/leafo/magick.git",
-	@"6ba5063b2fe3cf043b4247e9508a6c74b211e704")]		// Star: 51
-[TestCase(@"https://github.com/iamaleksey/lua-zmq.git",
-	@"5578612efe296faa36203c7b80507e38fa7714e0")]		// Star: 40
-[TestCase(@"https://github.com/FourOne/Tukui_Filger.git",
-	@"2fb93152102c651ed8b2e8271727cf6d002738a2")]		// Star: 39
+[TestCase(@"https://github.com/pygy/LuLPeg.git",
+	@"c457b27e0d7fc935b133921bf3aee92efffe40c8")]		// Star: 44
+[TestCase(@"https://github.com/franko/luajit-lang-toolkit.git",
+	@"838b951f65899330a6b707cde96582b5f795abe3")]		// Star: 43
+[TestCase(@"https://github.com/Elv13/tyrannical.git",
+	@"117bf645ddf015a9da63da8c33cc7da004661261")]		// Star: 43
+[TestCase(@"https://github.com/lua-nucleo/lua-nucleo.git",
+	@"570e115dab1260ad433bd778eebb5d91fd122d5a")]		// Star: 43
+[TestCase(@"https://github.com/lilydjwg/myawesomerc.git",
+	@"d7183f3cb533064ecc39a51e621fc556671ff449")]		// Star: 42
+[TestCase(@"https://github.com/bioe007/awesome-shifty.git",
+	@"b12b66e6a26a2c5fbec6c1119dd29b4f8faf0fe0")]		// Star: 41
+[TestCase(@"https://github.com/kikito/anim8.git",
+	@"8f110db45f63451df2589255c009ad0e2312eed6")]		// Star: 41
 [TestCase(@"https://github.com/vrld/Quickie.git",
 	@"52d06037d13afdc68384f1031766ac087cb5e70e")]		// Star: 41
 [TestCase(@"https://github.com/silentbicycle/lunatest.git",
 	@"e33f2ff55dc843a29d01013aef22b4b89903599b")]		// Star: 41
-[TestCase(@"https://github.com/Neopallium/LuaNativeObjects.git",
-	@"a5c444769b7dfad1436a1bc4fe21dce75629db25")]		// Star: 39
-[TestCase(@"https://github.com/stevedonovan/LuaMacro.git",
-	@"4ec5a8ebdbb9576ca9aa16cc6645f4c7cf2a7705")]		// Star: 38
 [TestCase(@"https://github.com/headchant/LICK.git",
 	@"e2f900bb5dea40f4d8009fad03cdcf4aa96991f7")]		// Star: 41
+[TestCase(@"https://github.com/ravageralpha/my_openwrt_mod.git",
+	@"70fcba54825c9da6e09e7cdeb8ba57809c36c8e1")]		// Star: 40
+[TestCase(@"https://github.com/iamaleksey/lua-zmq.git",
+	@"5578612efe296faa36203c7b80507e38fa7714e0")]		// Star: 40
+[TestCase(@"https://github.com/henix/slt2.git",
+	@"67141149a05937589548a1368d0b52027014e2f1")]		// Star: 40
+[TestCase(@"https://github.com/cloudwu/lua-trace.git",
+	@"79a31124f64d863cf670ff82583a144f19570339")]		// Star: 40
+[TestCase(@"https://github.com/norman/lua-haml.git",
+	@"7eb4179f9003cc4f3d1db2adbaf81cea2fc8994c")]		// Star: 39
+[TestCase(@"https://github.com/FourOne/Tukui_Filger.git",
+	@"2fb93152102c651ed8b2e8271727cf6d002738a2")]		// Star: 39
+[TestCase(@"https://github.com/Neopallium/LuaNativeObjects.git",
+	@"a5c444769b7dfad1436a1bc4fe21dce75629db25")]		// Star: 39
+[TestCase(@"https://github.com/alexander-yakushev/awesompd.git",
+	@"00f26f44c5bf890988322b5107ee536531d6e0bc")]		// Star: 39
+[TestCase(@"https://github.com/stevedonovan/LuaMacro.git",
+	@"4ec5a8ebdbb9576ca9aa16cc6645f4c7cf2a7705")]		// Star: 38
 [TestCase(@"https://github.com/SiENcE/lovecodify.git",
 	@"9b84ce1a5f3474707e6021355afd6c2554f18251")]		// Star: 38
 [TestCase(@"https://github.com/jp-ganis/JPS.git",
 	@"c65f107fa59a5f572e0ffd70be7990a873d87487")]		// Star: 38
+[TestCase(@"https://github.com/SnakeSVx/sbep.git",
+	@"346e1431ed536d4b8b54676d330f28a06c3e54be")]		// Star: 38
+[TestCase(@"https://github.com/stravant/LuaMinify.git",
+	@"c284a942089b0154af7498b110e02d1bba8aee16")]		// Star: 38
 [TestCase(@"https://github.com/Toresh/Tukui_ClassTimer.git",
 	@"f9f5752d33a1a882cb5f46ef9e42badaa1fb5fc2")]		// Star: 37
+[TestCase(@"https://github.com/dualface/cocos2d-x-lua-framework.git",
+	@"8ebfc699fb135bd1749de02b6c1d5522ac105dd1")]		// Star: 37
 [TestCase(@"https://github.com/JesterXL/Robotlegs-for-Corona.git",
 	@"79e1407f962dce303325a827adff1fe0a3e16ad6")]		// Star: 36
 [TestCase(@"https://github.com/jsimmons/mongrel2-lua.git",
 	@"f6d2f50df67c69a56be50d23690530e19e9648db")]		// Star: 36
-[TestCase(@"https://github.com/alexander-yakushev/awesompd.git",
-	@"00f26f44c5bf890988322b5107ee536531d6e0bc")]		// Star: 39
-[TestCase(@"https://github.com/henix/slt2.git",
-	@"67141149a05937589548a1368d0b52027014e2f1")]		// Star: 40
-[TestCase(@"https://github.com/dualface/cocos2d-x-lua-framework.git",
-	@"8ebfc699fb135bd1749de02b6c1d5522ac105dd1")]		// Star: 37
 [TestCase(@"https://github.com/UPenn-RoboCup/UPennalizers.git",
 	@"abd9b34294a6485965be274333b72f1272f8f3c8")]		// Star: 36
+[TestCase(@"https://github.com/fperrad/lua-MessagePack.git",
+	@"c908ead3c2001663ac3d0b5a9c1001bfdcc87397")]		// Star: 36
+[TestCase(@"https://github.com/solso/api-aggregator.git",
+	@"2ea1f6b38f9bd4465255cd3a60a6dd6a6442dd9b")]		// Star: 36
+[TestCase(@"https://github.com/tdy/dots.git",
+	@"c74fbd925b41c6189ed394854ea289131399f3f1")]		// Star: 36
+[TestCase(@"https://github.com/fediaFedia/Omnimo.git",
+	@"a98cdf9cc5fa51b1aa82f2834218a3a11085f0b3")]		// Star: 36
 [TestCase(@"https://github.com/Windower/Lua.git",
 	@"28926d6c45907ca91d3883599745903173eb15ad")]		// Star: 35
-[TestCase(@"https://github.com/pygy/LuLPeg.git",
-	@"c457b27e0d7fc935b133921bf3aee92efffe40c8")]		// Star: 44
+[TestCase(@"https://github.com/chatid/fend.git",
+	@"72dc6b024e2cabb4b707250b89097d4ff0da22f2")]		// Star: 35
+[TestCase(@"https://github.com/dluksza/screenful.git",
+	@"758057633588cb35d54417783af1ce14864b8a3c")]		// Star: 35
+[TestCase(@"https://github.com/cloudwu/ldebug.git",
+	@"b80bcd31944d7ea4c504dc915601d3e2080e73d9")]		// Star: 35
 [TestCase(@"https://github.com/Elv13/awesome-configs.git",
 	@"18bbb46a2c8d2fc69e65e0d0a6fe66db9b5e0055")]		// Star: 34
 [TestCase(@"https://github.com/ggcrunchy/corona-sdk-snippets.git",
 	@"e89f4547a36c4b8b817855e2a3e7c50b9ae19a4d")]		// Star: 34
-[TestCase(@"https://github.com/SnakeSVx/sbep.git",
-	@"346e1431ed536d4b8b54676d330f28a06c3e54be")]		// Star: 38
 [TestCase(@"https://github.com/leafo/heroku-openresty.git",
 	@"5945df6f7641e456e51c518947a5f9e50f0cc4d5")]		// Star: 34
-[TestCase(@"https://github.com/cloudwu/lua-trace.git",
-	@"79a31124f64d863cf670ff82583a144f19570339")]		// Star: 40
-[TestCase(@"https://github.com/fperrad/lua-MessagePack.git",
-	@"c908ead3c2001663ac3d0b5a9c1001bfdcc87397")]		// Star: 36
-[TestCase(@"https://github.com/vain/awesome-vain.git",
-	@"a83343157e11efc1e1cbbe7b80ab01d38fca373a")]		// Star: 32
-[TestCase(@"https://github.com/chatid/fend.git",
-	@"72dc6b024e2cabb4b707250b89097d4ff0da22f2")]		// Star: 35
 [TestCase(@"https://github.com/deniza/Ad-Mediator-for-Corona.git",
 	@"084d12b45bd576f6abbb34cb3e849aaaa294e91c")]		// Star: 34
-[TestCase(@"https://github.com/solso/api-aggregator.git",
-	@"2ea1f6b38f9bd4465255cd3a60a6dd6a6442dd9b")]		// Star: 36
-[TestCase(@"https://github.com/mpeterv/luacheck.git",
-	@"43721c92786dc0b0fded70abe5b51880ec42e5e2")]		// Star: 33
-[TestCase(@"https://github.com/stravant/LuaMinify.git",
-	@"c284a942089b0154af7498b110e02d1bba8aee16")]		// Star: 38
-[TestCase(@"https://github.com/Floobits/diffshipper.git",
-	@"8542aeac030cc4f8fa93088a145574e8c379fdd9")]		// Star: 33
 [TestCase(@"https://github.com/silentbicycle/tamale.git",
 	@"6d8ef8315348b01c88bb9d2245f84d6b1cd68c07")]		// Star: 34
-[TestCase(@"https://github.com/tdy/dots.git",
-	@"c74fbd925b41c6189ed394854ea289131399f3f1")]		// Star: 36
-[TestCase(@"https://github.com/tekkub/libdatabroker-1-1.git",
-	@"1a63ede0248c11aa1ee415187c1f9c9489ce3e02")]		// Star: 32
-[TestCase(@"https://github.com/dluksza/screenful.git",
-	@"758057633588cb35d54417783af1ce14864b8a3c")]		// Star: 35
-[TestCase(@"https://github.com/fediaFedia/Omnimo.git",
-	@"a98cdf9cc5fa51b1aa82f2834218a3a11085f0b3")]		// Star: 36
-[TestCase(@"https://github.com/cycojesus/awesome-solarized.git",
-	@"7f9f3615bc0bf283888a60d72f5f8453d8ce8bc0")]		// Star: 33
 [TestCase(@"https://github.com/kikito/stateful.lua.git",
 	@"eede90c5a5ec97639154b5e4413c337175ed21e2")]		// Star: 34
 [TestCase(@"https://github.com/hoelzro/lua-repl.git",
 	@"b5fde2ac342def303eda8eb8d51b2bc807fdc4ba")]		// Star: 34
-[TestCase(@"https://github.com/JakobOvrum/LuaIRC.git",
-	@"16057be815ec4408e32988c561e7ea4038bc53ba")]		// Star: 32
-[TestCase(@"https://github.com/Jeija/minetest-mod-mesecons.git",
-	@"1f666875807c3c8e6c1771e4fb46c374d2e40ccb")]		// Star: 33
-[TestCase(@"https://github.com/catwell/luajit-msgpack-pure.git",
-	@"a7f16a0826831dc78ff29b94a834b66847988506")]		// Star: 32
 [TestCase(@"https://github.com/brimworks/lua-http-parser.git",
 	@"7adc3e7310091db5ffd1c09a87edcbc55255f730")]		// Star: 34
 [TestCase(@"https://github.com/nrk/hige.git",
 	@"f8ccf97063c62b93224fe6991551522fdaba9083")]		// Star: 34
-[TestCase(@"https://github.com/Jasoco/LOVE-Adventure-Game-Engine.git",
-	@"5ed8cb4f6b561090ef9b5fccda187b5b32217dbf")]		// Star: 33
-[TestCase(@"https://github.com/kikito/cron.lua.git",
-	@"170f7d9463de36ecd73c16fd008b3789de2e54cb")]		// Star: 31
 [TestCase(@"https://github.com/SpiderLabs/Nmap-Tools.git",
 	@"0282df407ae5ba426bd96415fcbe36a166a74838")]		// Star: 34
+[TestCase(@"https://github.com/bartbes/love-misc-libs.git",
+	@"79faade695182e728cd7a5eda1304f3ed5df1073")]		// Star: 34
+[TestCase(@"https://github.com/philipbl/Day-One-Lightroom-Plugin.git",
+	@"f48bee6370a144fb83c23f669b731be88196c3cd")]		// Star: 34
+[TestCase(@"https://github.com/mpeterv/luacheck.git",
+	@"43721c92786dc0b0fded70abe5b51880ec42e5e2")]		// Star: 33
+[TestCase(@"https://github.com/Floobits/diffshipper.git",
+	@"8542aeac030cc4f8fa93088a145574e8c379fdd9")]		// Star: 33
+[TestCase(@"https://github.com/cycojesus/awesome-solarized.git",
+	@"7f9f3615bc0bf283888a60d72f5f8453d8ce8bc0")]		// Star: 33
+[TestCase(@"https://github.com/Jeija/minetest-mod-mesecons.git",
+	@"1f666875807c3c8e6c1771e4fb46c374d2e40ccb")]		// Star: 33
+[TestCase(@"https://github.com/Jasoco/LOVE-Adventure-Game-Engine.git",
+	@"5ed8cb4f6b561090ef9b5fccda187b5b32217dbf")]		// Star: 33
+[TestCase(@"https://github.com/OutlawGameTools/Lime2DTileEngine.git",
+	@"b61f2b5ba47bbeef7674436aa8925d2f04c3d926")]		// Star: 33
+[TestCase(@"https://github.com/pintsized/lua-resty-rack.git",
+	@"4d8f8e166c01a7aa8ce9a9f06969699fd0aebf47")]		// Star: 33
+[TestCase(@"https://github.com/vain/awesome-vain.git",
+	@"a83343157e11efc1e1cbbe7b80ab01d38fca373a")]		// Star: 32
+[TestCase(@"https://github.com/tekkub/libdatabroker-1-1.git",
+	@"1a63ede0248c11aa1ee415187c1f9c9489ce3e02")]		// Star: 32
+[TestCase(@"https://github.com/JakobOvrum/LuaIRC.git",
+	@"16057be815ec4408e32988c561e7ea4038bc53ba")]		// Star: 32
+[TestCase(@"https://github.com/catwell/luajit-msgpack-pure.git",
+	@"a7f16a0826831dc78ff29b94a834b66847988506")]		// Star: 32
+[TestCase(@"https://github.com/ToxicFrog/vstruct.git",
+	@"f230429b6aa0791d0a0f3755ff670372186fb63c")]		// Star: 32
+[TestCase(@"https://github.com/z1lt0id/awesome.git",
+	@"a93c6274fcd411dcd2224b963238928ab821a064")]		// Star: 32
+[TestCase(@"https://github.com/Nayruden/Ulysses.git",
+	@"3860886d9dabf36b1ad7e7f81d7e26776c6960c3")]		// Star: 32
+[TestCase(@"https://github.com/kikito/cron.lua.git",
+	@"170f7d9463de36ecd73c16fd008b3789de2e54cb")]		// Star: 31
 [TestCase(@"https://github.com/mailru/tntlua.git",
 	@"15d742d541725e6eeea96a24d1e60fff38294af5")]		// Star: 31
 [TestCase(@"https://github.com/creationix/moonslice-luv.git",
 	@"717f5ce1ce96f0c1abb58b97c44e90bbaef814f2")]		// Star: 31
-[TestCase(@"https://github.com/bartbes/love-misc-libs.git",
-	@"79faade695182e728cd7a5eda1304f3ed5df1073")]		// Star: 34
 [TestCase(@"https://github.com/Mic92/vicious.git",
 	@"1c626ec7a6988e91f8ffe6c94d516b18bf95f9d9")]		// Star: 31
-[TestCase(@"https://github.com/OutlawGameTools/Lime2DTileEngine.git",
-	@"b61f2b5ba47bbeef7674436aa8925d2f04c3d926")]		// Star: 33
-[TestCase(@"https://github.com/ToxicFrog/vstruct.git",
-	@"f230429b6aa0791d0a0f3755ff670372186fb63c")]		// Star: 32
-[TestCase(@"https://github.com/pintsized/lua-resty-rack.git",
-	@"4d8f8e166c01a7aa8ce9a9f06969699fd0aebf47")]		// Star: 33
 [TestCase(@"https://github.com/waf/nice-and-clean-theme.git",
 	@"8a0ae5950921c2cadb609ba1c735fd9392bee70c")]		// Star: 31
+[TestCase(@"https://github.com/wiremod/wire-extras.git",
+	@"a2db0eb86660e4f0bbfff935368a6dcd29acfb80")]		// Star: 31
+[TestCase(@"https://github.com/sroccaserra/object-lua.git",
+	@"64f6a91318a310cf2a7ef8eb0884f82d46beead6")]		// Star: 31
+[TestCase(@"https://github.com/wingify/lua-resty-rabbitmqstomp.git",
+	@"a8c9a0d9ad5e150b6f284a594e239e7baa766622")]		// Star: 31
+[TestCase(@"https://github.com/ansca/Air-Hockey.git",
+	@"ff05ac99ec276259249ec423520064dafaac0eb7")]		// Star: 31
+[TestCase(@"https://github.com/jtarchie/sinatra-openresty.git",
+	@"7f7ed65eb389f432bd0a80bd226e8c1bbdc15352")]		// Star: 31
+[TestCase(@"https://github.com/clementfarabet/ipam-tutorials.git",
+	@"e0cfcf4749d88f7a41fa5989ee94605942b205eb")]		// Star: 31
+[TestCase(@"https://github.com/GlitchGames/GGData.git",
+	@"283673459586a92c75473da7fe97855ec85517a5")]		// Star: 30
+[TestCase(@"https://github.com/craigmj/json4lua.git",
+	@"0459abdca8145b4965b9a818c526c634725986b1")]		// Star: 30
+[TestCase(@"https://github.com/khaledhosny/euler-otf.git",
+	@"6c76de44dcff216f2d91d0638386cb575a52ded5")]		// Star: 30
 [TestCase(@"https://github.com/Wiladams/LAPHLibs.git",
 	@"aed3531fb6face76c5634bde995e9cf503d6136b")]		// Star: 29
 [TestCase(@"https://github.com/cloudwu/luacc.git",
 	@"cbf858da578aa75c6e3651e78ea78c19e5e12159")]		// Star: 29
-[TestCase(@"https://github.com/wiremod/wire-extras.git",
-	@"a2db0eb86660e4f0bbfff935368a6dcd29acfb80")]		// Star: 31
-[TestCase(@"https://github.com/GlitchGames/GGData.git",
-	@"283673459586a92c75473da7fe97855ec85517a5")]		// Star: 30
 [TestCase(@"https://github.com/Chessnut/NutScript.git",
 	@"10ae4f18968a265c158a78a14327a56a6a9088ee")]		// Star: 29
-[TestCase(@"https://github.com/sroccaserra/object-lua.git",
-	@"64f6a91318a310cf2a7ef8eb0884f82d46beead6")]		// Star: 31
 [TestCase(@"https://github.com/kikito/bump.lua.git",
 	@"f3e2033bf248c4278ca2dc2c7c4e66d5cf413a2f")]		// Star: 29
-[TestCase(@"https://github.com/craigmj/json4lua.git",
-	@"0459abdca8145b4965b9a818c526c634725986b1")]		// Star: 30
-[TestCase(@"https://github.com/wingify/lua-resty-rabbitmqstomp.git",
-	@"a8c9a0d9ad5e150b6f284a594e239e7baa766622")]		// Star: 31
-[TestCase(@"https://github.com/z1lt0id/awesome.git",
-	@"a93c6274fcd411dcd2224b963238928ab821a064")]		// Star: 32
-[TestCase(@"https://github.com/fsantanna/luagravity.git",
-	@"58c761ded3b8f27e1f2f7a0810898a9e91d7437a")]		// Star: 28
 [TestCase(@"https://github.com/tales/sourceoftales.git",
 	@"f259c99ebb42a4956f6e4c5464051651a3226d5a")]		// Star: 29
-[TestCase(@"https://github.com/Nayruden/Ulysses.git",
-	@"3860886d9dabf36b1ad7e7f81d7e26776c6960c3")]		// Star: 32
 [TestCase(@"https://github.com/paulofmandown/rotLove.git",
 	@"bb089f3294ba9cd1f7cc031dffc0b695fa2ed4bf")]		// Star: 29
-[TestCase(@"https://github.com/ansca/Air-Hockey.git",
-	@"ff05ac99ec276259249ec423520064dafaac0eb7")]		// Star: 31
-[TestCase(@"https://github.com/DarkstarProject/darkstar.git",
-	@"367bd9591cc586b06171c4679d7722cedad00557")]		// Star: 28
-[TestCase(@"https://github.com/khaledhosny/euler-otf.git",
-	@"6c76de44dcff216f2d91d0638386cb575a52ded5")]		// Star: 30
 [TestCase(@"https://github.com/ansca/TinyPenguin.git",
 	@"865b63634e55d6769e3a00b1da902c79ede68787")]		// Star: 29
+[TestCase(@"https://github.com/slembcke/debugger.lua.git",
+	@"49baebfe73e3cc2ae5f17ee2997ad82b5ecd06d3")]		// Star: 29
+[TestCase(@"https://github.com/Olivine-Labs/lusty.git",
+	@"97ff69c9ccc09a339969c4b2e08d94da9581c06d")]		// Star: 29
+[TestCase(@"https://github.com/RobSis/treesome.git",
+	@"6486454d586f86ee4eebd9edcc6df76664ff9227")]		// Star: 29
+[TestCase(@"https://github.com/kindy/lj-web.git",
+	@"81081dc8f29e09c977f864a035695d46a55395c1")]		// Star: 29
+[TestCase(@"https://github.com/fsantanna/luagravity.git",
+	@"58c761ded3b8f27e1f2f7a0810898a9e91d7437a")]		// Star: 28
+[TestCase(@"https://github.com/DarkstarProject/darkstar.git",
+	@"367bd9591cc586b06171c4679d7722cedad00557")]		// Star: 28
 [TestCase(@"https://github.com/derickd/moaigui.git",
 	@"9e0300469df5c65bf2445705c2cda6df9bc81b1f")]		// Star: 28
 [TestCase(@"https://github.com/Eonblast/fleece-lite.git",
 	@"06103ea87601c74801ca5780bc9014011243bbec")]		// Star: 28
 [TestCase(@"https://github.com/mason-larobina/luakit-plugins.git",
 	@"d5c774952d1ebdb36b20f5dfedb0f831abb8743a")]		// Star: 28
+[TestCase(@"https://github.com/500px/500pxPublisher.lrplugin.git",
+	@"09aa4a317c56f856ffef770ef1d37d1cc3d13f96")]		// Star: 28
+[TestCase(@"https://github.com/andycai/kodelua.git",
+	@"b8556d073ef658959a1afc32fa6d2313e4285923")]		// Star: 28
 [TestCase(@"https://github.com/stevedonovan/luaish.git",
 	@"6c5ea145e8faedd6bf65d7e80cb4fc741629cf16")]		// Star: 27
-[TestCase(@"https://github.com/jtarchie/sinatra-openresty.git",
-	@"7f7ed65eb389f432bd0a80bd226e8c1bbdc15352")]		// Star: 31
-[TestCase(@"https://github.com/fgprodigal/RayUI.git",
-	@"2ffd999fec0a372a70247058c6c00f8cb766acab")]		// Star: 26
 [TestCase(@"https://github.com/Asphyxia/Tukui.git",
 	@"3c8e581abc23fc8bcd7aa8668affe30e6204be5d")]		// Star: 27
-[TestCase(@"https://github.com/clementfarabet/ipam-tutorials.git",
-	@"e0cfcf4749d88f7a41fa5989ee94605942b205eb")]		// Star: 31
-[TestCase(@"https://github.com/cloudwu/ldebug.git",
-	@"b80bcd31944d7ea4c504dc915601d3e2080e73d9")]		// Star: 35
-[TestCase(@"https://github.com/slembcke/debugger.lua.git",
-	@"49baebfe73e3cc2ae5f17ee2997ad82b5ecd06d3")]		// Star: 29
 [TestCase(@"https://github.com/tullamods/Dominos.git",
 	@"6d5b7bf1883d62c26b64ff635244a0e435c2074d")]		// Star: 27
 [TestCase(@"https://github.com/tadeuszwojcik/luvit-redis.git",
 	@"a91d4584f5b1eab95923c3e48f838a4096b8499d")]		// Star: 27
-[TestCase(@"https://github.com/ildyria/iFilger.git",
-	@"d092e040143146a551b6821b6a9b199a4b98e9db")]		// Star: 26
 [TestCase(@"https://github.com/dmccuskey/Ghost-vs-Monsters---OOP.git",
 	@"c9bbaadc02941f71f518d3258a7b0d0624ac9daf")]		// Star: 27
-[TestCase(@"https://github.com/sergeyzavadski/breeze.git",
-	@"b17da085ca4691feb189690038b8d054b861d6e0")]		// Star: 26
-[TestCase(@"https://github.com/500px/500pxPublisher.lrplugin.git",
-	@"09aa4a317c56f856ffef770ef1d37d1cc3d13f96")]		// Star: 28
-[TestCase(@"https://github.com/bioe007/awesome-revelation.git",
-	@"2f28b196352199acd51d6967b19dcaf3d95a55e8")]		// Star: 26
-[TestCase(@"https://github.com/Olivine-Labs/lusty.git",
-	@"97ff69c9ccc09a339969c4b2e08d94da9581c06d")]		// Star: 29
 [TestCase(@"https://github.com/rgieseke/locco.git",
 	@"139fc5b8b3cd3fa6e1a4de777ec98ce59715ec18")]		// Star: 27
+[TestCase(@"https://github.com/Phrogz/SLAXML.git",
+	@"8aa52bc271eb9a28b1f8f3c5260202ad1b6fcaf8")]		// Star: 27
+[TestCase(@"https://github.com/johnpolacek/Match-The-Letter-Game.git",
+	@"4f164f80e997755f0999b678896058aa4e767818")]		// Star: 27
+[TestCase(@"https://github.com/GrahamRanson/Ice.git",
+	@"0efbc709ce9b65526ed0939921ce0933e486ccb9")]		// Star: 27
+[TestCase(@"https://github.com/LazyZhu/lua-resty-ssdb.git",
+	@"c7bdbcc8dc3ee23790fa9ca6ee3631e84fa0bf5d")]		// Star: 27
+[TestCase(@"https://github.com/Yonaba/Lua-Class-System.git",
+	@"7c4b0f345e7d89835024c1aee763e8fde055ca3a")]		// Star: 27
+[TestCase(@"https://github.com/fgprodigal/RayUI.git",
+	@"2ffd999fec0a372a70247058c6c00f8cb766acab")]		// Star: 26
+[TestCase(@"https://github.com/ildyria/iFilger.git",
+	@"d092e040143146a551b6821b6a9b199a4b98e9db")]		// Star: 26
+[TestCase(@"https://github.com/sergeyzavadski/breeze.git",
+	@"b17da085ca4691feb189690038b8d054b861d6e0")]		// Star: 26
+[TestCase(@"https://github.com/bioe007/awesome-revelation.git",
+	@"2f28b196352199acd51d6967b19dcaf3d95a55e8")]		// Star: 26
 [TestCase(@"https://github.com/tullamods/OmniCC.git",
 	@"434fb78fba9e891efdd9a43978efe00ab3232ad2")]		// Star: 26
 [TestCase(@"https://github.com/TACC/Lmod.git",
@@ -498,20 +518,26 @@
 	@"af3be83d6569c17bd9b87d170b2530564ec7b3aa")]		// Star: 26
 [TestCase(@"https://github.com/silentbicycle/sidereal.git",
 	@"145f788b5246e73f7cd9f82097161b63ee05b6f8")]		// Star: 26
-[TestCase(@"https://github.com/ierton/awesomerc-ierton.git",
-	@"7d0cbecc84266e2e11223f8fac5a25833589a21c")]		// Star: 25
 [TestCase(@"https://github.com/perky/FEZ.git",
 	@"39186578f86f42bc554526ebb6184f943b16a2dc")]		// Star: 26
 [TestCase(@"https://github.com/desbouis/nginx-redis-proxy.git",
 	@"1e9048f67c518f5093b6f516af240c39c4d1b678")]		// Star: 26
-[TestCase(@"https://github.com/RobSis/treesome.git",
-	@"6486454d586f86ee4eebd9edcc6df76664ff9227")]		// Star: 29
-[TestCase(@"https://github.com/kindy/lj-web.git",
-	@"81081dc8f29e09c977f864a035695d46a55395c1")]		// Star: 29
-[TestCase(@"https://github.com/Senscape/Asylum-Teaser.git",
-	@"52f4f5a0dcb868fd1ebb9b86f3e4c2dbdb4579d0")]		// Star: 24
-[TestCase(@"https://github.com/Phrogz/SLAXML.git",
-	@"8aa52bc271eb9a28b1f8f3c5260202ad1b6fcaf8")]		// Star: 27
+[TestCase(@"https://github.com/decltype/forgottenmapeditor.git",
+	@"bae6c103c688ab58c1e422179871779fbd6a8687")]		// Star: 26
+[TestCase(@"https://github.com/neomantra/lds.git",
+	@"d3b054dc48ab7428ea0020ea81e79688ad160fa1")]		// Star: 26
+[TestCase(@"https://github.com/josemota/dotfiles.git",
+	@"23abfcce78efc084854868dca9d57cb95b4feeff")]		// Star: 26
+[TestCase(@"https://github.com/robmiracle/Corona-SDK-RSS-Reader.git",
+	@"0ff21a80b3c9548e265d9816428aa256007ff8a5")]		// Star: 26
+[TestCase(@"https://github.com/jaydipdave/quickdefencewaf.git",
+	@"d6a0412e56beb856a06641c9d401a1a35e1ad7ca")]		// Star: 26
+[TestCase(@"https://github.com/diegofn/TuneIn-Radio-VLC.git",
+	@"4e02c6b807ac31dd5256d7b370931db2a1ed4ccc")]		// Star: 26
+[TestCase(@"https://github.com/setkeh/Awesome-Laptop-3.5.git",
+	@"3c96c14cfeed1beb7781097ef8a139e3296db362")]		// Star: 26
+[TestCase(@"https://github.com/ierton/awesomerc-ierton.git",
+	@"7d0cbecc84266e2e11223f8fac5a25833589a21c")]		// Star: 25
 [TestCase(@"https://github.com/haveatry823/QSanguoshaAI.git",
 	@"97b9a4cc39f3b320c741f20f53368ef490b9e753")]		// Star: 25
 [TestCase(@"https://github.com/leegao/see.lua.git",
@@ -524,222 +550,226 @@
 	@"91fcc8910a5f5cb83de6119357402940ce309fcc")]		// Star: 25
 [TestCase(@"https://github.com/TheLinx/ltwitter.git",
 	@"1859f60816a2c8d1b999db4d2fdfe0d671f047d6")]		// Star: 25
+[TestCase(@"https://github.com/johnpolacek/Video-Gallery.git",
+	@"bad64b606c222165606237b204a4f5a57024cd4c")]		// Star: 25
+[TestCase(@"https://github.com/geekscape/mqtt_lua.git",
+	@"aba95ca2f790d0aa0ca910a8c26f2455f8d3b166")]		// Star: 25
+[TestCase(@"https://github.com/ilua/ilua.git",
+	@"c9ef6799113e71d89d629b29b266d1eba4105038")]		// Star: 25
+[TestCase(@"https://github.com/christopho/zsdx.git",
+	@"878df4510abea1dcd6b05d861941a2926c0c265e")]		// Star: 25
+[TestCase(@"https://github.com/Etiene/sailor.git",
+	@"5472932a2483fc3e7b69a4e69f7fa85caa245230")]		// Star: 25
+[TestCase(@"https://github.com/Senscape/Asylum-Teaser.git",
+	@"52f4f5a0dcb868fd1ebb9b86f3e4c2dbdb4579d0")]		// Star: 24
 [TestCase(@"https://github.com/npryce/codea-controllers.git",
 	@"38bbfb87a15627a594c625ccc6c4b90e7c63aae3")]		// Star: 24
-[TestCase(@"https://github.com/johnpolacek/Match-The-Letter-Game.git",
-	@"4f164f80e997755f0999b678896058aa4e767818")]		// Star: 27
-[TestCase(@"https://github.com/decltype/forgottenmapeditor.git",
-	@"bae6c103c688ab58c1e422179871779fbd6a8687")]		// Star: 26
 [TestCase(@"https://github.com/renstrom/NeavUI.git",
 	@"e16a5b8fd402fd67b3d61b66531b2adbd1e24c8c")]		// Star: 24
 [TestCase(@"https://github.com/sacek/LPegLJ.git",
 	@"a97c49b36abc172221fedbfc984dba108ede7f01")]		// Star: 24
 [TestCase(@"https://github.com/karai17/Simple-Tiled-Implementation.git",
 	@"936a563e383366c7a68bd87148b8d535ebedd2f3")]		// Star: 24
-[TestCase(@"https://github.com/GrahamRanson/Ice.git",
-	@"0efbc709ce9b65526ed0939921ce0933e486ccb9")]		// Star: 27
 [TestCase(@"https://github.com/kikito/passion.git",
 	@"1fb7233b4035cddb4e58ea18a9f590d011eb2f72")]		// Star: 24
 [TestCase(@"https://github.com/khaledhosny/luaotfload.git",
 	@"9291e1983240e72d93815a096963dc28a7acd770")]		// Star: 24
-[TestCase(@"https://github.com/philipbl/Day-One-Lightroom-Plugin.git",
-	@"f48bee6370a144fb83c23f669b731be88196c3cd")]		// Star: 34
+[TestCase(@"https://github.com/TekNoLogic/Panda.git",
+	@"32b4d6e53446ae3579e9d72838c81113edd3549d")]		// Star: 24
+[TestCase(@"https://github.com/Elv13/radical.git",
+	@"8da00cbd657f77fdfcd4b6a9cc81420daa2cb5e7")]		// Star: 24
+[TestCase(@"https://github.com/mydevelopergames/AutoLAN.git",
+	@"b5353864003cb0ba20d5b1e37284dd97114cf1df")]		// Star: 24
+[TestCase(@"https://github.com/kikito/beholder.lua.git",
+	@"9f1a31eb51f5e3775f1c111fab37a9f72db6deae")]		// Star: 24
+[TestCase(@"https://github.com/jgrahamc/lulip.git",
+	@"4049423de9c02c25d1deebd54553211bf583e9d8")]		// Star: 24
+[TestCase(@"https://github.com/mlnlover11/LuaAssemblyTools.git",
+	@"e496bc6df2e49ea0beebb26f216aca3821a2b28e")]		// Star: 24
+[TestCase(@"https://github.com/kikito/love-loader.git",
+	@"d29176b54e5bf0ee2496d89f6eb5bbc4b35ae06d")]		// Star: 24
 [TestCase(@"https://github.com/TekNoLogic/GnomishVendorShrinker.git",
 	@"dbf481f2cd0da671169c9673f976bf9a2d61e957")]		// Star: 23
 [TestCase(@"https://github.com/kikito/middleclass-extras.git",
 	@"840a6b250f7fd8d46d796a3ec99c363651c626c0")]		// Star: 23
-[TestCase(@"https://github.com/johnpolacek/Video-Gallery.git",
-	@"bad64b606c222165606237b204a4f5a57024cd4c")]		// Star: 25
-[TestCase(@"https://github.com/geekscape/mqtt_lua.git",
-	@"aba95ca2f790d0aa0ca910a8c26f2455f8d3b166")]		// Star: 25
-[TestCase(@"https://github.com/TekNoLogic/Panda.git",
-	@"32b4d6e53446ae3579e9d72838c81113edd3549d")]		// Star: 24
-[TestCase(@"https://github.com/LazyZhu/lua-resty-ssdb.git",
-	@"c7bdbcc8dc3ee23790fa9ca6ee3631e84fa0bf5d")]		// Star: 27
-[TestCase(@"https://github.com/Elv13/radical.git",
-	@"8da00cbd657f77fdfcd4b6a9cc81420daa2cb5e7")]		// Star: 24
-[TestCase(@"https://github.com/neomantra/lds.git",
-	@"d3b054dc48ab7428ea0020ea81e79688ad160fa1")]		// Star: 26
-[TestCase(@"https://github.com/josemota/dotfiles.git",
-	@"23abfcce78efc084854868dca9d57cb95b4feeff")]		// Star: 26
-[TestCase(@"https://github.com/robmiracle/Corona-SDK-RSS-Reader.git",
-	@"0ff21a80b3c9548e265d9816428aa256007ff8a5")]		// Star: 26
 [TestCase(@"https://github.com/Metapyziks/finalfrontier.git",
 	@"3b22cc19b155834c0e9af7c107ee58f1cd4deea8")]		// Star: 23
 [TestCase(@"https://github.com/Wiladams/TINN.git",
 	@"e588fff7f9e147ef4bc56e872cb385b56f712913")]		// Star: 23
 [TestCase(@"https://github.com/RustOxide/Oxide.git",
 	@"b69be445c99762f70ebe4c3e42e53170d09a21cf")]		// Star: 23
+[TestCase(@"https://github.com/pygy/strung.lua.git",
+	@"f17cdabe1973eaa5cb1ce7817822f7a8c37b8d8b")]		// Star: 23
+[TestCase(@"https://github.com/circumjacence/ConkyInfinitySVG.git",
+	@"14aa1812dd4a596b23df70d58b78b8052258b9b5")]		// Star: 23
+[TestCase(@"https://github.com/lonelyplanet/openresty-statsd.git",
+	@"9b1a788cabe1fcb20843f4dc0d78468ed04f9a62")]		// Star: 23
+[TestCase(@"https://github.com/Cluain/Lua-Simple-XML-Parser.git",
+	@"2c318f3b01121dad61dee34b8c80c970ff938192")]		// Star: 23
+[TestCase(@"https://github.com/golgote/neturl.git",
+	@"258c3f6e637030a39265b74ae1e9d681cf977296")]		// Star: 23
 [TestCase(@"https://github.com/JackH79/.dotfiles.git",
 	@"b957416b6a83a0d05fa943067e821ed77732c201")]		// Star: 22
-[TestCase(@"https://github.com/mydevelopergames/AutoLAN.git",
-	@"b5353864003cb0ba20d5b1e37284dd97114cf1df")]		// Star: 24
 [TestCase(@"https://github.com/kamaitama/Tiramisu--outdated--don-t-use-.git",
 	@"15a847ad05042ae4d7b1117b887902e33470f076")]		// Star: 22
 [TestCase(@"https://github.com/Wiladams/LJIT2Win32.git",
 	@"59e4419fc4fae4af2553e65fbbaa3d8a0125b4c4")]		// Star: 22
-[TestCase(@"https://github.com/pygy/strung.lua.git",
-	@"f17cdabe1973eaa5cb1ce7817822f7a8c37b8d8b")]		// Star: 23
 [TestCase(@"https://github.com/haimanman/jx3.git",
 	@"4fbdd1db34096d1c904ca426aa0f19c4f29595c5")]		// Star: 22
 [TestCase(@"https://github.com/PrinterLUA/FORGOTTENSERVER-ORTS.git",
 	@"916b8b9341dac800a7adbbe76efb1b56d1bdb78d")]		// Star: 22
 [TestCase(@"https://github.com/Thalassicus/cep-bnw.git",
 	@"a0f24cc82fd05ed2b1bfff411f276e8ef7ace176")]		// Star: 22
-[TestCase(@"https://github.com/andycai/kodelua.git",
-	@"b8556d073ef658959a1afc32fa6d2313e4285923")]		// Star: 28
 [TestCase(@"https://github.com/affli/xCT.git",
 	@"c20ea295aa816b53b6294eae47d6c4af2eb623d7")]		// Star: 22
-[TestCase(@"https://github.com/ilua/ilua.git",
-	@"c9ef6799113e71d89d629b29b266d1eba4105038")]		// Star: 25
-[TestCase(@"https://github.com/kikito/beholder.lua.git",
-	@"9f1a31eb51f5e3775f1c111fab37a9f72db6deae")]		// Star: 24
-[TestCase(@"https://github.com/lovelyrpgcommunity/A-Whiff-of-Steam.git",
-	@"e44aea49b6de9955603cb4db5cd88beea003f3f0")]		// Star: 21
 [TestCase(@"https://github.com/mascarenhas/luaclr.git",
 	@"b0586fcba4320beab46a2d243ca80894fee02afd")]		// Star: 22
-[TestCase(@"https://github.com/jgrahamc/lulip.git",
-	@"4049423de9c02c25d1deebd54553211bf583e9d8")]		// Star: 24
-[TestCase(@"https://github.com/Yonaba/Lua-Class-System.git",
-	@"7c4b0f345e7d89835024c1aee763e8fde055ca3a")]		// Star: 27
 [TestCase(@"https://github.com/Haleth/FreeUI.git",
 	@"60353ebfe2a143c7beb32ba600701b6dd89e7398")]		// Star: 22
 [TestCase(@"https://github.com/speedata/publisher.git",
 	@"8f4415a068bd7561f514b7cc6cc603e415a1bde6")]		// Star: 22
-[TestCase(@"https://github.com/mlnlover11/LuaAssemblyTools.git",
-	@"e496bc6df2e49ea0beebb26f216aca3821a2b28e")]		// Star: 24
+[TestCase(@"https://github.com/FPtje/Sublime-GLua-Highlight.git",
+	@"7a5a310f440519a25d4f344fcd25906fdd5baf98")]		// Star: 22
+[TestCase(@"https://github.com/xolox/lua-lxsh.git",
+	@"ee16ce4903616030a26c15c4f8ce2222434f0ade")]		// Star: 22
+[TestCase(@"https://github.com/davidm/lua-bit-numberlua.git",
+	@"30b6828b298b46411b548202d40524caba06a99c")]		// Star: 22
+[TestCase(@"https://github.com/mikar/awesome-themes.git",
+	@"877511213c3db9397166bcd1436087b39387aa5d")]		// Star: 22
+[TestCase(@"https://github.com/ansca/Storyboard-Sample.git",
+	@"500f3bfeda09abf6cf82f679b3e14cad65b40900")]		// Star: 22
+[TestCase(@"https://github.com/zrong/lua.git",
+	@"5e3e50524a36552e95a4cdda2025dbb8b1694a65")]		// Star: 22
+[TestCase(@"https://github.com/lovelyrpgcommunity/A-Whiff-of-Steam.git",
+	@"e44aea49b6de9955603cb4db5cd88beea003f3f0")]		// Star: 21
 [TestCase(@"https://github.com/fperrad/lua-TestMore.git",
 	@"627b3b84afae5c0395f2c336ee710539792e4fac")]		// Star: 21
 [TestCase(@"https://github.com/DracoBlue/lua-oauth.git",
 	@"e09c6325713cde008416b9211fb57b284352f9a3")]		// Star: 21
 [TestCase(@"https://github.com/creationix/nodeconf2012.git",
 	@"879fcbe34143e3784fc3110637d467a62552d472")]		// Star: 21
-[TestCase(@"https://github.com/FPtje/Sublime-GLua-Highlight.git",
-	@"7a5a310f440519a25d4f344fcd25906fdd5baf98")]		// Star: 22
 [TestCase(@"https://github.com/Meneth/PB-git.git",
 	@"0b1a1abafea33f8009f6502a3a5807ee89065d2e")]		// Star: 21
 [TestCase(@"https://github.com/RafaelDeJongh/cap.git",
 	@"c411140a3d0aa69f5752388c83d281bd5eb39755")]		// Star: 21
-[TestCase(@"https://github.com/circumjacence/ConkyInfinitySVG.git",
-	@"14aa1812dd4a596b23df70d58b78b8052258b9b5")]		// Star: 23
-[TestCase(@"https://github.com/xolox/lua-lxsh.git",
-	@"ee16ce4903616030a26c15c4f8ce2222434f0ade")]		// Star: 22
-[TestCase(@"https://github.com/christopho/zsdx.git",
-	@"878df4510abea1dcd6b05d861941a2926c0c265e")]		// Star: 25
 [TestCase(@"https://github.com/RafaelDeJongh/cap_resources.git",
 	@"049e4f6a34937c5ac969d611e6e5f668e27f481a")]		// Star: 21
-[TestCase(@"https://github.com/norman/grackle.git",
-	@"f0b88c9f7a3b3a2df197decbd4b90147c9ac4c05")]		// Star: 19
-[TestCase(@"https://github.com/davidm/lua-bit-numberlua.git",
-	@"30b6828b298b46411b548202d40524caba06a99c")]		// Star: 22
 [TestCase(@"https://github.com/davidm/lua-matrix.git",
 	@"7a33f9652ddc6808ec9eb866d9e214546bbfc765")]		// Star: 21
 [TestCase(@"https://github.com/quaker66/vortex.git",
 	@"2993be665f412b8243470597e34bd9f61f5513d1")]		// Star: 21
+[TestCase(@"https://github.com/Wiladams/LJIT2RPi.git",
+	@"43cf70d697de45344b660c05ef36b53c3df81617")]		// Star: 21
+[TestCase(@"https://github.com/TekNoLogic/Cork.git",
+	@"1b40e35a31c1048033b6f6b94600581b389a46d9")]		// Star: 21
+[TestCase(@"https://github.com/hoelzro/lua-term.git",
+	@"76d7c992a22d4481969a977ad36d6d35d3b2ca6f")]		// Star: 21
+[TestCase(@"https://github.com/ansca/Pinball-Madness.git",
+	@"70679e4d288cf21cc612146f11c8d24fcdb51834")]		// Star: 21
+[TestCase(@"https://github.com/duff333/Parallax-Class.git",
+	@"cf6c6f4a4e90208ca9b6fd10d439825017a900b3")]		// Star: 21
+[TestCase(@"https://github.com/coronalabs/CoronaCrush.git",
+	@"211be29c3c9b90d4e762c8c502c543f6e6937d63")]		// Star: 21
+[TestCase(@"https://github.com/wscherphof/lua-htmlparser.git",
+	@"a8b5f6fb3160ababb5bc2c11bc4b2b0b67439be5")]		// Star: 21
+[TestCase(@"https://github.com/clementfarabet/torch-tutorials.git",
+	@"844457015aa1c23f60b4d75fc4a79e745f322e2e")]		// Star: 21
 [TestCase(@"https://github.com/roaminggamer/RG_FreeStuff.git",
 	@"8c27742b04911fe1f1ed348390681a46d04be6c7")]		// Star: 20
 [TestCase(@"https://github.com/sharpobject/panel-attack.git",
 	@"129b7094c1fc7bf26494acf9f819b164e95e1cc6")]		// Star: 20
 [TestCase(@"https://github.com/minetest-technic/technic.git",
 	@"44dbc75b6115d5235ba0538925e44484037459a1")]		// Star: 20
-[TestCase(@"https://github.com/Wiladams/LJIT2RPi.git",
-	@"43cf70d697de45344b660c05ef36b53c3df81617")]		// Star: 21
 [TestCase(@"https://github.com/joshtynjala/gtween.lua.git",
 	@"572000edf616c2c7ce2c5ab15e550da97f8d928f")]		// Star: 20
-[TestCase(@"https://github.com/mikar/awesome-themes.git",
-	@"877511213c3db9397166bcd1436087b39387aa5d")]		// Star: 22
-[TestCase(@"https://github.com/jaydipdave/quickdefencewaf.git",
-	@"d6a0412e56beb856a06641c9d401a1a35e1ad7ca")]		// Star: 26
-[TestCase(@"https://github.com/TekNoLogic/Cork.git",
-	@"1b40e35a31c1048033b6f6b94600581b389a46d9")]		// Star: 21
 [TestCase(@"https://github.com/Movimento5StelleLazio/ParlamentoElettronicoM5S.git",
 	@"415d0b8c03bbda585171e1a795b7dc45d7d15bb7")]		// Star: 20
+[TestCase(@"https://github.com/CK2Plus/CK2Plus.git",
+	@"d34cdd807f66990e040edcbba462191d56f36852")]		// Star: 20
+[TestCase(@"https://github.com/codepunkschmidt/Codepunk-s-Code.git",
+	@"f2f76b3c1662e864269ca34f3540e90b61a375a4")]		// Star: 20
+[TestCase(@"https://github.com/mkottman/lua-git.git",
+	@"d64218a227fe26b1fc971a8802f74a1921e0187e")]		// Star: 20
+[TestCase(@"https://github.com/bartbes/Class-Commons.git",
+	@"53f6f546d20f9ff68d72b894b4c585be9dab9160")]		// Star: 20
+[TestCase(@"https://github.com/keplerproject/cgilua.git",
+	@"4ef15e7b641202325ba220e1700c60a23692f8dd")]		// Star: 20
+[TestCase(@"https://github.com/graue/luasynth.git",
+	@"4ddb9e9b587cfb62b2bca4914b3c67bb862338ab")]		// Star: 20
+[TestCase(@"https://github.com/altuzar/Appsamuck_Corona_SDK.git",
+	@"b4015eb491f6a8408a8201218048f49253665f25")]		// Star: 20
+[TestCase(@"https://github.com/jolicloud/jolicloud-desktop-environment.git",
+	@"77cb7b64647d1d10cbf40f30d6c11b8c05a9e96a")]		// Star: 20
+[TestCase(@"https://github.com/bungle/lua-resty-template.git",
+	@"aadc42ba718de8dc97fe8d2dd3f64fdd837f9910")]		// Star: 20
+[TestCase(@"https://github.com/06wj/cocos2d_lua_snippets.git",
+	@"e8486c6d51a63ef79552afd5bb556ae07b8558af")]		// Star: 20
+[TestCase(@"https://github.com/norman/grackle.git",
+	@"f0b88c9f7a3b3a2df197decbd4b90147c9ac4c05")]		// Star: 19
 [TestCase(@"https://github.com/pixeltailgames/cinema.git",
 	@"3bbc936bae1a2c538f5fbc8cc9e31da8fe238212")]		// Star: 19
 [TestCase(@"https://github.com/ar2rsawseen/GiderosCodingEasy.git",
 	@"9778dc91ed6d88b36b6140d59ec92d942705af87")]		// Star: 19
-[TestCase(@"https://github.com/hoelzro/lua-term.git",
-	@"76d7c992a22d4481969a977ad36d6d35d3b2ca6f")]		// Star: 21
-[TestCase(@"https://github.com/CK2Plus/CK2Plus.git",
-	@"d34cdd807f66990e040edcbba462191d56f36852")]		// Star: 20
-[TestCase(@"https://github.com/ansca/Storyboard-Sample.git",
-	@"500f3bfeda09abf6cf82f679b3e14cad65b40900")]		// Star: 22
 [TestCase(@"https://github.com/stevedonovan/Orbiter.git",
 	@"92378b529bad80669ade6f989933fbb37d445319")]		// Star: 19
-[TestCase(@"https://github.com/lonelyplanet/openresty-statsd.git",
-	@"9b1a788cabe1fcb20843f4dc0d78468ed04f9a62")]		// Star: 23
-[TestCase(@"https://github.com/ansca/Pinball-Madness.git",
-	@"70679e4d288cf21cc612146f11c8d24fcdb51834")]		// Star: 21
 [TestCase(@"https://github.com/flukso/flm02.git",
 	@"7564cae07ac0cea60fbb137e1a96424d6bd397f4")]		// Star: 19
-[TestCase(@"https://github.com/Cluain/Lua-Simple-XML-Parser.git",
-	@"2c318f3b01121dad61dee34b8c80c970ff938192")]		// Star: 23
+[TestCase(@"https://github.com/iGARET/MovieClipX.git",
+	@"6046016454c5814513f50e54c029f61bad1b7fc0")]		// Star: 19
+[TestCase(@"https://github.com/michal-h21/tex4ebook.git",
+	@"cbe484bcaa764f8874dab0666c00091df5e55cd3")]		// Star: 19
+[TestCase(@"https://github.com/clementfarabet/torch7-demos.git",
+	@"0991dec5d6c09ceba6452a6d6b6a5f466de6a12c")]		// Star: 19
+[TestCase(@"https://github.com/SimonLarsen/sienna.git",
+	@"ba33bd8aa5a49ec3565f9580f6ff84b06f0b4ed2")]		// Star: 19
 [TestCase(@"https://github.com/liquidbase/Duffed-UI.git",
 	@"6fc01613c88f991350d9d1cbd50258282479ed32")]		// Star: 18
-[TestCase(@"https://github.com/codepunkschmidt/Codepunk-s-Code.git",
-	@"f2f76b3c1662e864269ca34f3540e90b61a375a4")]		// Star: 20
 [TestCase(@"https://github.com/corsix/ffi-reflect.git",
 	@"b01e2421722e591173cd53fd082b6372c358b4d5")]		// Star: 18
-[TestCase(@"https://github.com/mkottman/lua-git.git",
-	@"d64218a227fe26b1fc971a8802f74a1921e0187e")]		// Star: 20
 [TestCase(@"https://github.com/jdesgats/ILuaJIT.git",
 	@"dde5d2597b2e3142c937191a30906f72f463f9e8")]		// Star: 18
-[TestCase(@"https://github.com/bartbes/Class-Commons.git",
-	@"53f6f546d20f9ff68d72b894b4c585be9dab9160")]		// Star: 20
 [TestCase(@"https://github.com/bennychen/Moai-based-Pacman.git",
 	@"865f9d6fa27ec65c83d4c4100a84dced32b41fa1")]		// Star: 18
 [TestCase(@"https://github.com/TekNoLogic/teksLoot.git",
 	@"ab416d90d878d9def517f20043989b9bdd3e8715")]		// Star: 18
-[TestCase(@"https://github.com/diegofn/TuneIn-Radio-VLC.git",
-	@"4e02c6b807ac31dd5256d7b370931db2a1ed4ccc")]		// Star: 26
 [TestCase(@"https://github.com/mabako/mta-paradise.git",
 	@"6d4a852e27a276920943827426b9cf88e20a6b7d")]		// Star: 18
-[TestCase(@"https://github.com/keplerproject/cgilua.git",
-	@"4ef15e7b641202325ba220e1700c60a23692f8dd")]		// Star: 20
-[TestCase(@"https://github.com/Etiene/sailor.git",
-	@"5472932a2483fc3e7b69a4e69f7fa85caa245230")]		// Star: 25
 [TestCase(@"https://github.com/ayourtch/gliese.git",
 	@"4635b1b1874c877c291169c3298b64b5d030fe57")]		// Star: 18
-[TestCase(@"https://github.com/duff333/Parallax-Class.git",
-	@"cf6c6f4a4e90208ca9b6fd10d439825017a900b3")]		// Star: 21
-[TestCase(@"https://github.com/golgote/neturl.git",
-	@"258c3f6e637030a39265b74ae1e9d681cf977296")]		// Star: 23
-[TestCase(@"https://github.com/graue/luasynth.git",
-	@"4ddb9e9b587cfb62b2bca4914b3c67bb862338ab")]		// Star: 20
-[TestCase(@"https://github.com/setkeh/Awesome-Laptop-3.5.git",
-	@"3c96c14cfeed1beb7781097ef8a139e3296db362")]		// Star: 26
-[TestCase(@"https://github.com/altuzar/Appsamuck_Corona_SDK.git",
-	@"b4015eb491f6a8408a8201218048f49253665f25")]		// Star: 20
-[TestCase(@"https://github.com/kikito/love-loader.git",
-	@"d29176b54e5bf0ee2496d89f6eb5bbc4b35ae06d")]		// Star: 24
 [TestCase(@"https://github.com/jnwhiteh/luasandbox.git",
 	@"3623705ef17767aa31125f124023a1f8d48e644f")]		// Star: 18
-[TestCase(@"https://github.com/malkia/luajit-opencl.git",
-	@"72cba1c258b604ee301015cd6ac00dc264b0eef7")]		// Star: 17
 [TestCase(@"https://github.com/andrewmcwatters/steamweb-lua-sdk.git",
 	@"f86cfd6b5a2e32196c1bb433266a34395618b9b7")]		// Star: 18
 [TestCase(@"https://github.com/agladysh/luatexts.git",
 	@"2ca61795384aa9a9685776527515266894d3471b")]		// Star: 18
-[TestCase(@"https://github.com/iGARET/MovieClipX.git",
-	@"6046016454c5814513f50e54c029f61bad1b7fc0")]		// Star: 19
 [TestCase(@"https://github.com/kikito/memoize.lua.git",
 	@"30218efdba2fe563117f4176849afa2e76ddaa9d")]		// Star: 18
-[TestCase(@"https://github.com/francois2metz/pomodoro-awesome.git",
-	@"d6a4b06308b713abf396e622e507bd8c64daf388")]		// Star: 17
 [TestCase(@"https://github.com/3SillyHats/LoveHotel.git",
 	@"b5858b621afde54272a7b057a3011851d7382a73")]		// Star: 18
-[TestCase(@"https://github.com/jolicloud/jolicloud-desktop-environment.git",
-	@"77cb7b64647d1d10cbf40f30d6c11b8c05a9e96a")]		// Star: 20
 [TestCase(@"https://github.com/leegao/Rocket-for-Lua.git",
 	@"7767a250d2e52579a34d2da6a19e43a9a8810994")]		// Star: 18
-[TestCase(@"https://github.com/gamesys/moonshine.git",
-	@"ca6d7a57bfb676caf409e7398a448f90eb139b47")]		// Star: 167
-[TestCase(@"https://github.com/fperrad/lua-CodeGen.git",
-	@"fa086ff237875753d8b26f98728e489b1aca2d1d")]		// Star: 16
-[TestCase(@"https://github.com/michal-h21/tex4ebook.git",
-	@"cbe484bcaa764f8874dab0666c00091df5e55cd3")]		// Star: 19
-[TestCase(@"https://github.com/bungle/lua-resty-template.git",
-	@"aadc42ba718de8dc97fe8d2dd3f64fdd837f9910")]		// Star: 20
+[TestCase(@"https://github.com/JesterXL/PlaneShooter.git",
+	@"d0a80f993e2b94ee7eba9bc07f60d9f125ddaf1a")]		// Star: 18
+[TestCase(@"https://github.com/latestpost/Moai-Examples.git",
+	@"aea47812478686184dfc9f0f974b1fe63b23ebc1")]		// Star: 18
+[TestCase(@"https://github.com/randrews/color.git",
+	@"62b72b6b45a0ceb19d8bae7deca8ac0a9d62d169")]		// Star: 18
+[TestCase(@"https://github.com/Shadowed/ShadowedUnitFrames.git",
+	@"0e15e2e55c08ad922657a6850823d15d7145d049")]		// Star: 18
+[TestCase(@"https://github.com/cldrn/nmap-nse-scripts.git",
+	@"9cc8c91f7b16c4eaa1735642be9807e174c4177d")]		// Star: 18
+[TestCase(@"https://github.com/bsm/fakengx.git",
+	@"20920a35d2d3d0104e36784efbbafa873b4cb134")]		// Star: 18
+[TestCase(@"https://github.com/coronalabs/framework-widgets-legacy.git",
+	@"ad47e84c5febfd9c8c40ca9b163cace973db0dca")]		// Star: 18
+[TestCase(@"https://github.com/ittner/lua-iconv.git",
+	@"2205a0fe274ee0e59b1b15dcd5a11a4325fecead")]		// Star: 18
+[TestCase(@"https://github.com/xspacesoft/PropHunt.git",
+	@"5f38363f44080d173515c48c9977a57f226f4d6a")]		// Star: 18
+[TestCase(@"https://github.com/malkia/luajit-opencl.git",
+	@"72cba1c258b604ee301015cd6ac00dc264b0eef7")]		// Star: 17
+[TestCase(@"https://github.com/francois2metz/pomodoro-awesome.git",
+	@"d6a4b06308b713abf396e622e507bd8c64daf388")]		// Star: 17
 [TestCase(@"https://github.com/iamwilhelm/frock.git",
 	@"957eb561d41ea15b3ce0f6af5ceb3132378fcbf3")]		// Star: 17
 [TestCase(@"https://github.com/Adze1502/mwan.git",
@@ -748,48 +778,48 @@
 	@"a33fbe7adb838d5292ebe38cc829c6b3771df348")]		// Star: 17
 [TestCase(@"https://github.com/mikejsavage/flea.git",
 	@"de59a9c3072aff59ece9a5808f31decae0e029d3")]		// Star: 17
-[TestCase(@"https://github.com/JesterXL/PlaneShooter.git",
-	@"d0a80f993e2b94ee7eba9bc07f60d9f125ddaf1a")]		// Star: 18
-[TestCase(@"https://github.com/latestpost/Moai-Examples.git",
-	@"aea47812478686184dfc9f0f974b1fe63b23ebc1")]		// Star: 18
 [TestCase(@"https://github.com/sacek/Luajit-LPEG.git",
 	@"12a777b074d27a2724cf4e3bd344fddc2b0b3008")]		// Star: 17
 [TestCase(@"https://github.com/gigamo/awesome-configs.git",
 	@"8417a0c6fc906b110d3be3cf47b1f7ceeca1a03d")]		// Star: 17
 [TestCase(@"https://github.com/spc476/LPeg-Parsers.git",
 	@"92bc1752975abc8e1a713e210271fa9f0d0f7843")]		// Star: 17
-[TestCase(@"https://github.com/randrews/color.git",
-	@"62b72b6b45a0ceb19d8bae7deca8ac0a9d62d169")]		// Star: 18
-[TestCase(@"https://github.com/clementfarabet/torch7-demos.git",
-	@"0991dec5d6c09ceba6452a6d6b6a5f466de6a12c")]		// Star: 19
-[TestCase(@"https://github.com/weshoke/codepeg.git",
-	@"51ef031a2463f075b53f0dba95b91ab46eb9736f")]		// Star: 16
 [TestCase(@"https://github.com/cornelisse/LuaFSM.git",
 	@"efbb263562917165e1d7ecdd905348619c59746f")]		// Star: 17
 [TestCase(@"https://github.com/dvv/luvit-websocket.git",
 	@"02b74c14fe547a32e858c56717af78757076e258")]		// Star: 17
-[TestCase(@"https://github.com/Shadowed/ShadowedUnitFrames.git",
-	@"0e15e2e55c08ad922657a6850823d15d7145d049")]		// Star: 18
-[TestCase(@"https://github.com/cldrn/nmap-nse-scripts.git",
-	@"9cc8c91f7b16c4eaa1735642be9807e174c4177d")]		// Star: 18
+[TestCase(@"https://github.com/bowerhaus/BhWax.git",
+	@"43a1bdd811a77fe0fbc2dd92963946d855a7a340")]		// Star: 17
+[TestCase(@"https://github.com/slact/lua-ohm.git",
+	@"91b7fb3649d8a120c8329949c0b92272914488ef")]		// Star: 17
+[TestCase(@"https://github.com/gideros/Scene-Manager.git",
+	@"c62d27d52752d5e49df80cb1d6ee05ee66a3d11a")]		// Star: 17
+[TestCase(@"https://github.com/kainosnoema/remq.git",
+	@"3cd3deb56d62bb2ebcc353103db04e8717878f5b")]		// Star: 17
+[TestCase(@"https://github.com/torque/Aegisub-Motion.git",
+	@"fad9f464a0faf3741ab751efdcbb2936b31c77ea")]		// Star: 17
+[TestCase(@"https://github.com/ppissanetzky/AndThen.git",
+	@"95575c7ef883554c3f3f61d3aaee7139ec071817")]		// Star: 17
+[TestCase(@"https://github.com/callin2/ParticleSugar.git",
+	@"4c0e661db118ef6dbe8c472e5de627f68ac3a721")]		// Star: 17
+[TestCase(@"https://github.com/Tieske/date.git",
+	@"ac569c1a7036b7a2131b94776543c1e7bdc378b3")]		// Star: 17
+[TestCase(@"https://github.com/kikito/gamera.git",
+	@"bf85cbf8416e82e1d2399c0e2ca81f27500959ce")]		// Star: 17
+[TestCase(@"https://github.com/menudoproblema/Wireshark-MQTT.git",
+	@"d208c656126c393d018c692aaba7a7a8459e7673")]		// Star: 17
+[TestCase(@"https://github.com/fperrad/lua-CodeGen.git",
+	@"fa086ff237875753d8b26f98728e489b1aca2d1d")]		// Star: 16
+[TestCase(@"https://github.com/weshoke/codepeg.git",
+	@"51ef031a2463f075b53f0dba95b91ab46eb9736f")]		// Star: 16
 [TestCase(@"https://github.com/adamdburton/pointshop.git",
 	@"53c8896258437a4cb4317e8b7f09f44add4be6bc")]		// Star: 16
 [TestCase(@"https://github.com/davidm/lua-fish.git",
 	@"9e5183da866f2b71636492734170d30191ec198a")]		// Star: 16
 [TestCase(@"https://github.com/Person8880/Shine.git",
 	@"63ffc5f7d3c94afd785f7bc376420e78a12440c6")]		// Star: 16
-[TestCase(@"https://github.com/bsm/fakengx.git",
-	@"20920a35d2d3d0104e36784efbbafa873b4cb134")]		// Star: 18
 [TestCase(@"https://github.com/timn/lua-xmlrpc.git",
 	@"b12ac249d62dc66ba76e7da4adbced8aa37fe8a3")]		// Star: 16
-[TestCase(@"https://github.com/zrong/lua.git",
-	@"5e3e50524a36552e95a4cdda2025dbb8b1694a65")]		// Star: 22
-[TestCase(@"https://github.com/gorlowski/couth.git",
-	@"f6ffc89e32e3b6c9f6a394c70708aa78d492eb07")]		// Star: 15
-[TestCase(@"https://github.com/norman/hops.git",
-	@"b89744c7b2fe54ae2e3e9f8e632d5a78bee77243")]		// Star: 15
-[TestCase(@"https://github.com/bowerhaus/BhWax.git",
-	@"43a1bdd811a77fe0fbc2dd92963946d855a7a340")]		// Star: 17
 [TestCase(@"https://github.com/SpaceTown-Developers/Lemon-Gate.git",
 	@"8d561d204a52929670718c9c58956d2dda03eb8a")]		// Star: 16
 [TestCase(@"https://github.com/radare/lum.git",
@@ -798,52 +828,58 @@
 	@"3473486d3142e135d8450ae7606cbd5013ce5164")]		// Star: 16
 [TestCase(@"https://github.com/dodo/uzful.git",
 	@"51898ac2a28f8869d0e1983ab1e492b7b45ee375")]		// Star: 16
-[TestCase(@"https://github.com/loghound/Corona-Transitions.git",
-	@"6f2c661893eaafc1935a53cef969f91284040c5d")]		// Star: 15
-[TestCase(@"https://github.com/slact/lua-ohm.git",
-	@"91b7fb3649d8a120c8329949c0b92272914488ef")]		// Star: 17
 [TestCase(@"https://github.com/ansca/Flight-Path.git",
 	@"6d65ac819354e740f1bc28e01d69ab6775801083")]		// Star: 16
-[TestCase(@"https://github.com/coronalabs/CoronaCrush.git",
-	@"211be29c3c9b90d4e762c8c502c543f6e6937d63")]		// Star: 21
 [TestCase(@"https://github.com/rit-sse/RapDevXI.git",
 	@"ac966362765f8f877fc3e05f40d6b46a95bac9cb")]		// Star: 16
 [TestCase(@"https://github.com/pkulchenko/ZeroBraneEduPack.git",
 	@"37a15344f1ac162e53956ce6b83188a560063499")]		// Star: 16
 [TestCase(@"https://github.com/s2games/Heroes-of-Newerth-Bots.git",
 	@"d267b6df4f0ea1e19d6419606251a6c38a7065fc")]		// Star: 16
-[TestCase(@"https://github.com/gideros/Scene-Manager.git",
-	@"c62d27d52752d5e49df80cb1d6ee05ee66a3d11a")]		// Star: 17
 [TestCase(@"https://github.com/ayourtch/luajit-fun.git",
 	@"54fd54d2b6f173c33428bd984365f05a36e33821")]		// Star: 16
-[TestCase(@"https://github.com/ansca/Gear-Animation.git",
-	@"082bd66b2589d37624e09f0be8d6501512c8ddf7")]		// Star: 15
 [TestCase(@"https://github.com/nanoant/glua.git",
 	@"6eb2c470d9b430ffe1e9af7c3e60676f38eff9ad")]		// Star: 16
-[TestCase(@"https://github.com/kengonakajima/luvit-mysql.git",
-	@"1c93b1c63a8d35fd139d5ed5720752c9c68a94e3")]		// Star: 15
-[TestCase(@"https://github.com/kainosnoema/remq.git",
-	@"3cd3deb56d62bb2ebcc353103db04e8717878f5b")]		// Star: 17
-[TestCase(@"https://github.com/lloydpick/gathererdb_wowhead.git",
-	@"a404fa4f372d59f48836479d125e7a2b213aaadc")]		// Star: 15
-[TestCase(@"https://github.com/torque/Aegisub-Motion.git",
-	@"fad9f464a0faf3741ab751efdcbb2936b31c77ea")]		// Star: 17
-[TestCase(@"https://github.com/Etiene/valua.git",
-	@"5c541c55c1a16469ef7ed1c34de2511f6916c6a3")]		// Star: 15
 [TestCase(@"https://github.com/bakins/lua-resty-riak.git",
 	@"c14c61b3035869d8424de9c4ee47ec380544d742")]		// Star: 16
+[TestCase(@"https://github.com/perky/Goo.git",
+	@"c4101d31b1915381788901c3027bdcd2da423893")]		// Star: 16
+[TestCase(@"https://github.com/ansca/Simple-Pool.git",
+	@"cc261ca0dac4099b024a596d684417dcc158fbf3")]		// Star: 16
+[TestCase(@"https://github.com/ea/nmap-scripts.git",
+	@"30858bb1ae8778bf4aba1ea631325a91a1bca4b2")]		// Star: 16
+[TestCase(@"https://github.com/Patsky/Match-3-Gems-Puzzle-Game.git",
+	@"cbc564e7e322b07863effed66f7fbb5a1ee008a3")]		// Star: 16
+[TestCase(@"https://github.com/Xandaros/evolve.git",
+	@"946852f4fc0dade9f63a61a65ff1d106dfa6ae2c")]		// Star: 16
+[TestCase(@"https://github.com/clementfarabet/lua---parallel.git",
+	@"bbeb0ae7f6c8c41a580e61210fd9aafcc3d51f53")]		// Star: 16
+[TestCase(@"https://github.com/daly88/lutem.git",
+	@"a15bda104ff6cb758599b9bf3efc5ee742f3ba41")]		// Star: 16
+[TestCase(@"https://github.com/freifunk/luci.git",
+	@"14c50067dc6aed27bc5e53e2ebab015849a7845e")]		// Star: 16
+[TestCase(@"https://github.com/adriweb/EEPro-for-Nspire.git",
+	@"b2be315f3e9fbf3ce017f10cade657c613ad09e1")]		// Star: 16
+[TestCase(@"https://github.com/gorlowski/couth.git",
+	@"f6ffc89e32e3b6c9f6a394c70708aa78d492eb07")]		// Star: 15
+[TestCase(@"https://github.com/norman/hops.git",
+	@"b89744c7b2fe54ae2e3e9f8e632d5a78bee77243")]		// Star: 15
+[TestCase(@"https://github.com/loghound/Corona-Transitions.git",
+	@"6f2c661893eaafc1935a53cef969f91284040c5d")]		// Star: 15
+[TestCase(@"https://github.com/ansca/Gear-Animation.git",
+	@"082bd66b2589d37624e09f0be8d6501512c8ddf7")]		// Star: 15
+[TestCase(@"https://github.com/kengonakajima/luvit-mysql.git",
+	@"1c93b1c63a8d35fd139d5ed5720752c9c68a94e3")]		// Star: 15
+[TestCase(@"https://github.com/lloydpick/gathererdb_wowhead.git",
+	@"a404fa4f372d59f48836479d125e7a2b213aaadc")]		// Star: 15
+[TestCase(@"https://github.com/Etiene/valua.git",
+	@"5c541c55c1a16469ef7ed1c34de2511f6916c6a3")]		// Star: 15
 [TestCase(@"https://github.com/rxi/lume.git",
 	@"c7471b32fbfcd0f1cc3b94eefbb4c76d3f99a20e")]		// Star: 15
 [TestCase(@"https://github.com/Fizzadar/Luawa.git",
 	@"4cc4c97f9ca4d61e73f20eeb3aa23a55dba59f8e")]		// Star: 15
 [TestCase(@"https://github.com/unifiedremote/sandbox.git",
 	@"840c864a692ed00b62235273832e399dd11232de")]		// Star: 15
-[TestCase(@"https://github.com/gvx/richtext.git",
-	@"28bc742afbb39a27a3dd38ea8976a4e9d56189b1")]		// Star: 14
-[TestCase(@"https://github.com/coronalabs/framework-widgets-legacy.git",
-	@"ad47e84c5febfd9c8c40ca9b163cace973db0dca")]		// Star: 18
-[TestCase(@"https://github.com/ppissanetzky/AndThen.git",
-	@"95575c7ef883554c3f3f61d3aaee7139ec071817")]		// Star: 17
 [TestCase(@"https://github.com/mascarenhas/cosmo.git",
 	@"52ba6e3b25649d5b771721a6b7cc19150fbfadcd")]		// Star: 15
 [TestCase(@"https://github.com/Olivine-Labs/luassert.git",
@@ -856,38 +892,32 @@
 	@"6b0a8b6b0f30836d1d0bc2e30d7b9dbd613c61d4")]		// Star: 15
 [TestCase(@"https://github.com/davidhollander/ox.git",
 	@"f63d0dfd30da567e5604b9a92d2f6f64e1cd9de0")]		// Star: 15
-[TestCase(@"https://github.com/callin2/ParticleSugar.git",
-	@"4c0e661db118ef6dbe8c472e5de627f68ac3a721")]		// Star: 17
-[TestCase(@"https://github.com/perky/Goo.git",
-	@"c4101d31b1915381788901c3027bdcd2da423893")]		// Star: 16
 [TestCase(@"https://github.com/openitg/itg3theme.git",
 	@"7aa72330b22f0a37f4acaa666904b6a93ae9efe9")]		// Star: 15
-[TestCase(@"https://github.com/Xruptor/BagSync.git",
-	@"c9129b229a1a8a941567826136d079bf6339ad4b")]		// Star: 13
 [TestCase(@"https://github.com/jasonsantos/remdebug.git",
 	@"8d16df8262d21cee5a882cec46964f72e4a353de")]		// Star: 15
-[TestCase(@"https://github.com/rjpower/luajit-interpreter.git",
-	@"1bb90c05f3819d763653fbe889849e7ecfffd384")]		// Star: 14
-[TestCase(@"https://github.com/Abica/lime.git",
-	@"faf1e6074abc76ec22300f1d88dac466aebb834d")]		// Star: 13
-[TestCase(@"https://github.com/ittner/lua-iconv.git",
-	@"2205a0fe274ee0e59b1b15dcd5a11a4325fecead")]		// Star: 18
-[TestCase(@"https://github.com/ansca/Simple-Pool.git",
-	@"cc261ca0dac4099b024a596d684417dcc158fbf3")]		// Star: 16
-[TestCase(@"https://github.com/ea/nmap-scripts.git",
-	@"30858bb1ae8778bf4aba1ea631325a91a1bca4b2")]		// Star: 16
-[TestCase(@"https://github.com/Patsky/Match-3-Gems-Puzzle-Game.git",
-	@"cbc564e7e322b07863effed66f7fbb5a1ee008a3")]		// Star: 16
 [TestCase(@"https://github.com/liyanrui/zhfonts.git",
 	@"714bab914a770b6c594b0f32fd84a5d69b47bbd1")]		// Star: 15
-[TestCase(@"https://github.com/neomantra/nm-luajit-playground.git",
-	@"32dadfd516e2a3d5c3fb6d91206707fd990f7146")]		// Star: 14
-[TestCase(@"https://github.com/Tieske/date.git",
-	@"ac569c1a7036b7a2131b94776543c1e7bdc378b3")]		// Star: 17
-[TestCase(@"https://github.com/Xandaros/evolve.git",
-	@"946852f4fc0dade9f63a61a65ff1d106dfa6ae2c")]		// Star: 16
 [TestCase(@"https://github.com/mkosler/LoveAStar.git",
 	@"d8ab63403b084dcb52587cf3264ab415e0523cc1")]		// Star: 15
+[TestCase(@"https://github.com/tomasguisasola/luasoap.git",
+	@"af1e100281cee4b972df10121e37e51d53367a98")]		// Star: 15
+[TestCase(@"https://github.com/zm33y/vlc-lua-sia.git",
+	@"6f6f1f1012e5e8c9f05d83e1dacb4b1281e62811")]		// Star: 15
+[TestCase(@"https://github.com/GmodStarfall/Starfall.git",
+	@"27677e471dc07ebb9ad1456622c2d76dcd1d462f")]		// Star: 15
+[TestCase(@"https://github.com/moteus/lzmq.git",
+	@"185e626ef6236b0bcddcaa37f0b0590406aba2ab")]		// Star: 15
+[TestCase(@"https://github.com/Elv13/blind.git",
+	@"f6f2057d898b671d6bcf78c192ba2eba722f3104")]		// Star: 15
+[TestCase(@"https://github.com/linkedin/dmarc-msys.git",
+	@"d05cc79753b87701d0ee0e99ee7e3fd29f2e4a37")]		// Star: 15
+[TestCase(@"https://github.com/gvx/richtext.git",
+	@"28bc742afbb39a27a3dd38ea8976a4e9d56189b1")]		// Star: 14
+[TestCase(@"https://github.com/rjpower/luajit-interpreter.git",
+	@"1bb90c05f3819d763653fbe889849e7ecfffd384")]		// Star: 14
+[TestCase(@"https://github.com/neomantra/nm-luajit-playground.git",
+	@"32dadfd516e2a3d5c3fb6d91206707fd990f7146")]		// Star: 14
 [TestCase(@"https://github.com/CapsAdmin/pac3.git",
 	@"762cb8dc2c322786fba95ff8773f2b9b2559d7ee")]		// Star: 14
 [TestCase(@"https://github.com/microlua/release.git",
@@ -902,58 +932,64 @@
 	@"9e540de676b305857e526830f14fabe7e65ce53b")]		// Star: 14
 [TestCase(@"https://github.com/haste/oGlow.git",
 	@"fb0007a86fb334cbca8a8e2f99992d8e44cd23c9")]		// Star: 14
-[TestCase(@"https://github.com/tomasguisasola/luasoap.git",
-	@"af1e100281cee4b972df10121e37e51d53367a98")]		// Star: 15
 [TestCase(@"https://github.com/mikelovesrobots/lua-enumerable.git",
 	@"be92fdc222684608aacec82020eff9dfc8bcd231")]		// Star: 14
-[TestCase(@"https://github.com/zm33y/vlc-lua-sia.git",
-	@"6f6f1f1012e5e8c9f05d83e1dacb4b1281e62811")]		// Star: 15
-[TestCase(@"https://github.com/GmodStarfall/Starfall.git",
-	@"27677e471dc07ebb9ad1456622c2d76dcd1d462f")]		// Star: 15
-[TestCase(@"https://github.com/wscherphof/lua-htmlparser.git",
-	@"a8b5f6fb3160ababb5bc2c11bc4b2b0b67439be5")]		// Star: 21
-[TestCase(@"https://github.com/clementfarabet/lua---parallel.git",
-	@"bbeb0ae7f6c8c41a580e61210fd9aafcc3d51f53")]		// Star: 16
-[TestCase(@"https://github.com/moteus/lzmq.git",
-	@"185e626ef6236b0bcddcaa37f0b0590406aba2ab")]		// Star: 15
-[TestCase(@"https://github.com/coronalabs/widget-v1.git",
-	@"ec02d0bf059a5ef28e7b8f5c34c6b1f1a18656f1")]		// Star: 12
 [TestCase(@"https://github.com/prefanatic/exsto.git",
 	@"fcbf79c7f1ef5d84fe6fb57738ca3f4747ccd866")]		// Star: 14
 [TestCase(@"https://github.com/philnelson/A-Star-Pathfinding-For-Lua.git",
 	@"486dcd36709215bec7a8d8841439c168149cbd84")]		// Star: 14
-[TestCase(@"https://github.com/Azenet/FTPScripts.git",
-	@"d55436ae5ab48d38d2804ecb434cfd9b059b94df")]		// Star: 12
+[TestCase(@"https://github.com/alfredbaudisch/Corona-Transition-Manager.git",
+	@"126189b0e8cfd5853e8663e55c3cde5283db0889")]		// Star: 14
+[TestCase(@"https://github.com/nanomsg/luajit-nanomsg.git",
+	@"fdeb72d290f0fc0c02ee4c96ee9e08b96bb53b80")]		// Star: 14
+[TestCase(@"https://github.com/GloryFish/lua-astar.git",
+	@"5dcffa1d5dddf19592385b798d9310eafa0aeec2")]		// Star: 14
+[TestCase(@"https://github.com/sinaris/AsphyxiaUI---v6.git",
+	@"b0f568239cf8c42a639f3627306c9c519f417a46")]		// Star: 14
+[TestCase(@"https://github.com/ColonelThirtyTwo/lsqlite3-ffi.git",
+	@"a7e36bb057ad9f22010912f3ecf732e5333973d4")]		// Star: 14
+[TestCase(@"https://github.com/aconbere/vert.git",
+	@"8974337bca570830c68a9dce42fcf1e05c1efec1")]		// Star: 14
+[TestCase(@"https://github.com/amireh/lua_cliargs.git",
+	@"504e5aa9ab8929404d129046fb9493386962a95a")]		// Star: 14
+[TestCase(@"https://github.com/Saegor/isomap.git",
+	@"a6e54476a05a171f72493c7ccb7dde0d3e095a81")]		// Star: 14
+[TestCase(@"https://github.com/weshoke/DSL.git",
+	@"da0791b4e6855efd0f63b8a1a597db1186ff0854")]		// Star: 14
+[TestCase(@"https://github.com/tophermade/Menu-Structure.git",
+	@"0a32c1809a325c904df9143fdfec03c02a17f69d")]		// Star: 14
+[TestCase(@"https://github.com/speedata/luaqrcode.git",
+	@"6f48c2f990d0e2a2d0964c299a3a8b38bdcc4370")]		// Star: 14
+[TestCase(@"https://github.com/bsm/lua-resty-http.git",
+	@"50210eb954a25cf497d5395a3dadf6a3b1027940")]		// Star: 14
+[TestCase(@"https://github.com/kikito/i18n.lua.git",
+	@"4e2b9c2a945bd9681f811f885a9148ae09653299")]		// Star: 14
+[TestCase(@"https://github.com/SidaBoL/Scripts.git",
+	@"8fd8b9551ee13f5caf3c318db68d9a0571ce1f78")]		// Star: 14
+[TestCase(@"https://github.com/vfasky/catke-for-luvit.git",
+	@"578f642191086d0ea00095fcb3f38e5f106229d9")]		// Star: 14
+[TestCase(@"https://github.com/Xruptor/BagSync.git",
+	@"c9129b229a1a8a941567826136d079bf6339ad4b")]		// Star: 13
+[TestCase(@"https://github.com/Abica/lime.git",
+	@"faf1e6074abc76ec22300f1d88dac466aebb834d")]		// Star: 13
 [TestCase(@"https://github.com/pib/calabash.git",
 	@"2c837819bd3d5c9fa618a06f898c5fc80c2bf480")]		// Star: 13
-[TestCase(@"https://github.com/daly88/lutem.git",
-	@"a15bda104ff6cb758599b9bf3efc5ee742f3ba41")]		// Star: 16
 [TestCase(@"https://github.com/capmar/spriter-love2d.git",
 	@"4867632e829a1e2c4384cc77bf4f9d25e1273e31")]		// Star: 13
 [TestCase(@"https://github.com/alexander-yakushev/menubar.git",
 	@"b2a184d8b3312b48ec1e17e2c5092cc0f15323c2")]		// Star: 13
-[TestCase(@"https://github.com/freifunk/luci.git",
-	@"14c50067dc6aed27bc5e53e2ebab015849a7845e")]		// Star: 16
 [TestCase(@"https://github.com/Repooc/ElvUI_SLE.git",
 	@"4f5e0ad360a9ee6392d656da50bc2448b334206c")]		// Star: 13
 [TestCase(@"https://github.com/jzwinck/redis-wireshark.git",
 	@"23842e5a9dc891782466f7a1eee5f303482edc52")]		// Star: 13
 [TestCase(@"https://github.com/ELLIOTTCABLE/System.git",
 	@"d8a54cbc8dba8af73c26087506c458272037ab8b")]		// Star: 13
-[TestCase(@"https://github.com/alfredbaudisch/Corona-Transition-Manager.git",
-	@"126189b0e8cfd5853e8663e55c3cde5283db0889")]		// Star: 14
 [TestCase(@"https://github.com/thehunmonkgroup/luchia.git",
 	@"3f70eb6b6ac510c710e5052c7db9d727a7a3530f")]		// Star: 13
-[TestCase(@"https://github.com/nanomsg/luajit-nanomsg.git",
-	@"fdeb72d290f0fc0c02ee4c96ee9e08b96bb53b80")]		// Star: 14
-[TestCase(@"https://github.com/adriweb/EEPro-for-Nspire.git",
-	@"b2be315f3e9fbf3ce017f10cade657c613ad09e1")]		// Star: 16
 [TestCase(@"https://github.com/DanielFGray/dotfiles.git",
 	@"880e84e14699212436cafb3c20d8f07319862a2f")]		// Star: 13
 [TestCase(@"https://github.com/dmzgroup/lmk.git",
 	@"134c9237e48fc17a2252a2a705f5c36a467b40ac")]		// Star: 13
-[TestCase(@"https://github.com/GloryFish/lua-astar.git",
-	@"5dcffa1d5dddf19592385b798d9310eafa0aeec2")]		// Star: 14
 [TestCase(@"https://github.com/Shrike78/Shilke2D.git",
 	@"8da54c029e2e121511144f17d2f600cd267d4c1c")]		// Star: 13
 [TestCase(@"https://github.com/Sorroko/cclite.git",
@@ -962,56 +998,54 @@
 	@"4c28978faf1b5e7a63170553eb4d2b2274b0307b")]		// Star: 13
 [TestCase(@"https://github.com/katcipis/luanotify.git",
 	@"de6abf748c1aeae2eaec760da4420d8ee2e41e60")]		// Star: 13
-[TestCase(@"https://github.com/sinaris/AsphyxiaUI---v6.git",
-	@"b0f568239cf8c42a639f3627306c9c519f417a46")]		// Star: 14
 [TestCase(@"https://github.com/nemik/arduinoponics.git",
 	@"2beedde1f2ed4d1bc01781632e9eeab809998d1d")]		// Star: 13
-[TestCase(@"https://github.com/ColonelThirtyTwo/LuJGL.git",
-	@"8c551fcd56af0dd3dec67718cfd7b0aa24f69cbb")]		// Star: 12
-[TestCase(@"https://github.com/kikito/gamera.git",
-	@"bf85cbf8416e82e1d2399c0e2ca81f27500959ce")]		// Star: 17
 [TestCase(@"https://github.com/tullamods/Bagnon.git",
 	@"979e1879e5389abef94bcbf1f64a820f5c2b6f02")]		// Star: 13
-[TestCase(@"https://github.com/clementfarabet/torch-tutorials.git",
-	@"844457015aa1c23f60b4d75fc4a79e745f322e2e")]		// Star: 21
 [TestCase(@"https://github.com/Shadowed/QuickAuctions.git",
 	@"ff74f36b39ea0d1cff9706d7c88c5ea7b8d75113")]		// Star: 13
-[TestCase(@"https://github.com/ColonelThirtyTwo/lsqlite3-ffi.git",
-	@"a7e36bb057ad9f22010912f3ecf732e5333973d4")]		// Star: 14
 [TestCase(@"https://github.com/ioddly/love-repl.git",
 	@"264d772c059b8448ac375bc6b67248d7d0b01f07")]		// Star: 13
-[TestCase(@"https://github.com/cimm/iphotoexportservice.git",
-	@"f7cdc8f540d841d24f2181fdcde796ff9d335ff8")]		// Star: 11
+[TestCase(@"https://github.com/Nukesor/lovetoys.git",
+	@"f8e9ea7dbd0ef1700da2a7aa4e7b9d6a280253f5")]		// Star: 13
+[TestCase(@"https://github.com/prasannakkcse/Custom-particle-emitter.git",
+	@"7939208856e5501675ea17857cfdcf77e4e46439")]		// Star: 13
+[TestCase(@"https://github.com/mlepage/heightmap.git",
+	@"f70a08146337ce156970282c33123e13e81bdc32")]		// Star: 13
+[TestCase(@"https://github.com/radamanthus/radlib.git",
+	@"5a8fbd6e554038354f74557d27093d4bd75a0f24")]		// Star: 13
+[TestCase(@"https://github.com/davidm/lua-annotate.git",
+	@"dd36fb50d07c272f799dc9c82df972877003ddee")]		// Star: 13
+[TestCase(@"https://github.com/intrntbrn/awesome.git",
+	@"f55390b7616f3adb90ffa4847f51dc08127119d6")]		// Star: 13
+[TestCase(@"https://github.com/mtourne/ngx.shcache.git",
+	@"646aa3429bda4d7bd3fc8650d6c43b750907b3df")]		// Star: 13
+[TestCase(@"https://github.com/cloudflare/raven-lua.git",
+	@"4c4d28bc91a1b7af6ddb15ab76d77900693e3d66")]		// Star: 13
+[TestCase(@"https://github.com/SimonLarsen/iyfct.git",
+	@"ae0aa391e89b71002df9f0e8249294c5c02be5f7")]		// Star: 13
+[TestCase(@"https://github.com/torch/nn.git",
+	@"2f834ce5a23ace20b0883a60227a21f28e8b6aca")]		// Star: 13
+[TestCase(@"https://github.com/coronalabs/widget-v1.git",
+	@"ec02d0bf059a5ef28e7b8f5c34c6b1f1a18656f1")]		// Star: 12
+[TestCase(@"https://github.com/Azenet/FTPScripts.git",
+	@"d55436ae5ab48d38d2804ecb434cfd9b059b94df")]		// Star: 12
+[TestCase(@"https://github.com/ColonelThirtyTwo/LuJGL.git",
+	@"8c551fcd56af0dd3dec67718cfd7b0aa24f69cbb")]		// Star: 12
 [TestCase(@"https://github.com/Maul/Ion.git",
 	@"06a419cdc1c6f9b2d9af2e6decd22a066cfe084f")]		// Star: 12
 [TestCase(@"https://github.com/TekNoLogic/GoodNewsEveryone.git",
 	@"3e1a1ef83bc8cf90139cfb655b14897670ad0ef4")]		// Star: 12
-[TestCase(@"https://github.com/norman/lua-devtools.git",
-	@"3b6f162f5423a345ce85f44fd08271563094051e")]		// Star: 11
-[TestCase(@"https://github.com/aconbere/vert.git",
-	@"8974337bca570830c68a9dce42fcf1e05c1efec1")]		// Star: 14
-[TestCase(@"https://github.com/amireh/lua_cliargs.git",
-	@"504e5aa9ab8929404d129046fb9493386962a95a")]		// Star: 14
 [TestCase(@"https://github.com/wookay/luacat.git",
 	@"ecef193ba1ef9b7bfdee78bf85a4a9833885e7b6")]		// Star: 12
 [TestCase(@"https://github.com/TekNoLogic/StealYourCarbon.git",
 	@"740dc63207542ea275145ed566af9349eb8f4201")]		// Star: 12
 [TestCase(@"https://github.com/SiENcE/lovemoai.git",
 	@"2c5bd50d663e355b4d18b4ee576bf09b9c405d57")]		// Star: 12
-[TestCase(@"https://github.com/Elv13/blind.git",
-	@"f6f2057d898b671d6bcf78c192ba2eba722f3104")]		// Star: 15
-[TestCase(@"https://github.com/06wj/cocos2d_lua_snippets.git",
-	@"e8486c6d51a63ef79552afd5bb556ae07b8558af")]		// Star: 20
 [TestCase(@"https://github.com/Salmito/leda.git",
 	@"785dec718b0026a9fef13257d0512606b732af12")]		// Star: 12
-[TestCase(@"https://github.com/menudoproblema/Wireshark-MQTT.git",
-	@"d208c656126c393d018c692aaba7a7a8459e7673")]		// Star: 17
 [TestCase(@"https://github.com/TekNoLogic/TourGuide.git",
 	@"dbd8559a62beb1d63c783abada02320fd87c660d")]		// Star: 12
-[TestCase(@"https://github.com/Nukesor/lovetoys.git",
-	@"f8e9ea7dbd0ef1700da2a7aa4e7b9d6a280253f5")]		// Star: 13
-[TestCase(@"https://github.com/linkedin/dmarc-msys.git",
-	@"d05cc79753b87701d0ee0e99ee7e3fd29f2e4a37")]		// Star: 15
 [TestCase(@"https://github.com/dreadmullet/JC2-MP-Racing.git",
 	@"587e999100f688b253541a4322e561541d01cd25")]		// Star: 12
 [TestCase(@"https://github.com/Foohy/gm-rollercoaster.git",
@@ -1034,30 +1068,58 @@
 	@"0ac03b8c8bd33ccf0b3a97f67bea8648582ae62b")]		// Star: 12
 [TestCase(@"https://github.com/Yonaba/Allen.git",
 	@"9abdcd0330d7007d77d67a97b0c4627a46a7f278")]		// Star: 12
-[TestCase(@"https://github.com/prasannakkcse/Custom-particle-emitter.git",
-	@"7939208856e5501675ea17857cfdcf77e4e46439")]		// Star: 13
 [TestCase(@"https://github.com/fsantanna/ceu.git",
 	@"534fce7717b25acf85e101395dedb35aa90756c0")]		// Star: 12
-[TestCase(@"https://github.com/GeekWithALife/Narwhal.git",
-	@"7629b54bc5b87db407abc5b78f054c2c85059ec4")]		// Star: 11
-[TestCase(@"https://github.com/Saegor/isomap.git",
-	@"a6e54476a05a171f72493c7ccb7dde0d3e095a81")]		// Star: 14
-[TestCase(@"https://github.com/batrick/lunadry.git",
-	@"6b62fe7f79b8fa197726dbcf23d301e677cce668")]		// Star: 10
 [TestCase(@"https://github.com/coronalabs/framework-cloud.git",
 	@"426e51564855ca519f010197bd42966e4ec37461")]		// Star: 12
-[TestCase(@"https://github.com/Shestak/ShestakUI_Extra.git",
-	@"2344c1d9134ad7f28f54938b0ea0f36d79b92385")]		// Star: 11
-[TestCase(@"https://github.com/mlepage/heightmap.git",
-	@"f70a08146337ce156970282c33123e13e81bdc32")]		// Star: 13
 [TestCase(@"https://github.com/luaforge/html.git",
 	@"ae6060c80bf069079dadb9b3a757505acc5eaecd")]		// Star: 12
-[TestCase(@"https://github.com/weshoke/DSL.git",
-	@"da0791b4e6855efd0f63b8a1a597db1186ff0854")]		// Star: 14
+[TestCase(@"https://github.com/alex-lawson/sb-automation.git",
+	@"514ad6929283980ca33bf5e232675ea3ffddb3e9")]		// Star: 12
+[TestCase(@"https://github.com/xfbs/PiL3.git",
+	@"6bbaa7deb2de6b025fc504df297628a68bd376f3")]		// Star: 12
+[TestCase(@"https://github.com/lipp/lua-jet.git",
+	@"3f08180472e8ff56f3d30098b4f77c1af1a54f2b")]		// Star: 12
+[TestCase(@"https://github.com/Paamayim/adventure.git",
+	@"6f3630fe885e6cb567ec7df2a80fd5ddaf0af0bd")]		// Star: 12
+[TestCase(@"https://github.com/binarypie/awesomepie.git",
+	@"a14592459b09dc550f8937281dac92d9e62c2f76")]		// Star: 12
+[TestCase(@"https://github.com/EmmanuelOga/easing.git",
+	@"5374a50f60a011bd9c83361b1ddb3b5a16812edd")]		// Star: 12
+[TestCase(@"https://github.com/joshtynjala/signal.lua.git",
+	@"447b1d8698b1a6a949e9540a7cb65f4e1d8ffb57")]		// Star: 12
+[TestCase(@"https://github.com/hnakamur/luajit-examples.git",
+	@"13db7f399eee78b614c07423d002f1af502839bd")]		// Star: 12
+[TestCase(@"https://github.com/Neopallium/luagit2.git",
+	@"3fdf549d26a880bf11c0312c9a4cbfdd3b2ed73a")]		// Star: 12
+[TestCase(@"https://github.com/sacado/luarc.git",
+	@"82edc50767f9ef137196b72215f17663ecfd083d")]		// Star: 12
+[TestCase(@"https://github.com/coreos/corelb.git",
+	@"439fffb7cb2cdf44ba907e7c59348a211a6862d3")]		// Star: 12
+[TestCase(@"https://github.com/tangerinagames/spine-moai.git",
+	@"966f2b09cad43ed0b0334567f8f445bfc15b7a21")]		// Star: 12
+[TestCase(@"https://github.com/SurfaceS/BoL_Studio.git",
+	@"ee298b822d9924c2d68d7f645a07930f9dcc1f6b")]		// Star: 12
+[TestCase(@"https://github.com/setkeh/Awesome.git",
+	@"2595987eb37f0b4d5726785a5c55265bd877f5fb")]		// Star: 12
+[TestCase(@"https://github.com/docopt/docopt.lua.git",
+	@"85300d01eeab2d3cd1d50ef097964c50412b48fc")]		// Star: 12
+[TestCase(@"https://github.com/slime73/love-snippets.git",
+	@"357cc5a5146fe6a397e04fe1a97a96031232b278")]		// Star: 12
+[TestCase(@"https://github.com/ChartBoost/corona-sdk.git",
+	@"b1e2363dbef67f4b266689c8ae4793dab5359068")]		// Star: 12
+[TestCase(@"https://github.com/Taytay/api-proxy-3scale-heroku.git",
+	@"e83c47f5521bb908ce6165c9e102b57f47a5fa33")]		// Star: 12
+[TestCase(@"https://github.com/cimm/iphotoexportservice.git",
+	@"f7cdc8f540d841d24f2181fdcde796ff9d335ff8")]		// Star: 11
+[TestCase(@"https://github.com/norman/lua-devtools.git",
+	@"3b6f162f5423a345ce85f44fd08271563094051e")]		// Star: 11
+[TestCase(@"https://github.com/GeekWithALife/Narwhal.git",
+	@"7629b54bc5b87db407abc5b78f054c2c85059ec4")]		// Star: 11
+[TestCase(@"https://github.com/Shestak/ShestakUI_Extra.git",
+	@"2344c1d9134ad7f28f54938b0ea0f36d79b92385")]		// Star: 11
 [TestCase(@"https://github.com/daogangtang/lglib.git",
 	@"e9be241c663a742f61cf09a4ef645ca465f09b5e")]		// Star: 11
-[TestCase(@"https://github.com/xspacesoft/PropHunt.git",
-	@"5f38363f44080d173515c48c9977a57f226f4d6a")]		// Star: 18
 [TestCase(@"https://github.com/timn/roslua.git",
 	@"44a106fb753c5c0313811d4d7580928169388e7a")]		// Star: 11
 [TestCase(@"https://github.com/tcjennings/LUA-RFC-4122-UUID-Generator.git",
@@ -1066,82 +1128,90 @@
 	@"2f1ce9f391f648e1120c0e0e29a9cfc8ec3f09cd")]		// Star: 11
 [TestCase(@"https://github.com/jdp/tarn.git",
 	@"7dcddbba73179b75e0d4aca9753e6bd9de1a4847")]		// Star: 11
-[TestCase(@"https://github.com/SimonLarsen/sienna.git",
-	@"ba33bd8aa5a49ec3565f9580f6ff84b06f0b4ed2")]		// Star: 19
 [TestCase(@"https://github.com/Plaque-fcc/luakit-adblock.git",
 	@"865340c70921cccb1f3c490c2d4dd09bef269f16")]		// Star: 11
 [TestCase(@"https://github.com/vsergeyev/sol.git",
 	@"d41e3c70d5f6a52ef8b4914509cbe3a6770bac91")]		// Star: 11
 [TestCase(@"https://github.com/kikito/bresenham.lua.git",
 	@"2e060144d448d3be16cf2042f5a297011c0a60a9")]		// Star: 11
-[TestCase(@"https://github.com/alex-lawson/sb-automation.git",
-	@"514ad6929283980ca33bf5e232675ea3ffddb3e9")]		// Star: 12
 [TestCase(@"https://github.com/BenDol/otclient-candybot.git",
 	@"06dd9e7957484824729ef7c07e8295d2ebde1e9b")]		// Star: 11
 [TestCase(@"https://github.com/craigbarnes/lua-gumbo.git",
 	@"2d00e4f8ba49b2c8ea293863845dcae236d219e5")]		// Star: 11
-[TestCase(@"https://github.com/xfbs/PiL3.git",
-	@"6bbaa7deb2de6b025fc504df297628a68bd376f3")]		// Star: 12
 [TestCase(@"https://github.com/Tarendai/Shard.git",
 	@"7c51c520f566698905a61ce71766790374d825ae")]		// Star: 11
 [TestCase(@"https://github.com/Pawkette/LootDrop.git",
 	@"e774841fc09a33f39ded9c2b87ccf8a77cdcb836")]		// Star: 11
-[TestCase(@"https://github.com/radamanthus/radlib.git",
-	@"5a8fbd6e554038354f74557d27093d4bd75a0f24")]		// Star: 13
 [TestCase(@"https://github.com/kikito/battle-cry.git",
 	@"9fee042bffbf69e0a0430d8ab0fc304f1bec8d45")]		// Star: 11
 [TestCase(@"https://github.com/adityam/simple-slides.git",
 	@"878636e1d042b9df6ed2ac408293b1fefdfa061b")]		// Star: 11
-[TestCase(@"https://github.com/lipp/lua-jet.git",
-	@"3f08180472e8ff56f3d30098b4f77c1af1a54f2b")]		// Star: 12
 [TestCase(@"https://github.com/RobloxLabs/internal-code.git",
 	@"80e57b1870cc88fc2d984d9b3d2d8748f9c966fc")]		// Star: 11
 [TestCase(@"https://github.com/2bt/wall-E.git",
 	@"692969fd7913ad59c34ccdee5585ccf07662aadd")]		// Star: 11
-[TestCase(@"https://github.com/davidm/lua-annotate.git",
-	@"dd36fb50d07c272f799dc9c82df972877003ddee")]		// Star: 13
-[TestCase(@"https://github.com/Paamayim/adventure.git",
-	@"6f3630fe885e6cb567ec7df2a80fd5ddaf0af0bd")]		// Star: 12
 [TestCase(@"https://github.com/xyzz/minetest-mods.git",
 	@"3aae8e6da98dc620debae09378e7619c6debe095")]		// Star: 11
-[TestCase(@"https://github.com/binarypie/awesomepie.git",
-	@"a14592459b09dc550f8937281dac92d9e62c2f76")]		// Star: 12
-[TestCase(@"https://github.com/tophermade/Menu-Structure.git",
-	@"0a32c1809a325c904df9143fdfec03c02a17f69d")]		// Star: 14
-[TestCase(@"https://github.com/norman/tlua.git",
-	@"dfcc7aec12f957619afb62fe607aaae526d6322c")]		// Star: 10
 [TestCase(@"https://github.com/gtimworks/lua-process.git",
 	@"8a6965b926cb47ae73d0ac04f20e780f7dc6c9b5")]		// Star: 11
-[TestCase(@"https://github.com/EmmanuelOga/easing.git",
-	@"5374a50f60a011bd9c83361b1ddb3b5a16812edd")]		// Star: 12
-[TestCase(@"https://github.com/joshtynjala/signal.lua.git",
-	@"447b1d8698b1a6a949e9540a7cb65f4e1d8ffb57")]		// Star: 12
-[TestCase(@"https://github.com/hnakamur/luajit-examples.git",
-	@"13db7f399eee78b614c07423d002f1af502839bd")]		// Star: 12
 [TestCase(@"https://github.com/webscriptio/lib.git",
 	@"ee687b6763d4d65bdb458e1f3250ea3c002911b0")]		// Star: 11
 [TestCase(@"https://github.com/stevedonovan/LuaExpatUtils.git",
 	@"88c228365b084224c911d34aff06002634b38b50")]		// Star: 11
-[TestCase(@"https://github.com/intrntbrn/awesome.git",
-	@"f55390b7616f3adb90ffa4847f51dc08127119d6")]		// Star: 13
-[TestCase(@"https://github.com/Neopallium/luagit2.git",
-	@"3fdf549d26a880bf11c0312c9a4cbfdd3b2ed73a")]		// Star: 12
 [TestCase(@"https://github.com/daurnimator/mongol.git",
 	@"221c6e54f623732d91bcc7a5831d7590c28840bf")]		// Star: 11
-[TestCase(@"https://github.com/sacado/luarc.git",
-	@"82edc50767f9ef137196b72215f17663ecfd083d")]		// Star: 12
 [TestCase(@"https://github.com/dcalacci/arch-dots.git",
 	@"0951be856cb7dbfe81f69549a3b43767b442f8cc")]		// Star: 11
-[TestCase(@"https://github.com/coreos/corelb.git",
-	@"439fffb7cb2cdf44ba907e7c59348a211a6862d3")]		// Star: 12
 [TestCase(@"https://github.com/Uberi/Minetest-WorldEdit.git",
 	@"2784a25561be45894d2a138828013c96f387d470")]		// Star: 11
-[TestCase(@"https://github.com/xlilcasper/Redworks.git",
-	@"8b8b444af4ce8ec0ad6fdffee2bc99ba0ec91db8")]		// Star: 10
-[TestCase(@"https://github.com/speedata/luaqrcode.git",
-	@"6f48c2f990d0e2a2d0964c299a3a8b38bdcc4370")]		// Star: 14
 [TestCase(@"https://github.com/koraykv/unsup.git",
 	@"50d74c38fd6730bafbe3cb2bef7ecb4751070dec")]		// Star: 11
+[TestCase(@"https://github.com/azurewang/lua-resty-postgres.git",
+	@"19bc847543381cb4a6142d347d494f4c37054a47")]		// Star: 11
+[TestCase(@"https://github.com/mony960/dotfiles.git",
+	@"3277facf2d225e6322c3dc1d32ae4fe89d6cfb96")]		// Star: 11
+[TestCase(@"https://github.com/GravityScore/LuaIDE.git",
+	@"d82271536f3da477825e0d6b987b8c5044224c91")]		// Star: 11
+[TestCase(@"https://github.com/DGAH/LuaSkillsForQSGS.git",
+	@"9e0db8ec2fe8d70bae2934215230d10357b7eff5")]		// Star: 11
+[TestCase(@"https://github.com/ruilov/GitClient-Release.git",
+	@"1318d5440e9faa2f7a9ee487a8a6bcdb822a93c2")]		// Star: 11
+[TestCase(@"https://github.com/apendley/CocosCodea.git",
+	@"e097c0f1e2792ec0c71bb0dd5c94f7e2e86cda41")]		// Star: 11
+[TestCase(@"https://github.com/redpiston/CoronaOuyaController.git",
+	@"8f2a1decd25696748153d4d9d8442c087a1d0d7b")]		// Star: 11
+[TestCase(@"https://github.com/timespacemagic/coronaSDK.git",
+	@"655dac1e3b2e7620296b8f2d58ab9da6f975cdb9")]		// Star: 11
+[TestCase(@"https://github.com/davidm/lua-compat-env.git",
+	@"88941c29575feb82fa2379621d4689d1f97eeb68")]		// Star: 11
+[TestCase(@"https://github.com/romockee/powerarrow-dark.git",
+	@"1fa61636e7aa93dff53ebdc782cd4f9c46a97fa7")]		// Star: 11
+[TestCase(@"https://github.com/TekNoLogic/Ampere.git",
+	@"7f8bebc296c8dc3a1d5cef90aa231302d64e60e2")]		// Star: 11
+[TestCase(@"https://github.com/effelsberg/loveCodea.git",
+	@"ba92fcb252dcb052d2e7943d8318d90dc9b5b29f")]		// Star: 11
+[TestCase(@"https://github.com/vrld/love-console.git",
+	@"3bf1e3d64b8240675287b853690c87c78a683d24")]		// Star: 11
+[TestCase(@"https://github.com/npryce/codea-planet-battle.git",
+	@"5c84d4a5e94ada018a0bc1b64e18bd75b7b63b6f")]		// Star: 11
+[TestCase(@"https://github.com/xero/dotfiles.git",
+	@"d4d3a5a78d08d368d3a86a112ec60ee81b3dd967")]		// Star: 11
+[TestCase(@"https://github.com/centos-bz/http-guard.git",
+	@"f7e64bc74af3280b43b5fbaf3471ae85954fa1ed")]		// Star: 11
+[TestCase(@"https://github.com/lipp/nodish.git",
+	@"66bb5e231607895b8796d800c58f6824b2273c00")]		// Star: 11
+[TestCase(@"https://github.com/rgieseke/textredux.git",
+	@"5467890b442b2cb3990cc693b5aff7b8d954d84a")]		// Star: 11
+[TestCase(@"https://github.com/azurewang/lua-resty-fastdfs.git",
+	@"25a0678578292c4c863f3596254d4d4c2863d056")]		// Star: 11
+[TestCase(@"https://github.com/BobDickinson/corona-s3.git",
+	@"62671718f4547cc22da87b8616197f1db7d9adbc")]		// Star: 11
+[TestCase(@"https://github.com/batrick/lunadry.git",
+	@"6b62fe7f79b8fa197726dbcf23d301e677cce668")]		// Star: 10
+[TestCase(@"https://github.com/norman/tlua.git",
+	@"dfcc7aec12f957619afb62fe607aaae526d6322c")]		// Star: 10
+[TestCase(@"https://github.com/xlilcasper/Redworks.git",
+	@"8b8b444af4ce8ec0ad6fdffee2bc99ba0ec91db8")]		// Star: 10
 [TestCase(@"https://github.com/jmaygarden/gzio.git",
 	@"63b512f6706e951f8d5a4f9bc9cb29aae38b6723")]		// Star: 10
 [TestCase(@"https://github.com/haste/oChat.git",
@@ -1154,28 +1224,14 @@
 	@"674f06ce7f35e8719b20593b8d70f90a458836a9")]		// Star: 10
 [TestCase(@"https://github.com/Cluain/particle-candy-corona-effect-helper.git",
 	@"162151215ee799a4656081503c107698312ec4d8")]		// Star: 10
-[TestCase(@"https://github.com/tangerinagames/spine-moai.git",
-	@"966f2b09cad43ed0b0334567f8f445bfc15b7a21")]		// Star: 12
-[TestCase(@"https://github.com/azurewang/lua-resty-postgres.git",
-	@"19bc847543381cb4a6142d347d494f4c37054a47")]		// Star: 11
 [TestCase(@"https://github.com/sonoro1234/Lua2SC.git",
 	@"628685de648e863a1cc8e4951393cc25781fea7f")]		// Star: 10
 [TestCase(@"https://github.com/jsimmons/tnetstrings.lua.git",
 	@"22ac06ca7688dfab36841e470480750a41e3aa5b")]		// Star: 10
-[TestCase(@"https://github.com/mony960/dotfiles.git",
-	@"3277facf2d225e6322c3dc1d32ae4fe89d6cfb96")]		// Star: 11
-[TestCase(@"https://github.com/bsm/lua-resty-http.git",
-	@"50210eb954a25cf497d5395a3dadf6a3b1027940")]		// Star: 14
-[TestCase(@"https://github.com/mtourne/ngx.shcache.git",
-	@"646aa3429bda4d7bd3fc8650d6c43b750907b3df")]		// Star: 13
 [TestCase(@"https://github.com/slact/webylene-lua.git",
 	@"6b44f77fc12433c4a8cf7f85627de88e68c30f4c")]		// Star: 10
 [TestCase(@"https://github.com/cpettitt/lua-functional.git",
 	@"44c9cb2b54bac0c315143782b862d7fc8f565427")]		// Star: 10
-[TestCase(@"https://github.com/GravityScore/LuaIDE.git",
-	@"d82271536f3da477825e0d6b987b8c5044224c91")]		// Star: 11
-[TestCase(@"https://github.com/DGAH/LuaSkillsForQSGS.git",
-	@"9e0db8ec2fe8d70bae2934215230d10357b7eff5")]		// Star: 11
 [TestCase(@"https://github.com/Camoy/ISO.git",
 	@"c092228aeed2800fa913566e5615e84b4b780b33")]		// Star: 10
 [TestCase(@"https://github.com/soveran/resp.git",
@@ -1184,16 +1240,8 @@
 	@"51c6654b17786093608d7dd3ed0494a86b15d32e")]		// Star: 10
 [TestCase(@"https://github.com/rxi/lurker.git",
 	@"b66c1dd94054f2527b2db5a3cbe6d7808e7b7ffa")]		// Star: 10
-[TestCase(@"https://github.com/SurfaceS/BoL_Studio.git",
-	@"ee298b822d9924c2d68d7f645a07930f9dcc1f6b")]		// Star: 12
 [TestCase(@"https://github.com/mirven/lua-bert.git",
 	@"b2fe033f3bd239e08f9b888d604a57d70f238237")]		// Star: 10
-[TestCase(@"https://github.com/ruilov/GitClient-Release.git",
-	@"1318d5440e9faa2f7a9ee487a8a6bcdb822a93c2")]		// Star: 11
-[TestCase(@"https://github.com/apendley/CocosCodea.git",
-	@"e097c0f1e2792ec0c71bb0dd5c94f7e2e86cda41")]		// Star: 11
-[TestCase(@"https://github.com/cloudflare/raven-lua.git",
-	@"4c4d28bc91a1b7af6ddb15ab76d77900693e3d66")]		// Star: 13
 [TestCase(@"https://github.com/microlua/utilities.git",
 	@"5f09f1fcc2347f40dce61265bab6726229cabe19")]		// Star: 10
 [TestCase(@"https://github.com/lipp/tango.git",
@@ -1208,26 +1256,14 @@
 	@"6bc9da2f2a24cccde600bb10599c0205dc5e82b4")]		// Star: 10
 [TestCase(@"https://github.com/smlb/dotfiles.git",
 	@"3d0aa69ad4fc71e7a073ffd4e45dffca20a99f90")]		// Star: 10
-[TestCase(@"https://github.com/redpiston/CoronaOuyaController.git",
-	@"8f2a1decd25696748153d4d9d8442c087a1d0d7b")]		// Star: 11
-[TestCase(@"https://github.com/timespacemagic/coronaSDK.git",
-	@"655dac1e3b2e7620296b8f2d58ab9da6f975cdb9")]		// Star: 11
-[TestCase(@"https://github.com/davidm/lua-compat-env.git",
-	@"88941c29575feb82fa2379621d4689d1f97eeb68")]		// Star: 11
 [TestCase(@"https://github.com/patrickallaert/MySQL-Proxy-scripts-for-devs.git",
 	@"53d7de39a6c4d68391889ac5c76348effe35fcf8")]		// Star: 10
-[TestCase(@"https://github.com/romockee/powerarrow-dark.git",
-	@"1fa61636e7aa93dff53ebdc782cd4f9c46a97fa7")]		// Star: 11
-[TestCase(@"https://github.com/SimonLarsen/iyfct.git",
-	@"ae0aa391e89b71002df9f0e8249294c5c02be5f7")]		// Star: 13
 [TestCase(@"https://github.com/mendsley/libssl.git",
 	@"5282f1f5b209dbf594518088db200c448bfa4896")]		// Star: 10
 [TestCase(@"https://github.com/Allez/alDamageMeter.git",
 	@"ed0c90824f9d18dda3223481c9444ac7ff7192f9")]		// Star: 10
 [TestCase(@"https://github.com/quaker66/luacy.git",
 	@"dab8833ed0a97bde72212eb3a2bb6255107d2c20")]		// Star: 10
-[TestCase(@"https://github.com/kikito/i18n.lua.git",
-	@"4e2b9c2a945bd9681f811f885a9148ae09653299")]		// Star: 14
 [TestCase(@"https://github.com/TekNoLogic/Buffet.git",
 	@"04194fd43c41b128ea504bac6e6102b76b93484b")]		// Star: 10
 [TestCase(@"https://github.com/JakobOvrum/LuaMVC.git",
@@ -1238,70 +1274,78 @@
 	@"38853d7b2786543200bf5ba015914d5a38cfdf19")]		// Star: 10
 [TestCase(@"https://github.com/regit/suriwire.git",
 	@"f08f9219061ae2628a794c3c6273cb2aac19247e")]		// Star: 10
-[TestCase(@"https://github.com/TekNoLogic/Ampere.git",
-	@"7f8bebc296c8dc3a1d5cef90aa231302d64e60e2")]		// Star: 11
 [TestCase(@"https://github.com/sam-github/lunit.git",
 	@"46c4e907c49451d0c2d9734466897f9be7367bbd")]		// Star: 10
-[TestCase(@"https://github.com/dvv/luvit-static.git",
-	@"fa3a71992a0c6bf8927a3ee5a119eef06f2becee")]		// Star: 9
 [TestCase(@"https://github.com/nickgammon/plugins.git",
 	@"ed3bfdbf35ddc3f513cfef475afe5ae7ab794a6e")]		// Star: 10
 [TestCase(@"https://github.com/LuaDist/squish.git",
 	@"1756545cc3b1bebb27e03dde7e833858dc6741f3")]		// Star: 10
-[TestCase(@"https://github.com/Lafolie/Platformy.git",
-	@"8dd6a09aebb816c0191cf254031010a62f6b778a")]		// Star: 8
-[TestCase(@"https://github.com/effelsberg/loveCodea.git",
-	@"ba92fcb252dcb052d2e7943d8318d90dc9b5b29f")]		// Star: 11
-[TestCase(@"https://github.com/Foof/fRunes.git",
-	@"2bedc9314bafdc63c5e1e1c16adba25a34c8b63d")]		// Star: 8
-[TestCase(@"https://github.com/fgprodigal/RayUI-for-CTM.git",
-	@"7ff33c408184f803d7262dc8e8b2ce4bd894e4ab")]		// Star: 9
-[TestCase(@"https://github.com/Kryso/Tukui_ClassTimer.git",
-	@"b0892679412cfb52a13476fd895e04fc6820de3f")]		// Star: 9
-[TestCase(@"https://github.com/vrld/love-console.git",
-	@"3bf1e3d64b8240675287b853690c87c78a683d24")]		// Star: 11
-[TestCase(@"https://github.com/npryce/codea-planet-battle.git",
-	@"5c84d4a5e94ada018a0bc1b64e18bd75b7b63b6f")]		// Star: 11
-[TestCase(@"https://github.com/sigg/RDX.git",
-	@"3a45e26947e7c2c07e9506e82eb00f9272c93f4e")]		// Star: 9
 [TestCase(@"https://github.com/iuser99/BoL.git",
 	@"bbc2b89d52653aa469a9a2de549666938a2acd72")]		// Star: 10
 [TestCase(@"https://github.com/NightmaresWithin/Public.git",
 	@"8c45553e7cc436f15090daae4e75e9eed089da7f")]		// Star: 10
-[TestCase(@"https://github.com/SidaBoL/Scripts.git",
-	@"8fd8b9551ee13f5caf3c318db68d9a0571ce1f78")]		// Star: 14
 [TestCase(@"https://github.com/lattejed/a-star-lua.git",
 	@"8bb38832fed377611018c07e0a03ad5a45c60adb")]		// Star: 10
-[TestCase(@"https://github.com/setkeh/Awesome.git",
-	@"2595987eb37f0b4d5726785a5c55265bd877f5fb")]		// Star: 12
-[TestCase(@"https://github.com/Shrike78/HarmonyCodea.git",
-	@"1acfbd24b5bd07500f334c48ff0de7607ba92c07")]		// Star: 9
-[TestCase(@"https://github.com/dcodeIO/CumulusAdmin.git",
-	@"72dc3c45ed126841f096c6be6f8cd33c9cb728ad")]		// Star: 9
 [TestCase(@"https://github.com/Neopallium/lua-clang-cindex.git",
 	@"ffa6d5ba3b1bdc7337ed4f3ebfadbc12a08737a4")]		// Star: 10
-[TestCase(@"https://github.com/xero/dotfiles.git",
-	@"d4d3a5a78d08d368d3a86a112ec60ee81b3dd967")]		// Star: 11
-[TestCase(@"https://github.com/jnwhiteh/snippets_luacode.git",
-	@"4b8761b0168bca3a1a7e1d149ba534375d3b0833")]		// Star: 9
-[TestCase(@"https://github.com/Redsmin/redis-lua-unit.git",
-	@"272da00b83e5470976046f45d85d2509c7ea891b")]		// Star: 9
 [TestCase(@"https://github.com/Pogs/lua-utf8-simple.git",
 	@"cd47bb210614afe379080d5149275e353aa93719")]		// Star: 10
-[TestCase(@"https://github.com/virgo-agent-toolkit/luvit-async.git",
-	@"77634123463665aefa004e14a742507b8e2b8dd6")]		// Star: 9
-[TestCase(@"https://github.com/davidhollander/fn.git",
-	@"e7c7a4db0ef4814a6f482a68fbc77303b36a17b6")]		// Star: 9
-[TestCase(@"https://github.com/makotok/HSFramework.git",
-	@"d89b1253583c1f78378a97d39f2dc31fb6fad6b9")]		// Star: 8
 [TestCase(@"https://github.com/silentbicycle/lua-memcached.git",
 	@"b4ea004c4e82da8fb618f295bdb01ff9ad2c3cbd")]		// Star: 10
 [TestCase(@"https://github.com/brandontreb/Boids.git",
 	@"ad882fa51d719934d279fdd570e2c4f98e948d5c")]		// Star: 10
 [TestCase(@"https://github.com/rohitjoshi/lua-mapreduce.git",
 	@"4d16f694e1b2025cfbfdbe9e78e63e5967e7cfa7")]		// Star: 10
-[TestCase(@"https://github.com/docopt/docopt.lua.git",
-	@"85300d01eeab2d3cd1d50ef097964c50412b48fc")]		// Star: 12
+[TestCase(@"https://github.com/darkstalker/LuaTwit.git",
+	@"811631f5feb5dc3d4d6485d65c570020056f686e")]		// Star: 10
+[TestCase(@"https://github.com/ansca/Corona-Pagecurl.git",
+	@"7d5806e2007c1fd8d36539959bc36eb754994c90")]		// Star: 10
+[TestCase(@"https://github.com/BobDickinson/lib_facebook.git",
+	@"4a6af380e659546a8bea2ed203b92f7e1a9fdb86")]		// Star: 10
+[TestCase(@"https://github.com/torch/optim.git",
+	@"4dd17db5dae27b947d713e60150066d753763420")]		// Star: 10
+[TestCase(@"https://github.com/Lerg/skybox.git",
+	@"f68e1fcb4902fda86753b6ac5d785e1632037dcf")]		// Star: 10
+[TestCase(@"https://github.com/LiquidHelium/LoveAchievements.git",
+	@"c25c5d686ceddd6ae721fe0f6d80b29bb30ad33b")]		// Star: 10
+[TestCase(@"https://github.com/speccy/daze.git",
+	@"e83b6e9ee890af0dcaa043698246d935b5355b9f")]		// Star: 10
+[TestCase(@"https://github.com/hoelzro/obvious.git",
+	@"d4e11c47ebc9bdccd92e06d5c9ee0a09675c3cf0")]		// Star: 10
+[TestCase(@"https://github.com/catwell/lua-toolbox.git",
+	@"a6ba3526e5ebad77fea1f961a20e3817464047bf")]		// Star: 10
+[TestCase(@"https://github.com/ejmr/Luvent.git",
+	@"3ff9588828003420bc990217e774e7461bff2105")]		// Star: 10
+[TestCase(@"https://github.com/kikito/sandbox.lua.git",
+	@"bdecb751d799484b8f1a7cf013de8e00fe74ccc3")]		// Star: 10
+[TestCase(@"https://github.com/PilzAdam/carts.git",
+	@"70cc4f449ff9a064293573387cf8de931d795413")]		// Star: 10
+[TestCase(@"https://github.com/mkosler/LOVELuaDoc.git",
+	@"fd3cc554ecf3db158d2869ef3f579facf65fb8ba")]		// Star: 10
+[TestCase(@"https://github.com/TheLinx/MoonIRC.git",
+	@"360258f75b140b2c798f8db7137c0cc397eef1df")]		// Star: 10
+[TestCase(@"https://github.com/daurnimator/luatz.git",
+	@"cfc4ba97c3596db1105abc17692a54185cfd3a30")]		// Star: 10
+[TestCase(@"https://github.com/dvv/luvit-static.git",
+	@"fa3a71992a0c6bf8927a3ee5a119eef06f2becee")]		// Star: 9
+[TestCase(@"https://github.com/fgprodigal/RayUI-for-CTM.git",
+	@"7ff33c408184f803d7262dc8e8b2ce4bd894e4ab")]		// Star: 9
+[TestCase(@"https://github.com/Kryso/Tukui_ClassTimer.git",
+	@"b0892679412cfb52a13476fd895e04fc6820de3f")]		// Star: 9
+[TestCase(@"https://github.com/sigg/RDX.git",
+	@"3a45e26947e7c2c07e9506e82eb00f9272c93f4e")]		// Star: 9
+[TestCase(@"https://github.com/Shrike78/HarmonyCodea.git",
+	@"1acfbd24b5bd07500f334c48ff0de7607ba92c07")]		// Star: 9
+[TestCase(@"https://github.com/dcodeIO/CumulusAdmin.git",
+	@"72dc3c45ed126841f096c6be6f8cd33c9cb728ad")]		// Star: 9
+[TestCase(@"https://github.com/jnwhiteh/snippets_luacode.git",
+	@"4b8761b0168bca3a1a7e1d149ba534375d3b0833")]		// Star: 9
+[TestCase(@"https://github.com/Redsmin/redis-lua-unit.git",
+	@"272da00b83e5470976046f45d85d2509c7ea891b")]		// Star: 9
+[TestCase(@"https://github.com/virgo-agent-toolkit/luvit-async.git",
+	@"77634123463665aefa004e14a742507b8e2b8dd6")]		// Star: 9
+[TestCase(@"https://github.com/davidhollander/fn.git",
+	@"e7c7a4db0ef4814a6f482a68fbc77303b36a17b6")]		// Star: 9
 [TestCase(@"https://github.com/koraykv/optim.git",
 	@"46fa4f3733fcb60d47c39d859685dac4e04e11fc")]		// Star: 9
 [TestCase(@"https://github.com/stevedonovan/lglob.git",
@@ -1310,8 +1354,6 @@
 	@"11eec42e2911467203a2e91e1ea585248a565889")]		// Star: 9
 [TestCase(@"https://github.com/elua/examples.git",
 	@"b2222c5fb27d8c1a870980ee201cc0efb1a02d6c")]		// Star: 9
-[TestCase(@"https://github.com/slime73/love-snippets.git",
-	@"357cc5a5146fe6a397e04fe1a97a96031232b278")]		// Star: 12
 [TestCase(@"https://github.com/bilalq/dotfiles.git",
 	@"31d9af2504d5706568e589ea58bd710fcbfacd0d")]		// Star: 9
 [TestCase(@"https://github.com/mimetic/corona-styled-textwrap.git",
@@ -1328,28 +1370,52 @@
 	@"b6ceb198f5c29919f7d0f1bfde83aa7e946685b2")]		// Star: 9
 [TestCase(@"https://github.com/pirj/proxy.git",
 	@"d70d3e3b6a12f7e9b2cd4a5decc3680a0865c534")]		// Star: 9
-[TestCase(@"https://github.com/darkstalker/LuaTwit.git",
-	@"811631f5feb5dc3d4d6485d65c570020056f686e")]		// Star: 10
-[TestCase(@"https://github.com/ansca/Corona-Pagecurl.git",
-	@"7d5806e2007c1fd8d36539959bc36eb754994c90")]		// Star: 10
 [TestCase(@"https://github.com/daogangtang/bamboo-redis.git",
 	@"4266117fdbbfb665074d3acb2895078997079bc5")]		// Star: 9
 [TestCase(@"https://github.com/tisyang/kaos.git",
 	@"f5a281fcd4e9af4e2e4bab2022e7904f806e78f3")]		// Star: 9
-[TestCase(@"https://github.com/BobDickinson/lib_facebook.git",
-	@"4a6af380e659546a8bea2ed203b92f7e1a9fdb86")]		// Star: 10
-[TestCase(@"https://github.com/centos-bz/http-guard.git",
-	@"f7e64bc74af3280b43b5fbaf3471ae85954fa1ed")]		// Star: 11
 [TestCase(@"https://github.com/umitproject/ns-mobile.git",
 	@"676ad6fd512fa8e23097619083ecc53036f8dce2")]		// Star: 9
 [TestCase(@"https://github.com/cucumber/cucumber-lua.git",
 	@"4154884f2c884e2f815338c4a6fd8cd515bc2d3f")]		// Star: 9
 [TestCase(@"https://github.com/Mr-Gash/GMod-Deathrun.git",
 	@"35dbfa1f328f2f1f519ad09d5b1b2cf7ab20761c")]		// Star: 9
-[TestCase(@"https://github.com/torch/optim.git",
-	@"4dd17db5dae27b947d713e60150066d753763420")]		// Star: 10
 [TestCase(@"https://github.com/oeed/OneOS.git",
 	@"f18f19e5fb5ded783088a90ca5e7aaa9bea2a0f8")]		// Star: 9
+[TestCase(@"https://github.com/shomeax/wireshark-http-extra.git",
+	@"584eac3ac45dad54d48260273d5e65c3edd165e0")]		// Star: 9
+[TestCase(@"https://github.com/ethanpil/tileBG.git",
+	@"27ac694a49aed51fec3c62963310503c90b18c8c")]		// Star: 9
+[TestCase(@"https://github.com/GlitchGames/GGTwitter.git",
+	@"49fbf1e666bd4f88f471d14a1f4860fe953774d4")]		// Star: 9
+[TestCase(@"https://github.com/takeshixx/ssl-heartbleed.nse.git",
+	@"da9685ea180e9524f51fc9215fd2a8e8ab8e6689")]		// Star: 9
+[TestCase(@"https://github.com/lua-aplicado/lua-aplicado.git",
+	@"ddf853d5dc9be57c3e08021a156cdbe096d636c8")]		// Star: 9
+[TestCase(@"https://github.com/callin2/lockout.lua.git",
+	@"8c6a2ffa382a36ff2c0c581f03c97891b211ac99")]		// Star: 9
+[TestCase(@"https://github.com/sapier/animals_modpack.git",
+	@"dd501299dd00a909a460512c3cc7afe0211b1316")]		// Star: 9
+[TestCase(@"https://github.com/AdamBuchweitz/ToggleClass.git",
+	@"af074ef1f6343efdd1e136128dfb89634c8a2d6e")]		// Star: 9
+[TestCase(@"https://github.com/Wiladams/LJIT2Sophia.git",
+	@"9a5019b71a38f8ae039884300bed6c4e5754fd17")]		// Star: 9
+[TestCase(@"https://github.com/TekNoLogic/controlfreak.git",
+	@"bab63d273d51ac66f4176d2c4aad49d4ce5b41a0")]		// Star: 9
+[TestCase(@"https://github.com/dcartoon/redis-lua-scripts.git",
+	@"e7ac664a1a9f618f529a75d64c225ad351fc4755")]		// Star: 9
+[TestCase(@"https://github.com/zhhchen/lua-resty-gearman.git",
+	@"d81da2e8c3081d6c96e068d9efec0ab926bf25a4")]		// Star: 9
+[TestCase(@"https://github.com/rgieseke/ta-themes.git",
+	@"8fc6bee580154cf7d480829ad23290e1c3a5a454")]		// Star: 9
+[TestCase(@"https://github.com/michael714/Corona-Dropbox3.git",
+	@"98e32cdfb29dfa6014c095ca81042f4714b5c89b")]		// Star: 9
+[TestCase(@"https://github.com/Lafolie/Platformy.git",
+	@"8dd6a09aebb816c0191cf254031010a62f6b778a")]		// Star: 8
+[TestCase(@"https://github.com/Foof/fRunes.git",
+	@"2bedc9314bafdc63c5e1e1c16adba25a34c8b63d")]		// Star: 8
+[TestCase(@"https://github.com/makotok/HSFramework.git",
+	@"d89b1253583c1f78378a97d39f2dc31fb6fad6b9")]		// Star: 8
 [TestCase(@"https://github.com/lanceulmer/memory.lua.git",
 	@"c62daafd3b9a27ea1ab6f17adfc5ab9fcd0477d5")]		// Star: 8
 [TestCase(@"https://github.com/slact/lua-feedparser.git",
@@ -1360,14 +1426,10 @@
 	@"d9bea0aeff6916d9d3fae7938897b9b7d3882d68")]		// Star: 8
 [TestCase(@"https://github.com/jhamb/NotionScriptsCollection.git",
 	@"6def9fe0473e75984d6e5da19e3a908f6a1fef0e")]		// Star: 8
-[TestCase(@"https://github.com/JesterXL/ZombieStick.git",
-	@"d5812d67dbe8debbab36232e5fca688e0b28bafd")]		// Star: 7
 [TestCase(@"https://github.com/rrthomas/mork.git",
 	@"481a35aefb246cff5125ce0c0c3c657d34c6d35b")]		// Star: 8
 [TestCase(@"https://github.com/zwopple/zwoptex-coordinates.git",
 	@"e508b07bae49ccbe3d4c10737263b0691893a560")]		// Star: 8
-[TestCase(@"https://github.com/ToxicFrog/steamtools.git",
-	@"28457fddd1bf12147f1cd48a1131592dc345392a")]		// Star: 7
 [TestCase(@"https://github.com/jessehorne/loveos.git",
 	@"03e7511b52a655860bfa331324cfd7b5ce020ff4")]		// Star: 8
 [TestCase(@"https://github.com/TekNoLogic/VendorBait.git",
@@ -1392,12 +1454,6 @@
 	@"eea6b35845ae55e9a43f497f0eec9bdd73c132a7")]		// Star: 8
 [TestCase(@"https://github.com/affli/Filger.git",
 	@"821e56c1e94e1d3ea162d15de797b2e458617a54")]		// Star: 8
-[TestCase(@"https://github.com/Lerg/skybox.git",
-	@"f68e1fcb4902fda86753b6ac5d785e1632037dcf")]		// Star: 10
-[TestCase(@"https://github.com/LiquidHelium/LoveAchievements.git",
-	@"c25c5d686ceddd6ae721fe0f6d80b29bb30ad33b")]		// Star: 10
-[TestCase(@"https://github.com/shomeax/wireshark-http-extra.git",
-	@"584eac3ac45dad54d48260273d5e65c3edd165e0")]		// Star: 9
 [TestCase(@"https://github.com/bullno1/MoaiRemote.git",
 	@"dd506f613453aa38e57e7df653ac2818ca6b0661")]		// Star: 8
 [TestCase(@"https://github.com/nightsailer/lua-resty-mongo.git",
@@ -1410,18 +1466,10 @@
 	@"076ed3a1fed46d62af02f0029438775f0271549f")]		// Star: 8
 [TestCase(@"https://github.com/jeancaffou/VLC-Player-Auto-Subtitles.git",
 	@"65e62039c98f087a29366630d75871b8b36ac2ab")]		// Star: 8
-[TestCase(@"https://github.com/lipp/nodish.git",
-	@"66bb5e231607895b8796d800c58f6824b2273c00")]		// Star: 11
 [TestCase(@"https://github.com/pkulchenko/LuaRemote.git",
 	@"715f6e2d503da12371b349bd8bc71b3fcf7ed1f0")]		// Star: 8
-[TestCase(@"https://github.com/TheLinx/LoveUpdate.git",
-	@"cdd57ccf5ad3c72825406d0c53b251e1f3c1116d")]		// Star: 7
-[TestCase(@"https://github.com/speccy/daze.git",
-	@"e83b6e9ee890af0dcaa043698246d935b5355b9f")]		// Star: 10
 [TestCase(@"https://github.com/xToken/DAK.git",
 	@"15f6704fd7fe1800c5a292429768aabbb31f0dbd")]		// Star: 8
-[TestCase(@"https://github.com/hoelzro/obvious.git",
-	@"d4e11c47ebc9bdccd92e06d5c9ee0a09675c3cf0")]		// Star: 10
 [TestCase(@"https://github.com/funkyvisions/ParentalGate.git",
 	@"580981727e4e836303938a1c6724a6871e7580e1")]		// Star: 8
 [TestCase(@"https://github.com/keplerproject/leg.git",
@@ -1430,18 +1478,10 @@
 	@"b24a16a06506624a09b598bc9296817bffa36451")]		// Star: 8
 [TestCase(@"https://github.com/Wiladams/BanateCAD.git",
 	@"b4bc5717096d7693854dbc1cc560c6bf53630a2b")]		// Star: 8
-[TestCase(@"https://github.com/rgieseke/textredux.git",
-	@"5467890b442b2cb3990cc693b5aff7b8d954d84a")]		// Star: 11
-[TestCase(@"https://github.com/ethanpil/tileBG.git",
-	@"27ac694a49aed51fec3c62963310503c90b18c8c")]		// Star: 9
 [TestCase(@"https://github.com/tcoram/bson-lua.git",
 	@"3da1ac5db6614366c7d871b227abc5b95590de21")]		// Star: 8
-[TestCase(@"https://github.com/GlitchGames/GGTwitter.git",
-	@"49fbf1e666bd4f88f471d14a1f4860fe953774d4")]		// Star: 9
 [TestCase(@"https://github.com/nixpulvis/EpicUI-2.0.git",
 	@"9354d6437f92936f8191737b7b2c5667bea82949")]		// Star: 8
-[TestCase(@"https://github.com/takeshixx/ssl-heartbleed.nse.git",
-	@"da9685ea180e9524f51fc9215fd2a8e8ab8e6689")]		// Star: 9
 [TestCase(@"https://github.com/drot/dotfiles.git",
 	@"db1a412d4bfc114dd769c87acabb6329d01fd679")]		// Star: 8
 [TestCase(@"https://github.com/dsoulayrol/flaw.git",
@@ -1454,30 +1494,18 @@
 	@"2bd22b0ce5b6d51d48ac0cac8e3c1d91a27183b2")]		// Star: 8
 [TestCase(@"https://github.com/josefnpat/Aeternum-Blammo.git",
 	@"cd93290de600345fd8487e61076835cba9a2981d")]		// Star: 8
-[TestCase(@"https://github.com/lua-aplicado/lua-aplicado.git",
-	@"ddf853d5dc9be57c3e08021a156cdbe096d636c8")]		// Star: 9
 [TestCase(@"https://github.com/TheLinx/Juiz.git",
 	@"59526715791f7db28c44f17a687dbf543e589f2b")]		// Star: 8
-[TestCase(@"https://github.com/callin2/lockout.lua.git",
-	@"8c6a2ffa382a36ff2c0c581f03c97891b211ac99")]		// Star: 9
 [TestCase(@"https://github.com/stevedonovan/LuaRocksTools.git",
 	@"93d77f7a053cf1aaad4e2bade792965257eec87f")]		// Star: 8
-[TestCase(@"https://github.com/sapier/animals_modpack.git",
-	@"dd501299dd00a909a460512c3cc7afe0211b1316")]		// Star: 9
 [TestCase(@"https://github.com/mkottman/wdm.git",
 	@"4f40b4980ce898e891d8cc71b2df6bf57721ff0c")]		// Star: 8
-[TestCase(@"https://github.com/catwell/lua-toolbox.git",
-	@"a6ba3526e5ebad77fea1f961a20e3817464047bf")]		// Star: 10
 [TestCase(@"https://github.com/ROClientSide/Translation.git",
 	@"9d8bba23d7eaea740e7f7d36c49c01be8105cfff")]		// Star: 8
 [TestCase(@"https://github.com/CapsAdmin/goluwa.git",
 	@"281cc2a3c78eb4425b2210d462ce198d5ac6d0d4")]		// Star: 8
 [TestCase(@"https://github.com/UglyOldGuy/BoL.git",
 	@"03bcbaafb12a3ccf80a3258e75fd4a49a6814026")]		// Star: 8
-[TestCase(@"https://github.com/ejmr/Luvent.git",
-	@"3ff9588828003420bc990217e774e7461bff2105")]		// Star: 10
-[TestCase(@"https://github.com/AdamBuchweitz/ToggleClass.git",
-	@"af074ef1f6343efdd1e136128dfb89634c8a2d6e")]		// Star: 9
 [TestCase(@"https://github.com/Neavo/Sora.git",
 	@"78c842d3f2a0037ea4e7cdcabb55b0a1fbe44de1")]		// Star: 8
 [TestCase(@"https://github.com/ChristopherThorpe/OldZugslistAddon.git",
@@ -1488,24 +1516,16 @@
 	@"ae3eef0db6147de575943d17c04450aa374cac84")]		// Star: 8
 [TestCase(@"https://github.com/radare/luvit-Connect.git",
 	@"fc551fa635c2a64c5fe3af61fd5dae4bb99355f6")]		// Star: 8
-[TestCase(@"https://github.com/Wiladams/LJIT2Sophia.git",
-	@"9a5019b71a38f8ae039884300bed6c4e5754fd17")]		// Star: 9
 [TestCase(@"https://github.com/hjelmeland/globals.git",
 	@"a71f0f814dc3bb9560032631e0ab3dfaa61931f9")]		// Star: 8
 [TestCase(@"https://github.com/dreamfairy/PrompaLua.git",
 	@"046bf97faa1f25315b674ddb0ce48d3b0f34554c")]		// Star: 8
-[TestCase(@"https://github.com/azurewang/lua-resty-fastdfs.git",
-	@"25a0678578292c4c863f3596254d4d4c2863d056")]		// Star: 11
-[TestCase(@"https://github.com/TekNoLogic/controlfreak.git",
-	@"bab63d273d51ac66f4176d2c4aad49d4ce5b41a0")]		// Star: 9
 [TestCase(@"https://github.com/haste/oUF_MovableFrames.git",
 	@"6e0d2560985b43a8dec86c9e9a60885bb3815ad0")]		// Star: 8
 [TestCase(@"https://github.com/meric/tier.git",
 	@"20f022319825d290c4d92bd85f6ea07d839f6f96")]		// Star: 8
 [TestCase(@"https://github.com/karai17/love-und-panzer.git",
 	@"ac00e060d3887acfbcc2e242fd410eb279ba4ae6")]		// Star: 8
-[TestCase(@"https://github.com/kikito/sandbox.lua.git",
-	@"bdecb751d799484b8f1a7cf013de8e00fe74ccc3")]		// Star: 10
 [TestCase(@"https://github.com/TekNoLogic/tekLayout.git",
 	@"e20e96c03d4a00ec619cf135bc8acae080f700a5")]		// Star: 8
 [TestCase(@"https://github.com/mascarenhas/luma.git",
@@ -1514,12 +1534,60 @@
 	@"ad716ef06723ec9a8f89da618a7c4c8692ad27dc")]		// Star: 8
 [TestCase(@"https://github.com/INPStarfall/Starfall.git",
 	@"ea5d09d62ba40669cd5db4e10a1308a11b1140f6")]		// Star: 8
-[TestCase(@"https://github.com/virgo-agent-toolkit/luvit-bourbon.git",
-	@"2a74bd2a0a934377fc119d35d22e8260c0e76656")]		// Star: 7
 [TestCase(@"https://github.com/joeka/I-hate-myself.git",
 	@"07bc1a2d682eeceb85dd74e928bc35d77353df08")]		// Star: 8
-[TestCase(@"https://github.com/torch/nn.git",
-	@"2f834ce5a23ace20b0883a60227a21f28e8b6aca")]		// Star: 13
+[TestCase(@"https://github.com/vrld/Moan.git",
+	@"7af248ab52327fbc86a20f3dbfd8fee3f072f725")]		// Star: 8
+[TestCase(@"https://github.com/justincormack/luacparse-example.git",
+	@"9b8785e410b231b2efc88f431f6f3a99ee3a275a")]		// Star: 8
+[TestCase(@"https://github.com/silentbicycle/lua-mpd.git",
+	@"ca32f43a09504d1843a55688757e4d52ecf2d38f")]		// Star: 8
+[TestCase(@"https://github.com/silentbicycle/lua-bdd.git",
+	@"c181ce4e65e8082eb22c0fdead775caf0098e32f")]		// Star: 8
+[TestCase(@"https://github.com/barraponto/dotfiles.git",
+	@"f9d59c54b7f439bbc19cd28624b3fab2ca931a16")]		// Star: 8
+[TestCase(@"https://github.com/oeed/PearOS.git",
+	@"9bc76cd2f0a0755030abd6d23a7c059ec152e8c2")]		// Star: 8
+[TestCase(@"https://github.com/Anaminus/roblox-cure.git",
+	@"3cbe3978de7f22da5a6b528003a52a2f31a6ac12")]		// Star: 8
+[TestCase(@"https://github.com/DarkAngel39/Events.git",
+	@"c4057ec2fc49c12ff598840fb7e4258a087e9b40")]		// Star: 8
+[TestCase(@"https://github.com/leafo/sitegen.git",
+	@"fee7ad981db92fe49f856cfd164a45c9cc25ce17")]		// Star: 8
+[TestCase(@"https://github.com/weltensturm/wac.git",
+	@"9e410bd9bf6f5c995b3b663d360641e43732aa69")]		// Star: 8
+[TestCase(@"https://github.com/jk3064/chiliui.git",
+	@"0a954ef747b53fdd64b8a90e02ee4ff6ab073f82")]		// Star: 8
+[TestCase(@"https://github.com/hishamhm/codegrep.git",
+	@"e31a238379e2abfff6f5081b868e038b118f9e1b")]		// Star: 8
+[TestCase(@"https://github.com/GlitchGames/GGRating.git",
+	@"2ffc9e82ee2e16e8c275fe789d652fd5f70ed1d6")]		// Star: 8
+[TestCase(@"https://github.com/adereth/notion-config.git",
+	@"a29fd95d27a33211dfee19cb0e0e4559901dcb0f")]		// Star: 8
+[TestCase(@"https://github.com/justincormack/slice.git",
+	@"3811bcd0e02470032b3e83c599ea941d3016b302")]		// Star: 8
+[TestCase(@"https://github.com/ejmr/LNVL.git",
+	@"e1cc55ae3e7d088404d8628bd43a83c93da21e94")]		// Star: 8
+[TestCase(@"https://github.com/AdamBuchweitz/CoronaCamera.git",
+	@"d9b6638f9bfe44a4357b5b983acf3161bfe62a9d")]		// Star: 8
+[TestCase(@"https://github.com/Whitewater/Serial.git",
+	@"48fb1eba63c4a60a1d6635f5900dec2fb7143e4c")]		// Star: 8
+[TestCase(@"https://github.com/ansca/GameCenter.git",
+	@"b300d42f2490d539cf61dc3af1f548a3436e68ba")]		// Star: 8
+[TestCase(@"https://github.com/minetest/survival.git",
+	@"3acee4cb4cea553296426bf3414bcd245d5d7e13")]		// Star: 8
+[TestCase(@"https://github.com/silentbicycle/lua-ukanren.git",
+	@"2c8d3d20d7f134de318298baf8265315f2556cb0")]		// Star: 8
+[TestCase(@"https://github.com/mpeterv/argparse.git",
+	@"f9fd78a5f09d6a4182cd443033970c1f69aa73fc")]		// Star: 8
+[TestCase(@"https://github.com/JesterXL/ZombieStick.git",
+	@"d5812d67dbe8debbab36232e5fca688e0b28bafd")]		// Star: 7
+[TestCase(@"https://github.com/ToxicFrog/steamtools.git",
+	@"28457fddd1bf12147f1cd48a1131592dc345392a")]		// Star: 7
+[TestCase(@"https://github.com/TheLinx/LoveUpdate.git",
+	@"cdd57ccf5ad3c72825406d0c53b251e1f3c1116d")]		// Star: 7
+[TestCase(@"https://github.com/virgo-agent-toolkit/luvit-bourbon.git",
+	@"2a74bd2a0a934377fc119d35d22e8260c0e76656")]		// Star: 7
 [TestCase(@"https://github.com/rr-tom/rr-works.git",
 	@"7ca920982c3c17603f749197e8aba23729e048bf")]		// Star: 7
 [TestCase(@"https://github.com/norman/mongrel2_wsapi.git",
@@ -1538,26 +1606,12 @@
 	@"e1665fd14c3f35f8c93602c87a94cfaaf42179f6")]		// Star: 7
 [TestCase(@"https://github.com/bighil/aeslua.git",
 	@"c8c6c56731dacdb014bab940c1cf71bee79fdac7")]		// Star: 7
-[TestCase(@"https://github.com/BobDickinson/corona-s3.git",
-	@"62671718f4547cc22da87b8616197f1db7d9adbc")]		// Star: 11
-[TestCase(@"https://github.com/dcartoon/redis-lua-scripts.git",
-	@"e7ac664a1a9f618f529a75d64c225ad351fc4755")]		// Star: 9
-[TestCase(@"https://github.com/vrld/Moan.git",
-	@"7af248ab52327fbc86a20f3dbfd8fee3f072f725")]		// Star: 8
-[TestCase(@"https://github.com/justincormack/luacparse-example.git",
-	@"9b8785e410b231b2efc88f431f6f3a99ee3a275a")]		// Star: 8
 [TestCase(@"https://github.com/audrencezar/lua-tokyotyrant.git",
 	@"008522b7b07dd90aa93c8bcc5a1b491d305f30bd")]		// Star: 7
-[TestCase(@"https://github.com/silentbicycle/lua-mpd.git",
-	@"ca32f43a09504d1843a55688757e4d52ecf2d38f")]		// Star: 8
 [TestCase(@"https://github.com/golgote/frigo.git",
 	@"67e3db91ba6808bf4daade98ac9f496aa33992ce")]		// Star: 7
 [TestCase(@"https://github.com/varuljin/Asphyxia-Filger.git",
 	@"7376036899aea657a08a3b80c3304b131bf4f5aa")]		// Star: 7
-[TestCase(@"https://github.com/silentbicycle/lua-bdd.git",
-	@"c181ce4e65e8082eb22c0fdead775caf0098e32f")]		// Star: 8
-[TestCase(@"https://github.com/barraponto/dotfiles.git",
-	@"f9d59c54b7f439bbc19cd28624b3fab2ca931a16")]		// Star: 8
 [TestCase(@"https://github.com/garybernhardt/LuaSpec.git",
 	@"2e42d633ea65a10960a1a2008000e139b3b0033b")]		// Star: 7
 [TestCase(@"https://github.com/scriptum/Monopoly.git",
@@ -1566,16 +1620,6 @@
 	@"cdf4edc6b1b1fc47edfec5b30a496b57a9cc1e00")]		// Star: 7
 [TestCase(@"https://github.com/perky/Cards.git",
 	@"25ea47c6554d1eac32433803a36e743f05091af8")]		// Star: 7
-[TestCase(@"https://github.com/oeed/PearOS.git",
-	@"9bc76cd2f0a0755030abd6d23a7c059ec152e8c2")]		// Star: 8
-[TestCase(@"https://github.com/Anaminus/roblox-cure.git",
-	@"3cbe3978de7f22da5a6b528003a52a2f31a6ac12")]		// Star: 8
-[TestCase(@"https://github.com/PilzAdam/carts.git",
-	@"70cc4f449ff9a064293573387cf8de931d795413")]		// Star: 10
-[TestCase(@"https://github.com/zhhchen/lua-resty-gearman.git",
-	@"d81da2e8c3081d6c96e068d9efec0ab926bf25a4")]		// Star: 9
-[TestCase(@"https://github.com/DarkAngel39/Events.git",
-	@"c4057ec2fc49c12ff598840fb7e4258a087e9b40")]		// Star: 8
 [TestCase(@"https://github.com/catwell/haricot.git",
 	@"128b4c5a30dffecf5d28b88693046deb934f9d48")]		// Star: 7
 [TestCase(@"https://github.com/duncanc/Lua-FFI-Extern.git",
@@ -1598,20 +1642,12 @@
 	@"e4fe52d687369247371a15eaa75a7bc37271d207")]		// Star: 7
 [TestCase(@"https://github.com/AlexHayton/NS2Combat.git",
 	@"84b00cbd8ac0b95d28b7e85e7386a0f7a61ea21d")]		// Star: 7
-[TestCase(@"https://github.com/ChartBoost/corona-sdk.git",
-	@"b1e2363dbef67f4b266689c8ae4793dab5359068")]		// Star: 12
 [TestCase(@"https://github.com/geoffleyland/lua-csv.git",
 	@"1ed256e9f5ec654e3f47de949a40089b7972cbc5")]		// Star: 7
 [TestCase(@"https://github.com/ixi-thor/sclua.git",
 	@"a6c9059d08c7618ce85433d5c7338cbe49f8e889")]		// Star: 7
-[TestCase(@"https://github.com/vfasky/catke-for-luvit.git",
-	@"578f642191086d0ea00095fcb3f38e5f106229d9")]		// Star: 14
-[TestCase(@"https://github.com/leafo/sitegen.git",
-	@"fee7ad981db92fe49f856cfd164a45c9cc25ce17")]		// Star: 8
 [TestCase(@"https://github.com/Philpax/jc2mp-buymenu.git",
 	@"48af005ac14406279c7c3b56ee8696bb57fbf60c")]		// Star: 7
-[TestCase(@"https://github.com/weltensturm/wac.git",
-	@"9e410bd9bf6f5c995b3b663d360641e43732aa69")]		// Star: 8
 [TestCase(@"https://github.com/Haleth/Aurora.git",
 	@"3f58c1f253ebd167d32070c310e51989901bb368")]		// Star: 7
 [TestCase(@"https://github.com/VanessaE/homedecor_modpack.git",
@@ -1620,10 +1656,6 @@
 	@"6752684d32ffeb1b7b31e012a915c13e41523c0d")]		// Star: 7
 [TestCase(@"https://github.com/calebthompson/mari0.git",
 	@"6f4ecfe75a163faa393367c94011befd616195be")]		// Star: 7
-[TestCase(@"https://github.com/jk3064/chiliui.git",
-	@"0a954ef747b53fdd64b8a90e02ee4ff6ab073f82")]		// Star: 8
-[TestCase(@"https://github.com/hishamhm/codegrep.git",
-	@"e31a238379e2abfff6f5081b868e038b118f9e1b")]		// Star: 8
 [TestCase(@"https://github.com/PhoenixBlack/Metrostroi.git",
 	@"f978be7344a4c5fb26efb58cc1094e0bfe35691c")]		// Star: 7
 [TestCase(@"https://github.com/ophal/core.git",
@@ -1638,20 +1670,10 @@
 	@"a297fc715761d9dd9b34bc1ef1246fe410de1ef0")]		// Star: 7
 [TestCase(@"https://github.com/SaxonDouglass/gauge.git",
 	@"a3f196abbfa9d55c2f4bbcf94e5554084cdf3f03")]		// Star: 7
-[TestCase(@"https://github.com/mikar/awesome-config.git",
-	@"364d1dd99cb563f8c0349cc21f626a746390fd6e")]		// Star: 6
 [TestCase(@"https://github.com/dvv/luvit-unicode.git",
 	@"a8ae98e4d00ba2c0da51019c8458fe2b98b28191")]		// Star: 7
-[TestCase(@"https://github.com/GlitchGames/GGRating.git",
-	@"2ffc9e82ee2e16e8c275fe789d652fd5f70ed1d6")]		// Star: 8
 [TestCase(@"https://github.com/projectgus/bbl-twitter.git",
 	@"2d414750e9209be334930f0556792efa9b1e9ed9")]		// Star: 7
-[TestCase(@"https://github.com/Zetoke/dotfiles.git",
-	@"39b7468d4bcbd1f089f119ae01136d567cc8e749")]		// Star: 6
-[TestCase(@"https://github.com/mkosler/LOVELuaDoc.git",
-	@"fd3cc554ecf3db158d2869ef3f579facf65fb8ba")]		// Star: 10
-[TestCase(@"https://github.com/adereth/notion-config.git",
-	@"a29fd95d27a33211dfee19cb0e0e4559901dcb0f")]		// Star: 8
 [TestCase(@"https://github.com/asb/gogdl.git",
 	@"9f5aaf6d3ed3aa667e3774090c36d0cf69aff543")]		// Star: 7
 [TestCase(@"https://github.com/clementfarabet/lua---image.git",
@@ -1666,8 +1688,6 @@
 	@"6b1f16a98f771d2a149049a8f36515036bcdc73f")]		// Star: 7
 [TestCase(@"https://github.com/Ensayia/whisper-server.git",
 	@"d0d2bfdca991a109b346e5af4fe0384b3b3b14fe")]		// Star: 7
-[TestCase(@"https://github.com/TheLinx/MoonIRC.git",
-	@"360258f75b140b2c798f8db7137c0cc397eef1df")]		// Star: 10
 [TestCase(@"https://github.com/evl/Reminders.git",
 	@"26ed5efdc2de9f03d6b899f428e01e76623cb17c")]		// Star: 7
 [TestCase(@"https://github.com/alexander-yakushev/conscience-awesome-theme.git",
@@ -1676,10 +1696,6 @@
 	@"40fcef6c40b977c3700d0d89cff619096323265d")]		// Star: 7
 [TestCase(@"https://github.com/haste/Butsu.git",
 	@"267a9132e079b2b3e9bab2f9cfdcb006ffa6ac10")]		// Star: 7
-[TestCase(@"https://github.com/Taytay/api-proxy-3scale-heroku.git",
-	@"e83c47f5521bb908ce6165c9e102b57f47a5fa33")]		// Star: 12
-[TestCase(@"https://github.com/justincormack/slice.git",
-	@"3811bcd0e02470032b3e83c599ea941d3016b302")]		// Star: 8
 [TestCase(@"https://github.com/Smelly/SmellyUI.git",
 	@"220bf0c11465aad274bb0a392ac7bdd143e45e2c")]		// Star: 7
 [TestCase(@"https://github.com/akrinke/svg2cairo.git",
@@ -1690,28 +1706,16 @@
 	@"2a01bc6ca3392dafee9369ff0e9875796d88aee4")]		// Star: 7
 [TestCase(@"https://github.com/raycmorgan/wsapi-more.git",
 	@"b40746945ef3c4d10edbbd58e11f926d15068aab")]		// Star: 7
-[TestCase(@"https://github.com/rgieseke/ta-themes.git",
-	@"8fc6bee580154cf7d480829ad23290e1c3a5a454")]		// Star: 9
 [TestCase(@"https://github.com/gvx/adventure.git",
 	@"2b568da7b31b98d5b4bc1fdafbdbf771c566ad5f")]		// Star: 7
 [TestCase(@"https://github.com/neostar20/Bezier-Curve-for-Corona-SDK.git",
 	@"3eb939e170cc353e01d592b87c01fce1ed838a5d")]		// Star: 7
-[TestCase(@"https://github.com/ejmr/LNVL.git",
-	@"e1cc55ae3e7d088404d8628bd43a83c93da21e94")]		// Star: 8
-[TestCase(@"https://github.com/dvv/luvit-curl.git",
-	@"eabbedc9bca445ee088fbbbf1fe7d7e917635804")]		// Star: 6
-[TestCase(@"https://github.com/AdamBuchweitz/CoronaCamera.git",
-	@"d9b6638f9bfe44a4357b5b983acf3161bfe62a9d")]		// Star: 8
 [TestCase(@"https://github.com/uggedal/tokyo-tyrant-sets.git",
 	@"f28b61e7c9e5aaa7282b9ef1c1bc81c48e806e6d")]		// Star: 7
 [TestCase(@"https://github.com/geoffleyland/luasimplex.git",
 	@"49f0fcb34bfa57e8ec570c24181bfa6fd79128fa")]		// Star: 7
-[TestCase(@"https://github.com/daurnimator/luatz.git",
-	@"cfc4ba97c3596db1105abc17692a54185cfd3a30")]		// Star: 10
 [TestCase(@"https://github.com/minism/leaf.git",
 	@"e3d7eb2e4ba84369f7303fafcab4a7ec68aabb53")]		// Star: 7
-[TestCase(@"https://github.com/Whitewater/Serial.git",
-	@"48fb1eba63c4a60a1d6635f5900dec2fb7143e4c")]		// Star: 8
 [TestCase(@"https://github.com/ignacio/redis-luanode.git",
 	@"c439119e3692c697003969cceff6d3e3314d4978")]		// Star: 7
 [TestCase(@"https://github.com/TekNoLogic/tekticles.git",
@@ -1738,6 +1742,26 @@
 	@"7c6ed8d81dcdc9ccc082faa7232b2754f68f558f")]		// Star: 7
 [TestCase(@"https://github.com/LennyPenny/Lennys.git",
 	@"bf7f2d33af96bfe41fd32a0262477c77f7b789a1")]		// Star: 7
+[TestCase(@"https://github.com/hoan/corona-settings.git",
+	@"4c7e667743f8d96c693378a2144e2220b4454173")]		// Star: 7
+[TestCase(@"https://github.com/Lerg/director-slim.git",
+	@"f22dc5b4b3d10b964b5c06b3eb33a155f6000981")]		// Star: 7
+[TestCase(@"https://github.com/gg-ansca/DIY-BUDDY.git",
+	@"57ab4d7bd3b6ce1cfc6a7ccd2007cceacc8851df")]		// Star: 7
+[TestCase(@"https://github.com/wixico/luann.git",
+	@"80ff61ed866de5e65821d9de778a92902858368b")]		// Star: 7
+[TestCase(@"https://github.com/wwwjfy/legend-mac.git",
+	@"b1c8637ddaeddbf7ff58ce26529538b64a7a313e")]		// Star: 7
+[TestCase(@"https://github.com/Quenty/NevermoreEngine.git",
+	@"a10991e00eb52a21d6f9602bdf2b23ba556c8cbc")]		// Star: 7
+[TestCase(@"https://github.com/ghostbar/dotfiles.git",
+	@"0484844ff1fc6b580fc2f5a45a9cd04a4de1cf5c")]		// Star: 7
+[TestCase(@"https://github.com/mikar/awesome-config.git",
+	@"364d1dd99cb563f8c0349cc21f626a746390fd6e")]		// Star: 6
+[TestCase(@"https://github.com/Zetoke/dotfiles.git",
+	@"39b7468d4bcbd1f089f119ae01136d567cc8e749")]		// Star: 6
+[TestCase(@"https://github.com/dvv/luvit-curl.git",
+	@"eabbedc9bca445ee088fbbbf1fe7d7e917635804")]		// Star: 6
 [TestCase(@"https://github.com/rayman1900/Angry-Bird-Catapult.git",
 	@"18c569249b483a7f5bd80d4ca6c9e2f4ef6186ed")]		// Star: 6
 [TestCase(@"https://github.com/npryce/codea-fishing.git",
@@ -1750,14 +1774,10 @@
 	@"d4b6444c92fac8f602ea75b2034f28c16b1f8aca")]		// Star: 6
 [TestCase(@"https://github.com/Lerg/tnt.git",
 	@"45529d40da74b10166244bc1a8bf37db32ab9da8")]		// Star: 6
-[TestCase(@"https://github.com/hoan/corona-settings.git",
-	@"4c7e667743f8d96c693378a2144e2220b4454173")]		// Star: 7
 [TestCase(@"https://github.com/rgd87/NugRunning.git",
 	@"eaec5d1f9d24806f9a6e4adb2d0373b0215ec4df")]		// Star: 6
 [TestCase(@"https://github.com/dodo/awesomerc.git",
 	@"3addb2d4542dcdc8d8b50825ee4dc941455c9648")]		// Star: 6
-[TestCase(@"https://github.com/ansca/GameCenter.git",
-	@"b300d42f2490d539cf61dc3af1f548a3436e68ba")]		// Star: 8
 [TestCase(@"https://github.com/ansca/Breakout.git",
 	@"2024e983e306b4ee3f7c683c891666019ed35cb3")]		// Star: 6
 [TestCase(@"https://github.com/Mic92/lognotify.git",
@@ -1770,30 +1790,18 @@
 	@"1508fbc0031b517a11b13a6c009bad00a4c08ba3")]		// Star: 6
 [TestCase(@"https://github.com/fy0/jianjia_old.git",
 	@"2ba3d79841134b749ff371858a26ac3dad6aac01")]		// Star: 6
-[TestCase(@"https://github.com/Lerg/director-slim.git",
-	@"f22dc5b4b3d10b964b5c06b3eb33a155f6000981")]		// Star: 7
 [TestCase(@"https://github.com/lipp/lualibusb.git",
 	@"648a11644e4ed4aefb5d2b65839e671aa40f086f")]		// Star: 6
 [TestCase(@"https://github.com/alexander-yakushev/infojets.git",
 	@"bb70ee61edc69ab2ecc0745ffb4e4bff79cdc8e1")]		// Star: 6
 [TestCase(@"https://github.com/evl/SliceDice.git",
 	@"91c6a86001601486e76a89b0cbc6cebd94f9566c")]		// Star: 6
-[TestCase(@"https://github.com/michaelenger/Stealth2D.git",
-	@"307af12560e6070fd28c8988169233a9cb669d3e")]		// Star: 5
 [TestCase(@"https://github.com/dgfitch/Cuke4Lua.git",
 	@"973588a2e194e4f96ccfe7db1f9b52ad604dfc40")]		// Star: 6
-[TestCase(@"https://github.com/gg-ansca/DIY-BUDDY.git",
-	@"57ab4d7bd3b6ce1cfc6a7ccd2007cceacc8851df")]		// Star: 7
-[TestCase(@"https://github.com/wixico/luann.git",
-	@"80ff61ed866de5e65821d9de778a92902858368b")]		// Star: 7
-[TestCase(@"https://github.com/michael714/Corona-Dropbox3.git",
-	@"98e32cdfb29dfa6014c095ca81042f4714b5c89b")]		// Star: 9
 [TestCase(@"https://github.com/Safturento/stAddonManager.git",
 	@"227768730bd6f062c5c8c3e8ea2b52856c365e3a")]		// Star: 6
 [TestCase(@"https://github.com/seanbutnotheard/SynthBox.git",
 	@"1963fc6b9f5ad317113d7171eaddf35d42f2e468")]		// Star: 6
-[TestCase(@"https://github.com/minetest/survival.git",
-	@"3acee4cb4cea553296426bf3414bcd245d5d7e13")]		// Star: 8
 [TestCase(@"https://github.com/JakobOvrum/LuaWeb.git",
 	@"6ce62a0f830e11e512a8d1396a24da9cc7aad02a")]		// Star: 6
 [TestCase(@"https://github.com/akosma/CodeaCalc.git",
@@ -1806,16 +1814,12 @@
 	@"afcad7316c7b7f87ad6ce53087a0db902a5c0e24")]		// Star: 6
 [TestCase(@"https://github.com/paulofmandown/rlLove.git",
 	@"f894602eda2e60910af81658e6aded7500f5483d")]		// Star: 6
-[TestCase(@"https://github.com/wwwjfy/legend-mac.git",
-	@"b1c8637ddaeddbf7ff58ce26529538b64a7a313e")]		// Star: 7
 [TestCase(@"https://github.com/Croisened/Throwback-Football.git",
 	@"35f2e9b33c0aeb63d0e693a3842c49b2646a505f")]		// Star: 6
 [TestCase(@"https://github.com/cthulhuology/pgproc.lua.git",
 	@"93fcf971db55097b3d752f3ff47c9a5a7f4b188c")]		// Star: 6
 [TestCase(@"https://github.com/MatthewBlanchard/Love3D.git",
 	@"86d817ba8c90144ba5274480dc0cde5a8d4b6561")]		// Star: 6
-[TestCase(@"https://github.com/silentbicycle/lua-ukanren.git",
-	@"2c8d3d20d7f134de318298baf8265315f2556cb0")]		// Star: 8
 [TestCase(@"https://github.com/pepinganos/Little-Jumping-Thing.git",
 	@"90cd83bc6a5a66fb72e52fb08441d2b9f5067d1a")]		// Star: 6
 [TestCase(@"https://github.com/TekNoLogic/HatTrick.git",
@@ -1828,23 +1832,19 @@
 	@"259303699cd6ea7b455401da3a61690ac8be0a04")]		// Star: 6
 [TestCase(@"https://github.com/latestpost/Moai-SDK-1.3---Game-Template.git",
 	@"ae2082e5cd064b87de2a5ea0f1eb5eb780de37d6")]		// Star: 6
-[TestCase(@"https://github.com/solor/FreeUI.Fluffy.git",
-	@"8337a13dde12ef6e9909d82c3a90ca16a44f85d4")]		// Star: 5
-[TestCase(@"https://github.com/Quenty/NevermoreEngine.git",
-	@"a10991e00eb52a21d6f9602bdf2b23ba556c8cbc")]		// Star: 7
 [TestCase(@"https://github.com/moteus/lua-vararg.git",
 	@"ec596b417cb14eb238bb11b505b568ceaad1e454")]		// Star: 6
 [TestCase(@"https://github.com/Kadoba/love-struct.git",
 	@"851c23177433dccf9a61f303a30f623bcf38d87d")]		// Star: 6
-[TestCase(@"https://github.com/mpeterv/argparse.git",
-	@"f9fd78a5f09d6a4182cd443033970c1f69aa73fc")]		// Star: 8
 [TestCase(@"https://github.com/NightKawata/PlayBoy.git",
 	@"79bc36dba9fb1ba0b8deafade3f0704a7bd000c1")]		// Star: 6
-[TestCase(@"https://github.com/ghostbar/dotfiles.git",
-	@"0484844ff1fc6b580fc2f5a45a9cd04a4de1cf5c")]		// Star: 7
 [TestCase(@"https://github.com/Vaevictusnet/Talescripts.git",
 	@"5e4db6c2a86c218366ac780b23e6424cbf5a4da6")]		// Star: 6
 [TestCase(@"https://github.com/remakeelectric/owrt_pub_feeds.git",
 	@"f08af1510641e8f753d6f1fdc9d05a4206375a19")]		// Star: 6
 [TestCase(@"https://github.com/haveatry823/qsgsext.git",
 	@"e88a4511d4465f2c3b7d6cc4e4f3e8ea98ceb43d")]		// Star: 6
+[TestCase(@"https://github.com/michaelenger/Stealth2D.git",
+	@"307af12560e6070fd28c8988169233a9cb669d3e")]		// Star: 5
+[TestCase(@"https://github.com/solor/FreeUI.Fluffy.git",
+	@"8337a13dde12ef6e9909d82c3a90ca16a44f85d4")]		// Star: 5
