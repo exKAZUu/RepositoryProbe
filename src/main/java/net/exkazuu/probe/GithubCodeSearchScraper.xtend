@@ -129,9 +129,11 @@ class GithubCodeSearchScraper {
 			System.out.println("Please specify one argument indicating a csv file for loading and saving results.")
 			System.exit(-1)
 		}
-		val scraper = new GithubCodeSearchScraper(new File(args.get(0)), new FirefoxDriver(),
-			new CodeSearchQuery("Capybara find", "ruby"), 1800, 1000 * 1000, 100, new CodeSearchQuery("click", "ruby"),
-			new CodeSearchQuery("click", "cucumber"))
+
+		val csvFile = new File(args.get(0))
+		val driver = new FirefoxDriver()
+		val scraper = new GithubCodeSearchScraper(csvFile, driver, new CodeSearchQuery("Capybara find", "ruby"), 1800,
+			1000 * 1000, 10, new CodeSearchQuery("click", "ruby"), new CodeSearchQuery("click", "cucumber"))
 		scraper.start()
 	}
 }

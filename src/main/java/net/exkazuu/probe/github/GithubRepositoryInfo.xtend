@@ -12,23 +12,23 @@ import org.supercsv.prefs.CsvPreference
 class GithubRepositoryInfo {
 	val static header = #["url", "mainBranch", "latestCommitSha", "starCount", "forkCount", "commitCount", "branchCount",
 		"releaseCount", "contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount",
-		"searchResultCount"]
-	val static processors = #[null, null, null, new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(),
-		new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt(), new ParseInt()]
+		"closedPullRequestCount", "searchResultCount"]
+	val static processors = (#[null, null, null] + header.map[new ParseInt()]).take(header.length)
 
-	@Property String url
-	@Property String mainBranch
-	@Property String latestCommitSha
-	@Property int starCount
-	@Property int forkCount
-	@Property int commitCount
-	@Property int branchCount
-	@Property int releaseCount
-	@Property int contributorCount
-	@Property int openPullRequestCount
-	@Property int openIssueCount
-	@Property int closedIssueCount
-	@Property int searchResultCount
+	@Property String url = ""
+	@Property String mainBranch = ""
+	@Property String latestCommitSha = ""
+	@Property int starCount = -1
+	@Property int forkCount = -1
+	@Property int commitCount = -1
+	@Property int branchCount = -1
+	@Property int releaseCount = -1
+	@Property int contributorCount = -1
+	@Property int openIssueCount = -1
+	@Property int closedIssueCount = -1
+	@Property int openPullRequestCount = -1
+	@Property int closedPullRequestCount = -1
+	@Property int searchResultCount = -1
 
 	def static write(File file, Iterable<GithubRepositoryInfo> infos) {
 		val writer = new FileWriter(file)

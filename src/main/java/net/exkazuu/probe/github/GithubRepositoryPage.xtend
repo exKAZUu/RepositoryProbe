@@ -5,6 +5,7 @@ import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 
 import static extension net.exkazuu.probe.common.WebElementExtensions.*
+import org.openqa.selenium.JavascriptExecutor
 
 /**
  * A class for scraping project information from GitHub pages.
@@ -128,6 +129,10 @@ class GithubRepositoryPage {
 	}
 
 	def getContributorCount() {
+		val src = driver.pageSource
+		val element = driver.findElement(By.tagName("html"))
+		val d = driver as JavascriptExecutor
+		val contents = d.executeScript("return arguments[0].innerHTML;", element) as String;
 		Idioms.retry([|getNumElements.get(3).extractInteger], 10,
 			[ e, i, max |
 				if (i == max) {
