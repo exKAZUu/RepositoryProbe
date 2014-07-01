@@ -6,6 +6,13 @@ import java.io.FileWriter
 import java.io.PrintWriter
 import net.exkazuu.probe.maven.MavenManager
 
+/**
+ * A class for recording the result of "mvn test".
+ * 
+ * @author Ryohei Takasawa
+ */
+
+
 class SearchTestedRepos {
 	def static void main(String[] args) {
 		val mm = new MavenManager("C:\\Study")

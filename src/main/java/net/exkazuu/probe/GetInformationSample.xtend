@@ -11,6 +11,14 @@ import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
 
+/**
+ * A class for measuring metrics by SonarQube and showing on the console.
+ * The size of pom.xml is limited to the range from minCount bytes to maxCount bytes. 
+ * Projects are cloned into the folder rootDirPath.
+ * 
+ * @author Ryohei Takasawa
+ */
+
 class GetInformationSample {
 	def static void main(String[] args) {
 		val properties = new Properties

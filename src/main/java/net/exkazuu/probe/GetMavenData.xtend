@@ -10,9 +10,13 @@ import net.exkazuu.probe.maven.MavenManager
 import org.openqa.selenium.By
 import org.openqa.selenium.chrome.ChromeDriver
 
-/*
- *	Script for Existing repositories
+/**
+ * A class for measuring metrics and outputing to a csv file.
+ * Targeted projects are in the folder placed dirPath.
+ * 
+ * @author Ryohei Takasawa
  */
+
 class GetMavenData {
 	def static void main(String[] args) {
 		val driver = new ChromeDriver

@@ -26,6 +26,13 @@ class RepositoryInfo {
 	}
 }
 
+/**
+ * A class for collecting names and addresses of projects which have successful test code.
+ * It determines test success by the console message of the command "mvn test".
+ * 
+ * @author Ryohei Takasawa
+ */
+
 class SearchReposUsingMaven {
 
 	def static nextPage(WebDriver driver) {
