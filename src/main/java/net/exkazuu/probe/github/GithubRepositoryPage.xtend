@@ -2,7 +2,6 @@ package net.exkazuu.probe.github
 
 import net.exkazuu.probe.common.Idioms
 import org.openqa.selenium.By
-import org.openqa.selenium.JavascriptExecutor
 import org.openqa.selenium.WebDriver
 
 import static extension net.exkazuu.probe.extensions.XWebElement.*

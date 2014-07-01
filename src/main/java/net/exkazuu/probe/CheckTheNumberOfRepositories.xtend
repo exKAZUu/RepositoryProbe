@@ -2,11 +2,10 @@ package net.exkazuu.probe
 
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
-import org.openqa.selenium.htmlunit.HtmlUnitDriver
+import org.openqa.selenium.firefox.FirefoxDriver
 
 import static extension net.exkazuu.probe.extensions.XCollection.*
 import static extension net.exkazuu.probe.extensions.XString.*
-import org.openqa.selenium.firefox.FirefoxDriver
 
 /**
  * A class for counting the number of repositories which have pom.xml.
