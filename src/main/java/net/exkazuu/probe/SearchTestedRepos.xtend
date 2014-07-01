@@ -11,8 +11,6 @@ import net.exkazuu.probe.maven.MavenManager
  * 
  * @author Ryohei Takasawa
  */
-
-
 class SearchTestedRepos {
 	def static void main(String[] args) {
 		val mm = new MavenManager("C:\\Study")
