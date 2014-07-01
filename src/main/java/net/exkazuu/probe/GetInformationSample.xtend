@@ -5,11 +5,11 @@ import java.sql.Timestamp
 import java.util.HashSet
 import java.util.Properties
 import net.exkazuu.probe.git.GitManager
-import net.exkazuu.probe.maven.MavenManager
 import org.eclipse.egit.github.core.service.RepositoryService
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
+import net.exkazuu.probe.maven.OldMavenManager
 
 /**
  * A class for measuring metrics by SonarQube and showing on the console.
@@ -70,7 +70,7 @@ class GetInformationSample {
 		val timestamp3 = new Timestamp(System.currentTimeMillis)
 		System.out.println(timestamp3)
 
-		val mm = new MavenManager(rootDirPath)
+		val mm = new OldMavenManager(rootDirPath)
 		for (address : addressBook) {
 			val name = address.substring(address.lastIndexOf('/') + 1, address.lastIndexOf('.'))
 			mm.test(name)

@@ -1,7 +1,6 @@
 package net.exkazuu.probe.maven
 
 import net.exkazuu.probe.git.GitManager
-import net.exkazuu.probe.maven.MavenManager
 import org.junit.Test
 
 import static org.hamcrest.Matchers.*
@@ -9,7 +8,7 @@ import static org.junit.Assert.*
 
 class MavenManagerTest {
 	val gm = new GitManager("DirectoryForTest")
-	val mm = new MavenManager("DirectoryForTest")
+	val mm = new OldMavenManager("DirectoryForTest")
 
 	@Test
 	def void commonsAts() {

@@ -8,10 +8,10 @@ import java.io.PrintWriter
 import java.util.HashSet
 import java.util.Properties
 import net.exkazuu.probe.git.GitManager
-import net.exkazuu.probe.maven.MavenManager
 import org.eclipse.egit.github.core.service.RepositoryService
 import org.openqa.selenium.By
 import org.openqa.selenium.chrome.ChromeDriver
+import net.exkazuu.probe.maven.OldMavenManager
 
 /**
  * Modified version of GetInformation Sample.
@@ -113,7 +113,7 @@ class GetRepositoryInformation {
 				printWriter2.print(tag + ",")
 			}
 			printWriter2.println("")
-			val mm = new MavenManager(dirPath)
+			val mm = new OldMavenManager(dirPath)
 			for (address : addressBook) {
 				val name = address.substring(address.lastIndexOf('/') + 1, address.lastIndexOf('.'))
 				mm.test(name)

@@ -1,31 +1,63 @@
 package net.exkazuu.probe.github
 
+import com.google.common.base.Strings
+
 class CodeSearchQuery {
-	String language
-	String keyword
+	val String keyword
+	var path = ""
+	var language = ""
+	var minSize = -1
+	var maxSize = -1
 
 	new(String keyword) {
-		this(keyword, null)
+		this.keyword = keyword
 	}
 
-	new(String keyword, String language) {
-		this.keyword = if(keyword != null) keyword else ""
-		this.language = if(language != null) language else ""
+	def setPath(String path) {
+		this.path = path
+		this
 	}
 
-	def getKeyword() {
-		keyword
+	def setLanguage(String language) {
+		this.language = language
+		this
 	}
 
-	def getLanguage() {
-		language
+	def setSize(int minSize, int maxSize) {
+		this.minSize = minSize
+		this.maxSize = maxSize
+		this
 	}
 
-	def getQueryUrl(int minSize, int maxSize) {
-		constructQueryUrl(minSize, maxSize).toString.trim
+	def getQueryUrl() {
+		"https://github.com" + queryUrlSuffix
 	}
 
-	private def constructQueryUrl(int minSize, int maxSize) '''
-		https://github.com/search?l=«language»&q=«keyword»+size:«minSize»..«maxSize»&ref=cmdform&type=Code
-	'''
+	def getQueryUrlSuffix() {
+		'''/search?q=«keyword»«pathQuery»«sizeQuery»«languageQuery»&type=Code'''.toString
+	}
+
+	private def getLanguageQuery() {
+		if (Strings.isNullOrEmpty(language)) {
+			""
+		} else {
+			'''&l=«language»'''
+		}
+	}
+
+	private def getPathQuery() {
+		if (Strings.isNullOrEmpty(path)) {
+			""
+		} else {
+			'''+path:«path»'''
+		}
+	}
+
+	private def getSizeQuery() {
+		if (minSize < 0 || maxSize < 0) {
+			""
+		} else {
+			'''+size:«minSize»..«maxSize»'''
+		}
+	}
 }

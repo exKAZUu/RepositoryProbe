@@ -12,10 +12,7 @@ class RepositorySearchQuery {
 	}
 
 	def getQueryUrl() {
-		constructQueryUrl().toString.trim
+		'''https://github.com/search?l=«language»&o=desc&q=stars%3A%3E1&ref=searchresults&s=stars&type=Repositories'''.
+			toString
 	}
-
-	private def constructQueryUrl() '''
-		https://github.com/search?l=«language»&o=desc&q=stars%3A%3E1&ref=searchresults&s=stars&type=Repositories
-	'''
 }

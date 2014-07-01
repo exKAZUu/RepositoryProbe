@@ -9,6 +9,12 @@ import org.openqa.selenium.firefox.FirefoxDriver
 
 import static extension net.exkazuu.probe.extensions.XWebElement.*
 
+/**
+ * An concrete class for scraping GitHub projects using a code search query
+ * (e.g. https://github.com/search?q=test&type=Code).
+ * 
+ * @author Kazunori Sakamoto
+ */
 class GithubCodeSearchScraper extends GithubScraper {
 
 	val CodeSearchQuery projectQuery
@@ -24,13 +30,13 @@ class GithubCodeSearchScraper extends GithubScraper {
 		this.maxSizeForSearching = maxSize
 	}
 
-	private def start() {
+	private def run() {
 		var size = minSizeForSearching
 		while (0 <= size && size < maxSizeForSearching) {
 			val maxSize = findGoodMaxSize(size)
 			System.out.println("Range: " + size + " .. " + maxSize)
 			val lastCount = infos.size
-			gatherRepositoryAddress(projectQuery.getQueryUrl(size, maxSize))
+			scrapeRepositories(projectQuery.setSize(size, maxSize).queryUrl)
 			if (lastCount != infos.size) {
 				GithubRepositoryInfo.write(csvFile, infos.values)
 			}
@@ -42,7 +48,7 @@ class GithubCodeSearchScraper extends GithubScraper {
 	private def findGoodMaxSize(int size) {
 		var range = 1
 		do {
-			openSearchResultPage(projectQuery.getQueryUrl(size, size + range - 1))
+			openSearchResultPage(projectQuery.setSize(size, size + range - 1).queryUrl)
 			range = range * 2
 		} while (resultCount <= maxPageCount * 10)
 		range = range / 4
@@ -67,8 +73,8 @@ class GithubCodeSearchScraper extends GithubScraper {
 
 		val csvFile = new File(args.get(0))
 		val driver = new FirefoxDriver()
-		val scraper = new GithubCodeSearchScraper(csvFile, driver, new CodeSearchQuery("Capybara find", "ruby"), 1800,
-			1000 * 1000, 10, new CodeSearchQuery("click", "ruby"), new CodeSearchQuery("click", "cucumber"))
-		scraper.start()
+		val query = new CodeSearchQuery("project").setPath("pom.xml")
+		val scraper = new GithubCodeSearchScraper(csvFile, driver, query, 1, 1000 * 1000, 10)
+		scraper.run()
 	}
 }

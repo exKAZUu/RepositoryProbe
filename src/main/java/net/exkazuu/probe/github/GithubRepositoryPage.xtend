@@ -45,7 +45,7 @@ class GithubRepositoryPage {
 	}
 
 	private def moveToSearchPage(CodeSearchQuery query) {
-		move(topUrl + "/search?ref=cmdform&l=" + query.language + "&q=" + query.keyword)
+		move(topUrl + query.queryUrlSuffix)
 	}
 
 	private def getSocialCountElements() {
@@ -166,7 +166,7 @@ class GithubRepositoryPage {
 			0
 		}
 	}
-	
+
 	def getClosedPullRequestCount() {
 		val userAndProjectName = topUrl.replaceAll("https://github.com/", "")
 		val repository = GitHub.connectAnonymously.getRepository(userAndProjectName)

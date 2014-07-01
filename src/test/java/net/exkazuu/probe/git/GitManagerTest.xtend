@@ -2,16 +2,16 @@ package net.exkazuu.probe.git
 
 import java.util.HashSet
 import net.exkazuu.probe.file.FileManager
-import net.exkazuu.probe.maven.MavenManager
 import org.junit.Test
 
 import static org.hamcrest.Matchers.*
 import static org.junit.Assert.*
+import net.exkazuu.probe.maven.OldMavenManager
 
 class GitManagerTest {
 
 	val gm = new GitManager("DirectoryForTest")
-	val mm = new MavenManager("DirectoryForTest")
+	val mm = new OldMavenManager("DirectoryForTest")
 	val fm = new FileManager("DirectoryForTest")
 
 	@Test
