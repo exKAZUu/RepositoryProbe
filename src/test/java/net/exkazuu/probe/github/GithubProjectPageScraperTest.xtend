@@ -27,7 +27,7 @@ class GithubProjectPageScraperTest {
 		assertThat(scraper.releaseCount, greaterThanOrEqualTo(15))
 		assertThat(scraper.contributorCount, greaterThanOrEqualTo(165))
 
-		assertThat(scraper.mainBranchName, is("development"))
+		assertThat(scraper.mainBranchName, is("master"))
 
 		assertThat(scraper.openPullRequestCount, greaterThanOrEqualTo(0))
 		assertThat(scraper.openIssueCount, greaterThanOrEqualTo(0))
