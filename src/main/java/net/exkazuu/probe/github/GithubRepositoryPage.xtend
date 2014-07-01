@@ -1,12 +1,12 @@
 package net.exkazuu.probe.github
 
 import net.exkazuu.probe.common.Idioms
+import org.kohsuke.github.GHIssueState
+import org.kohsuke.github.GitHub
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 
 import static extension net.exkazuu.probe.extensions.XWebElement.*
-import org.kohsuke.github.GitHub
-import org.kohsuke.github.GHIssueState
 
 /**
  * A class for scraping project information from GitHub pages.
@@ -77,6 +77,7 @@ class GithubRepositoryPage {
 		val info = new GithubRepositoryInfo()
 		info.url = getUrl
 		info.mainBranch = getMainBranchName
+		info.watchCount = getWatchCount
 		info.starCount = getStarCount
 		info.forkCount = getForkCount
 		info.commitCount = getCommitCount
@@ -110,12 +111,23 @@ class GithubRepositoryPage {
 		shaBlock.substring(shaBlock.lastIndexOf('/') + 1)
 	}
 
+	def getWatchCount() {
+		val elements = getSocialCountElements.toList
+		if (elements.size > 2) {
+			elements.get(0).extractInteger
+		} else {
+			-1
+		}
+	}
+
 	def getStarCount() {
-		getSocialCountElements.get(0).extractInteger
+		val elements = getSocialCountElements.toList
+		elements.get(elements.size - 2).extractInteger
 	}
 
 	def getForkCount() {
-		getSocialCountElements.get(1).extractInteger
+		val elements = getSocialCountElements.toList
+		elements.get(elements.size - 1).extractInteger
 	}
 
 	def getCommitCount() {

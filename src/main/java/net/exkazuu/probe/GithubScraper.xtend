@@ -8,6 +8,9 @@ import net.exkazuu.probe.github.GithubRepositoryInfo
 import net.exkazuu.probe.github.GithubRepositoryPage
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
+import java.util.Properties
+import java.io.FileInputStream
+import com.google.common.base.Strings
 
 /**
  * An abstract class for scraping GitHub projects.
@@ -15,7 +18,7 @@ import org.openqa.selenium.WebDriver
  * @author Kazunori Sakamoto
  */
 abstract class GithubScraper {
-	protected val static leastElapsedTime = 10 * 1000
+	protected var static leastElapsedTime = 10 * 1000
 
 	protected val File csvFile
 	protected val Map<String, GithubRepositoryInfo> infos
@@ -31,6 +34,21 @@ abstract class GithubScraper {
 		this.driver = driver
 		this.maxPageCount = maxPageCount
 		this.codeSearchQueries = codeSearchQueries
+
+		val propertyFile = new File("secret.properties")
+		if (propertyFile.exists) {
+			val properties = new Properties
+			properties.load(new FileInputStream(propertyFile))
+			val user = properties.getProperty("user")
+			val password = properties.getProperty("password")
+			if (!Strings.isNullOrEmpty(user) && !Strings.isNullOrEmpty(password)) {
+				driver.get("https://github.com/login")
+				driver.findElement(By.name("login")).sendKeys(user)
+				driver.findElement(By.name("password")).sendKeys(password)
+				driver.findElement(By.name("commit")).click()
+				leastElapsedTime = 4 * 1000
+			}
+		}
 	}
 
 	def scrapeRepositories(String firstPageUrl) {
