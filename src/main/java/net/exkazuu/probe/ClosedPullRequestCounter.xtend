@@ -10,10 +10,8 @@ class ClosedPullRequestCounter {
 		val github = new RtGithub()
 		val repo = github.repos.get(new Coordinates.Simple("jcabi/jcabi-github"))
 		
-		System.out.println(repo.pulls.get(0).toString)
-		
 		repo.pulls.iterate.forEach [
-			System.out.println(it.toString)
+			System.out.println(it.number)
 		]
 	}
 }
