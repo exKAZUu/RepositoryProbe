@@ -7,6 +7,15 @@ import java.util.HashSet
 import net.exkazuu.probe.file.FileManager
 import net.exkazuu.probe.git.GitManager
 
+/**
+ * A class for counting the number of developers and testers.
+ * Counting the unique number of the name appeared in commit logs.
+ * "Testers" is defined as the names appeared in the test code.
+ * 
+ * @author Ryohei Takasawa
+ */
+
+
 class GetNumberOfDelevopersAndTestes {
 	def static void main(String[] args) {
 		val gm = new GitManager("C:\\Study")

@@ -6,6 +6,13 @@ import org.eclipse.egit.github.core.service.RepositoryService
 import org.openqa.selenium.By
 import org.openqa.selenium.chrome.ChromeDriver
 
+/**
+ * A class for counting the number of repositories which have pom.xml.
+ * The size of pom.xml is limited to the range from minCount bytes to maxCount bytes. 
+ * 
+ * @author Ryohei Takasawa
+ */
+
 class CheckTheNumberOfRepositories {
 	def static main(String[] args) {
 		val userAndPass = new Properties

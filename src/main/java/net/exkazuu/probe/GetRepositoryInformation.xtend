@@ -13,6 +13,13 @@ import org.eclipse.egit.github.core.service.RepositoryService
 import org.openqa.selenium.By
 import org.openqa.selenium.chrome.ChromeDriver
 
+/**
+ * Modified version of GetInformation Sample.
+ * Deleting projects after measuring metrics.
+ * 
+ * @author Ryohei Takasawa
+ */
+
 class GetRepositoryInformation {
 	def static void main(String[] args) {
 		val properties = new Properties
