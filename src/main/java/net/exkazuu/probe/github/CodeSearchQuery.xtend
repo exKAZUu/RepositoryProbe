@@ -30,7 +30,11 @@ class CodeSearchQuery {
 	}
 
 	def getQueryUrl() {
-		constructQueryUrl().toString.trim
+		"https://github.com" + queryUrlSuffix
+	}
+
+	def getQueryUrlSuffix() {
+		'''/search?q=«keyword»«pathQuery»«sizeQuery»«languageQuery»&type=Code'''.toString
 	}
 
 	private def getLanguageQuery() {
@@ -56,8 +60,4 @@ class CodeSearchQuery {
 			'''+size:«minSize»..«maxSize»'''
 		}
 	}
-
-	private def constructQueryUrl() '''
-		https://github.com/search?q=«keyword»«pathQuery»«sizeQuery»«languageQuery»&type=Code
-	'''
 }

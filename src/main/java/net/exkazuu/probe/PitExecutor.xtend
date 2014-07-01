@@ -5,6 +5,7 @@ import java.util.Map
 import net.exkazuu.probe.github.GithubRepositoryInfo
 import net.exkazuu.probe.maven.MavenManager
 import net.exkazuu.probe.maven.PitManager
+import org.eclipse.jgit.api.CreateBranchCommand
 import org.eclipse.jgit.api.Git
 
 /**
@@ -28,7 +29,9 @@ class PitExecutor {
 		infos.forEach [ url, info |
 			val userDir = new File(mvnDir.path, info.userName)
 			userDir.mkdir()
-			Git.cloneRepository().setURI(url).setDirectory(userDir).call();
+			val git = Git.cloneRepository().setURI(url).setDirectory(userDir).call();
+			git.checkout().setCreateBranch(true).setName("branchName").setUpstreamMode(
+				CreateBranchCommand.SetupUpstreamMode.TRACK).setStartPoint("origin/" + info.mainBranch).call();
 			val projectDir = new File(userDir.path, info.projectName)
 			val ret = new PitManager(new MavenManager(projectDir)).execute
 			info.generatedMutantCount = ret.get(0)
