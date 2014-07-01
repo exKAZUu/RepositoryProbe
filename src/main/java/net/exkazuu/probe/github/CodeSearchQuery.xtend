@@ -20,4 +20,12 @@ class CodeSearchQuery {
 	def getLanguage() {
 		language
 	}
+
+	def getQueryUrl(int minSize, int maxSize) {
+		constructQueryUrl(minSize, maxSize).toString.trim
+	}
+
+	private def constructQueryUrl(int minSize, int maxSize) '''
+		https://github.com/search?l=«language»&q=«keyword»+size:«minSize»..«maxSize»&ref=cmdform&type=Code
+	'''
 }
