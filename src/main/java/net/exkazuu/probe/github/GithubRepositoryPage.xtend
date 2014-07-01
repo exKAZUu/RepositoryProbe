@@ -5,6 +5,8 @@ import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 
 import static extension net.exkazuu.probe.extensions.XWebElement.*
+import org.kohsuke.github.GitHub
+import org.kohsuke.github.GHIssueState
 
 /**
  * A class for scraping project information from GitHub pages.
@@ -82,6 +84,7 @@ class GithubRepositoryPage {
 		info.releaseCount = getReleaseCount
 		info.contributorCount = getContributorCount
 		info.openPullRequestCount = getOpenPullRequestCount
+		info.closedPullRequestCount = getClosedPullRequestCount
 		info.openIssueCount = getOpenIssueCount
 		info.closedIssueCount = getClosedIssueCount
 		info.searchResultCount = getSearchResultCount
@@ -162,6 +165,14 @@ class GithubRepositoryPage {
 		} else {
 			0
 		}
+	}
+	
+	def getClosedPullRequestCount() {
+		val userAndProjectName = topUrl.replaceAll("https://github.com/", "")
+		val repository = GitHub.connectAnonymously.getRepository(userAndProjectName)
+		val closedPullRequests = repository.getPullRequests(GHIssueState.CLOSED)
+
+		closedPullRequests.length
 	}
 
 	def getSearchResultCount() {
