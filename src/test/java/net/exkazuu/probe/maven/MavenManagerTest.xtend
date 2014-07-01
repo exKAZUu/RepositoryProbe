@@ -1,7 +1,6 @@
 package net.exkazuu.probe.maven
 
 import net.exkazuu.probe.git.GitManager
-import net.exkazuu.probe.maven.MavenManager
 import org.junit.Test
 
 import static org.hamcrest.Matchers.*
@@ -32,5 +31,14 @@ class MavenManagerTest {
 
 		mm.delete("TestSample")
 		assertThat(list.size, is(11))
+	}
+
+	@Test
+	def void get() {
+		val matcher = MavenManager.pitPattern.matcher(">> Generated 4 mutations Killed 4 (100%)")
+		assertThat(matcher.matches, is(true))
+		assertThat(matcher.group(1), is("4"))
+		assertThat(matcher.group(2), is("4"))
+		assertThat(matcher.group(3), is("100"))
 	}
 }

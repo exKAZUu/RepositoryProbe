@@ -9,6 +9,12 @@ import org.openqa.selenium.firefox.FirefoxDriver
 
 import static extension net.exkazuu.probe.extensions.XWebElement.*
 
+/**
+ * An concrete class for scraping GitHub projects using a code search query
+ * (e.g. https://github.com/search?q=test&type=Code).
+ * 
+ * @author Kazunori Sakamoto
+ */
 class GithubCodeSearchScraper extends GithubScraper {
 
 	val CodeSearchQuery projectQuery

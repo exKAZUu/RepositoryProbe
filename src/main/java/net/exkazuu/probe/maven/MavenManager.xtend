@@ -5,12 +5,14 @@ import java.io.File
 import java.io.FileReader
 import java.util.ArrayList
 import java.util.List
+import java.util.regex.Pattern
 
 import static extension net.exkazuu.probe.extensions.XFile.*
 import static extension net.exkazuu.probe.extensions.XProcess.*
 
 class MavenManager {
-	String root
+	val String root
+	public static val Pattern pitPattern = Pattern.compile('''>> Generated (\d+) mutations Killed (\d+) \((\d+)%\)''')
 
 	new(String root) {
 		this.root = root
@@ -139,13 +141,17 @@ class MavenManager {
 		return result
 	}
 
-	def List<String> pit(String name) {
+	def List<Integer> pit(String name) {
 		val command = getMavenCommand("org.pitest:pitest-maven:mutationCoverage")
 		val path = root + "/" + name
 		System::out.println(name + " mutating...")
 		val p = Runtime.runtime.exec(command, null, new File(path))
 		val result = p.readAllOutputsIgnoringErrors()
-
-		return result
+		val matcher = result.map [
+			pitPattern.matcher(it)
+		].findFirst [
+			it.matches
+		]
+		return (1 .. 3).map[Integer.parseInt(matcher.group(it))].toList
 	}
 }

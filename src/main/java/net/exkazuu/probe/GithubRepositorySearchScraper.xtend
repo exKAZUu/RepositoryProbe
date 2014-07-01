@@ -8,6 +8,12 @@ import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.firefox.FirefoxDriver
 
+/**
+ * An concrete class for scraping GitHub projects using a repository search query
+ * (e.g. https://github.com/search?q=test&type=Repositories).
+ * 
+ * @author Kazunori Sakamoto
+ */
 class GithubRepositorySearchScraper extends GithubScraper {
 	val RepositorySearchQuery repositorySearchQuery
 

@@ -9,6 +9,11 @@ import net.exkazuu.probe.github.GithubRepositoryPage
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 
+/**
+ * An abstract class for scraping GitHub projects.
+ * 
+ * @author Kazunori Sakamoto
+ */
 abstract class GithubScraper {
 	protected val static leastElapsedTime = 10 * 1000
 

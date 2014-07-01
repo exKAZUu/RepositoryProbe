@@ -14,8 +14,6 @@ import net.exkazuu.probe.git.GitManager
  * 
  * @author Ryohei Takasawa
  */
-
-
 class GetNumberOfDelevopersAndTestes {
 	def static void main(String[] args) {
 		val gm = new GitManager("C:\\Study")
