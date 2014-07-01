@@ -10,7 +10,7 @@ import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.firefox.FirefoxDriver
 
-import static extension net.exkazuu.probe.common.WebElementExtensions.*
+import static extension net.exkazuu.probe.extensions.XWebElement.*
 
 class GithubCodeSearchScraper {
 	val static leastElapsedTime = 10 * 1000

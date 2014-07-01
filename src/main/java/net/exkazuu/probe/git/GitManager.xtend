@@ -5,7 +5,7 @@ import java.io.File
 import java.util.HashSet
 import java.util.List
 
-import static extension net.exkazuu.probe.common.ProcessExtensions.*
+import static extension net.exkazuu.probe.extensions.XProcess.*
 
 class GitManager {
 	String root

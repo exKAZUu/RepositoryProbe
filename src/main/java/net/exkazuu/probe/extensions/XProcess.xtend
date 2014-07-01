@@ -1,6 +1,8 @@
-package net.exkazuu.probe.common
+package net.exkazuu.probe.extensions
 
-class ProcessExtensions {
+import net.exkazuu.probe.common.InputStreamThread
+
+class XProcess {
 	def static readAllOutputsIgnoringErrors(Process p) {
 		val ist = new InputStreamThread(p.inputStream)
 		val est = new InputStreamThread(p.errorStream)

@@ -6,7 +6,7 @@ import java.util.ArrayList
 import java.util.List
 
 import static extension com.google.common.io.CharStreams.*
-import static extension net.exkazuu.probe.common.FileExtensions.*
+import static extension net.exkazuu.probe.extensions.XFile.*
 
 class FileManager {
 	String root

@@ -6,8 +6,8 @@ import java.io.FileReader
 import java.util.ArrayList
 import java.util.List
 
-import static extension net.exkazuu.probe.common.FileExtensions.*
-import static extension net.exkazuu.probe.common.ProcessExtensions.*
+import static extension net.exkazuu.probe.extensions.XFile.*
+import static extension net.exkazuu.probe.extensions.XProcess.*
 
 class MavenManager {
 	String root
