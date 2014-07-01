@@ -10,8 +10,8 @@ import org.supercsv.io.CsvBeanWriter
 import org.supercsv.prefs.CsvPreference
 
 class GithubRepositoryInfo {
-	val static header = #["url", "mainBranch", "latestCommitSha", "starCount", "forkCount", "commitCount", "branchCount",
-		"releaseCount", "contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount",
+	val static header = #["url", "mainBranch", "latestCommitSha", "watchCount", "starCount", "forkCount", "commitCount",
+		"branchCount", "releaseCount", "contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount",
 		"closedPullRequestCount", "searchResultCount", "killedMutantCount", "generatedMutantCount",
 		"killedMutantPercentage"]
 	val static processors = (#[null, null, null] + header.drop(3).map [
@@ -21,6 +21,7 @@ class GithubRepositoryInfo {
 	@Property String url = ""
 	@Property String mainBranch = ""
 	@Property String latestCommitSha = ""
+	@Property int watchCount = -1
 	@Property int starCount = -1
 	@Property int forkCount = -1
 	@Property int commitCount = -1

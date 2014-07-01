@@ -51,6 +51,7 @@ class GithubRepositorySearchScraper extends GithubScraper {
 					new RepositorySearchQuery(it), 100)
 				scraper.run()
 			} catch (Exception e) {
+				e.printStackTrace
 			}
 		]
 	}

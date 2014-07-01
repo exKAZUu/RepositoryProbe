@@ -74,7 +74,7 @@ class GithubCodeSearchScraper extends GithubScraper {
 		val csvFile = new File(args.get(0))
 		val driver = new FirefoxDriver()
 		val query = new CodeSearchQuery("project").setPath("pom.xml")
-		val scraper = new GithubCodeSearchScraper(csvFile, driver, query, 1, 1000 * 1000, 10)
+		val scraper = new GithubCodeSearchScraper(csvFile, driver, query, 1000, 1000 * 1000, 10)
 		scraper.run()
 	}
 }

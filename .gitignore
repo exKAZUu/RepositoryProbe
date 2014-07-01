@@ -42,6 +42,7 @@ src/test/generated-sources
 
 account_info
 .properties
+secret.properties
 chromedriver.log
 
 data/
