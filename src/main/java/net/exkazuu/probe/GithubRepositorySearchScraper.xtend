@@ -24,8 +24,8 @@ class GithubRepositorySearchScraper extends GithubScraper {
 		this.repositorySearchQuery = repositorySearchQuery
 	}
 
-	private def start() {
-		gatherRepositoryAddress(repositorySearchQuery.queryUrl)
+	private def run() {
+		scrapeRepositories(repositorySearchQuery.queryUrl)
 		GithubRepositoryInfo.write(csvFile, infos.values)
 		driver.quit
 	}
@@ -49,7 +49,7 @@ class GithubRepositorySearchScraper extends GithubScraper {
 			try {
 				val scraper = new GithubRepositorySearchScraper(new File(it + ".csv"), new FirefoxDriver(),
 					new RepositorySearchQuery(it), 100)
-				scraper.start()
+				scraper.run()
 			} catch (Exception e) {
 			}
 		]

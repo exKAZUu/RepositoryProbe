@@ -8,13 +8,13 @@ import java.io.PrintWriter
 import java.util.HashSet
 import java.util.Properties
 import net.exkazuu.probe.git.GitManager
-import net.exkazuu.probe.maven.MavenManager
 import org.eclipse.egit.github.core.service.RepositoryService
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.support.ui.WebDriverWait
+import net.exkazuu.probe.maven.OldMavenManager
 
 class RepositoryInfo {
 	@Property String owner;
@@ -58,7 +58,7 @@ class SearchReposUsingMaven {
 
 		// git clone and maven test
 		val gm = new GitManager("C:\\Study")
-		val mm = new MavenManager("C:\\Study")
+		val mm = new OldMavenManager("C:\\Study")
 
 		repoStrings.forEach [
 			val strs = it.split("/")

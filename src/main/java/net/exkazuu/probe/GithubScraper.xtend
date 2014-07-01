@@ -18,9 +18,9 @@ abstract class GithubScraper {
 	protected val static leastElapsedTime = 10 * 1000
 
 	protected val File csvFile
+	protected val Map<String, GithubRepositoryInfo> infos
 	protected val WebDriver driver
 	protected val CodeSearchQuery[] codeSearchQueries
-	protected val Map<String, GithubRepositoryInfo> infos
 	protected val int maxPageCount
 	var lastSearchTime = 0L
 
@@ -33,7 +33,7 @@ abstract class GithubScraper {
 		this.codeSearchQueries = codeSearchQueries
 	}
 
-	def gatherRepositoryAddress(String firstPageUrl) {
+	def scrapeRepositories(String firstPageUrl) {
 		var url = firstPageUrl
 		var pageCount = 1
 		while (url != null && pageCount <= maxPageCount) {

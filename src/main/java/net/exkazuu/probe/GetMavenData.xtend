@@ -6,9 +6,9 @@ import java.io.FileWriter
 import java.io.PrintWriter
 import java.util.ArrayList
 import net.exkazuu.probe.file.FileManager
-import net.exkazuu.probe.maven.MavenManager
 import org.openqa.selenium.By
 import org.openqa.selenium.chrome.ChromeDriver
+import net.exkazuu.probe.maven.OldMavenManager
 
 /**
  * A class for measuring metrics and outputing to a csv file.
@@ -76,7 +76,7 @@ class GetMavenData {
 			printWriter.println("")
 			val fileManager = new FileManager(dirPath)
 			val dirList = fileManager.dirList
-			val mvnManager = new MavenManager(dirPath)
+			val mvnManager = new OldMavenManager(dirPath)
 			dirList.forEach [
 				val folderPath = it.toString
 				if (!folderPath.contains(".txt")) {

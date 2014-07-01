@@ -4,7 +4,7 @@ import java.io.BufferedWriter
 import java.io.File
 import java.io.FileWriter
 import java.io.PrintWriter
-import net.exkazuu.probe.maven.MavenManager
+import net.exkazuu.probe.maven.OldMavenManager
 
 /**
  * A class for recording the result of "mvn test".
@@ -13,7 +13,7 @@ import net.exkazuu.probe.maven.MavenManager
  */
 class SearchTestedRepos {
 	def static void main(String[] args) {
-		val mm = new MavenManager("C:\\Study")
+		val mm = new OldMavenManager("C:\\Study")
 		val list = mm.getDirList()
 		val file = new File("C:\\Study\\testResult.txt")
 		val pw = new PrintWriter(new BufferedWriter(new FileWriter(file)))

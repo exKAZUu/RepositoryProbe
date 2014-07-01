@@ -12,8 +12,11 @@ import org.supercsv.prefs.CsvPreference
 class GithubRepositoryInfo {
 	val static header = #["url", "mainBranch", "latestCommitSha", "starCount", "forkCount", "commitCount", "branchCount",
 		"releaseCount", "contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount",
-		"closedPullRequestCount", "searchResultCount"]
-	val static processors = (#[null, null, null] + header.map[new ParseInt()]).take(header.length)
+		"closedPullRequestCount", "searchResultCount", "killedMutantCount", "generatedMutantCount",
+		"killedMutantPercentage"]
+	val static processors = (#[null, null, null] + header.drop(3).map [
+		new ParseInt()
+	])
 
 	@Property String url = ""
 	@Property String mainBranch = ""
@@ -29,6 +32,21 @@ class GithubRepositoryInfo {
 	@Property int openPullRequestCount = -1
 	@Property int closedPullRequestCount = -1
 	@Property int searchResultCount = -1
+	@Property int killedMutantCount = -1
+	@Property int generatedMutantCount = -1
+	@Property int killedMutantPercentage = -1 // TODO: Should the type be double?
+
+	def getUserAndProjectName() {
+		url.substring("https://github.com/".length)
+	}
+
+	def getUserName() {
+		userAndProjectName.split("/").get(0)
+	}
+
+	def getProjectName() {
+		userAndProjectName.split("/").get(1)
+	}
 
 	def static write(File file, Iterable<GithubRepositoryInfo> infos) {
 		val writer = new FileWriter(file)
