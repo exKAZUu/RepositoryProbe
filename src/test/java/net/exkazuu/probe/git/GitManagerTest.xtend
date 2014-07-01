@@ -39,7 +39,7 @@ class GitManagerTest {
 
 	@Test
 	def void cloneByAddress() {
-		val address = "https://github.com/ocwajbaum/jenkins"
+		val address = "https://github.com/gumfum/TestSample"
 		val list = gm.clone(address)
 
 		val str = address.substring(address.lastIndexOf('/') + 1, address.length)
@@ -50,9 +50,9 @@ class GitManagerTest {
 	}
 
 	@Test
-	def void getAuthorNamesXwiki() {
-		gm.clone("https://github.com/xwiki/xwiki-commons")
-		val fileList = fm.getSourceCodeAbsolutePath("DirectoryForTest/xwiki-commons")
+	def void getAuthorNamesTestSample() {
+		gm.clone("https://github.com/gumfum/TestSample")
+		val fileList = fm.getSourceCodeAbsolutePath("DirectoryForTest/TestSample")
 
 		val result = new HashSet<String>()
 		for (file : fileList) {
@@ -65,9 +65,9 @@ class GitManagerTest {
 	}
 
 	@Test
-	def void getAuthorNamesZanataServer() {
-		gm.clone("https://github.com/zanata/zanata-server")
-		val fileList = fm.getSourceCodeAbsolutePath("DirectoryForTest/zanata-server")
+	def void getAuthorNamesFromTestSample() {
+		gm.clone("https://github.com/gumfum/TestSample")
+		val fileList = fm.getSourceCodeAbsolutePath("DirectoryForTest/TestSample")
 
 		val result = new HashSet<String>()
 		for (file : fileList) {
@@ -78,15 +78,15 @@ class GitManagerTest {
 		for (name : result) {
 			System.out.println(name)
 		}
-		assertThat(result.size, is(16))
+		assertThat(result.size, is(2))
 	}
 
 	@Test
-	def void getAuthorNamesZanataServerFile() {
-		gm.clone("https://github.com/zanata/zanata-server")
+	def void getAuthorNamesTestSampleFile() {
+		gm.clone("https://github.com/gumfum/TestSample")
 
 		for (name : gm.getAuthorNames(
-			"DirectoryForTest/zanata-server/zanata-war/src/test/java/org/zanata/webtrans/client/presenter/TranslationPresenterTest.java")) {
+			"DirectoryForTest/TestSample/src/main/Plus.java")) {
 			System.out.println(name)
 		}
 
