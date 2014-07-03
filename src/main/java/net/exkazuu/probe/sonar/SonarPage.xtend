@@ -1,4 +1,4 @@
-package net.exkazuu.probe.maven
+package net.exkazuu.probe.sonar
 
 import java.util.List
 import org.openqa.selenium.By
@@ -9,6 +9,10 @@ import static extension net.exkazuu.probe.extensions.XWebElement.*
 
 class SonarPage {
 	var WebDriver driver
+	
+	new(WebDriver driver) {
+		this.driver = driver
+	}
 
 	def getInformation() {
 		val info = new SonarInfo()
@@ -23,7 +27,7 @@ class SonarPage {
 		info.accessors = accessors
 		info.publicDocumentedAPIDensity = publicDocumentedAPIDensity
 		info.publicAPI = publicAPI
-		info.publicUndocumtnedAPI = publicUndocumentedAPI
+		info.publicUndocumentedAPI = publicUndocumentedAPI
 		info.commentLinesDensity = commentLinesDensity
 		info.commentLines = commentLines
 		info.duplicatedLinesDensity = duplicatedLinesDensity
@@ -53,6 +57,8 @@ class SonarPage {
 		info.testErrors = testErrors
 		info.tests = tests
 		info.testExecutionTime = testExecutionTime
+		
+		info
 	}
 	
 	private def getElementsById(String id) {
@@ -111,7 +117,7 @@ class SonarPage {
 	}
 	
 	/**
-	 * 4.0.0
+	 * existing in 4.0.0
 	 */
 	private def getPackages() {
 		getIntegerValueOfElementById("m_packeages")
@@ -126,35 +132,35 @@ class SonarPage {
 	}
 	
 	/**
-	 * 4.0.0
+	 * existing in 4.0.0
 	 */
 	private def getPublicDocumentedAPIDensity() {
 		getDecimalValueOfElementById("m_public_documented_api_density")
 	}
 	
 	/**
-	 * 4.0.0
+	 * existing in 4.0.0
 	 */
 	private def getPublicAPI() {
 		getIntegerValueOfElementById("m_public_api")
 	}
 	
 	/**
-	 * 4.0.0
+	 * existing in 4.0.0
 	 */
 	private def getPublicUndocumentedAPI() {
 		getIntegerValueOfElementById("m_public_undocumented_API")
 	}
 	
 	/**
-	 * 4.0.0
+	 * existing in 4.0.0
 	 */
 	private def getCommentLinesDensity() {
 		getDecimalValueOfElementById("m_commnet_lines_density")
 	}
 	
 	/**
-	 * 4.0.0
+	 * existing in 4.0.0
 	 */
 	private def getCommentLines() {
 		getIntegerValueOfElementById("m_comment_lines")
