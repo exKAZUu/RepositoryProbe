@@ -1,8 +1,6 @@
 package net.exkazuu.probe.github
 
 import net.exkazuu.probe.common.Idioms
-import org.kohsuke.github.GHIssueState
-import org.kohsuke.github.GitHub
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 
@@ -180,11 +178,20 @@ class GithubRepositoryPage {
 	}
 
 	def getClosedPullRequestCount() {
-		val userAndProjectName = topUrl.replaceAll("https://github.com/", "")
-		val repository = GitHub.connectAnonymously.getRepository(userAndProjectName)
-		val closedPullRequests = repository.getPullRequests(GHIssueState.CLOSED)
-
-		closedPullRequests.length
+		val closedPullRequestUrl = topUrl + "pulls?direction=desc&page=1&sort=created&state=closed"
+		driver.get(closedPullRequestUrl)
+		val pagenation = driver.findElements(By.className("pagination"))
+		val pageCount = if (pagenation.size >= 1) {
+				val links = driver.findElements(By.tagName("a"))
+				val lastPageLink = links.get(links.size - 2)
+				val pageCount = lastPageLink.extractInteger
+				lastPageLink.click
+				pageCount
+			} else {
+				1
+			}
+		val items = driver.findElements(By.className("list-group-item"))
+		(pageCount - 1) * 20 + items.size
 	}
 
 	def getSearchResultCount() {
