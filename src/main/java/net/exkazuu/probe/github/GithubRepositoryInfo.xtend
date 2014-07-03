@@ -8,16 +8,18 @@ import org.supercsv.cellprocessor.ParseInt
 import org.supercsv.io.CsvBeanReader
 import org.supercsv.io.CsvBeanWriter
 import org.supercsv.prefs.CsvPreference
+import net.exkazuu.probe.sonar.SonarInfo
 
 class GithubRepositoryInfo {
 	val static header = #["url", "mainBranch", "latestCommitSha", "watchCount", "starCount", "forkCount", "commitCount",
 		"branchCount", "releaseCount", "contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount",
 		"closedPullRequestCount", "searchResultCount", "killedMutantCount", "generatedMutantCount",
-		"killedMutantPercentage"]
+		"killedMutantPercentage"] + SonarInfo.header
 	val static processors = (#[null, null, null] + header.drop(3).map [
 		new ParseInt()
-	])
+	]) + SonarInfo.processors
 
+	//GitHub
 	@Property String url = ""
 	@Property String mainBranch = ""
 	@Property String latestCommitSha = ""
@@ -33,9 +35,54 @@ class GithubRepositoryInfo {
 	@Property int openPullRequestCount = -1
 	@Property int closedPullRequestCount = -1
 	@Property int searchResultCount = -1
+	
+	//PIT
 	@Property int killedMutantCount = -1
 	@Property int generatedMutantCount = -1
 	@Property int killedMutantPercentage = -1 // TODO: Should the type be double?
+	
+	//Sonar
+	@Property int loc = -1
+	@Property int lines = -1
+	@Property int statements = -1
+	@Property int files = -1
+	@Property int directories
+	@Property int classes = -1
+	@Property int packages = -1
+	@Property int functions = -1
+	@Property int accessors = -1
+	@Property double publicDocumentedAPIDensity = -1
+	@Property int publicAPI = -1
+	@Property int publicUndocumtnedAPI = -1
+	@Property double commentLinesDensity = -1
+	@Property int commentLines = -1
+	@Property String duplicatedLinesDensity = ""
+	@Property int duplicatedLines = -1
+	@Property int duplicatedBlocks = -1
+	@Property int duplicatedFiles = -1
+	@Property double functionComplexity = -1
+	@Property double classComplexity = -1
+	@Property double fileComplexity = -1
+	@Property double complexity = -1
+	@Property int violations = -1
+	@Property String technicalDebt = ""
+	@Property int blockerViolations = -1
+	@Property int criticalViolations = -1
+	@Property int majorViolations = -1
+	@Property int minorViolations = -1
+	@Property int infoViolations = -1
+	@Property double packageTangleIndex = -1
+	@Property int packageCycles = -1
+	@Property int packageFeedbackEdges = -1
+	@Property int packageTangles = -1
+	@Property double coverage = -1
+	@Property double lineCoverage = -1
+	@Property double branchCoverage = -1
+	@Property double testSuccessDensity = -1
+	@Property int testFailures = -1
+	@Property int testErrors = -1
+	@Property int tests = -1
+	@Property String testExecutionTime = ""	
 
 	def getUserAndProjectName() {
 		url.substring("https://github.com/".length)
