@@ -167,17 +167,6 @@ class GithubRepositoryPage {
 		}
 	}
 
-	/**
-	 * Too slow
-	 */
-	def getClosedPullRequestCountOld() {
-		val userAndProjectName = topUrl.replaceAll("https://github.com/", "")
-		val repository = GitHub.connectAnonymously.getRepository(userAndProjectName)
-		val closedPullRequests = repository.getPullRequests(GHIssueState.CLOSED)
-
-		closedPullRequests.length
-	}
-
 	def getClosedPullRequestCount() {
 		val closedPullRequestUrl = topUrl + "pulls?direction=desc&page=1&sort=created&state=closed"
 		driver.get(closedPullRequestUrl)
