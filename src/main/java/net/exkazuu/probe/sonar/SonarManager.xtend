@@ -3,6 +3,7 @@ package net.exkazuu.probe.sonar
 import net.exkazuu.probe.maven.MavenManager
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.By
+import net.exkazuu.probe.github.GithubRepositoryInfo
 
 class SonarManager {
 	val MavenManager mvnMan
@@ -13,7 +14,7 @@ class SonarManager {
 		this.driver = driver
 	}
 
-	def SonarInfo execute() {
+	def execute(GithubRepositoryInfo info) {
 		mvnMan.execute("sonar:sonar")
 		driver.get("http://localhost:9000/sessions/login")
 		Thread.sleep(10 * 1000)
@@ -21,24 +22,20 @@ class SonarManager {
 		driver.findElements(By.xpath('//input[@id="password"]')).get(0).sendKeys("admin")
 		driver.findElements(By.xpath('//input[@type="submit"]')).get(0).click()
 		Thread.sleep(10 * 1000)
-		
+
 		val repos = driver.findElements(By.xpath('//td[@class=" nowrap"]/a[1]'))
-		if(repos.size != 0) {
+		if (repos.size != 0) {
 			repos.get(0).click
 			Thread.sleep(10 * 1000)
-			val info = new SonarPage(driver).information
-			
+
+			new SonarPage(driver).updateInformation(info)
+
 			val deleteURL = driver.currentUrl.replace("dashboard/index", "project/deletion")
 			driver.get(deleteURL)
 			Thread.sleep(10 * 1000)
 			driver.findElement(By.xpath('//input[@id="delete_resource"]')).click
 			Thread.sleep(10 * 1000)
 			driver.switchTo.alert.accept
-			
-			info
-		} else {
-			val info = new SonarInfo
-			info
 		}
 	}
 }

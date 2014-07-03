@@ -8,16 +8,34 @@ import org.supercsv.cellprocessor.ParseInt
 import org.supercsv.io.CsvBeanReader
 import org.supercsv.io.CsvBeanWriter
 import org.supercsv.prefs.CsvPreference
-import net.exkazuu.probe.sonar.SonarInfo
+import org.supercsv.cellprocessor.ParseDouble
 
 class GithubRepositoryInfo {
+	val public static sonarHeader = #["loc", "lines", "statemens", "files", "directories", "classes", "packages",
+		"functions", "accessors", "publicDocumentedAPIDensity", "publicAPI", "publicUndocumentedAPI",
+		"commentLinesDensity", "commentLines", "duplicatedLinesDensity", "duplicatedLines", "duplicatedBlocks",
+		"duplicatedFiles", "functionComplexity", "classComplexity", "fileComplexity", "complexity", "violations",
+		"technicalDebt", "blockerViolations", "criticalViolations", "majorViolations", "minorViolations",
+		"infoViolations", "packageTangleIndex", "packageCycles", "packageFeedbackEdges", "packageTangles", "coverage",
+		"lineCoverage", "branchCoverage", "testSuccessDensity", "testFailures", "testErrors", "tests",
+		"testExecutionTime"]
+
+	val static public sonarProcessors = (sonarHeader.subList(0, 9).map[new ParseInt()] +
+		#[new ParseDouble(), new ParseInt(), new ParseInt(), new ParseDouble(), new ParseInt(), null] +
+		sonarHeader.subList(15, 18).map[new ParseInt()] + sonarHeader.subList(18, 21).map[new ParseDouble()] +
+		#[new ParseInt(), null] + sonarHeader.subList(24, 29).map[new ParseInt()] + #[new ParseDouble()] +
+		sonarHeader.subList(30, 33).map[new ParseInt()] + sonarHeader.subList(33, 37).map[new ParseDouble()] +
+		sonarHeader.subList(37, 40).map[new ParseInt()] + #[null]
+		)
+
 	val static header = #["url", "mainBranch", "latestCommitSha", "watchCount", "starCount", "forkCount", "commitCount",
 		"branchCount", "releaseCount", "contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount",
 		"closedPullRequestCount", "searchResultCount", "killedMutantCount", "generatedMutantCount",
-		"killedMutantPercentage"] + SonarInfo.header
+		"killedMutantPercentage"] + sonarHeader
+
 	val static processors = (#[null, null, null] + header.drop(3).map [
 		new ParseInt()
-	]) + SonarInfo.processors
+	]) + sonarProcessors
 
 	//GitHub
 	@Property String url = ""
@@ -35,12 +53,12 @@ class GithubRepositoryInfo {
 	@Property int openPullRequestCount = -1
 	@Property int closedPullRequestCount = -1
 	@Property int searchResultCount = -1
-	
+
 	//PIT
 	@Property int killedMutantCount = -1
 	@Property int generatedMutantCount = -1
 	@Property int killedMutantPercentage = -1 // TODO: Should the type be double?
-	
+
 	//Sonar
 	@Property int loc = -1
 	@Property int lines = -1
@@ -82,7 +100,7 @@ class GithubRepositoryInfo {
 	@Property int testFailures = -1
 	@Property int testErrors = -1
 	@Property int tests = -1
-	@Property String testExecutionTime = ""	
+	@Property String testExecutionTime = ""
 
 	def getUserAndProjectName() {
 		url.substring("https://github.com/".length)
