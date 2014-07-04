@@ -2,9 +2,10 @@ package net.exkazuu.probe.sonar
 
 import org.supercsv.cellprocessor.ParseDouble
 import org.supercsv.cellprocessor.ParseInt
+import org.supercsv.cellprocessor.ift.CellProcessor
 
 class SonarInfo {
-	val public static header = #["loc", "lines", "statemens", "files", "directories", "classes", "packages", "functions",
+	public static val header = #["loc", "lines", "statemens", "files", "directories", "classes", "packages", "functions",
 		"accessors", "publicDocumentedAPIDensity", "publicAPI", "publicUndocumentedAPI", "commentLinesDensity",
 		"commentLines", "duplicatedLinesDensity", "duplicatedLines", "duplicatedBlocks", "duplicatedFiles",
 		"functionComplexity", "classComplexity", "fileComplexity", "complexity", "violations", "technicalDebt",
@@ -12,13 +13,13 @@ class SonarInfo {
 		"packageTangleIndex", "packageCycles", "packageFeedbackEdges", "packageTangles", "coverage", "lineCoverage",
 		"branchCoverage", "testSuccessDensity", "testFailures", "testErrors", "tests", "testExecutionTime"]
 
-	val static public processors = (header.subList(0, 9).map[new ParseInt()] +
+	public static val processors = (header.subList(0, 9).map[new ParseInt() as CellProcessor] +
 		#[new ParseDouble(), new ParseInt(), new ParseInt(), new ParseDouble(), new ParseInt(), null] +
 		header.subList(15, 18).map[new ParseInt()] + header.subList(18, 21).map[new ParseDouble()] +
 		#[new ParseInt(), null] + header.subList(24, 29).map[new ParseInt()] + #[new ParseDouble()] +
 		header.subList(30, 33).map[new ParseInt()] + header.subList(33, 37).map[new ParseDouble()] +
 		header.subList(37, 40).map[new ParseInt()] + #[null]
-		)
+		).toList
 
 	@Property int loc = -1
 	@Property int lines = -1

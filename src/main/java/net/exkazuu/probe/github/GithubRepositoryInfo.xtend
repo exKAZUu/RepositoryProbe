@@ -11,13 +11,13 @@ import org.supercsv.prefs.CsvPreference
 import net.exkazuu.probe.sonar.SonarInfo
 
 class GithubRepositoryInfo {
-	val static header = #["url", "mainBranch", "latestCommitSha", "watchCount", "starCount", "forkCount", "commitCount",
+	val static header = (#["url", "mainBranch", "latestCommitSha", "watchCount", "starCount", "forkCount", "commitCount",
 		"branchCount", "releaseCount", "contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount",
 		"closedPullRequestCount", "searchResultCount", "killedMutantCount", "generatedMutantCount",
-		"killedMutantPercentage"] + SonarInfo.header
-	val static processors = (#[null, null, null] + header.drop(3).map [
+		"killedMutantPercentage"] + SonarInfo.header).toList
+	val static processors = ((#[null, null, null] + header.drop(3).map [
 		new ParseInt()
-	]) + SonarInfo.processors
+	]) + SonarInfo.processors).toList
 
 	//GitHub
 	@Property String url = ""
@@ -35,12 +35,12 @@ class GithubRepositoryInfo {
 	@Property int openPullRequestCount = -1
 	@Property int closedPullRequestCount = -1
 	@Property int searchResultCount = -1
-	
+
 	//PIT
 	@Property int killedMutantCount = -1
 	@Property int generatedMutantCount = -1
 	@Property int killedMutantPercentage = -1 // TODO: Should the type be double?
-	
+
 	//Sonar
 	@Property int loc = -1
 	@Property int lines = -1
@@ -82,7 +82,7 @@ class GithubRepositoryInfo {
 	@Property int testFailures = -1
 	@Property int testErrors = -1
 	@Property int tests = -1
-	@Property String testExecutionTime = ""	
+	@Property String testExecutionTime = ""
 
 	def getUserAndProjectName() {
 		url.substring("https://github.com/".length)
