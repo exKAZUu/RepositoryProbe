@@ -71,7 +71,7 @@ class GithubRepositoryInfo {
 	@Property int accessors = -1
 	@Property double publicDocumentedAPIDensity = -1
 	@Property int publicAPI = -1
-	@Property int publicUndocumtnedAPI = -1
+	@Property int publicUndocumentedAPI = -1
 	@Property double commentLinesDensity = -1
 	@Property int commentLines = -1
 	@Property String duplicatedLinesDensity = ""
