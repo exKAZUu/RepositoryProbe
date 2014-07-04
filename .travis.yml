@@ -5,3 +5,12 @@ jdk:
 before_install:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
+
+# Notify development list when needed
+notifications:
+ recipients:
+   - exkazuu@gmail.com
+   - henshinfukanou@gmail.com
+ email:
+   on_success: change
+   on_failure: always
