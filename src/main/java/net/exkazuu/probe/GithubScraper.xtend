@@ -97,8 +97,6 @@ abstract class GithubScraper {
 			}
 		}
 	}
-	
-	def void SimpleDateFormat(String string)
 
 	abstract def String[] getUrlsOrSuffixes()
 

@@ -33,9 +33,7 @@ class GithubRepositoryInfo {
 		"closedPullRequestCount", "searchResultCount", "retrievedTime", "killedMutantCount", "generatedMutantCount",
 		"killedMutantPercentage"] + sonarHeader).toList
 
-	val static processors = ((#[null, null, null, null] + header.drop(4).map [
-		new ParseInt()
-	]) + sonarProcessors).toList
+	val static processors = ((#[null, null, null, null] + header.drop(4).map[new ParseInt()]) + sonarProcessors).toList
 
 	//GitHub
 	@Property String url = ""
@@ -114,7 +112,7 @@ class GithubRepositoryInfo {
 	def getProjectName() {
 		userAndProjectName.split("/").get(1)
 	}
-	
+
 	def static write(File file, Iterable<GithubRepositoryInfo> infos) {
 		val writer = new FileWriter(file)
 		val csvWriter = new CsvBeanWriter(writer, CsvPreference.STANDARD_PREFERENCE)
