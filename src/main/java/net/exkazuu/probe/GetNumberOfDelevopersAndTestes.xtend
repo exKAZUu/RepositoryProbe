@@ -5,7 +5,7 @@ import java.io.FileWriter
 import java.io.PrintWriter
 import java.util.HashSet
 import net.exkazuu.probe.file.FileManager
-import net.exkazuu.probe.git.GitManager
+import net.exkazuu.probe.git.OldGitManager
 
 /**
  * A class for counting the number of developers and testers.
@@ -16,7 +16,7 @@ import net.exkazuu.probe.git.GitManager
  */
 class GetNumberOfDelevopersAndTestes {
 	def static void main(String[] args) {
-		val gm = new GitManager("C:\\Study")
+		val gm = new OldGitManager("C:\\Study")
 		val fm = new FileManager("C:\\Study")
 		val outputFile = new File("C:\\Study\\number.txt")
 		val pw = new PrintWriter(new FileWriter(outputFile))

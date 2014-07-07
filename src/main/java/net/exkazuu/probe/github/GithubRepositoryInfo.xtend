@@ -4,20 +4,38 @@ import java.io.File
 import java.io.FileReader
 import java.io.FileWriter
 import java.util.ArrayList
+import org.supercsv.cellprocessor.ParseDouble
 import org.supercsv.cellprocessor.ParseInt
 import org.supercsv.io.CsvBeanReader
 import org.supercsv.io.CsvBeanWriter
 import org.supercsv.prefs.CsvPreference
-import net.exkazuu.probe.sonar.SonarInfo
 
 class GithubRepositoryInfo {
+	val public static sonarHeader = #["loc", "lines", "statemens", "files", "directories", "classes", "packages",
+		"functions", "accessors", "publicDocumentedAPIDensity", "publicAPI", "publicUndocumentedAPI",
+		"commentLinesDensity", "commentLines", "duplicatedLinesDensity", "duplicatedLines", "duplicatedBlocks",
+		"duplicatedFiles", "functionComplexity", "classComplexity", "fileComplexity", "complexity", "violations",
+		"technicalDebt", "blockerViolations", "criticalViolations", "majorViolations", "minorViolations",
+		"infoViolations", "packageTangleIndex", "packageCycles", "packageFeedbackEdges", "packageTangles", "coverage",
+		"lineCoverage", "branchCoverage", "testSuccessDensity", "testFailures", "testErrors", "tests",
+		"testExecutionTime"]
+
+	val static public sonarProcessors = (sonarHeader.subList(0, 9).map[new ParseInt()] +
+		#[new ParseDouble(), new ParseInt(), new ParseInt(), new ParseDouble(), new ParseInt(), null] +
+		sonarHeader.subList(15, 18).map[new ParseInt()] + sonarHeader.subList(18, 21).map[new ParseDouble()] +
+		#[new ParseInt(), null] + sonarHeader.subList(24, 29).map[new ParseInt()] + #[new ParseDouble()] +
+		sonarHeader.subList(30, 33).map[new ParseInt()] + sonarHeader.subList(33, 37).map[new ParseDouble()] +
+		sonarHeader.subList(37, 40).map[new ParseInt()] + #[null]
+		)
+
 	val static header = (#["url", "mainBranch", "latestCommitSha", "watchCount", "starCount", "forkCount", "commitCount",
 		"branchCount", "releaseCount", "contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount",
 		"closedPullRequestCount", "searchResultCount", "killedMutantCount", "generatedMutantCount",
-		"killedMutantPercentage"] + SonarInfo.header).toList
+		"killedMutantPercentage"] + sonarHeader).toList
+
 	val static processors = ((#[null, null, null] + header.drop(3).map [
 		new ParseInt()
-	]) + SonarInfo.processors).toList
+	]) + sonarProcessors).toList
 
 	//GitHub
 	@Property String url = ""
@@ -53,7 +71,7 @@ class GithubRepositoryInfo {
 	@Property int accessors = -1
 	@Property double publicDocumentedAPIDensity = -1
 	@Property int publicAPI = -1
-	@Property int publicUndocumtnedAPI = -1
+	@Property int publicUndocumentedAPI = -1
 	@Property double commentLinesDensity = -1
 	@Property int commentLines = -1
 	@Property String duplicatedLinesDensity = ""

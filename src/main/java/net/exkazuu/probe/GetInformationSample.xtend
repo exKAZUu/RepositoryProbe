@@ -4,12 +4,12 @@ import java.io.FileInputStream
 import java.sql.Timestamp
 import java.util.HashSet
 import java.util.Properties
-import net.exkazuu.probe.git.GitManager
 import org.eclipse.egit.github.core.service.RepositoryService
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
 import net.exkazuu.probe.maven.OldMavenManager
+import net.exkazuu.probe.git.OldGitManager
 
 /**
  * A class for measuring metrics by SonarQube and showing on the console.
@@ -60,7 +60,7 @@ class GetInformationSample {
 		val timestamp2 = new Timestamp(System.currentTimeMillis)
 		System.out.println(timestamp2)
 
-		val gm = new GitManager(rootDirPath)
+		val gm = new OldGitManager(rootDirPath)
 		for (address : addressBook) {
 			System.out.println(address)
 			gm.clone(address)

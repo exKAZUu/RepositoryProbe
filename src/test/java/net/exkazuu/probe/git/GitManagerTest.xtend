@@ -10,7 +10,7 @@ import net.exkazuu.probe.maven.OldMavenManager
 
 class GitManagerTest {
 
-	val gm = new GitManager("DirectoryForTest")
+	val gm = new OldGitManager("DirectoryForTest")
 	val mm = new OldMavenManager("DirectoryForTest")
 	val fm = new FileManager("DirectoryForTest")
 

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver
 import org.openqa.selenium.WebElement
 
 import static extension net.exkazuu.probe.extensions.XWebElement.*
+import net.exkazuu.probe.github.GithubRepositoryInfo
 
 class SonarPage {
 	var WebDriver driver
@@ -14,8 +15,7 @@ class SonarPage {
 		this.driver = driver
 	}
 
-	def getInformation() {
-		val info = new SonarInfo()
+	def updateInformation(GithubRepositoryInfo info) {
 		info.loc = loc
 		info.lines = lines
 		info.statements = statements

@@ -7,11 +7,11 @@ import java.io.FileWriter
 import java.io.PrintWriter
 import java.util.HashSet
 import java.util.Properties
-import net.exkazuu.probe.git.GitManager
 import org.eclipse.egit.github.core.service.RepositoryService
 import org.openqa.selenium.By
 import org.openqa.selenium.chrome.ChromeDriver
 import net.exkazuu.probe.maven.OldMavenManager
+import net.exkazuu.probe.git.OldGitManager
 
 /**
  * Modified version of GetInformation Sample.
@@ -96,7 +96,7 @@ class GetRepositoryInformation {
 				addressBook.add(address)
 			}
 			/* clone */
-			val gm = new GitManager(dirPath)
+			val gm = new OldGitManager(dirPath)
 			val addressFile = new File(dirPath + "\\address.txt")
 			val printWriter1 = new PrintWriter(new BufferedWriter(new FileWriter(addressFile)))
 			for (address : addressBook) {
