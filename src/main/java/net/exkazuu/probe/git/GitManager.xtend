@@ -16,9 +16,11 @@ class GitManager {
 	def cloneSpecifiedBranch(String url, String branchName) {
 		if (RepositoryCache.FileKey.isGitRepository(directory, FS.DETECTED)) {
 			// Already cloned. Just need to open a repository here.
+			Git.open(directory).checkout().setName(branchName).setUpstreamMode(
+				CreateBranchCommand.SetupUpstreamMode.TRACK).setStartPoint("origin/" + branchName).call()
 		} else {
 			val git = Git.cloneRepository().setURI(url).setDirectory(directory.parentFile).call();
-			git.checkout().setCreateBranch(true).setName("branchName").setUpstreamMode(
+			git.checkout().setCreateBranch(true).setName(branchName).setUpstreamMode(
 				CreateBranchCommand.SetupUpstreamMode.TRACK).setStartPoint("origin/" + branchName).call()
 		}
 	}	
