@@ -1,13 +1,13 @@
 package net.exkazuu.probe.maven
 
-import net.exkazuu.probe.git.GitManager
 import org.junit.Test
 
 import static org.hamcrest.Matchers.*
 import static org.junit.Assert.*
+import net.exkazuu.probe.git.OldGitManager
 
 class MavenManagerTest {
-	val gm = new GitManager("DirectoryForTest")
+	val gm = new OldGitManager("DirectoryForTest")
 	val mm = new OldMavenManager("DirectoryForTest")
 
 	@Test
