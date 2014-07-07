@@ -4,11 +4,11 @@ import java.io.File
 import java.io.FileReader
 import java.io.FileWriter
 import java.util.ArrayList
+import org.supercsv.cellprocessor.ParseDouble
 import org.supercsv.cellprocessor.ParseInt
 import org.supercsv.io.CsvBeanReader
 import org.supercsv.io.CsvBeanWriter
 import org.supercsv.prefs.CsvPreference
-import org.supercsv.cellprocessor.ParseDouble
 
 class GithubRepositoryInfo {
 	val public static sonarHeader = #["loc", "lines", "statemens", "files", "directories", "classes", "packages",
@@ -28,14 +28,14 @@ class GithubRepositoryInfo {
 		sonarHeader.subList(37, 40).map[new ParseInt()] + #[null]
 		)
 
-	val static header = #["url", "mainBranch", "latestCommitSha", "watchCount", "starCount", "forkCount", "commitCount",
+	val static header = (#["url", "mainBranch", "latestCommitSha", "watchCount", "starCount", "forkCount", "commitCount",
 		"branchCount", "releaseCount", "contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount",
 		"closedPullRequestCount", "searchResultCount", "killedMutantCount", "generatedMutantCount",
-		"killedMutantPercentage"] + sonarHeader
+		"killedMutantPercentage"] + sonarHeader).toList
 
-	val static processors = (#[null, null, null] + header.drop(3).map [
+	val static processors = ((#[null, null, null] + header.drop(3).map [
 		new ParseInt()
-	]) + sonarProcessors
+	]) + sonarProcessors).toList
 
 	//GitHub
 	@Property String url = ""

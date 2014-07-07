@@ -2,7 +2,7 @@ package net.exkazuu.probe
 
 import java.io.File
 import java.util.Map
-import net.exkazuu.GitManager
+import net.exkazuu.probe.git.GitManager
 import net.exkazuu.probe.github.GithubRepositoryInfo
 import net.exkazuu.probe.maven.MavenManager
 import net.exkazuu.probe.sonar.SonarManager
