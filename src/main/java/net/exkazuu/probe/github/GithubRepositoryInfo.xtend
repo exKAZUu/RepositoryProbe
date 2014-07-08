@@ -28,19 +28,18 @@ class GithubRepositoryInfo {
 		sonarHeader.subList(37, 40).map[new ParseInt()] + #[null]
 		)
 
-	val static header = (#["url", "mainBranch", "latestCommitSha", "watchCount", "starCount", "forkCount", "commitCount",
-		"branchCount", "releaseCount", "contributorCount", "openIssueCount", "closedIssueCount", "openPullRequestCount",
-		"closedPullRequestCount", "searchResultCount", "killedMutantCount", "generatedMutantCount",
-		"killedMutantPercentage"] + sonarHeader).toList
+	val static header = (#["url", "mainBranch", "latestCommitSha", "retrievedTime", "watchCount", "starCount",
+		"forkCount", "commitCount", "branchCount", "releaseCount", "contributorCount", "openIssueCount",
+		"closedIssueCount", "openPullRequestCount", "closedPullRequestCount", "searchResultCount", "killedMutantCount",
+		"generatedMutantCount", "killedMutantPercentage"] + sonarHeader).toList
 
-	val static processors = ((#[null, null, null] + header.drop(3).map [
-		new ParseInt()
-	]) + sonarProcessors).toList
+	val static processors = ((#[null, null, null, null] + header.drop(4).map[new ParseInt()]) + sonarProcessors).toList
 
 	//GitHub
 	@Property String url = ""
 	@Property String mainBranch = ""
 	@Property String latestCommitSha = ""
+	@Property String retrievedTime = ""
 	@Property int watchCount = -1
 	@Property int starCount = -1
 	@Property int forkCount = -1

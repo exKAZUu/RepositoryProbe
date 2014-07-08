@@ -11,6 +11,8 @@ import org.openqa.selenium.WebDriver
 import java.util.Properties
 import java.io.FileInputStream
 import com.google.common.base.Strings
+import java.util.Date
+import java.text.SimpleDateFormat
 
 /**
  * An abstract class for scraping GitHub projects.
@@ -90,6 +92,7 @@ abstract class GithubScraper {
 			if (!infos.containsKey(url)) {
 				System.out.print(".")
 				val info = new GithubRepositoryPage(driver, url, codeSearchQueries).information
+				info.retrievedTime = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(new Date).toString
 				infos.put(info.url, info)
 			}
 		}
