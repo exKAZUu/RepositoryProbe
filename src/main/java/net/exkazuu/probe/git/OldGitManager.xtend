@@ -22,6 +22,7 @@ class OldGitManager {
 	def List<String> clone(String address, String name) {
 		System::out.println(name + " cloning...")
 		val command = "git clone " + address + " " + root + "/" + name
+		System.out.println(command)
 		val p = Runtime.runtime.exec(command)
 		val result = p.readAllOutputsIgnoringErrors()
 

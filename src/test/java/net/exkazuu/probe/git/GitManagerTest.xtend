@@ -1,12 +1,13 @@
 package net.exkazuu.probe.git
 
+import java.io.File
 import java.util.HashSet
 import net.exkazuu.probe.file.FileManager
+import net.exkazuu.probe.maven.OldMavenManager
 import org.junit.Test
 
 import static org.hamcrest.Matchers.*
 import static org.junit.Assert.*
-import net.exkazuu.probe.maven.OldMavenManager
 
 class GitManagerTest {
 
@@ -85,10 +86,18 @@ class GitManagerTest {
 	def void getAuthorNamesTestSampleFile() {
 		gm.clone("https://github.com/gumfum/TestSample")
 
-		for (name : gm.getAuthorNames(
-			"DirectoryForTest/TestSample/src/main/Plus.java")) {
+		for (name : gm.getAuthorNames("DirectoryForTest/TestSample/src/main/Plus.java")) {
 			System.out.println(name)
 		}
+	}
 
+	@Test
+	def void cloneShallowly() {
+		val gitMan = new GitManager(new File("DirectoryForTest"))
+		System.out.println(gitMan.directoryPath)
+		val res = gitMan.cloneShallowly("https://github.com/gumfum/SampleMavenProject", "gumfum/SampleMavenProject", 1)
+		res.forEach [
+			System.out.println(it)
+		]
 	}
 }
