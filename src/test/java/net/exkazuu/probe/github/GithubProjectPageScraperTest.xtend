@@ -30,6 +30,7 @@ class GithubProjectPageScraperTest {
 		assertThat(scraper.mainBranchName, is("master"))
 
 		assertThat(scraper.openPullRequestCount, greaterThanOrEqualTo(0))
+		assertThat(scraper.closedPullRequestCount, greaterThanOrEqualTo(1420))
 		assertThat(scraper.openIssueCount, greaterThanOrEqualTo(0))
 		assertThat(scraper.closedIssueCount, greaterThanOrEqualTo(2043))
 
@@ -50,6 +51,7 @@ class GithubProjectPageScraperTest {
 		assertThat(scraper.mainBranchName, is("multi-row-select/save"))
 
 		assertThat(scraper.openPullRequestCount, greaterThanOrEqualTo(0))
+		assertThat(scraper.closedIssueCount, greaterThanOrEqualTo(0))
 		assertThat(scraper.openIssueCount, greaterThanOrEqualTo(0))
 		assertThat(scraper.closedIssueCount, greaterThanOrEqualTo(0))
 
