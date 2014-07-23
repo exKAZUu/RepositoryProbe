@@ -22,7 +22,7 @@ class GithubRepositoryInfo {
 
 	val static public sonarProcessors = (sonarHeader.subList(0, 9).map[new ParseInt()] +
 		#[new ParseDouble(), new ParseInt(), new ParseInt(), new ParseDouble(), new ParseInt(), null] +
-		sonarHeader.subList(15, 18).map[new ParseInt()] + sonarHeader.subList(18, 21).map[new ParseDouble()] +
+		sonarHeader.subList(15, 18).map[new ParseInt()] + sonarHeader.subList(18, 22).map[new ParseDouble()] +
 		#[new ParseInt(), null] + sonarHeader.subList(24, 29).map[new ParseInt()] + #[new ParseDouble()] +
 		sonarHeader.subList(30, 33).map[new ParseInt()] + sonarHeader.subList(33, 37).map[new ParseDouble()] +
 		sonarHeader.subList(37, 40).map[new ParseInt()] + #[null]
@@ -33,7 +33,8 @@ class GithubRepositoryInfo {
 		"closedIssueCount", "openPullRequestCount", "closedPullRequestCount", "searchResultCount", "killedMutantCount",
 		"generatedMutantCount", "killedMutantPercentage"] + sonarHeader).toList
 
-	val static processors = ((#[null, null, null, null] + header.drop(4).map[new ParseInt()]) + sonarProcessors).toList
+	val static processors = ((#[null, null, null, null] + header.drop(4 + sonarHeader.size).map[new ParseInt()]) +
+		sonarProcessors).toList
 
 	//GitHub
 	@Property String url = ""
@@ -59,7 +60,7 @@ class GithubRepositoryInfo {
 	@Property int killedMutantPercentage = -1 // TODO: Should the type be double?
 
 	//Sonar
-	@Property int loc = -1
+	@Property int loc = -1 // 0-
 	@Property int lines = -1
 	@Property int statements = -1
 	@Property int files = -1
@@ -68,38 +69,38 @@ class GithubRepositoryInfo {
 	@Property int packages = -1
 	@Property int functions = -1
 	@Property int accessors = -1
-	@Property double publicDocumentedAPIDensity = -1
+	@Property double publicDocumentedAPIDensity = -1 // 9
 	@Property int publicAPI = -1
 	@Property int publicUndocumentedAPI = -1
 	@Property double commentLinesDensity = -1
 	@Property int commentLines = -1
 	@Property String duplicatedLinesDensity = ""
-	@Property int duplicatedLines = -1
+	@Property int duplicatedLines = -1 // 15-
 	@Property int duplicatedBlocks = -1
 	@Property int duplicatedFiles = -1
-	@Property double functionComplexity = -1
+	@Property double functionComplexity = -1 // 18-
 	@Property double classComplexity = -1
 	@Property double fileComplexity = -1
 	@Property double complexity = -1
-	@Property int violations = -1
+	@Property int violations = -1 // 22
 	@Property String technicalDebt = ""
-	@Property int blockerViolations = -1
+	@Property int blockerViolations = -1 // 24
 	@Property int criticalViolations = -1
 	@Property int majorViolations = -1
 	@Property int minorViolations = -1
 	@Property int infoViolations = -1
-	@Property double packageTangleIndex = -1
-	@Property int packageCycles = -1
+	@Property double packageTangleIndex = -1 // 29
+	@Property int packageCycles = -1 // 30-
 	@Property int packageFeedbackEdges = -1
 	@Property int packageTangles = -1
-	@Property double coverage = -1
+	@Property double coverage = -1 // 33-
 	@Property double lineCoverage = -1
 	@Property double branchCoverage = -1
 	@Property double testSuccessDensity = -1
-	@Property int testFailures = -1
+	@Property int testFailures = -1 // 37-
 	@Property int testErrors = -1
 	@Property int tests = -1
-	@Property String testExecutionTime = ""
+	@Property String testExecutionTime = "" // 40
 
 	def getUserAndProjectName() {
 		url.substring("https://github.com/".length)
