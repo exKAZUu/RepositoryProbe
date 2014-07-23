@@ -61,7 +61,6 @@ class GithubProjectPageScraperTest {
 	@Test
 	def void retrieveRepositoryAllInformation() {
 		val scraper = new GithubRepositoryPage(driver, "gumfum", "SampleMavenProject", new CodeSearchQuery(""))
-		assertThat(scraper.watchCount, equalTo(1))
 		assertThat(scraper.starCount, equalTo(0))
 		assertThat(scraper.forkCount, equalTo(0))
 		
