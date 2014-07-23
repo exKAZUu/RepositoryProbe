@@ -82,8 +82,8 @@ class GithubRepositoryPage {
 		info.branchCount = getBranchCount
 		info.releaseCount = getReleaseCount
 		info.contributorCount = getContributorCount
-		info.openPullRequestCount = getOpenPullRequestCount
 		info.closedPullRequestCount = getClosedPullRequestCount
+		info.openPullRequestCount = getOpenPullRequestCount
 		info.openIssueCount = getOpenIssueCount
 		info.closedIssueCount = getClosedIssueCount
 		info.searchResultCount = getSearchResultCount
@@ -178,12 +178,12 @@ class GithubRepositoryPage {
 	}
 
 	def getClosedPullRequestCount() {
-		val closedPullRequestUrl = topUrl + "pulls?direction=desc&page=1&sort=created&state=closed"
+		val closedPullRequestUrl = topUrl + "/pulls?direction=desc&page=1&sort=created&state=closed"
 		driver.get(closedPullRequestUrl)
 		val pagenation = driver.findElements(By.className("pagination"))
 		val pageCount = if (pagenation.size >= 1) {
 				val links = driver.findElements(By.tagName("a"))
-				val lastPageLink = links.get(links.size - 2)
+				val lastPageLink = links.get(links.size - 17)
 				val pageCount = lastPageLink.extractInteger
 				lastPageLink.click
 				pageCount
@@ -191,6 +191,7 @@ class GithubRepositoryPage {
 				1
 			}
 		val items = driver.findElements(By.className("list-group-item"))
+		moveToTopPage()
 		(pageCount - 1) * 20 + items.size
 	}
 
