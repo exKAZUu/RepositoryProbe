@@ -11,7 +11,7 @@ import org.supercsv.io.CsvBeanWriter
 import org.supercsv.prefs.CsvPreference
 
 class GithubRepositoryInfo {
-	val public static sonarHeader = #["loc", "lines", "statemens", "files", "directories", "classes", "packages",
+	val public static sonarHeader = #["loc", "lines", "statements", "files", "directories", "classes", "packages",
 		"functions", "accessors", "publicDocumentedAPIDensity", "publicAPI", "publicUndocumentedAPI",
 		"commentLinesDensity", "commentLines", "duplicatedLinesDensity", "duplicatedLines", "duplicatedBlocks",
 		"duplicatedFiles", "functionComplexity", "classComplexity", "fileComplexity", "complexity", "violations",

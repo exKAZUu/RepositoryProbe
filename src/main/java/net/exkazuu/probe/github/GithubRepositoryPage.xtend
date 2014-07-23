@@ -82,8 +82,8 @@ class GithubRepositoryPage {
 		info.branchCount = getBranchCount
 		info.releaseCount = getReleaseCount
 		info.contributorCount = getContributorCount
-		info.openPullRequestCount = getOpenPullRequestCount
 		info.closedPullRequestCount = getClosedPullRequestCount
+		info.openPullRequestCount = getOpenPullRequestCount
 		info.openIssueCount = getOpenIssueCount
 		info.closedIssueCount = getClosedIssueCount
 		info.searchResultCount = getSearchResultCount
