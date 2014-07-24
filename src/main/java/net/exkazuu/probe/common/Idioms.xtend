@@ -24,6 +24,7 @@ class Idioms {
 				return func.apply
 			} catch (Exception e) {
 				if (verbosely && (showingAllErrors || i == count)) {
+					System.err.println("Failed to retry (" + i + "/" + count + ")")
 					e.printStackTrace
 				}
 				if (i != count) {

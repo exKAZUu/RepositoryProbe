@@ -66,7 +66,7 @@ abstract class GithubScraper {
 					val nextPageUrl = getNextPageUrl(driver)
 					scrapeProjectInformation()
 					nextPageUrl
-				], 20, 500, null, true, false)
+				], 20, 1000, null, true, false)
 
 			System.out.println(" done")
 			pageCount = pageCount + 1
@@ -89,7 +89,7 @@ abstract class GithubScraper {
 				} else {
 					"https://github.com/" + urlOrSuffix
 				}
-			if (!infos.containsKey(url)) {
+			if (!infos.containsKey(url) || !infos.get(url).isScrapedFromGitHub) {
 				System.out.print(".")
 				val info = new GithubRepositoryPage(driver, url, codeSearchQueries).information
 				info.retrievedTime = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(new Date).toString

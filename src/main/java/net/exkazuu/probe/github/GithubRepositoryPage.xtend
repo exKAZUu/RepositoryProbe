@@ -74,20 +74,25 @@ class GithubRepositoryPage {
 	def getInformation() {
 		val info = new GithubRepositoryInfo()
 		info.url = getUrl
-		info.mainBranch = getMainBranchName
-		info.watchCount = getWatchCount
-		info.starCount = getStarCount
-		info.forkCount = getForkCount
-		info.commitCount = getCommitCount
-		info.branchCount = getBranchCount
-		info.releaseCount = getReleaseCount
-		info.contributorCount = getContributorCount
+		Idioms.retry(
+			[ |
+				// from Top page
+				info.mainBranch = getMainBranchName
+				info.watchCount = getWatchCount
+				info.starCount = getStarCount
+				info.forkCount = getForkCount
+				info.commitCount = getCommitCount
+				info.branchCount = getBranchCount
+				info.releaseCount = getReleaseCount
+				info.contributorCount = getContributorCount
+				info.openPullRequestCount = getOpenPullRequestCount
+				info.openIssueCount = getOpenIssueCount
+				info.closedIssueCount = getClosedIssueCount
+				info.latestCommitSha = getLatestCommitSha
+				null
+			], 30, 1000, null, true, false)
 		info.closedPullRequestCount = getClosedPullRequestCount
-		info.openPullRequestCount = getOpenPullRequestCount
-		info.openIssueCount = getOpenIssueCount
-		info.closedIssueCount = getClosedIssueCount
 		info.searchResultCount = getSearchResultCount
-		info.latestCommitSha = getLatestCommitSha
 		info
 	}
 
@@ -124,6 +129,7 @@ class GithubRepositoryPage {
 	}
 
 	def getForkCount() {
+		moveToTopPage()
 		val elements = getSocialCountElements.toList
 		elements.get(elements.size - 1).extractInteger
 	}
@@ -179,7 +185,7 @@ class GithubRepositoryPage {
 
 	def getClosedPullRequestCount() {
 		val closedPullRequestUrl = topUrl + "/pulls?direction=desc&page=1&sort=created&state=closed"
-		driver.get(closedPullRequestUrl)
+		move(closedPullRequestUrl)
 		val pagenation = driver.findElements(By.className("pagination"))
 		val pageCount = if (pagenation.size >= 1) {
 				val links = driver.findElements(By.tagName("a"))

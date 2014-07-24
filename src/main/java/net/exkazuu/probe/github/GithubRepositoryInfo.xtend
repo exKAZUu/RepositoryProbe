@@ -9,6 +9,7 @@ import org.supercsv.cellprocessor.ParseInt
 import org.supercsv.io.CsvBeanReader
 import org.supercsv.io.CsvBeanWriter
 import org.supercsv.prefs.CsvPreference
+import com.google.common.base.Strings
 
 class GithubRepositoryInfo {
 	val public static sonarHeader = #["loc", "lines", "statements", "files", "directories", "classes", "packages",
@@ -101,6 +102,14 @@ class GithubRepositoryInfo {
 	@Property int testErrors = -1
 	@Property int tests = -1
 	@Property String testExecutionTime = "" // 40
+
+	def isScrapedFromGitHub() {
+		!(Strings.isNullOrEmpty(url) || Strings.isNullOrEmpty(mainBranch) || Strings.isNullOrEmpty(latestCommitSha) ||
+			Strings.isNullOrEmpty(retrievedTime) || watchCount == -1 || starCount == -1 || forkCount == -1 ||
+			commitCount == -1 || branchCount == -1 || releaseCount == -1 || contributorCount == -1 ||
+			openIssueCount == -1 || closedIssueCount == -1 || openPullRequestCount == -1 ||
+			closedPullRequestCount == -1 || searchResultCount == -1)
+	}
 
 	def getUserAndProjectName() {
 		url.substring("https://github.com/".length)

@@ -47,10 +47,13 @@ class GithubCodeSearchScraper extends GithubScraper {
 
 	private def findGoodMaxSize(int size) {
 		var range = 1
+		System.out.print("Find a range (" + size + "): ")
 		do {
+			System.out.print(size + range - 1 + ", ")
 			openSearchResultPage(projectQuery.setSize(size, size + range - 1).queryUrl)
 			range = range * 2
 		} while (resultCount <= maxPageCount * 10)
+		System.out.println()
 		range = range / 4
 		if(range > 0) size + range - 1 else size
 	}
@@ -74,7 +77,7 @@ class GithubCodeSearchScraper extends GithubScraper {
 		val csvFile = new File(args.get(0))
 		val driver = new FirefoxDriver()
 		val query = new CodeSearchQuery("project").setPath("pom.xml")
-		val scraper = new GithubCodeSearchScraper(csvFile, driver, query, 1000, 1000 * 1000 * 1000, 100)
+		val scraper = new GithubCodeSearchScraper(csvFile, driver, query, 1304, 1000 * 1000 * 1000, 100)
 		scraper.run()
 	}
 }
