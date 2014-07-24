@@ -198,8 +198,8 @@ class GithubRepositoryPage {
 	def getSearchResultCount() {
 		queries.map [
 			val elems = getCounterOfSearchResultElements(it)
-			if (elems.length > 2) {
-				elems.get(2).extractInteger
+			if (elems.length > 0) {
+				elems.get(0).extractInteger
 			} else {
 				0
 			}
