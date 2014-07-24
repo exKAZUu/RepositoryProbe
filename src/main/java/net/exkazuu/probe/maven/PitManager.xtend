@@ -7,20 +7,36 @@ import java.util.regex.Pattern
 import static extension net.exkazuu.probe.extensions.XProcess.*
 
 enum MutantOperator {
-	CONDITIONALS_BOUNDARY,
-	NEGATE_CONDITIONALS,
-	REMOVE_CONDITIONALS,
-	MATH,
-	INCREMENTS,
+
+	// Default mutators
 	INVERT_NEGS,
-	INLINE_CONSTS,
 	RETURN_VALS,
-	VOIDMETHODCALLS,
-	NONVOIDMETHOD_CALLS,
+	INLINE_CONSTS,
+	MATH,
+	VOID_METHOD_CALLS,
+	NEGATE_CONDITIONALS,
+	CONDITIONALS_BOUNDARY,
+	INCREMENTS,
+
+	// Optional mutators
+	REMOVE_INCREMENTS,
+	NON_VOID_METHOD_CALLS,
 	CONSTRUCTOR_CALLS,
-	EXPERIMENTALINLINECONSTS,
-	EXPERIMENTALMEMBERVARIABLE,
-	EXPERIMENTAL_SWITCH
+	REMOVE_CONDITIONALS_EQ_IF,
+	REMOVE_CONDITIONALS_EQ_ELSE,
+	REMOVE_CONDITIONALS_ORD_IF,
+	REMOVE_CONDITIONALS_ORD_ELSE,
+	REMOVE_CONDITIONALS,
+
+	// Experimental mutators
+	EXPERIMENTAL_MEMBER_VARIABLE,
+	EXPERIMENTAL_SWITCH,
+	REMOVE_SWITCH,
+
+	// Pre-set mutators
+	DEFAULTS,
+	STRONGER,
+	ALL
 }
 
 class PitManager {
@@ -32,10 +48,7 @@ class PitManager {
 	}
 
 	def List<Integer> execute() {
-		execute(
-			EnumSet.of(MutantOperator.CONDITIONALS_BOUNDARY, MutantOperator.NEGATE_CONDITIONALS, MutantOperator.MATH,
-				MutantOperator.INCREMENTS, MutantOperator.INVERT_NEGS, MutantOperator.RETURN_VALS,
-				MutantOperator.VOIDMETHODCALLS))
+		execute(EnumSet.of(MutantOperator.DEFAULTS))
 	}
 
 	def List<Integer> execute(EnumSet<MutantOperator> operators) {

@@ -42,6 +42,10 @@ class GithubRepositoryPage {
 		move(topUrl + "/issues")
 	}
 
+	private def moveToReleasePage() {
+		move(topUrl + "/releases")
+	}
+
 	private def moveToSearchPage(CodeSearchQuery query) {
 		move(topUrl + query.queryUrlSuffix)
 	}
@@ -87,8 +91,11 @@ class GithubRepositoryPage {
 				info.contributorCount = getContributorCount
 				info.openPullRequestCount = getOpenPullRequestCount
 				info.openIssueCount = getOpenIssueCount
-				info.closedIssueCount = getClosedIssueCount
 				info.latestCommitSha = getLatestCommitSha
+				// moveToIssuePage
+				info.closedIssueCount = getClosedIssueCount
+				// moveToReleasePage
+				info.latestTag = getLatestTag
 				null
 			], 30, 1000, null, true, false)
 		info.closedPullRequestCount = getClosedPullRequestCount
@@ -106,6 +113,16 @@ class GithubRepositoryPage {
 		val candidates = selected.filter[it.getAttribute("class") == "select-menu-item js-navigation-item selected"]
 		val url = candidates.last.findElement(By.tagName("a")).getAttribute("href")
 		url.split('/').drop(6).join('/')
+	}
+
+	def getLatestTag() {
+		moveToReleasePage()
+		val tags = driver.findElements(By.className("css-truncate-target"))
+		if (tags.length > 0) {
+			tags.head.text.trim
+		} else {
+			GithubRepositoryInfo.NONE
+		}
 	}
 
 	def getLatestCommitSha() {

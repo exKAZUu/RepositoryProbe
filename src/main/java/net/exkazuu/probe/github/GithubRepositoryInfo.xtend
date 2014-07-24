@@ -12,7 +12,9 @@ import org.supercsv.prefs.CsvPreference
 import com.google.common.base.Strings
 
 class GithubRepositoryInfo {
-	val public static sonarHeader = #["loc", "lines", "statements", "files", "directories", "classes", "packages",
+	val public static NONE = "-"
+	
+	val static sonarHeader = #["loc", "lines", "statements", "files", "directories", "classes", "packages",
 		"functions", "accessors", "publicDocumentedAPIDensity", "publicAPI", "publicUndocumentedAPI",
 		"commentLinesDensity", "commentLines", "duplicatedLinesDensity", "duplicatedLines", "duplicatedBlocks",
 		"duplicatedFiles", "functionComplexity", "classComplexity", "fileComplexity", "complexity", "violations",
@@ -21,7 +23,7 @@ class GithubRepositoryInfo {
 		"lineCoverage", "branchCoverage", "testSuccessDensity", "testFailures", "testErrors", "tests",
 		"testExecutionTime"]
 
-	val static public sonarProcessors = (sonarHeader.subList(0, 9).map[new ParseInt()] +
+	val static sonarProcessors = (sonarHeader.subList(0, 9).map[new ParseInt()] +
 		#[new ParseDouble(), new ParseInt(), new ParseInt(), new ParseDouble(), new ParseInt(), null] +
 		sonarHeader.subList(15, 18).map[new ParseInt()] + sonarHeader.subList(18, 22).map[new ParseDouble()] +
 		#[new ParseInt(), null] + sonarHeader.subList(24, 29).map[new ParseInt()] + #[new ParseDouble()] +
@@ -29,17 +31,18 @@ class GithubRepositoryInfo {
 		sonarHeader.subList(37, 40).map[new ParseInt()] + #[null]
 		)
 
-	val static header = (#["url", "mainBranch", "latestCommitSha", "retrievedTime", "watchCount", "starCount",
-		"forkCount", "commitCount", "branchCount", "releaseCount", "contributorCount", "openIssueCount",
+	val static header = (#["url", "mainBranch", "latestTag", "latestCommitSha", "retrievedTime", "watchCount",
+		"starCount", "forkCount", "commitCount", "branchCount", "releaseCount", "contributorCount", "openIssueCount",
 		"closedIssueCount", "openPullRequestCount", "closedPullRequestCount", "searchResultCount", "killedMutantCount",
 		"generatedMutantCount", "killedMutantPercentage"] + sonarHeader).toList
 
-	val static processors = ((#[null, null, null, null] + header.drop(4 + sonarHeader.size).map[new ParseInt()]) +
+	val static processors = ((#[null, null, null, null, null] + header.drop(4 + sonarHeader.size).map[new ParseInt()]) +
 		sonarProcessors).toList
 
 	//GitHub
 	@Property String url = ""
 	@Property String mainBranch = ""
+	@Property String latestTag = ""
 	@Property String latestCommitSha = ""
 	@Property String retrievedTime = ""
 	@Property int watchCount = -1
@@ -104,10 +107,10 @@ class GithubRepositoryInfo {
 	@Property String testExecutionTime = "" // 40
 
 	def isScrapedFromGitHub() {
-		!(Strings.isNullOrEmpty(url) || Strings.isNullOrEmpty(mainBranch) || Strings.isNullOrEmpty(latestCommitSha) ||
-			Strings.isNullOrEmpty(retrievedTime) || watchCount == -1 || starCount == -1 || forkCount == -1 ||
-			commitCount == -1 || branchCount == -1 || releaseCount == -1 || contributorCount == -1 ||
-			openIssueCount == -1 || closedIssueCount == -1 || openPullRequestCount == -1 ||
+		!(Strings.isNullOrEmpty(url) || Strings.isNullOrEmpty(mainBranch) || Strings.isNullOrEmpty(latestTag) ||
+			Strings.isNullOrEmpty(latestCommitSha) || Strings.isNullOrEmpty(retrievedTime) || watchCount == -1 ||
+			starCount == -1 || forkCount == -1 || commitCount == -1 || branchCount == -1 || releaseCount == -1 ||
+			contributorCount == -1 || openIssueCount == -1 || closedIssueCount == -1 || openPullRequestCount == -1 ||
 			closedPullRequestCount == -1 || searchResultCount == -1)
 	}
 
