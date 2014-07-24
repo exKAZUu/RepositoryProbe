@@ -36,7 +36,7 @@ class GithubRepositoryInfo {
 		"closedIssueCount", "openPullRequestCount", "closedPullRequestCount", "searchResultCount", "killedMutantCount",
 		"generatedMutantCount", "killedMutantPercentage"] + sonarHeader).toList
 
-	val static processors = ((#[null, null, null, null, null] + header.drop(4 + sonarHeader.size).map[new ParseInt()]) +
+	val static processors = ((#[null, null, null, null, null] + header.drop(5 + sonarHeader.size).map[new ParseInt()]) +
 		sonarProcessors).toList
 
 	//GitHub
