@@ -57,4 +57,23 @@ class GithubProjectPageScraperTest {
 
 		assertThat(scraper.searchResultCount, greaterThanOrEqualTo(591))
 	}
+
+	@Test
+	def void retrieveRepositoryAllInformation() {
+		val scraper = new GithubRepositoryPage(driver, "gumfum", "SampleMavenProject", new CodeSearchQuery(""))
+		assertThat(scraper.starCount, equalTo(0))
+		assertThat(scraper.forkCount, equalTo(0))
+		
+		assertThat(scraper.commitCount, equalTo(4))
+		assertThat(scraper.branchCount, equalTo(2))
+		assertThat(scraper.releaseCount, equalTo(0))
+		assertThat(scraper.contributorCount, equalTo(1))
+		
+		assertThat(scraper.mainBranchName, is("master"))
+		
+		assertThat(scraper.openPullRequestCount, equalTo(0))
+		assertThat(scraper.closedPullRequestCount, equalTo(1))
+		assertThat(scraper.openIssueCount, equalTo(1))
+		assertThat(scraper.closedIssueCount, equalTo(2))
+	}
 }
