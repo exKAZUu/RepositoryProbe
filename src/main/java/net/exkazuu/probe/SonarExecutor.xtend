@@ -28,9 +28,9 @@ class SonarExecutor {
 	def run() {
 		infos.forEach [ url, info |
 			val userDir = new File(mvnDir.path, info.userName)
-			userDir.mkdir()
 			val projectDir = new File(userDir.path, info.projectName)
-			new GitManager(projectDir).cloneSpecifiedBranch(url, info.mainBranch)
+			userDir.mkdirs()
+			new GitManager(projectDir).cloneAndCheckout(url, info.mainBranch, "origin/" + info.mainBranch)
 			new SonarManager(new MavenManager(projectDir), new HtmlUnitDriver()).execute(info)
 		]
 		GithubRepositoryInfo.write(csvFile, infos.values)

@@ -52,13 +52,16 @@ class PitManager {
 	}
 
 	def List<Integer> execute(EnumSet<MutantOperator> operators) {
-		val proc = mvnMan.execute("-e", "org.pitest:pitest-maven:1.0.0:mutationCoverage",
-			"-Dmutators=" + operators.join(','))
-		val matcher = proc.readAllOutputsIgnoringErrors().map [
+		val proc = mvnMan.execute("test", "-e", "org.pitest:pitest-maven:1.0.0:mutationCoverage", "-DtargetClasses=*",
+			"-DexcludedClasses=org.pitest.*,sun.*,com.sun.*", "-Dmutators=" + operators.join(','))
+		val ret = proc.readAllOutputsIgnoringErrors()
+		val matcher = ret.map [
 			pitPattern.matcher(it)
 		].findFirst [
 			it.matches
 		]
-		return (1 .. 3).map[Integer.parseInt(matcher.group(it))].toList
+		if (matcher != null) {
+			(1 .. 3).map[Integer.parseInt(matcher.group(it))].toList
+		}
 	}
 }

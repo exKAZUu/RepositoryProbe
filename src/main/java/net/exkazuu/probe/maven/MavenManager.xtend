@@ -8,6 +8,7 @@ class MavenManager {
 
 	new(File directory) {
 		this.directory = directory
+		directory.mkdirs()
 	}
 
 	def execute(String... args) {
