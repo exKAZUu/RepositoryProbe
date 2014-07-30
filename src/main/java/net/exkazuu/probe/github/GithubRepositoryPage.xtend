@@ -103,7 +103,7 @@ class GithubRepositoryPage {
 				// moveToReleasePage
 				info.latestTag = getLatestTag
 				null
-			], 60, 1000, null, true, false)
+			], 60, 1000, null, true, false, info.url)
 		info.searchResultCount = getSearchResultCount
 		info
 	}

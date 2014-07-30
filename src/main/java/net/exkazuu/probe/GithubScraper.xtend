@@ -66,7 +66,7 @@ abstract class GithubScraper {
 					val nextPageUrl = getNextPageUrl(driver)
 					scrapeProjectInformation()
 					nextPageUrl
-				], 60, 1000, null, true, false)
+				], 60, 1000, null, true, false, searchResultUrl)
 
 			System.out.println(" done")
 			pageCount = pageCount + 1

@@ -19,12 +19,18 @@ class Idioms {
 
 	def static <T> retry(Functions.Function0<T> func, int count, int sleep, T valueWhenFailing, boolean verbosely,
 		boolean showingAllErrors) {
+		retry(func, count, sleep, valueWhenFailing, verbosely, showingAllErrors, "")
+	}
+
+	// TODO: Show debug message when failed to retry
+	def static <T> retry(Functions.Function0<T> func, int count, int sleep, T valueWhenFailing, boolean verbosely,
+		boolean showingAllErrors, String debugMessage) {
 		for (i : 1 .. count) {
 			try {
 				return func.apply
 			} catch (Exception e) {
 				if (verbosely && (showingAllErrors || i == count)) {
-					System.err.println("Failed to retry (" + i + "/" + count + ")")
+					System.err.println("Failed to retry (" + i + "/" + count + "): " + debugMessage)
 					e.printStackTrace
 				}
 				if (i != count) {
