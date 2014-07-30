@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver
 import org.openqa.selenium.firefox.FirefoxDriver
 
 import static extension net.exkazuu.probe.extensions.XWebElement.*
+import org.openqa.selenium.chrome.ChromeDriver
 
 /**
  * An concrete class for scraping GitHub projects using a code search query
@@ -75,9 +76,9 @@ class GithubCodeSearchScraper extends GithubScraper {
 		}
 
 		val csvFile = new File(args.get(0))
-		val driver = new FirefoxDriver()
+		val driver = new ChromeDriver()
 		val query = new CodeSearchQuery("project").setPath("pom.xml")
-		val scraper = new GithubCodeSearchScraper(csvFile, driver, query, 1400, 1000 * 1000 * 1000, 100)
+		val scraper = new GithubCodeSearchScraper(csvFile, driver, query, 1000, 1000 * 1000 * 1000, 100)
 		scraper.run()
 	}
 }

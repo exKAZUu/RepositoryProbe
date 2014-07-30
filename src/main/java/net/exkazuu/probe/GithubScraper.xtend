@@ -48,7 +48,7 @@ abstract class GithubScraper {
 				driver.findElement(By.name("login")).sendKeys(user)
 				driver.findElement(By.name("password")).sendKeys(password)
 				driver.findElement(By.name("commit")).click()
-				leastElapsedTime = 4 * 1000
+				leastElapsedTime = 2 * 1000
 			}
 		}
 	}
@@ -66,7 +66,7 @@ abstract class GithubScraper {
 					val nextPageUrl = getNextPageUrl(driver)
 					scrapeProjectInformation()
 					nextPageUrl
-				], 20, 1000, null, true, false)
+				], 60, 1000, null, true, false)
 
 			System.out.println(" done")
 			pageCount = pageCount + 1
