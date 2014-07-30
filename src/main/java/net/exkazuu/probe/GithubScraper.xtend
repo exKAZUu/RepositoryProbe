@@ -84,16 +84,16 @@ abstract class GithubScraper {
 
 	def scrapeProjectInformation() {
 		for (urlOrSuffix : urlsOrSuffixes) {
-			val url = if (urlOrSuffix.startsWith("http")) {
+			val url = if (urlOrSuffix.startsWith("https://")) {
 					urlOrSuffix
 				} else {
 					"https://github.com/" + urlOrSuffix
 				}
 			if (!infos.containsKey(url) || !infos.get(url).isScrapedFromGitHub) {
-				System.out.print(".")
 				val info = new GithubRepositoryPage(driver, url, codeSearchQueries).information
 				info.retrievedTime = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(new Date).toString
 				infos.put(info.url, info)
+				System.out.print(".")
 			}
 		}
 	}
