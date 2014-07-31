@@ -1,5 +1,6 @@
 package net.exkazuu.probe.github
 
+import com.google.common.base.Strings
 import java.io.File
 import java.io.FileReader
 import java.io.FileWriter
@@ -9,11 +10,10 @@ import org.supercsv.cellprocessor.ParseInt
 import org.supercsv.io.CsvBeanReader
 import org.supercsv.io.CsvBeanWriter
 import org.supercsv.prefs.CsvPreference
-import com.google.common.base.Strings
 
 class GithubRepositoryInfo {
 	val public static NONE = "-"
-	
+
 	val static sonarHeader = #["loc", "lines", "statements", "files", "directories", "classes", "packages",
 		"functions", "accessors", "publicDocumentedAPIDensity", "publicAPI", "publicUndocumentedAPI",
 		"commentLinesDensity", "commentLines", "duplicatedLinesDensity", "duplicatedLines", "duplicatedBlocks",
@@ -33,8 +33,39 @@ class GithubRepositoryInfo {
 
 	val static header = (#["url", "mainBranch", "latestTag", "latestCommitSha", "retrievedTime", "watchCount",
 		"starCount", "forkCount", "commitCount", "branchCount", "releaseCount", "contributorCount", "openIssueCount",
-		"closedIssueCount", "openPullRequestCount", "closedPullRequestCount", "searchResultCount", "killedMutantCount",
-		"generatedMutantCount", "killedMutantPercentage"] + sonarHeader).toList
+		"closedIssueCount", "openPullRequestCount", "closedPullRequestCount", "searchResultCount",
+		"killedMutantCountWithINVERT_NEGS", "generatedMutantCountWithINVERT_NEGS",
+		"killedMutantPercentageWithINVERT_NEGS", "killedMutantCountWithRETURN_VALS",
+		"generatedMutantCountWithRETURN_VALS", "killedMutantPercentageWithRETURN_VALS",
+		"killedMutantCountWithINLINE_CONSTS", "generatedMutantCountWithINLINE_CONSTS",
+		"killedMutantPercentageWithINLINE_CONSTS", "killedMutantCountWithMATH", "generatedMutantCountWithMATH",
+		"killedMutantPercentageWithMATH", "killedMutantCountWithVOID_METHOD_CALLS",
+		"generatedMutantCountWithVOID_METHOD_CALLS", "killedMutantPercentageWithVOID_METHOD_CALLS",
+		"killedMutantCountWithNEGATE_CONDITIONALS", "generatedMutantCountWithNEGATE_CONDITIONALS",
+		"killedMutantPercentageWithNEGATE_CONDITIONALS", "killedMutantCountWithCONDITIONALS_BOUNDARY",
+		"generatedMutantCountWithCONDITIONALS_BOUNDARY", "killedMutantPercentageWithCONDITIONALS_BOUNDARY",
+		"killedMutantCountWithINCREMENTS", "generatedMutantCountWithINCREMENTS",
+		"killedMutantPercentageWithINCREMENTS", "killedMutantCountWithREMOVE_INCREMENTS",
+		"generatedMutantCountWithREMOVE_INCREMENTS", "killedMutantPercentageWithREMOVE_INCREMENTS",
+		"killedMutantCountWithNON_VOID_METHOD_CALLS", "generatedMutantCountWithNON_VOID_METHOD_CALLS",
+		"killedMutantPercentageWithNON_VOID_METHOD_CALLS", "killedMutantCountWithCONSTRUCTOR_CALLS",
+		"generatedMutantCountWithCONSTRUCTOR_CALLS", "killedMutantPercentageWithCONSTRUCTOR_CALLS",
+		"killedMutantCountWithREMOVE_CONDITIONALS_EQ_IF", "generatedMutantCountWithREMOVE_CONDITIONALS_EQ_IF",
+		"killedMutantPercentageWithREMOVE_CONDITIONALS_EQ_IF", "killedMutantCountWithREMOVE_CONDITIONALS_EQ_ELSE",
+		"generatedMutantCountWithREMOVE_CONDITIONALS_EQ_ELSE", "killedMutantPercentageWithREMOVE_CONDITIONALS_EQ_ELSE",
+		"killedMutantCountWithREMOVE_CONDITIONALS_ORD_IF", "generatedMutantCountWithREMOVE_CONDITIONALS_ORD_IF",
+		"killedMutantPercentageWithREMOVE_CONDITIONALS_ORD_IF",
+		"killedMutantCountWithREMOVE_CONDITIONALS_ORD_ELSE", "generatedMutantCountWithREMOVE_CONDITIONALS_ORD_ELSE",
+		"killedMutantPercentageWithREMOVE_CONDITIONALS_ORD_ELSE", "killedMutantCountWithREMOVE_CONDITIONALS",
+		"generatedMutantCountWithREMOVE_CONDITIONALS", "killedMutantPercentageWithREMOVE_CONDITIONALS",
+		"killedMutantCountWithEXPERIMENTAL_MEMBER_VARIABLE", "generatedMutantCountWithEXPERIMENTAL_MEMBER_VARIABLE",
+		"killedMutantPercentageWithEXPERIMENTAL_MEMBER_VARIABLE", "killedMutantCountWithEXPERIMENTAL_SWITCH",
+		"generatedMutantCountWithEXPERIMENTAL_SWITCH", "killedMutantPercentageWithEXPERIMENTAL_SWITCH",
+		"killedMutantCountWithREMOVE_SWITCH", "generatedMutantCountWithREMOVE_SWITCH",
+		"killedMutantPercentageWithREMOVE_SWITCH", "killedMutantCountWithDEFAULTS", "generatedMutantCountWithDEFAULTS",
+		"killedMutantPercentageWithDEFAULTS", "killedMutantCountWithSTRONGER", "generatedMutantCountWithSTRONGER",
+		"killedMutantPercentageWithSTRONGER", "killedMutantCountWithALL", "generatedMutantCountWithALL",
+		"killedMutantPercentageWithALL"] + sonarHeader).toList
 
 	val static processors = ((#[null, null, null, null, null] + header.drop(5 + sonarHeader.size).map[new ParseInt()]) +
 		sonarProcessors).toList
@@ -58,10 +89,115 @@ class GithubRepositoryInfo {
 	@Property int closedPullRequestCount = -1
 	@Property int searchResultCount = -1
 
-	//PIT
-	@Property int killedMutantCount = -1
-	@Property int generatedMutantCount = -1
-	@Property int killedMutantPercentage = -1 // TODO: Should the type be double?
+	// PIT (INVERT_NEGS)
+	@Property int killedMutantCountWithINVERT_NEGS = -1
+	@Property int generatedMutantCountWithINVERT_NEGS = -1
+	@Property int killedMutantPercentageWithINVERT_NEGS = -1
+
+	// PIT (RETURN_VALS)
+	@Property int killedMutantCountWithRETURN_VALS = -1
+	@Property int generatedMutantCountWithRETURN_VALS = -1
+	@Property int killedMutantPercentageWithRETURN_VALS = -1
+
+	// PIT (INLINE_CONSTS)
+	@Property int killedMutantCountWithINLINE_CONSTS = -1
+	@Property int generatedMutantCountWithINLINE_CONSTS = -1
+	@Property int killedMutantPercentageWithINLINE_CONSTS = -1
+
+	// PIT (MATH)
+	@Property int killedMutantCountWithMATH = -1
+	@Property int generatedMutantCountWithMATH = -1
+	@Property int killedMutantPercentageWithMATH = -1
+
+	// PIT (VOID_METHOD_CALLS)
+	@Property int killedMutantCountWithVOID_METHOD_CALLS = -1
+	@Property int generatedMutantCountWithVOID_METHOD_CALLS = -1
+	@Property int killedMutantPercentageWithVOID_METHOD_CALLS = -1
+
+	// PIT (NEGATE_CONDITIONALS)
+	@Property int killedMutantCountWithNEGATE_CONDITIONALS = -1
+	@Property int generatedMutantCountWithNEGATE_CONDITIONALS = -1
+	@Property int killedMutantPercentageWithNEGATE_CONDITIONALS = -1
+
+	// PIT (CONDITIONALS_BOUNDARY)
+	@Property int killedMutantCountWithCONDITIONALS_BOUNDARY = -1
+	@Property int generatedMutantCountWithCONDITIONALS_BOUNDARY = -1
+	@Property int killedMutantPercentageWithCONDITIONALS_BOUNDARY = -1
+
+	// PIT (INCREMENTS)
+	@Property int killedMutantCountWithINCREMENTS = -1
+	@Property int generatedMutantCountWithINCREMENTS = -1
+	@Property int killedMutantPercentageWithINCREMENTS = -1
+
+	// PIT (REMOVE_INCREMENTS)
+	@Property int killedMutantCountWithREMOVE_INCREMENTS = -1
+	@Property int generatedMutantCountWithREMOVE_INCREMENTS = -1
+	@Property int killedMutantPercentageWithREMOVE_INCREMENTS = -1
+
+	// PIT (NON_VOID_METHOD_CALLS)
+	@Property int killedMutantCountWithNON_VOID_METHOD_CALLS = -1
+	@Property int generatedMutantCountWithNON_VOID_METHOD_CALLS = -1
+	@Property int killedMutantPercentageWithNON_VOID_METHOD_CALLS = -1
+
+	// PIT (CONSTRUCTOR_CALLS)
+	@Property int killedMutantCountWithCONSTRUCTOR_CALLS = -1
+	@Property int generatedMutantCountWithCONSTRUCTOR_CALLS = -1
+	@Property int killedMutantPercentageWithCONSTRUCTOR_CALLS = -1
+
+	// PIT (REMOVE_CONDITIONALS_EQ_IF)
+	@Property int killedMutantCountWithREMOVE_CONDITIONALS_EQ_IF = -1
+	@Property int generatedMutantCountWithREMOVE_CONDITIONALS_EQ_IF = -1
+	@Property int killedMutantPercentageWithREMOVE_CONDITIONALS_EQ_IF = -1
+
+	// PIT (REMOVE_CONDITIONALS_EQ_ELSE)
+	@Property int killedMutantCountWithREMOVE_CONDITIONALS_EQ_ELSE = -1
+	@Property int generatedMutantCountWithREMOVE_CONDITIONALS_EQ_ELSE = -1
+	@Property int killedMutantPercentageWithREMOVE_CONDITIONALS_EQ_ELSE = -1
+
+	// PIT (REMOVE_CONDITIONALS_ORD_IF)
+	@Property int killedMutantCountWithREMOVE_CONDITIONALS_ORD_IF = -1
+	@Property int generatedMutantCountWithREMOVE_CONDITIONALS_ORD_IF = -1
+	@Property int killedMutantPercentageWithREMOVE_CONDITIONALS_ORD_IF = -1
+
+	// PIT (REMOVE_CONDITIONALS_ORD_ELSE)
+	@Property int killedMutantCountWithREMOVE_CONDITIONALS_ORD_ELSE = -1
+	@Property int generatedMutantCountWithREMOVE_CONDITIONALS_ORD_ELSE = -1
+	@Property int killedMutantPercentageWithREMOVE_CONDITIONALS_ORD_ELSE = -1
+
+	// PIT (REMOVE_CONDITIONALS)
+	@Property int killedMutantCountWithREMOVE_CONDITIONALS = -1
+	@Property int generatedMutantCountWithREMOVE_CONDITIONALS = -1
+	@Property int killedMutantPercentageWithREMOVE_CONDITIONALS = -1
+
+	// PIT (EXPERIMENTAL_MEMBER_VARIABLE)
+	@Property int killedMutantCountWithEXPERIMENTAL_MEMBER_VARIABLE = -1
+	@Property int generatedMutantCountWithEXPERIMENTAL_MEMBER_VARIABLE = -1
+	@Property int killedMutantPercentageWithEXPERIMENTAL_MEMBER_VARIABLE = -1
+
+	// PIT (EXPERIMENTAL_SWITCH)
+	@Property int killedMutantCountWithEXPERIMENTAL_SWITCH = -1
+	@Property int generatedMutantCountWithEXPERIMENTAL_SWITCH = -1
+	@Property int killedMutantPercentageWithEXPERIMENTAL_SWITCH = -1
+
+	// PIT (REMOVE_SWITCH)
+	@Property int killedMutantCountWithREMOVE_SWITCH = -1
+	@Property int generatedMutantCountWithREMOVE_SWITCH = -1
+	@Property int killedMutantPercentageWithREMOVE_SWITCH = -1
+
+	// PIT (DEFAULTS)
+	@Property int killedMutantCountWithDEFAULTS = -1
+	@Property int generatedMutantCountWithDEFAULTS = -1
+	@Property int killedMutantPercentageWithDEFAULTS = -1
+
+	// PIT (STRONGER)
+	@Property int killedMutantCountWithSTRONGER = -1
+	@Property int generatedMutantCountWithSTRONGER = -1
+	@Property int killedMutantPercentageWithSTRONGER = -1
+
+	// PIT (ALL)
+	@Property int killedMutantCountWithALL = -1
+	@Property int generatedMutantCountWithALL = -1
+	@Property int killedMutantPercentageWithALL = -1
 
 	//Sonar
 	@Property int loc = -1 // 0-
