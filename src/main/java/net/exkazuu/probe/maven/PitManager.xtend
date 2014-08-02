@@ -51,6 +51,10 @@ class PitManager {
 		execute(EnumSet.of(MutantOperator.DEFAULTS))
 	}
 
+	def List<Integer> execute(MutantOperator operator) {
+		execute(EnumSet.of(operator))
+	}
+
 	def List<Integer> execute(EnumSet<MutantOperator> operators) {
 		val proc = mvnMan.execute("test", "-e", "org.pitest:pitest-maven:1.0.0:mutationCoverage", "-DtargetClasses=*",
 			"-DexcludedClasses=org.pitest.*,sun.*,com.sun.*", "-Dmutators=" + operators.join(','))

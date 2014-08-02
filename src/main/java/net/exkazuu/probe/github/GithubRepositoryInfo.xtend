@@ -66,10 +66,115 @@ class GithubRepositoryInfo {
 	@Property int closedPullRequestCount = -1
 	@Property int searchResultCount = -1
 
-	//PIT
-	@Property int killedMutantCount = -1
-	@Property int generatedMutantCount = -1
-	@Property int killedMutantPercentage = -1 // TODO: Should the type be double?
+	// PIT (INVERT_NEGS)
+	@Property int killedMutantCountWithINVERT_NEGS = -1
+	@Property int generatedMutantCountWithINVERT_NEGS = -1
+	@Property int killedMutantPercentageWithINVERT_NEGS = -1
+
+	// PIT (RETURN_VALS)
+	@Property int killedMutantCountWithRETURN_VALS = -1
+	@Property int generatedMutantCountWithRETURN_VALS = -1
+	@Property int killedMutantPercentageWithRETURN_VALS = -1
+
+	// PIT (INLINE_CONSTS)
+	@Property int killedMutantCountWithINLINE_CONSTS = -1
+	@Property int generatedMutantCountWithINLINE_CONSTS = -1
+	@Property int killedMutantPercentageWithINLINE_CONSTS = -1
+
+	// PIT (MATH)
+	@Property int killedMutantCountWithMATH = -1
+	@Property int generatedMutantCountWithMATH = -1
+	@Property int killedMutantPercentageWithMATH = -1
+
+	// PIT (VOID_METHOD_CALLS)
+	@Property int killedMutantCountWithVOID_METHOD_CALLS = -1
+	@Property int generatedMutantCountWithVOID_METHOD_CALLS = -1
+	@Property int killedMutantPercentageWithVOID_METHOD_CALLS = -1
+
+	// PIT (NEGATE_CONDITIONALS)
+	@Property int killedMutantCountWithNEGATE_CONDITIONALS = -1
+	@Property int generatedMutantCountWithNEGATE_CONDITIONALS = -1
+	@Property int killedMutantPercentageWithNEGATE_CONDITIONALS = -1
+
+	// PIT (CONDITIONALS_BOUNDARY)
+	@Property int killedMutantCountWithCONDITIONALS_BOUNDARY = -1
+	@Property int generatedMutantCountWithCONDITIONALS_BOUNDARY = -1
+	@Property int killedMutantPercentageWithCONDITIONALS_BOUNDARY = -1
+
+	// PIT (INCREMENTS)
+	@Property int killedMutantCountWithINCREMENTS = -1
+	@Property int generatedMutantCountWithINCREMENTS = -1
+	@Property int killedMutantPercentageWithINCREMENTS = -1
+
+	// PIT (REMOVE_INCREMENTS)
+	@Property int killedMutantCountWithREMOVE_INCREMENTS = -1
+	@Property int generatedMutantCountWithREMOVE_INCREMENTS = -1
+	@Property int killedMutantPercentageWithREMOVE_INCREMENTS = -1
+
+	// PIT (NON_VOID_METHOD_CALLS)
+	@Property int killedMutantCountWithNON_VOID_METHOD_CALLS = -1
+	@Property int generatedMutantCountWithNON_VOID_METHOD_CALLS = -1
+	@Property int killedMutantPercentageWithNON_VOID_METHOD_CALLS = -1
+
+	// PIT (CONSTRUCTOR_CALLS)
+	@Property int killedMutantCountWithCONSTRUCTOR_CALLS = -1
+	@Property int generatedMutantCountWithCONSTRUCTOR_CALLS = -1
+	@Property int killedMutantPercentageWithCONSTRUCTOR_CALLS = -1
+
+	// PIT (REMOVE_CONDITIONALS_EQ_IF)
+	@Property int killedMutantCountWithREMOVE_CONDITIONALS_EQ_IF = -1
+	@Property int generatedMutantCountWithREMOVE_CONDITIONALS_EQ_IF = -1
+	@Property int killedMutantPercentageWithREMOVE_CONDITIONALS_EQ_IF = -1
+
+	// PIT (REMOVE_CONDITIONALS_EQ_ELSE)
+	@Property int killedMutantCountWithREMOVE_CONDITIONALS_EQ_ELSE = -1
+	@Property int generatedMutantCountWithREMOVE_CONDITIONALS_EQ_ELSE = -1
+	@Property int killedMutantPercentageWithREMOVE_CONDITIONALS_EQ_ELSE = -1
+
+	// PIT (REMOVE_CONDITIONALS_ORD_IF)
+	@Property int killedMutantCountWithREMOVE_CONDITIONALS_ORD_IF = -1
+	@Property int generatedMutantCountWithREMOVE_CONDITIONALS_ORD_IF = -1
+	@Property int killedMutantPercentageWithREMOVE_CONDITIONALS_ORD_IF = -1
+
+	// PIT (REMOVE_CONDITIONALS_ORD_ELSE)
+	@Property int killedMutantCountWithREMOVE_CONDITIONALS_ORD_ELSE = -1
+	@Property int generatedMutantCountWithREMOVE_CONDITIONALS_ORD_ELSE = -1
+	@Property int killedMutantPercentageWithREMOVE_CONDITIONALS_ORD_ELSE = -1
+
+	// PIT (REMOVE_CONDITIONALS)
+	@Property int killedMutantCountWithREMOVE_CONDITIONALS = -1
+	@Property int generatedMutantCountWithREMOVE_CONDITIONALS = -1
+	@Property int killedMutantPercentageWithREMOVE_CONDITIONALS = -1
+
+	// PIT (EXPERIMENTAL_MEMBER_VARIABLE)
+	@Property int killedMutantCountWithEXPERIMENTAL_MEMBER_VARIABLE = -1
+	@Property int generatedMutantCountWithEXPERIMENTAL_MEMBER_VARIABLE = -1
+	@Property int killedMutantPercentageWithEXPERIMENTAL_MEMBER_VARIABLE = -1
+
+	// PIT (EXPERIMENTAL_SWITCH)
+	@Property int killedMutantCountWithEXPERIMENTAL_SWITCH = -1
+	@Property int generatedMutantCountWithEXPERIMENTAL_SWITCH = -1
+	@Property int killedMutantPercentageWithEXPERIMENTAL_SWITCH = -1
+
+	// PIT (REMOVE_SWITCH)
+	@Property int killedMutantCountWithREMOVE_SWITCH = -1
+	@Property int generatedMutantCountWithREMOVE_SWITCH = -1
+	@Property int killedMutantPercentageWithREMOVE_SWITCH = -1
+
+	// PIT (DEFAULTS)
+	@Property int killedMutantCountWithDEFAULTS = -1
+	@Property int generatedMutantCountWithDEFAULTS = -1
+	@Property int killedMutantPercentageWithDEFAULTS = -1
+
+	// PIT (STRONGER)
+	@Property int killedMutantCountWithSTRONGER = -1
+	@Property int generatedMutantCountWithSTRONGER = -1
+	@Property int killedMutantPercentageWithSTRONGER = -1
+
+	// PIT (ALL)
+	@Property int killedMutantCountWithALL = -1
+	@Property int generatedMutantCountWithALL = -1
+	@Property int killedMutantPercentageWithALL = -1
 
 	//Sonar
 	@Property int loc = -1

@@ -42,6 +42,10 @@ class GithubRepositoryPage {
 		move(topUrl + "/issues")
 	}
 
+	private def moveToPullRequestPage() {
+		move(topUrl + "/pulls")
+	}
+
 	private def moveToReleasePage() {
 		move(topUrl + "/releases")
 	}
@@ -55,14 +59,14 @@ class GithubRepositoryPage {
 		driver.findElements(By.className("social-count"))
 	}
 
-	private def getIssueAndPullRequestElements() {
-		moveToTopPage()
-		driver.findElements(By.className("counter"))
+	private def getIssueElements() {
+		moveToIssuePage()
+		driver.findElements(By.className("button-link"))
 	}
 
-	private def getOpenCloseButtonElements() {
-		moveToIssuePage()
-		driver.findElement(By.className("button-group")).findElements(By.className("minibutton"))
+	private def getPullRequestElements() {
+		moveToPullRequestPage()
+		driver.findElements(By.className("button-link"))
 	}
 
 	private def getNumElements() {
@@ -80,7 +84,7 @@ class GithubRepositoryPage {
 		info.url = getUrl
 		Idioms.retry(
 			[ |
-				// from Top page
+				// moveToTopPage
 				info.mainBranch = getMainBranchName
 				info.watchCount = getWatchCount
 				info.starCount = getStarCount
@@ -89,16 +93,17 @@ class GithubRepositoryPage {
 				info.branchCount = getBranchCount
 				info.releaseCount = getReleaseCount
 				info.contributorCount = getContributorCount
-				info.openPullRequestCount = getOpenPullRequestCount
-				info.openIssueCount = getOpenIssueCount
 				info.latestCommitSha = getLatestCommitSha
 				// moveToIssuePage
+				info.openIssueCount = getOpenIssueCount
 				info.closedIssueCount = getClosedIssueCount
+				// moveToPullRequestPage
+				info.openPullRequestCount = getOpenPullRequestCount
+				info.closedPullRequestCount = getClosedPullRequestCount
 				// moveToReleasePage
 				info.latestTag = getLatestTag
 				null
-			], 30, 1000, null, true, false)
-		info.closedPullRequestCount = getClosedPullRequestCount
+			], 60, 1000, null, true, false, info.url)
 		info.searchResultCount = getSearchResultCount
 		info
 	}
@@ -174,48 +179,39 @@ class GithubRepositoryPage {
 	}
 
 	def getOpenIssueCount() {
-		val elems = getIssueAndPullRequestElements
+		val elems = getIssueElements
 		if (elems.length > 1) {
-			elems.get(0).extractInteger
+			elems.get(0).extractInteger(0)
+		} else {
+			0
+		}
+	}
+
+	def getClosedIssueCount() {
+		val elems = getIssueElements
+		if (elems.length > 1) {
+			elems.get(1).extractInteger(0)
 		} else {
 			0
 		}
 	}
 
 	def getOpenPullRequestCount() {
-		val elems = getIssueAndPullRequestElements
+		val elems = getPullRequestElements
 		if (elems.length > 1) {
-			elems.get(1).extractInteger
-		} else {
-			elems.get(0).extractInteger
-		}
-	}
-
-	def getClosedIssueCount() {
-		val elems = getIssueAndPullRequestElements
-		if (elems.length > 1) {
-			getOpenCloseButtonElements.get(1).extractInteger
+			elems.get(0).extractInteger(0)
 		} else {
 			0
 		}
 	}
 
 	def getClosedPullRequestCount() {
-		val closedPullRequestUrl = topUrl + "/pulls?direction=desc&page=1&sort=created&state=closed"
-		move(closedPullRequestUrl)
-		val pagenation = driver.findElements(By.className("pagination"))
-		val pageCount = if (pagenation.size >= 1) {
-				val links = driver.findElements(By.tagName("a"))
-				val lastPageLink = links.get(links.size - 17)
-				val pageCount = lastPageLink.extractInteger
-				lastPageLink.click
-				pageCount
-			} else {
-				1
-			}
-		val items = driver.findElements(By.className("list-group-item"))
-		moveToTopPage()
-		(pageCount - 1) * 20 + items.size
+		val elems = getPullRequestElements
+		if (elems.length > 1) {
+			elems.get(1).extractInteger(0)
+		} else {
+			0
+		}
 	}
 
 	def getSearchResultCount() {

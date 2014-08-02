@@ -5,6 +5,7 @@ import java.util.List
 import net.exkazuu.probe.git.GitManager
 import net.exkazuu.probe.github.GithubRepositoryInfo
 import net.exkazuu.probe.maven.MavenManager
+import net.exkazuu.probe.maven.MutantOperator
 import net.exkazuu.probe.maven.PitManager
 
 /**
@@ -33,18 +34,26 @@ class PitExecutor {
 			System.out.print("Clone and checkout ... ")
 			new GitManager(projectDir).cloneAndCheckout(info.url, info.mainBranch, "origin/" + info.mainBranch)
 			System.out.println("done")
-			System.out.print("Execute PIT ... ")
-			val ret = new PitManager(new MavenManager(projectDir)).execute
-			if (ret != null) {
-				System.out.println("successful")
-				info.generatedMutantCount = ret.get(0)
-				info.killedMutantCount = ret.get(1)
-				info.killedMutantPercentage = ret.get(2)
-			} else {
-				System.out.println("failed")
-			}
+			execitePIT(info, projectDir)
 		]
 		GithubRepositoryInfo.write(csvFile, infos)
+	}
+
+	def void execitePIT(GithubRepositoryInfo info, File projectDir) {
+		System.out.print("Execute PIT ... ")
+		val pit = new PitManager(new MavenManager(projectDir))
+		for (operator : MutantOperator.values) {
+			val ret = pit.execute(operator)
+			if (ret != null) {
+				info.set("generatedMutantCountWith" + operator.name, ret.get(0))
+				info.set("killedMutantCountWith" + operator.name, ret.get(1))
+				info.set("killedMutantPercentageWith" + operator.name, ret.get(2))
+			} else {
+				System.out.println("failed")
+				return
+			}
+		}
+		System.out.println("successful")
 	}
 
 	def static void main(String[] args) {

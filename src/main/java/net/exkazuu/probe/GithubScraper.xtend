@@ -48,7 +48,7 @@ abstract class GithubScraper {
 				driver.findElement(By.name("login")).sendKeys(user)
 				driver.findElement(By.name("password")).sendKeys(password)
 				driver.findElement(By.name("commit")).click()
-				leastElapsedTime = 4 * 1000
+				leastElapsedTime = 2 * 1000
 			}
 		}
 	}
@@ -66,7 +66,7 @@ abstract class GithubScraper {
 					val nextPageUrl = getNextPageUrl(driver)
 					scrapeProjectInformation()
 					nextPageUrl
-				], 20, 1000, null, true, false)
+				], 60, 1000, null, true, false, searchResultUrl)
 
 			System.out.println(" done")
 			pageCount = pageCount + 1
@@ -84,16 +84,16 @@ abstract class GithubScraper {
 
 	def scrapeProjectInformation() {
 		for (urlOrSuffix : urlsOrSuffixes) {
-			val url = if (urlOrSuffix.startsWith("http")) {
+			val url = if (urlOrSuffix.startsWith("https://")) {
 					urlOrSuffix
 				} else {
 					"https://github.com/" + urlOrSuffix
 				}
 			if (!infos.containsKey(url) || !infos.get(url).isScrapedFromGitHub) {
-				System.out.print(".")
 				val info = new GithubRepositoryPage(driver, url, codeSearchQueries).information
 				info.retrievedTime = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(new Date).toString
 				infos.put(info.url, info)
+				System.out.print(".")
 			}
 		}
 	}
