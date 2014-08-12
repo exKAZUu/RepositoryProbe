@@ -50,7 +50,6 @@ class PitExecutor {
 				info.set("killedMutantPercentageWith" + operator.name, ret.get(2))
 			} else {
 				System.out.println("failed")
-				return
 			}
 		}
 		System.out.println("successful")
