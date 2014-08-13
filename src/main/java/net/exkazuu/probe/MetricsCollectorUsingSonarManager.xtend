@@ -6,6 +6,7 @@ import net.exkazuu.probe.maven.MavenManager
 import net.exkazuu.probe.sonar.SonarManager
 import org.openqa.selenium.chrome.ChromeDriver
 import net.exkazuu.probe.git.GitManager
+import java.util.ArrayList
 
 class MetricsCollectorUsingSonarManager {
 	def static void main(String[] args) {
@@ -30,6 +31,10 @@ class MetricsCollectorUsingSonarManager {
 		System.out.println("Unit Tests Coverage : " + updatedInfo.coverage)
 		System.out.println("Unit Test Success   : " + updatedInfo.testSuccessDensity)
 
+		val list = new ArrayList
+		list.add(updatedInfo)
+		GithubRepositoryInfo.write(new File("sonar.csv"), list)
+		
 		driver.quit
 	}
 
