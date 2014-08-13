@@ -41,7 +41,7 @@ enum MutantOperator {
 
 class PitManager {
 	val MavenManager mvnMan
-	public static val Pattern pitPattern = Pattern.compile('''>> Generated (\d+) mutations Killed (\d+) \((\d+)%\)''')
+	static val Pattern pitPattern = Pattern.compile('''>> Generated (\d+) mutations Killed (\d+) \((\d+)%\)''')
 
 	new(MavenManager mvnMan) {
 		this.mvnMan = mvnMan

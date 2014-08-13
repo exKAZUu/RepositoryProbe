@@ -66,6 +66,11 @@ class GithubRepositoryInfo {
 	@Property int closedPullRequestCount = -1
 	@Property int searchResultCount = -1
 
+	// XMutator
+	@Property int killedMutantCountWithXMutator = -1
+	@Property int generatedMutantCountWithXMutator = -1
+	@Property int killedMutantPercentageWithXMutator = -1
+
 	// PIT (INVERT_NEGS)
 	@Property int killedMutantCountWithINVERT_NEGS = -1
 	@Property int generatedMutantCountWithINVERT_NEGS = -1
@@ -298,6 +303,11 @@ class GithubRepositoryInfo {
 				@Property int openPullRequestCount = -1
 				@Property int closedPullRequestCount = -1
 				@Property int searchResultCount = -1
+				
+				// XMutator
+				@Property int killedMutantCountWithXMutator = -1
+				@Property int generatedMutantCountWithXMutator = -1
+				@Property int killedMutantPercentageWithXMutator = -1
 				
 				// PIT (INVERT_NEGS)
 				@Property int killedMutantCountWithINVERT_NEGS = -1
