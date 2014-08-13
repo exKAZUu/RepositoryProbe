@@ -15,7 +15,9 @@ class SonarManager {
 	}
 
 	def execute(GithubRepositoryInfo info) {
+		mvnMan.execute("clean install -DskipTest=true")
 		mvnMan.execute("sonar:sonar")
+		
 		driver.get("http://localhost:9000/sessions/login")
 		Thread.sleep(10 * 1000)
 		driver.findElements(By.xpath('//input[@id="login"]')).get(0).sendKeys("admin")
