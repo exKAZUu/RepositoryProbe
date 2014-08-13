@@ -1,5 +1,6 @@
 package net.exkazuu.probe.maven
 
+import com.google.common.base.Strings
 import com.google.common.collect.Lists
 import java.io.File
 
@@ -15,10 +16,18 @@ class XMutatorManager {
 
 	def execute(String... args) {
 		val prefix = "XMutator/XMutator.exe -c "
-		val command = prefix + args.join(' ') + ' ' + directory.absolutePath
-		val proc = Runtime.runtime.exec(command, null, directory)
+		val command = prefix + args.join(' ') + " \"" + directory.absolutePath + '"'
+		val proc = Runtime.runtime.exec(command)
 		val ret = proc.readAllOutputsAndErrors()
-		val vals = ret.get(0).get(0).trim.split(",").map [
+		val vals = ret.get(0).join.trim.split(",").filter [
+			!Strings.isNullOrEmpty(it)
+			try {
+				Integer.parseInt(it)
+				true
+			} catch (Exception e) {
+				false
+			}
+		].map [
 			Integer.parseInt(it)
 		]
 		Lists.newArrayList(vals)
