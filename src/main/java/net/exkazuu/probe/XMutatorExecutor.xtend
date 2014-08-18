@@ -24,7 +24,7 @@ class XMutatorExecutor {
 	}
 
 	def run() {
-		infos./*sortInplaceBy[it.starCount].reverse.*/take(20).forEach [ info, i |
+		infos.take(20).forEach [ info, i |
 			System.out.println(i + ": " + info.url)
 			val userDir = new File(mvnDir.path, info.userName)
 			val projectDir = new File(userDir.path, info.projectName)
@@ -41,13 +41,15 @@ class XMutatorExecutor {
 		System.out.print("Execute XMutator ... ")
 		val xm = new XMutatorManager(projectDir)
 		val ret = xm.execute()
-		if (ret != null && ret.size >= 3) {
-			info.killedMutantCountWithXMutator = ret.get(0)
-			info.generatedMutantCountWithXMutator = ret.get(1)
-			info.killedMutantPercentageWithXMutator = ret.get(2)
-			System.out.println("successful")
+		val vals = ret.key
+		if (vals != null && vals.size >= 3) {
+			info.killedMutantCountWithXMutator = vals.get(0)
+			info.generatedMutantCountWithXMutator = vals.get(1)
+			info.killedMutantPercentageWithXMutator = vals.get(2)
+			System.out.println("successful " + vals)
 		} else {
 			System.out.println("failed")
+			System.out.println(ret.value.get(0))
 		}
 	}
 

@@ -30,6 +30,6 @@ class XMutatorManager {
 		].map [
 			Integer.parseInt(it)
 		]
-		Lists.newArrayList(vals)
+		Lists.newArrayList(vals) -> ret.get(1)
 	}
 }
