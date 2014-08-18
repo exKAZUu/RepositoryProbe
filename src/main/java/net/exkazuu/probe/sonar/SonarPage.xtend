@@ -16,53 +16,55 @@ class SonarPage {
 	}
 
 	def updateInformation(GithubRepositoryInfo info) {
-		info.loc = loc
-		info.lines = lines
-		info.statements = statements
-		info.files = files
-		info.directories = directories
-		info.classes = classes
-		info.packages = packages
-		info.functions = functions
-		info.accessors = accessors
-		info.publicDocumentedAPIDensity = publicDocumentedAPIDensity
-		info.publicAPI = publicAPI
-		info.publicUndocumentedAPI = publicUndocumentedAPI
-		info.commentLinesDensity = commentLinesDensity
-		info.commentLines = commentLines
-		info.duplicatedLinesDensity = duplicatedLinesDensity
-		info.duplicatedLines = duplicatedLines
-		info.duplicatedBlocks = duplicatedBlocks
-		info.duplicatedFiles = duplicatedFiles
-		info.functionComplexity = functionComplexity
-		info.classComplexity = classComplexity
-		info.fileComplexity = fileComplexity
-		info.complexity = complexity
-		info.violations = violations
-		info.technicalDebt = technicalDebt
-		info.blockerViolations = blockerViolations
-		info.criticalViolations = criticalViolations
-		info.majorViolations = majorViolations
-		info.minorViolations = minorViolations
-		info.infoViolations = infoViolations
-		info.packageTangleIndex = packageTangleIndex
-		info.packageCycles = packageCycles
-		info.packageFeedbackEdges = packageFeedbackEdges
-		info.packageTangles = packageTangles
-		info.coverage = coverage
-		info.lineCoverage = lineCoverage
-		info.branchCoverage = branchCoverage
-		info.testSuccessDensity = testSuccessDensity
-		info.testFailures = testFailures
-		info.testErrors = testErrors
-		info.tests = tests
-		info.testExecutionTime = testExecutionTime
+		val newinfo = info
 		
-		info
+		newinfo.loc = loc
+		newinfo.lines = lines
+		newinfo.statements = statements
+		newinfo.files = files
+		newinfo.directories = directories
+		newinfo.classes = classes
+		newinfo.packages = packages
+		newinfo.functions = functions
+		newinfo.accessors = accessors
+		newinfo.publicDocumentedAPIDensity = publicDocumentedAPIDensity
+		newinfo.publicAPI = publicAPI
+		newinfo.publicUndocumentedAPI = publicUndocumentedAPI
+		newinfo.commentLinesDensity = commentLinesDensity
+		newinfo.commentLines = commentLines
+		newinfo.duplicatedLinesDensity = duplicatedLinesDensity
+		newinfo.duplicatedLines = duplicatedLines
+		newinfo.duplicatedBlocks = duplicatedBlocks
+		newinfo.duplicatedFiles = duplicatedFiles
+		newinfo.functionComplexity = functionComplexity
+		newinfo.classComplexity = classComplexity
+		newinfo.fileComplexity = fileComplexity
+		newinfo.complexity = complexity
+		newinfo.violations = violations
+		newinfo.technicalDebt = technicalDebt
+		newinfo.blockerViolations = blockerViolations
+		newinfo.criticalViolations = criticalViolations
+		newinfo.majorViolations = majorViolations
+		newinfo.minorViolations = minorViolations
+		newinfo.infoViolations = infoViolations
+		newinfo.packageTangleIndex = packageTangleIndex
+		newinfo.packageCycles = packageCycles
+		newinfo.packageFeedbackEdges = packageFeedbackEdges
+		newinfo.packageTangles = packageTangles
+		newinfo.coverage = coverage
+		newinfo.lineCoverage = lineCoverage
+		newinfo.branchCoverage = branchCoverage
+		newinfo.testSuccessDensity = testSuccessDensity
+		newinfo.testFailures = testFailures
+		newinfo.testErrors = testErrors
+		newinfo.tests = tests
+		newinfo.testExecutionTime = testExecutionTime
+		
+		newinfo
 	}
 	
 	private def getElementsById(String id) {
-		val elements = driver.findElements(By.xpath('//span[@id=' + id + ']'))
+		val elements = driver.findElements(By.xpath('//span[@id="' + id + '"]'))
 		elements
 	}
 	
@@ -80,6 +82,15 @@ class SonarPage {
 		} else {
 			-1.0
 		}
+	}
+	
+	private def convertFirstPercentageElementToDecimal(List<WebElement> elements) {
+		if(elements.size > 0) {
+			val text = elements.get(0).text
+			Double.parseDouble(elements.get(0).text.substring(0, text.length-1))
+		} else {
+			-1.0
+		}
 	}	
 	
 	private def getIntegerValueOfElementById(String id) {
@@ -91,7 +102,13 @@ class SonarPage {
 		val elements = getElementsById(id)
 		convertFirstElementToDecimal(elements)
 	}
-
+	
+	private def getPercentageDecimalValueOfElementById(String id) {
+		val elements = getElementsById(id)
+		convertFirstPercentageElementToDecimal(elements)
+	}
+	
+	
 	private def getLoc() {
 		getIntegerValueOfElementById("m_ncloc")
 	}
@@ -239,7 +256,7 @@ class SonarPage {
 	}
 	
 	private def getPackageTangleIndex() {
-		getDecimalValueOfElementById("m_package_tangle_index")
+		getPercentageDecimalValueOfElementById("m_package_tangle_index")
 	}
 	
 	def getPackageCycles() {
@@ -255,19 +272,19 @@ class SonarPage {
 	}
 	
 	private def getCoverage() {
-		getDecimalValueOfElementById("m_coverage")
+		getPercentageDecimalValueOfElementById("m_coverage")
 	}
 	
 	private def getLineCoverage() {
-		getDecimalValueOfElementById("m_line_coverage")
+		getPercentageDecimalValueOfElementById("m_line_coverage")
 	}
 	
 	private def getBranchCoverage() {
-		getDecimalValueOfElementById("m_branch_coverage")
+		getPercentageDecimalValueOfElementById("m_branch_coverage")
 	}
 	
 	private def getTestSuccessDensity() {
-		getDecimalValueOfElementById("m_test_success_density")
+		getPercentageDecimalValueOfElementById("m_test_success_density")
 	}
 	
 	private def getTestFailures() {

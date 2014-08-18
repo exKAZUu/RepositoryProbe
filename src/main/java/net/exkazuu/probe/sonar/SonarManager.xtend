@@ -15,7 +15,9 @@ class SonarManager {
 	}
 
 	def execute(GithubRepositoryInfo info) {
+		mvnMan.execute("clean install -DskipTest=true")
 		mvnMan.execute("sonar:sonar")
+		
 		driver.get("http://localhost:9000/sessions/login")
 		Thread.sleep(10 * 1000)
 		driver.findElements(By.xpath('//input[@id="login"]')).get(0).sendKeys("admin")
@@ -28,14 +30,19 @@ class SonarManager {
 			repos.get(0).click
 			Thread.sleep(10 * 1000)
 
-			new SonarPage(driver).updateInformation(info)
+			val updatedInfo = new SonarPage(driver).updateInformation(info)
 
 			val deleteURL = driver.currentUrl.replace("dashboard/index", "project/deletion")
 			driver.get(deleteURL)
 			Thread.sleep(10 * 1000)
-			driver.findElement(By.xpath('//input[@id="delete_resource"]')).click
+			driver.findElement(By.id("delete_resource")).click
 			Thread.sleep(10 * 1000)
-			driver.switchTo.alert.accept
+			driver.findElement(By.id("delete-project-submit")).click
+			//driver.switchTo.alert.accept
+			Thread.sleep(30 * 1000)
+
+			return updatedInfo
 		}
+		return info
 	}
 }
