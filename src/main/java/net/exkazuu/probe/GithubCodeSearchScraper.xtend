@@ -5,10 +5,9 @@ import net.exkazuu.probe.github.CodeSearchQuery
 import net.exkazuu.probe.github.GithubRepositoryInfo
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
-import org.openqa.selenium.firefox.FirefoxDriver
+import org.openqa.selenium.chrome.ChromeDriver
 
 import static extension net.exkazuu.probe.extensions.XWebElement.*
-import org.openqa.selenium.chrome.ChromeDriver
 
 /**
  * An concrete class for scraping GitHub projects using a code search query
