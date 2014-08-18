@@ -40,7 +40,7 @@ class PitExecutor {
 	}
 
 	def void execitePIT(GithubRepositoryInfo info, File projectDir) {
-		System.out.print("Execute PIT ... ")
+		System.out.print("Execute PIT ")
 		val pit = new PitManager(new MavenManager(projectDir))
 		for (operator : MutantOperator.values) {
 			val ret = pit.execute(operator)
@@ -48,11 +48,16 @@ class PitExecutor {
 				info.set("generatedMutantCountWith" + operator.name, ret.get(0))
 				info.set("killedMutantCountWith" + operator.name, ret.get(1))
 				info.set("killedMutantPercentageWith" + operator.name, ret.get(2))
+				System.out.print(".")
 			} else {
-				System.out.println("failed")
+				System.out.print("F")
+				if (operator == MutantOperator.DEFAULTS) {
+					System.out.println()
+					return
+				}
 			}
 		}
-		System.out.println("successful")
+		System.out.println()
 	}
 
 	def static void main(String[] args) {

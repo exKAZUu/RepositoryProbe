@@ -5,8 +5,14 @@ import java.util.List
 import java.util.regex.Pattern
 
 import static extension net.exkazuu.probe.extensions.XProcess.*
+import java.io.PrintStream
 
 enum MutantOperator {
+
+	// Pre-set mutators
+	DEFAULTS,
+	STRONGER,
+	ALL,
 
 	// Default mutators
 	INVERT_NEGS,
@@ -31,17 +37,14 @@ enum MutantOperator {
 	// Experimental mutators
 	EXPERIMENTAL_MEMBER_VARIABLE,
 	EXPERIMENTAL_SWITCH,
-	REMOVE_SWITCH,
-
-	// Pre-set mutators
-	DEFAULTS,
-	STRONGER,
-	ALL
+	REMOVE_SWITCH
 }
 
 class PitManager {
 	val MavenManager mvnMan
-	public static val Pattern pitPattern = Pattern.compile('''>> Generated (\d+) mutations Killed (\d+) \((\d+)%\)''')
+	static val Pattern pitPattern = Pattern.compile('''>> Generated (\d+) mutations Killed (\d+) \((\d+)%\)''')
+	static val stdoutLogStream = new PrintStream("pit_stdout.log")
+	static val stderrLogStream = new PrintStream("pit_stderr.log")
 
 	new(MavenManager mvnMan) {
 		this.mvnMan = mvnMan
@@ -57,8 +60,14 @@ class PitManager {
 
 	def List<Integer> execute(EnumSet<MutantOperator> operators) {
 		val proc = mvnMan.execute("test", "-e", "org.pitest:pitest-maven:1.0.0:mutationCoverage", "-DtargetClasses=*",
-			"-DexcludedClasses=org.pitest.*,sun.*,com.sun.*", "-Dmutators=" + operators.join(','))
+			"-DexcludedClasses=org.pitest.*,sun.*,com.sun.*,java.*", "-Dmutators=" + operators.join(','))
 		val ret = proc.readAllOutputsAndErrors()
+		ret.get(0).forEach[
+			stdoutLogStream.println(it)
+		]
+		ret.get(1).forEach[
+			stderrLogStream.println(it)
+		]
 		val matcher = ret.get(0).map [
 			pitPattern.matcher(it)
 		].findFirst [
