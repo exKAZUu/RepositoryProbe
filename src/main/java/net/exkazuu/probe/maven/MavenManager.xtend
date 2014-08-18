@@ -2,6 +2,8 @@ package net.exkazuu.probe.maven
 
 import java.io.File
 
+import static extension net.exkazuu.probe.extensions.XProcess.*
+
 class MavenManager {
 	val File directory
 	static val isWindows = System.getProperty("os.name").contains("Windows")
@@ -18,6 +20,8 @@ class MavenManager {
 				"mvn "
 			}
 		val command = prefix + args.join(' ')
-		Runtime.runtime.exec(command, null, directory)
+		val result = Runtime.runtime.exec(command, null, directory).readAllOutputsIgnoringErrors
+		
+		result
 	}
 }
