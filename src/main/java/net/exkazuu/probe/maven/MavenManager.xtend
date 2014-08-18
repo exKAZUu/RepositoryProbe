@@ -20,8 +20,7 @@ class MavenManager {
 				"mvn "
 			}
 		val command = prefix + args.join(' ')
-		val result = Runtime.runtime.exec(command, null, directory).readAllOutputsIgnoringErrors
-		
-		result
+
+		Runtime.runtime.exec(command, null, directory).readAllOutputsAndErrors()
 	}
 }

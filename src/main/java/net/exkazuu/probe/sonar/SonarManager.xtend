@@ -1,9 +1,9 @@
 package net.exkazuu.probe.sonar
 
-import net.exkazuu.probe.maven.MavenManager
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.By
 import net.exkazuu.probe.github.GithubRepositoryInfo
+import net.exkazuu.probe.maven.MavenManager
+import org.openqa.selenium.By
+import org.openqa.selenium.WebDriver
 
 class SonarManager {
 	val MavenManager mvnMan
@@ -17,7 +17,7 @@ class SonarManager {
 	def execute(GithubRepositoryInfo info) {
 		mvnMan.execute("clean install -DskipTest=true")
 		mvnMan.execute("sonar:sonar")
-		
+
 		driver.get("http://localhost:9000/sessions/login")
 		Thread.sleep(10 * 1000)
 		driver.findElements(By.xpath('//input[@id="login"]')).get(0).sendKeys("admin")
@@ -38,6 +38,7 @@ class SonarManager {
 			driver.findElement(By.id("delete_resource")).click
 			Thread.sleep(10 * 1000)
 			driver.findElement(By.id("delete-project-submit")).click
+
 			//driver.switchTo.alert.accept
 			Thread.sleep(30 * 1000)
 

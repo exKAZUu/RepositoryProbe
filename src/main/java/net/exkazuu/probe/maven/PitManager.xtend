@@ -1,11 +1,9 @@
 package net.exkazuu.probe.maven
 
+import java.io.PrintStream
 import java.util.EnumSet
 import java.util.List
 import java.util.regex.Pattern
-
-import static extension net.exkazuu.probe.extensions.XProcess.*
-import java.io.PrintStream
 
 enum MutantOperator {
 
@@ -59,13 +57,12 @@ class PitManager {
 	}
 
 	def List<Integer> execute(EnumSet<MutantOperator> operators) {
-		val proc = mvnMan.execute("test", "-e", "org.pitest:pitest-maven:1.0.0:mutationCoverage", "-DtargetClasses=*",
+		val ret = mvnMan.execute("test", "-e", "org.pitest:pitest-maven:1.0.0:mutationCoverage", "-DtargetClasses=*",
 			"-DexcludedClasses=org.pitest.*,sun.*,com.sun.*,java.*", "-Dmutators=" + operators.join(','))
-		val ret = proc.readAllOutputsAndErrors()
-		ret.get(0).forEach[
+		ret.get(0).forEach [
 			stdoutLogStream.println(it)
 		]
-		ret.get(1).forEach[
+		ret.get(1).forEach [
 			stderrLogStream.println(it)
 		]
 		val matcher = ret.get(0).map [
