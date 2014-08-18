@@ -49,7 +49,7 @@ class XMutatorExecutor {
 			System.out.println("successful " + vals)
 		} else {
 			System.out.println("failed")
-			System.out.println(ret.value.get(0))
+			System.out.println(ret.value.take(1).join)
 		}
 	}
 
