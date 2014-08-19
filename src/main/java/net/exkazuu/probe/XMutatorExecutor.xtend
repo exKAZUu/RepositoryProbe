@@ -24,7 +24,7 @@ class XMutatorExecutor {
 	}
 
 	def run() {
-		infos.take(20).forEach [ info, i |
+		infos.forEach [ info, i |
 			System.out.println(i + ": " + info.url)
 			val userDir = new File(mvnDir.path, info.userName)
 			val projectDir = new File(userDir.path, info.projectName)
@@ -33,8 +33,8 @@ class XMutatorExecutor {
 			new GitManager(projectDir).cloneAndCheckout(info.url, info.mainBranch, "origin/" + info.mainBranch)
 			System.out.println("done")
 			execiteXMutator(info, projectDir)
+			GithubRepositoryInfo.write(csvFile, infos)
 		]
-		GithubRepositoryInfo.write(csvFile, infos)
 	}
 
 	def void execiteXMutator(GithubRepositoryInfo info, File projectDir) {
@@ -48,6 +48,9 @@ class XMutatorExecutor {
 			info.killedMutantPercentageWithXMutator = vals.get(2)
 			System.out.println("successful " + vals)
 		} else {
+			info.killedMutantCountWithXMutator = -2
+			info.generatedMutantCountWithXMutator = -2
+			info.killedMutantPercentageWithXMutator = -2
 			System.out.println("failed")
 			System.out.println(ret.value.take(1).join)
 		}
