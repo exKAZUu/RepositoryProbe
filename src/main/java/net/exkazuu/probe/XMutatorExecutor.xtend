@@ -25,7 +25,7 @@ class XMutatorExecutor {
 
 	def run() {
 		infos.forEach [ info, i |
-			if (info.killedMutantCountWithXMutator != -1) {
+			if (info.killedMutantCountWithXMutator == -1) {
 				System.out.println(i + ": " + info.url)
 				val userDir = new File(mvnDir.path, info.userName)
 				val projectDir = new File(userDir.path, info.projectName)
