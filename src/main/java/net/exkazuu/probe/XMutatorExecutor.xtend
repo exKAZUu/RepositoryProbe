@@ -42,7 +42,7 @@ class XMutatorExecutor {
 		val xm = new XMutatorManager(projectDir)
 		val ret = xm.execute()
 		val vals = ret.key
-		if (vals != null && vals.size >= 3) {
+		if (vals != null && vals.size >= 3 && info.killedMutantCountWithXMutator != -1) {
 			info.killedMutantCountWithXMutator = vals.get(0)
 			info.generatedMutantCountWithXMutator = vals.get(1)
 			info.killedMutantPercentageWithXMutator = vals.get(2)
