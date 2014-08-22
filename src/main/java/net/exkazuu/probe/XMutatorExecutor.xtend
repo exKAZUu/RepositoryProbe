@@ -54,7 +54,7 @@ class XMutatorExecutor {
 			info.generatedMutantCountWithXMutator = -2
 			info.killedMutantPercentageWithXMutator = -2
 			System.out.println("failed")
-			System.out.println(ret.value.take(1).join)
+			System.out.println(ret.value.join("\n"))
 		}
 	}
 
