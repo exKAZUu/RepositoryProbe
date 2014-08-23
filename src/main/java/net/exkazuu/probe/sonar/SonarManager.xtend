@@ -30,7 +30,7 @@ class SonarManager {
 			repos.get(0).click
 			Thread.sleep(10 * 1000)
 
-			val updatedInfo = new SonarPage(driver).updateInformation(info)
+			new SonarPage(driver).updateInformation(info)
 
 			val deleteURL = driver.currentUrl.replace("dashboard/index", "project/deletion")
 			driver.get(deleteURL)
@@ -41,9 +41,6 @@ class SonarManager {
 
 			//driver.switchTo.alert.accept
 			Thread.sleep(30 * 1000)
-
-			return updatedInfo
 		}
-		return info
 	}
 }
