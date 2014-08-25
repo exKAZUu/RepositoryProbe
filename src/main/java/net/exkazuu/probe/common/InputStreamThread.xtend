@@ -7,8 +7,9 @@ import java.util.ArrayList
 import java.util.List
 
 class InputStreamThread extends Thread {
-	BufferedReader br
-	List<String> list = new ArrayList<String>
+	val BufferedReader br
+	val List<String> list = new ArrayList<String>
+	public var boolean stopped = false
 
 	new(InputStream is) {
 		br = new BufferedReader(new InputStreamReader(is))
@@ -16,9 +17,10 @@ class InputStreamThread extends Thread {
 
 	override void run() {
 		var line = new String
-		while ((line = br.readLine) != null) {
+		while (!stopped && (line = br.readLine) != null) {
 			list.add(line)
 		}
+		br.close
 	}
 
 	def List<String> getStringList() {
