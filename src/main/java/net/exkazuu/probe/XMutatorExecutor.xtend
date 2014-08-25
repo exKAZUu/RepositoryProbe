@@ -65,8 +65,8 @@ class XMutatorExecutor {
 	}
 
 	def static void main(String[] args) {
-		if (args.length != 1) {
-			System.out.println("Please specify one argument indicating a csv file for loading and saving results.")
+		if (args.length <= 1) {
+			System.out.println("Please specify two argument indicating a csv file and a skip count.")
 			System.exit(-1)
 		}
 
