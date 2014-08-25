@@ -24,7 +24,7 @@ class XMutatorExecutor {
 	}
 
 	def run() {
-		infos.forEach [ info, i |
+		infos.drop(1000).forEach [ info, i |
 			try {
 				if (info.killedMutantCountWithXMutator == -1) {
 					System.out.println(i + ": " + info.url)
