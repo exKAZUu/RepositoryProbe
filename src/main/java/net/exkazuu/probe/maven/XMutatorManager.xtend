@@ -15,7 +15,7 @@ class XMutatorManager {
 	}
 
 	def execute(String... args) {
-		val prefix = "XMutator/XMutator.exe -l 10 -c "
+		val prefix = "XMutator/XMutator.exe -l 60 -c "
 		val command = prefix + args.join(' ') + " \"" + directory.absolutePath + '"'
 		val proc = Runtime.runtime.exec(command)
 		val ret = proc.readAllOutputsAndErrors(true)
