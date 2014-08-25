@@ -15,16 +15,18 @@ class XMutatorExecutor {
 	protected val File csvFile
 	protected val List<GithubRepositoryInfo> infos
 	val File mvnDir
+	val int skipCount
 
-	new(File csvFile, File mvnDir) {
+	new(File csvFile, File mvnDir, int skipCount) {
 		this.csvFile = csvFile
 		this.infos = GithubRepositoryInfo.readList(csvFile)
 		this.mvnDir = mvnDir
+		this.skipCount = skipCount
 		mvnDir.mkdirs()
 	}
 
 	def run() {
-		infos.drop(1000).forEach [ info, i |
+		infos.drop(skipCount).forEach [ info, i |
 			try {
 				if (info.killedMutantCountWithXMutator == -1) {
 					System.out.println(i + ": " + info.url)
@@ -69,7 +71,8 @@ class XMutatorExecutor {
 		}
 
 		val csvFile = new File(args.get(0))
-		val executor = new XMutatorExecutor(csvFile, new File("repos"))
+		val skipCount = Integer.parseInt(args.get(1))
+		val executor = new XMutatorExecutor(csvFile, new File("repos"), skipCount)
 		executor.run()
 	}
 }
