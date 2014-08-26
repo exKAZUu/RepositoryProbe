@@ -19,7 +19,7 @@ class GithubRepositoryInfo {
 	val public static NONE = "-"
 
 	static val methodNames = typeof(GithubRepositoryInfo).methods.map[it.name].toSet
-	static val availableMethods = typeof(GithubRepositoryInfo).methods.filter [
+	static val availableGetters = typeof(GithubRepositoryInfo).methods.filter [
 		it.name.length > 3 && it.name.startsWith("get") && methodNames.contains("set" + it.name.substring(3))
 	].filter [
 		it.returnType == typeof(int) || it.returnType == typeof(double) || it.returnType == typeof(String)
@@ -27,9 +27,9 @@ class GithubRepositoryInfo {
 		it.order
 	].toArray(#[] as Method[])
 
-	val static header = availableMethods.map[it.propertyName].toArrayList
+	val static header = availableGetters.map[it.propertyName].toArrayList
 
-	val static processors = availableMethods.map [
+	val static processors = availableGetters.map [
 		if (it.returnType == typeof(int)) {
 			new ParseInt()
 		} else if (it.returnType == typeof(double)) {
@@ -44,7 +44,7 @@ class GithubRepositoryInfo {
 	}
 
 	def set(String propertyName, Object obj) {
-		this.class.getMethod("set" + StringUtils.capitalise(propertyName)).invoke(this, obj)
+		this.class.getMethod("set" + StringUtils.capitalise(propertyName), typeof(int)).invoke(this, obj)
 	}
 
 	// GitHub
