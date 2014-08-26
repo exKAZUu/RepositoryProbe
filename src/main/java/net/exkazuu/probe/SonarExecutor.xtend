@@ -5,8 +5,8 @@ import java.util.Map
 import net.exkazuu.probe.git.GitManager
 import net.exkazuu.probe.github.GithubRepositoryInfo
 import net.exkazuu.probe.maven.MavenManager
-import net.exkazuu.probe.sonar.SonarManager
 import org.openqa.selenium.htmlunit.HtmlUnitDriver
+import net.exkazuu.probe.sonar.OldSonarManager
 
 /**
  * A class for measuring metrics by execution SonarQube.
@@ -31,7 +31,7 @@ class SonarExecutor {
 			val projectDir = new File(userDir.path, info.projectName)
 			userDir.mkdirs()
 			new GitManager(projectDir).cloneAndCheckout(url, info.mainBranch, "origin/" + info.mainBranch)
-			new SonarManager(new MavenManager(projectDir), new HtmlUnitDriver()).execute(info)
+			new OldSonarManager(new MavenManager(projectDir), new HtmlUnitDriver()).execute(info)
 		]
 		GithubRepositoryInfo.write(csvFile, infos.values)
 	}

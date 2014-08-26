@@ -4,8 +4,8 @@ import java.io.File
 import net.exkazuu.probe.git.GitManager
 import net.exkazuu.probe.github.GithubRepositoryInfo
 import net.exkazuu.probe.maven.MavenManager
-import net.exkazuu.probe.sonar.SonarManager
 import org.openqa.selenium.chrome.ChromeDriver
+import net.exkazuu.probe.sonar.OldSonarManager
 
 class MetricsCollectorUsingSonarManager {
 	def static void main(String[] args) {
@@ -19,7 +19,7 @@ class MetricsCollectorUsingSonarManager {
 			val gitMan = new GitManager(new File(workDir))
 			gitMan.cloneAndCheckout(targetUrl, it.mainBranch, it.mainBranch)
 			val mvnMan = new MavenManager(new File(workDir))
-			val sonarMan = new SonarManager(mvnMan, driver)
+			val sonarMan = new OldSonarManager(mvnMan, driver)
 			sonarMan.execute(it)
 			GithubRepositoryInfo.write(dataFile, infos)
 		]
