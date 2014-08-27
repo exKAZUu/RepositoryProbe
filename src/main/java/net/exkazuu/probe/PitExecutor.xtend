@@ -26,15 +26,17 @@ class PitExecutor {
 	}
 
 	def run() {
-		infos.sortInplaceBy[it.starCount].reverse.take(20).forEach [ info, i |
-			System.out.println(i + ": " + info.url)
-			val userDir = new File(mvnDir.path, info.userName)
-			val projectDir = new File(userDir.path, info.projectName)
-			userDir.mkdirs()
-			System.out.print("Clone and checkout ... ")
-			new GitManager(projectDir).cloneAndCheckout(info.url, info.mainBranch, "origin/" + info.mainBranch)
-			System.out.println("done")
-			execitePIT(info, projectDir)
+		infos.forEach [ info, i |
+			if (info.killedMutantCountWithXMutator >= 0) {
+				System.out.println(i + ": " + info.url)
+				val userDir = new File(mvnDir.path, info.userName)
+				val projectDir = new File(userDir.path, info.projectName)
+				userDir.mkdirs()
+				System.out.print("Clone and checkout ... ")
+				new GitManager(projectDir).cloneAndCheckout(info.url, info.mainBranch, "origin/" + info.mainBranch)
+				System.out.println("done")
+				execitePIT(info, projectDir)
+			}
 		]
 		GithubRepositoryInfo.write(csvFile, infos)
 	}
