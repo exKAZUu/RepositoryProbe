@@ -38,6 +38,7 @@ class XMutatorExecutor {
 					System.out.println("done")
 					execiteXMutator(info, projectDir)
 					GithubRepositoryInfo.write(csvFile, infos)
+					return
 				}
 			} catch (Exception e) {
 				e.printStackTrace
