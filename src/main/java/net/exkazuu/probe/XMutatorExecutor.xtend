@@ -60,8 +60,8 @@ class XMutatorExecutor {
 			info.generatedMutantCountWithXMutator = -2
 			info.killedMutantPercentageWithXMutator = -2
 			System.out.println("failed")
-			System.out.println(ret.value.join("\n"))
 		}
+		System.out.println(ret.value.join("\n"))
 	}
 
 	def static void main(String[] args) {
