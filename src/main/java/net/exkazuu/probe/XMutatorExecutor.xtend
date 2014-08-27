@@ -38,6 +38,7 @@ class XMutatorExecutor {
 					System.out.println("done")
 					execiteXMutator(info, projectDir)
 					GithubRepositoryInfo.write(csvFile, infos)
+					return
 				}
 			} catch (Exception e) {
 				e.printStackTrace
@@ -60,8 +61,8 @@ class XMutatorExecutor {
 			info.generatedMutantCountWithXMutator = -2
 			info.killedMutantPercentageWithXMutator = -2
 			System.out.println("failed")
-			System.out.println(ret.value.join("\n"))
 		}
+		System.out.println(ret.value.join("\n"))
 	}
 
 	def static void main(String[] args) {
