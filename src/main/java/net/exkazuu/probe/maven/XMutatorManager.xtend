@@ -19,7 +19,7 @@ class XMutatorManager {
 		val command = prefix + args.join(' ') + " \"" + directory.absolutePath + '"'
 		val proc = Runtime.runtime.exec(command)
 		val ret = proc.readAllOutputsAndErrors(true)
-		val vals = ret.get(0).join.trim.split(",").filter [
+		val vals = ret.get(0).last.trim.split(",").filter [
 			!Strings.isNullOrEmpty(it)
 			try {
 				Integer.parseInt(it)
