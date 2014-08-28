@@ -28,7 +28,7 @@ class XMutatorExecutor {
 	def run() {
 		infos.drop(skipCount).forEach [ info, i |
 			try {
-				if (info.killedMutantCountWithXMutator != -2) {
+				if (info.killedMutantPercentageWithXMutator != -2) {
 					System.out.println(i + ": " + info.url)
 					val userDir = new File(mvnDir.path, info.userName)
 					val projectDir = new File(userDir.path, info.projectName)
