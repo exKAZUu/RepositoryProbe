@@ -36,9 +36,9 @@ class PitExecutor {
 				new GitManager(projectDir).cloneAndCheckout(info.url, info.mainBranch, "origin/" + info.mainBranch)
 				System.out.println("done")
 				execitePIT(info, projectDir)
+				GithubRepositoryInfo.write(csvFile, infos)
 			}
 		]
-		GithubRepositoryInfo.write(csvFile, infos)
 	}
 
 	def void execitePIT(GithubRepositoryInfo info, File projectDir) {
