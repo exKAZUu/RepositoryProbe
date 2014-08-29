@@ -28,7 +28,7 @@ class PitExecutor {
 	def run() {
 		infos.forEach [ info, i |
 			if (info.killedMutantCountWithXMutator >= 0 && info.generatedMutantCountWithDEFAULTS == -1) {
-				System.out.println(i + ": " + info.url)
+				System.out.println((i + 1) + ": " + info.url)
 				val userDir = new File(mvnDir.path, info.userName)
 				val projectDir = new File(userDir.path, info.projectName)
 				userDir.mkdirs()

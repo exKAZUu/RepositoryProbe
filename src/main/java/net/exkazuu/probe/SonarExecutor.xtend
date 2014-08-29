@@ -1,7 +1,7 @@
 package net.exkazuu.probe
 
 import java.io.File
-import java.util.Map
+import java.util.List
 import net.exkazuu.probe.git.GitManager
 import net.exkazuu.probe.github.GithubRepositoryInfo
 import net.exkazuu.probe.maven.MavenManager
@@ -15,24 +15,25 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver
  */
 class SonarExecutor {
 	protected val File csvFile
-	protected val Map<String, GithubRepositoryInfo> infos
+	protected val List<GithubRepositoryInfo> infos
 	val File mvnDir
 
 	new(File csvFile, File mvnDir) {
 		this.csvFile = csvFile
-		this.infos = GithubRepositoryInfo.readMap(csvFile)
+		this.infos = GithubRepositoryInfo.readList(csvFile)
 		this.mvnDir = mvnDir
 		mvnDir.mkdirs()
 	}
 
 	def run() {
-		infos.forEach [ url, info |
+		infos.forEach [ info, i |
+			System.out.println((i + 1) + ": " + info.url)
 			val userDir = new File(mvnDir.path, info.userName)
 			val projectDir = new File(userDir.path, info.projectName)
 			userDir.mkdirs()
-			new GitManager(projectDir).cloneAndCheckout(url, info.mainBranch, "origin/" + info.mainBranch)
+			new GitManager(projectDir).cloneAndCheckout(info.url, info.mainBranch, "origin/" + info.mainBranch)
 			new SonarManager(new MavenManager(projectDir), new HtmlUnitDriver()).execute(info)
-			GithubRepositoryInfo.write(csvFile, infos.values)
+			GithubRepositoryInfo.write(csvFile, infos)
 		]
 	}
 
