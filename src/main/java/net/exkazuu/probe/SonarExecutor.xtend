@@ -39,6 +39,7 @@ class SonarExecutor {
 			} catch (Exception e) {
 			}
 		]
+		driver.close
 	}
 
 	def static void main(String[] args) {
