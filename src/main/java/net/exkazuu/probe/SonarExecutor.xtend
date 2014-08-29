@@ -32,8 +32,8 @@ class SonarExecutor {
 			userDir.mkdirs()
 			new GitManager(projectDir).cloneAndCheckout(url, info.mainBranch, "origin/" + info.mainBranch)
 			new SonarManager(new MavenManager(projectDir), new HtmlUnitDriver()).execute(info)
+			GithubRepositoryInfo.write(csvFile, infos.values)
 		]
-		GithubRepositoryInfo.write(csvFile, infos.values)
 	}
 
 	def static void main(String[] args) {
