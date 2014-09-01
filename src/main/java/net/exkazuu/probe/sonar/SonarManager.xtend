@@ -39,7 +39,7 @@ class SonarManager {
 	}
 
 	def execute(GithubRepositoryInfo info) {
-		mvnMan.start("clean test").waitToFinish()
+		mvnMan.start("clean package -DskipTest=true").waitToFinish()
 		mvnMan.start("sonar:sonar").waitToFinish()
 		login
 		moveToTopPage
