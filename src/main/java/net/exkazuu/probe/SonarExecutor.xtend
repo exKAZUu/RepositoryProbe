@@ -6,7 +6,7 @@ import net.exkazuu.probe.git.GitManager
 import net.exkazuu.probe.github.GithubRepositoryInfo
 import net.exkazuu.probe.maven.MavenManager
 import net.exkazuu.probe.sonar.SonarManager
-import org.openqa.selenium.htmlunit.HtmlUnitDriver
+import org.openqa.selenium.chrome.ChromeDriver
 
 /**
  * A class for measuring metrics by execution SonarQube.
@@ -26,15 +26,20 @@ class SonarExecutor {
 	}
 
 	def run() {
+		val driver = new ChromeDriver()
 		infos.forEach [ info, i |
 			System.out.println((i + 1) + ": " + info.url)
-			val userDir = new File(mvnDir.path, info.userName)
-			val projectDir = new File(userDir.path, info.projectName)
-			userDir.mkdirs()
-			new GitManager(projectDir).cloneAndCheckout(info.url, info.mainBranch, "origin/" + info.mainBranch)
-			new SonarManager(new MavenManager(projectDir), new HtmlUnitDriver()).execute(info)
-			GithubRepositoryInfo.write(csvFile, infos)
+			try {
+				val userDir = new File(mvnDir.path, info.userName)
+				val projectDir = new File(userDir.path, info.projectName)
+				userDir.mkdirs()
+				new GitManager(projectDir).cloneAndCheckout(info.url, info.mainBranch, "origin/" + info.mainBranch)
+				new SonarManager(new MavenManager(projectDir), driver).execute(info)
+				GithubRepositoryInfo.write(csvFile, infos)
+			} catch (Exception e) {
+			}
 		]
+		driver.close
 	}
 
 	def static void main(String[] args) {
