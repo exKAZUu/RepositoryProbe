@@ -34,8 +34,12 @@ class SonarExecutor {
 					val userDir = new File(mvnDir.path, info.userName)
 					val projectDir = new File(userDir.path, info.projectName)
 					userDir.mkdirs()
+					System.out.print("Clone repository ... ")
 					new GitManager(projectDir).cloneAndCheckout(info.url, info.mainBranch, "origin/" + info.mainBranch)
+					System.out.println("done")
+					System.out.print("Execute sonar ... ")
 					new SonarManager(new MavenManager(projectDir), driver).execute(info)
+					System.out.println("done")
 					GithubRepositoryInfo.write(csvFile, infos)
 				} catch (Exception e) {
 				}
