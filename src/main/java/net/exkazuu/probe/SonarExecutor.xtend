@@ -17,9 +17,11 @@ class SonarExecutor {
 	protected val File csvFile
 	protected val List<GithubRepositoryInfo> infos
 	val File mvnDir
+	val int skipCount
 
-	new(File csvFile, File mvnDir) {
+	new(File csvFile, int skipCount, File mvnDir) {
 		this.csvFile = csvFile
+		this.skipCount = skipCount
 		this.infos = GithubRepositoryInfo.readList(csvFile)
 		this.mvnDir = mvnDir
 		mvnDir.mkdirs()
@@ -27,10 +29,10 @@ class SonarExecutor {
 
 	def run() {
 		val driver = new ChromeDriver()
-		infos.forEach [ info, i |
-			if (info.killedMutantCountWithXMutator >= 0 && info.loc == -1) {
-				System.out.println((i + 1) + ": " + info.url)
-				try {
+		infos.drop(skipCount).forEach [ info, i |
+			try {
+				if (info.killedMutantCountWithXMutator >= 0 && info.loc == -1) {
+					System.out.println((i + skipCount + 1) + ": " + info.url)
 					val userDir = new File(mvnDir.path, info.userName)
 					val projectDir = new File(userDir.path, info.projectName)
 					userDir.mkdirs()
@@ -41,21 +43,22 @@ class SonarExecutor {
 					new SonarManager(new MavenManager(projectDir), driver).execute(info)
 					System.out.println("done")
 					GithubRepositoryInfo.write(csvFile, infos)
-				} catch (Exception e) {
 				}
+			} catch (Exception e) {
 			}
 		]
 		driver.close
 	}
 
 	def static void main(String[] args) {
-		if (args.length != 1) {
-			System.out.println("Please specify one argument indicating a csv file for loading and saving results.")
+		if (args.length <= 1) {
+			System.out.println("Please specify two argument indicating a csv file and a skip count.")
 			System.exit(-1)
 		}
 
 		val csvFile = new File(args.get(0))
-		val executor = new SonarExecutor(csvFile, new File("repos"))
+		val skipCount = Integer.parseInt(args.get(1))
+		val executor = new SonarExecutor(csvFile, skipCount, new File("repos"))
 		executor.run()
 	}
 }
