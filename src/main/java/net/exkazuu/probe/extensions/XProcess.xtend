@@ -3,6 +3,21 @@ package net.exkazuu.probe.extensions
 import net.exkazuu.probe.common.InputStreamThread
 
 class XProcess {
+
+	def static waitToFinish(Process p) {
+		val ist = new InputStreamThread(p.inputStream)
+		val est = new InputStreamThread(p.errorStream)
+		ist.start
+		est.start
+		System.out.print(".")
+		p.waitFor
+		System.out.print(".")
+		ist.stopped = true
+		est.stopped = true
+		p.destroy
+		System.out.print(".")
+	}
+
 	def static readAllOutputsIgnoringErrors(Process p) {
 		val ist = new InputStreamThread(p.inputStream)
 		val est = new InputStreamThread(p.errorStream)
@@ -14,7 +29,7 @@ class XProcess {
 
 		return ist.getStringList
 	}
-	
+
 	def static readAllOutputsAndErrors(Process p) {
 		val ist = new InputStreamThread(p.inputStream)
 		val est = new InputStreamThread(p.errorStream)
@@ -26,7 +41,7 @@ class XProcess {
 
 		return #[ist.stringList, est.stringList]
 	}
-	
+
 	def static readAllOutputsAndErrors(Process p, boolean forceStopReading) {
 		val ist = new InputStreamThread(p.inputStream)
 		val est = new InputStreamThread(p.errorStream)

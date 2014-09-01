@@ -5,6 +5,8 @@ import java.util.EnumSet
 import java.util.List
 import java.util.regex.Pattern
 
+import static extension net.exkazuu.probe.extensions.XProcess.*
+
 enum MutantOperator {
 
 	// Pre-set mutators
@@ -57,8 +59,9 @@ class PitManager {
 	}
 
 	def List<Integer> execute(EnumSet<MutantOperator> operators) {
-		val ret = mvnMan.execute("test", "-e", "org.pitest:pitest-maven:1.0.0:mutationCoverage", "-DtargetClasses=*",
-			"-DexcludedClasses=org.pitest.*,sun.*,com.sun.*,java.*", "-Dmutators=" + operators.join(','))
+		val ret = mvnMan.start("test", "-e", "org.pitest:pitest-maven:1.0.0:mutationCoverage", "-DtargetClasses=*",
+			"-DexcludedClasses=org.pitest.*,sun.*,com.sun.*,java.*", "-Dmutators=" + operators.join(',')).
+			readAllOutputsAndErrors()
 		ret.get(0).forEach [
 			stdoutLogStream.println(it)
 		]
