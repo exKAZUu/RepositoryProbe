@@ -28,15 +28,17 @@ class SonarExecutor {
 	def run() {
 		val driver = new ChromeDriver()
 		infos.forEach [ info, i |
-			System.out.println((i + 1) + ": " + info.url)
-			try {
-				val userDir = new File(mvnDir.path, info.userName)
-				val projectDir = new File(userDir.path, info.projectName)
-				userDir.mkdirs()
-				new GitManager(projectDir).cloneAndCheckout(info.url, info.mainBranch, "origin/" + info.mainBranch)
-				new SonarManager(new MavenManager(projectDir), driver).execute(info)
-				GithubRepositoryInfo.write(csvFile, infos)
-			} catch (Exception e) {
+			if (info.killedMutantCountWithXMutator >= 0 && info.loc == -1) {
+				System.out.println((i + 1) + ": " + info.url)
+				try {
+					val userDir = new File(mvnDir.path, info.userName)
+					val projectDir = new File(userDir.path, info.projectName)
+					userDir.mkdirs()
+					new GitManager(projectDir).cloneAndCheckout(info.url, info.mainBranch, "origin/" + info.mainBranch)
+					new SonarManager(new MavenManager(projectDir), driver).execute(info)
+					GithubRepositoryInfo.write(csvFile, infos)
+				} catch (Exception e) {
+				}
 			}
 		]
 		driver.close
