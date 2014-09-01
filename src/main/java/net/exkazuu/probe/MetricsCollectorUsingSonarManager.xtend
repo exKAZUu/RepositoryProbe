@@ -19,7 +19,7 @@ class MetricsCollectorUsingSonarManager {
 			val gitMan = new GitManager(new File(workDir))
 			gitMan.cloneAndCheckout(targetUrl, it.mainBranch, it.mainBranch)
 			val mvnMan = new MavenManager(new File(workDir))
-			val sonarMan = new SonarManager(mvnMan, driver)
+			val sonarMan = new SonarManager(mvnMan, driver, new File("SonarQube"))
 			sonarMan.execute(it)
 			GithubRepositoryInfo.write(dataFile, infos)
 		]
