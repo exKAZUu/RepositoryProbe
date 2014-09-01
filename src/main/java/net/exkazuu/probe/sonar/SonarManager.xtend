@@ -50,6 +50,7 @@ class SonarManager {
 			Thread.sleep(10 * 1000)
 
 			new SonarPage(driver).updateInformation(info)
+			deleteFirstProjectData()
 		}
 	}
 
