@@ -6,6 +6,8 @@ import net.exkazuu.probe.maven.MavenManager
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 
+import static extension net.exkazuu.probe.extensions.XProcess.*
+
 class SonarManager {
 	val MavenManager mvnMan
 	val WebDriver driver
@@ -37,8 +39,8 @@ class SonarManager {
 	}
 
 	def execute(GithubRepositoryInfo info) {
-		mvnMan.execute("clean install -DskipTest=true")
-		mvnMan.execute("sonar:sonar")
+		mvnMan.start("clean install -DskipTest=true").waitToFinish()
+		mvnMan.start("sonar:sonar").waitToFinish()
 		login
 		moveToTopPage
 
@@ -48,6 +50,7 @@ class SonarManager {
 			Thread.sleep(10 * 1000)
 
 			new SonarPage(driver).updateInformation(info)
+			deleteFirstProjectData()
 		}
 	}
 

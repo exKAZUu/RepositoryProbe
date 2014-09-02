@@ -2,8 +2,6 @@ package net.exkazuu.probe.maven
 
 import java.io.File
 
-import static extension net.exkazuu.probe.extensions.XProcess.*
-
 class MavenManager {
 	val File directory
 	static val isWindows = System.getProperty("os.name").contains("Windows")
@@ -13,7 +11,7 @@ class MavenManager {
 		directory.mkdirs()
 	}
 
-	def execute(String... args) {
+	def start(String... args) {
 		val prefix = if (isWindows) {
 				"cmd /c mvn "
 			} else {
@@ -21,6 +19,6 @@ class MavenManager {
 			}
 		val command = prefix + args.join(' ')
 
-		Runtime.runtime.exec(command, null, directory).readAllOutputsAndErrors()
+		Runtime.runtime.exec(command, null, directory)
 	}
 }
