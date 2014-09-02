@@ -1,6 +1,7 @@
 package net.exkazuu.probe.sonar
 
 import java.io.File
+import net.exkazuu.probe.common.Idioms
 import net.exkazuu.probe.github.GithubRepositoryInfo
 import net.exkazuu.probe.maven.MavenManager
 import org.openqa.selenium.By
@@ -9,20 +10,17 @@ import org.openqa.selenium.WebDriver
 import static extension net.exkazuu.probe.extensions.XProcess.*
 
 class SonarManager {
-	val MavenManager mvnMan
 	val WebDriver driver
 	val File directory
 
-	new(MavenManager mvnMan, WebDriver driver) {
-		this.mvnMan = mvnMan
-		this.driver = driver
-		this.directory = new File("SonarQube")
+	new(WebDriver driver) {
+		this(driver, new File("SonarQube"))
 	}
 
-	new(MavenManager mvnMan, WebDriver driver, File directory) {
-		this.mvnMan = mvnMan
+	new(WebDriver driver, File directory) {
 		this.driver = driver
 		this.directory = directory
+		login()
 	}
 
 	def moveToTopPage() {
@@ -31,46 +29,72 @@ class SonarManager {
 
 	def login() {
 		driver.get("http://localhost:9000/sessions/login")
-		Thread.sleep(10 * 1000)
 		driver.findElements(By.xpath('//input[@id="login"]')).get(0).sendKeys("admin")
 		driver.findElements(By.xpath('//input[@id="password"]')).get(0).sendKeys("admin")
 		driver.findElements(By.xpath('//input[@type="submit"]')).get(0).click()
-		Thread.sleep(10 * 1000)
 	}
 
-	def execute(GithubRepositoryInfo info) {
-		mvnMan.start("clean install -DskipTest=true").waitToFinish()
-		mvnMan.start("sonar:sonar").waitToFinish()
-		login
-		moveToTopPage
+	def execute(MavenManager mvnMan, GithubRepositoryInfo info) {
+		val time = System.currentTimeMillis
+		mvnMan.start("clean install -DskipTest=true -Dgpg.skip=true").waitToFinish()
 
+		Idioms.wait(
+			[ |
+				try {
+					if (driver.findElement(By.className("marginbottom5")).text.contains(
+						"Welcome to SonarQube Dashboard")) {
+						return false
+					}
+				} catch (Exception e) {
+				}
+				true
+			], 100)
+		if (time + (60 * 1000) > System.currentTimeMillis) {
+			Thread.sleep(time + (60 * 1000) - System.currentTimeMillis)
+		}
+
+		mvnMan.start("sonar:sonar").waitToFinish()
+
+		moveToTopPage()
 		val repos = driver.findElements(By.xpath('//td[@class=" nowrap"]/a[1]'))
 		if (repos.size != 0) {
+			if (repos.size != 1) {
+				throw new Exception("The number of projects should be 1.")
+			}
 			repos.get(0).click
-			Thread.sleep(10 * 1000)
 
 			new SonarPage(driver).updateInformation(info)
 			deleteFirstProjectData()
+		} else {
+			System.out.println("Failed to retrieve information.")
 		}
 	}
 
 	def deleteFirstProjectData() {
-		login
-		moveToTopPage
-
+		moveToTopPage()
 		val repos = driver.findElements(By.xpath('//td[@class=" nowrap"]/a[1]'))
 		if (repos.size != 0) {
+			if (repos.size != 1) {
+				throw new Exception("The number of projects should be 1.")
+			}
 			repos.get(0).click
-			Thread.sleep(10 * 1000)
 
 			val deleteURL = driver.currentUrl.replace("dashboard/index", "project/deletion")
 			driver.get(deleteURL)
-			Thread.sleep(10 * 1000)
-			driver.findElement(By.id("delete_resource")).click
-			Thread.sleep(10 * 1000)
-			driver.findElement(By.id("delete-project-submit")).click
-
-			Thread.sleep(30 * 1000)
+			Thread.sleep(2000)
+			driver.findElement(By.id("delete_resource")).click()
+			Thread.sleep(2000)
+			Idioms.wait(
+				[ |
+					try {
+						driver.findElement(By.id("delete-project-submit")).click()
+						false
+					} catch (Exception e) {
+						true
+					}
+				], 100)
+		} else {
+			System.out.println("Failed to delete a measurement result.")
 		}
 	}
 

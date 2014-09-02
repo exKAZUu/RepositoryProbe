@@ -34,7 +34,7 @@ class XMutatorExecutor {
 					val projectDir = new File(userDir.path, info.projectName)
 					userDir.mkdirs()
 					System.out.print("Clone and checkout ... ")
-					new GitManager(projectDir).cloneAndCheckout(info.url, info.mainBranch, "origin/" + info.mainBranch)
+					new GitManager(projectDir).cloneAndCheckout(info.url, info.mainBranch, info.latestCommitSha)
 					System.out.println("done")
 					execiteXMutator(info, projectDir)
 					GithubRepositoryInfo.write(csvFile, infos)

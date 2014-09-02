@@ -12,15 +12,15 @@ class MetricsCollectorUsingSonarManager {
 		val dataFile = new File("pom.csv")
 		val infos = GithubRepositoryInfo.readList(dataFile)
 		val driver = new ChromeDriver
+		val sonarMan = new SonarManager(driver, new File("SonarQube"))
 		infos.forEach [
 			System.out.println(it.url)
 			val targetUrl = it.url
 			val workDir = targetUrl.replace("https://github.com/", "DirectoryForTest/")
 			val gitMan = new GitManager(new File(workDir))
-			gitMan.cloneAndCheckout(targetUrl, it.mainBranch, it.mainBranch)
+			gitMan.cloneAndCheckout(it.url, it.mainBranch, it.latestCommitSha)
 			val mvnMan = new MavenManager(new File(workDir))
-			val sonarMan = new SonarManager(mvnMan, driver, new File("SonarQube"))
-			sonarMan.execute(it)
+			sonarMan.execute(mvnMan, it)
 			GithubRepositoryInfo.write(dataFile, infos)
 		]
 		driver.quit
