@@ -56,4 +56,10 @@ class Idioms {
 		}
 		valueWhenFailing
 	}
+
+	def static wait(Functions.Function0<Boolean> func, int sleepMills) {
+		while (func.apply) {
+			Thread.sleep(sleepMills)
+		}
+	}
 }
