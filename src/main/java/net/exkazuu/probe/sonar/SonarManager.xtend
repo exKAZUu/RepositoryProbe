@@ -75,7 +75,9 @@ class SonarManager {
 
 			val deleteURL = driver.currentUrl.replace("dashboard/index", "project/deletion")
 			driver.get(deleteURL)
+			Thread.sleep(1000)
 			driver.findElement(By.id("delete_resource")).click()
+			Thread.sleep(1000)
 			Idioms.wait(
 				[ |
 					try {
