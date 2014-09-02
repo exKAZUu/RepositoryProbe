@@ -58,6 +58,9 @@ class SonarManager {
 		moveToTopPage()
 		val repos = driver.findElements(By.xpath('//td[@class=" nowrap"]/a[1]'))
 		if (repos.size != 0) {
+			if (repos.size != 1) {
+				throw new Exception("The number of projects should be 1.")
+			}
 			repos.get(0).click
 
 			new SonarPage(driver).updateInformation(info)
@@ -71,13 +74,16 @@ class SonarManager {
 		moveToTopPage()
 		val repos = driver.findElements(By.xpath('//td[@class=" nowrap"]/a[1]'))
 		if (repos.size != 0) {
+			if (repos.size != 1) {
+				throw new Exception("The number of projects should be 1.")
+			}
 			repos.get(0).click
 
 			val deleteURL = driver.currentUrl.replace("dashboard/index", "project/deletion")
 			driver.get(deleteURL)
-			Thread.sleep(1000)
+			Thread.sleep(2000)
 			driver.findElement(By.id("delete_resource")).click()
-			Thread.sleep(1000)
+			Thread.sleep(2000)
 			Idioms.wait(
 				[ |
 					try {
