@@ -35,17 +35,23 @@ class SonarManager {
 	}
 
 	def execute(MavenManager mvnMan, GithubRepositoryInfo info) {
+		val time = System.currentTimeMillis
 		mvnMan.start("clean install -DskipTest=true -Dgpg.skip=true").waitToFinish()
 
 		Idioms.wait(
 			[ |
 				try {
-					!driver.findElement(By.className("marginbottom5")).text.contains(
-						"Welcome to SonarQube Dashboard")
+					if (driver.findElement(By.className("marginbottom5")).text.contains(
+						"Welcome to SonarQube Dashboard")) {
+						return false
+					}
 				} catch (Exception e) {
-					true
 				}
+				true
 			], 100)
+		if (time + 10000 > System.currentTimeMillis) {
+			Thread.sleep(time + 10000 - System.currentTimeMillis)
+		}
 
 		mvnMan.start("sonar:sonar").waitToFinish()
 
