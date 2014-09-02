@@ -15,17 +15,14 @@ class SonarManager {
 	val File directory
 
 	new(MavenManager mvnMan, WebDriver driver) {
-		this.mvnMan = mvnMan
-		this.driver = driver
-		this.directory = new File("SonarQube")
-		moveToTopPage()
+		this(mvnMan, driver, new File("SonarQube"))
 	}
 
 	new(MavenManager mvnMan, WebDriver driver, File directory) {
 		this.mvnMan = mvnMan
 		this.driver = driver
 		this.directory = directory
-		moveToTopPage()
+		login()
 	}
 
 	def moveToTopPage() {
@@ -53,9 +50,8 @@ class SonarManager {
 			], 100)
 
 		mvnMan.start("sonar:sonar").waitToFinish()
-		login
-		moveToTopPage
 
+		moveToTopPage()
 		val repos = driver.findElements(By.xpath('//td[@class=" nowrap"]/a[1]'))
 		if (repos.size != 0) {
 			repos.get(0).click
@@ -66,9 +62,7 @@ class SonarManager {
 	}
 
 	def deleteFirstProjectData() {
-		login
-		moveToTopPage
-
+		moveToTopPage()
 		val repos = driver.findElements(By.xpath('//td[@class=" nowrap"]/a[1]'))
 		if (repos.size != 0) {
 			repos.get(0).click
