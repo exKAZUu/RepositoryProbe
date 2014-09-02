@@ -12,6 +12,8 @@ import static extension net.exkazuu.probe.extensions.XProcess.*
 class SonarManager {
 	val WebDriver driver
 	val File directory
+	val waitMillsAfterDeletion = 60 * 1000
+	var long lastMills
 
 	new(WebDriver driver) {
 		this(driver, new File("SonarQube"))
@@ -20,7 +22,7 @@ class SonarManager {
 	new(WebDriver driver, File directory) {
 		this.driver = driver
 		this.directory = directory
-		login()
+		this.lastMills = System.currentTimeMillis - waitMillsAfterDeletion
 	}
 
 	def moveToTopPage() {
@@ -35,22 +37,11 @@ class SonarManager {
 	}
 
 	def execute(MavenManager mvnMan, GithubRepositoryInfo info) {
-		val time = System.currentTimeMillis
 		mvnMan.start("clean install -DskipTest=true -Dgpg.skip=true").waitToFinish()
 
-		Idioms.wait(
-			[ |
-				try {
-					if (driver.findElement(By.className("marginbottom5")).text.contains(
-						"Welcome to SonarQube Dashboard")) {
-						return false
-					}
-				} catch (Exception e) {
-				}
-				true
-			], 100)
-		if (time + (60 * 1000) > System.currentTimeMillis) {
-			Thread.sleep(time + (60 * 1000) - System.currentTimeMillis)
+		val sleepMills = lastMills + waitMillsAfterDeletion - System.currentTimeMillis
+		if (sleepMills > 0) {
+			Thread.sleep(sleepMills)
 		}
 
 		mvnMan.start("sonar:sonar").waitToFinish()
@@ -65,13 +56,14 @@ class SonarManager {
 
 			new SonarPage(driver).updateInformation(info)
 			deleteFirstProjectData()
+			this.lastMills = System.currentTimeMillis - waitMillsAfterDeletion
 		} else {
 			System.out.println("Failed to retrieve information.")
 		}
 	}
 
 	def deleteFirstProjectData() {
-		moveToTopPage()
+		login()
 		val repos = driver.findElements(By.xpath('//td[@class=" nowrap"]/a[1]'))
 		if (repos.size != 0) {
 			if (repos.size != 1) {
