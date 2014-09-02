@@ -29,6 +29,7 @@ class SonarExecutor {
 
 	def run() {
 		val driver = new ChromeDriver()
+		val sonar = new SonarManager(driver)
 		infos.drop(skipCount).forEach [ info, i |
 			try {
 				if (info.killedMutantCountWithXMutator >= 0) {
@@ -40,7 +41,7 @@ class SonarExecutor {
 					new GitManager(projectDir).cloneAndCheckout(info.url, info.mainBranch, "origin/" + info.mainBranch)
 					System.out.println("done")
 					System.out.print("Execute sonar ... ")
-					new SonarManager(new MavenManager(projectDir), driver).execute(info)
+					sonar.execute(new MavenManager(projectDir), info)
 					System.out.println("done")
 					GithubRepositoryInfo.write(csvFile, infos)
 				}

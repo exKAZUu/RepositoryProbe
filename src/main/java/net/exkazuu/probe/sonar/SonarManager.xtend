@@ -10,16 +10,14 @@ import org.openqa.selenium.WebDriver
 import static extension net.exkazuu.probe.extensions.XProcess.*
 
 class SonarManager {
-	val MavenManager mvnMan
 	val WebDriver driver
 	val File directory
 
-	new(MavenManager mvnMan, WebDriver driver) {
-		this(mvnMan, driver, new File("SonarQube"))
+	new(WebDriver driver) {
+		this(driver, new File("SonarQube"))
 	}
 
-	new(MavenManager mvnMan, WebDriver driver, File directory) {
-		this.mvnMan = mvnMan
+	new(WebDriver driver, File directory) {
 		this.driver = driver
 		this.directory = directory
 		login()
@@ -36,7 +34,7 @@ class SonarManager {
 		driver.findElements(By.xpath('//input[@type="submit"]')).get(0).click()
 	}
 
-	def execute(GithubRepositoryInfo info) {
+	def execute(MavenManager mvnMan, GithubRepositoryInfo info) {
 		mvnMan.start("clean install -DskipTest=true -Dgpg.skip=true").waitToFinish()
 
 		Idioms.wait(
