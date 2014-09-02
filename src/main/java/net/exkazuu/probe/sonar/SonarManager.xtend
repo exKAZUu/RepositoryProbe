@@ -49,8 +49,8 @@ class SonarManager {
 				}
 				true
 			], 100)
-		if (time + 10000 > System.currentTimeMillis) {
-			Thread.sleep(time + 10000 - System.currentTimeMillis)
+		if (time + 60 * 1000 > System.currentTimeMillis) {
+			Thread.sleep(time + 60 * 1000 - System.currentTimeMillis)
 		}
 
 		mvnMan.start("sonar:sonar").waitToFinish()
