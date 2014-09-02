@@ -56,6 +56,8 @@ class SonarManager {
 
 			new SonarPage(driver).updateInformation(info)
 			deleteFirstProjectData()
+		} else {
+			System.out.println("Failed to retrieve information.")
 		}
 	}
 
@@ -77,6 +79,8 @@ class SonarManager {
 						true
 					}
 				], 100)
+		} else {
+			System.out.println("Failed to delete a measurement result.")
 		}
 	}
 
