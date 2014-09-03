@@ -12,7 +12,7 @@ import static extension net.exkazuu.probe.extensions.XProcess.*
 class SonarManager {
 	val WebDriver driver
 	val File directory
-	val waitMillsAfterDeletion = 60 * 1000
+	val waitMillsAfterDeletion = 120 * 1000
 	var long lastMills
 
 	new(WebDriver driver) {
@@ -27,6 +27,7 @@ class SonarManager {
 
 	def moveToTopPage() {
 		driver.get("http://localhost:9000/")
+		Thread.sleep(1000)
 	}
 
 	def login() {
@@ -34,6 +35,7 @@ class SonarManager {
 		driver.findElements(By.xpath('//input[@id="login"]')).get(0).sendKeys("admin")
 		driver.findElements(By.xpath('//input[@id="password"]')).get(0).sendKeys("admin")
 		driver.findElements(By.xpath('//input[@type="submit"]')).get(0).click()
+		Thread.sleep(1000)
 	}
 
 	def execute(MavenManager mvnMan, GithubRepositoryInfo info) {
