@@ -32,8 +32,8 @@ class GitManager {
 			// Already cloned. Just need to open a repository here.
 			val git = Git.open(gitDirectory)
 			git.reset.setMode(ResetCommand.ResetType.HARD).call()
-			//git.checkout.setName(masterBranch).call()
-			//git.pull.call()
+			git.checkout.setName(masterBranch).call()
+			git.pull.call()
 			git.checkout.setName(branchName).call()
 		} else {
 			val git = Git.cloneRepository.setURI(url).setDirectory(directory).call();
