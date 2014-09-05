@@ -17,26 +17,32 @@ class PitExecutor {
 	protected val File csvFile
 	protected val List<GithubRepositoryInfo> infos
 	val File mvnDir
+	val int skipCount
 
-	new(File csvFile, File mvnDir) {
+	new(File csvFile, int skipCount, File mvnDir) {
 		this.csvFile = csvFile
+		this.skipCount = skipCount
 		this.infos = GithubRepositoryInfo.readList(csvFile)
 		this.mvnDir = mvnDir
 		mvnDir.mkdirs()
 	}
 
 	def run() {
-		infos.forEach [ info, i |
-			if (info.killedMutantCountWithXMutator >= 0 && info.generatedMutantCountWithDEFAULTS == -1) {
-				System.out.println((i + 1) + ": " + info.url)
-				val userDir = new File(mvnDir.path, info.userName)
-				val projectDir = new File(userDir.path, info.projectName)
-				userDir.mkdirs()
-				System.out.print("Clone and checkout ... ")
-				new GitManager(projectDir).cloneAndCheckout(info.url, info.mainBranch, info.latestCommitSha)
-				System.out.println("done")
-				execitePIT(info, projectDir)
-				GithubRepositoryInfo.write(csvFile, infos)
+		infos.drop(skipCount).forEach [ info, i |
+			try {
+				if (info.killedMutantCountWithXMutator >= 0 && info.killedMutantCountWithDEFAULTS == -1) {
+					System.out.println((i + skipCount + 1) + ": " + info.url)
+					val userDir = new File(mvnDir.path, info.userName)
+					val projectDir = new File(userDir.path, info.projectName)
+					userDir.mkdirs()
+					System.out.print("Clone and checkout ... ")
+					new GitManager(projectDir).cloneAndCheckout(info.url, info.mainBranch, info.latestCommitSha)
+					System.out.println("done")
+					execitePIT(info, projectDir)
+					GithubRepositoryInfo.write(csvFile, infos)
+				}
+			} catch (Exception e) {
+				e.printStackTrace
 			}
 		]
 	}
@@ -66,13 +72,14 @@ class PitExecutor {
 	}
 
 	def static void main(String[] args) {
-		if (args.length != 1) {
-			System.out.println("Please specify one argument indicating a csv file for loading and saving results.")
+		if (args.length <= 1) {
+			System.out.println("Please specify two argument indicating a csv file and a skip count.")
 			System.exit(-1)
 		}
 
 		val csvFile = new File(args.get(0))
-		val executor = new PitExecutor(csvFile, new File("repos"))
+		val skipCount = Integer.parseInt(args.get(1))
+		val executor = new PitExecutor(csvFile, skipCount, new File("repos"))
 		executor.run()
 	}
 }

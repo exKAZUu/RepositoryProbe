@@ -46,6 +46,7 @@ class SonarExecutor {
 					GithubRepositoryInfo.write(csvFile, infos)
 				}
 			} catch (Exception e) {
+				e.printStackTrace
 			}
 		]
 		driver.close
