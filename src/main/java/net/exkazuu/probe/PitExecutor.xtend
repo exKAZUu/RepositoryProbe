@@ -30,7 +30,7 @@ class PitExecutor {
 	def run() {
 		infos.drop(skipCount).forEach [ info, i |
 			try {
-				if (info.killedMutantCountWithXMutator >= 0 && info.killedMutantCountWithDEFAULTS == -1) {
+				if (info.killedMutantCountWithDEFAULTS == -1) {
 					System.out.println((i + skipCount + 1) + ": " + info.url)
 					val userDir = new File(mvnDir.path, info.userName)
 					val projectDir = new File(userDir.path, info.projectName)
