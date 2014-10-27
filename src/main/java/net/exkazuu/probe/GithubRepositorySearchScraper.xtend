@@ -31,7 +31,7 @@ class GithubRepositorySearchScraper extends GithubScraper {
 	}
 
 	override def getUrlsOrSuffixes() {
-		driver.findElements(By.className("repolist-name")).map [
+		driver.findElements(By.className("repo-list-name")).map [
 			it.findElement(By.tagName("a")).getAttribute("href")
 		].toArray(#[""])
 	}
