@@ -16,9 +16,10 @@ class InputStreamThread extends Thread {
 	}
 
 	override void run() {
-		var line = new String
-		while (!stopped && (line = br.readLine) != null) {
+		var line = br.readLine
+		while (!stopped && line != null) {
 			list.add(line)
+			line = br.readLine
 		}
 		br.close
 	}
