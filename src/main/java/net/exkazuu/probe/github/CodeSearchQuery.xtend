@@ -6,6 +6,7 @@ class CodeSearchQuery {
 	val String keyword
 	var path = ""
 	var language = ""
+	var fileExtension = ""
 	var minSize = -1
 	var maxSize = -1
 
@@ -23,6 +24,11 @@ class CodeSearchQuery {
 		this
 	}
 
+	def setFileExtension(String fileExtension) {
+		this.fileExtension = fileExtension
+		this
+	}
+
 	def setSize(int minSize, int maxSize) {
 		this.minSize = minSize
 		this.maxSize = maxSize
@@ -34,7 +40,7 @@ class CodeSearchQuery {
 	}
 
 	def getQueryUrlSuffix() {
-		'''/search?q=«keyword»«pathQuery»«sizeQuery»«languageQuery»&type=Code'''.toString
+		'''/search?q=«keyword»«pathQuery»«fileExtensionQuery»«sizeQuery»«languageQuery»&type=Code'''.toString
 	}
 
 	private def getLanguageQuery() {
@@ -58,6 +64,14 @@ class CodeSearchQuery {
 			""
 		} else {
 			'''+size:«minSize»..«maxSize»'''
+		}
+	}
+
+	private def getFileExtensionQuery() {
+		if (Strings.isNullOrEmpty(fileExtension)) {
+			""
+		} else {
+			'''+extension:«fileExtension»'''
 		}
 	}
 }

@@ -20,7 +20,7 @@ import java.text.SimpleDateFormat
  * @author Kazunori Sakamoto
  */
 abstract class GithubScraper {
-	protected var static leastElapsedTime = 10 * 1000
+	protected var static leastElapsedTime = 12 * 1000
 
 	protected val File csvFile
 	protected val Map<String, GithubRepositoryInfo> infos

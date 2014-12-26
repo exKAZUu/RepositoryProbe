@@ -7,18 +7,19 @@ import java.io.FileWriter
 import java.io.PrintWriter
 import java.util.HashSet
 import java.util.Properties
+import net.exkazuu.probe.git.OldGitManager
+import net.exkazuu.probe.maven.OldMavenManager
 import org.eclipse.egit.github.core.service.RepositoryService
+import org.eclipse.xtend.lib.annotations.Accessors
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.support.ui.WebDriverWait
-import net.exkazuu.probe.maven.OldMavenManager
-import net.exkazuu.probe.git.OldGitManager
 
 class RepositoryInfo {
-	@Property String owner;
-	@Property String name;
+	@Accessors String owner;
+	@Accessors String name;
 
 	new(String user, String name) {
 		this.owner = user;

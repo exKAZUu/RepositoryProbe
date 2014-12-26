@@ -59,7 +59,7 @@ class GithubCodeSearchScraper extends GithubScraper {
 	}
 
 	private def getResultCount() {
-		driver.findElement(By.className("menu")).findElements(By.tagName("li")).get(1).extractInteger(0)
+		driver.findElement(By.className("menu")).findElements(By.tagName("a")).get(1).extractInteger(0)
 	}
 
 	override def getUrlsOrSuffixes() {
@@ -76,7 +76,7 @@ class GithubCodeSearchScraper extends GithubScraper {
 
 		val csvFile = new File(args.get(0))
 		val driver = new ChromeDriver()
-		val query = new CodeSearchQuery("project").setPath("pom.xml")
+		val query = new CodeSearchQuery("class").setFileExtension(".java")
 		val scraper = new GithubCodeSearchScraper(csvFile, driver, query, 1, 1000 * 1000 * 1000, 100)
 		scraper.run()
 	}
