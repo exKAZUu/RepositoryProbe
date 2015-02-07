@@ -31,7 +31,7 @@ class GithubRepositorySearchScraper extends GithubScraper {
 	}
 
 	override def getUrlsOrSuffixes() {
-		driver.findElements(By.className("repolist-name")).map [
+		driver.findElements(By.className("repo-list-name")).map [
 			it.findElement(By.tagName("a")).getAttribute("href")
 		].toArray(#[""])
 	}
@@ -45,10 +45,11 @@ class GithubRepositorySearchScraper extends GithubScraper {
 		//		val scraper = new GithubRepositorySearchScraper(new File(args.get(0)), new FirefoxDriver(),
 		//			new RepositorySearchQuery("java"), 100)
 		//		scraper.start()
-		#["java", "csharp", "javascript", "python", "php", "lua"].forEach [
+		//#["java", "csharp", "javascript", "python", "php", "lua"].forEach [
+		#["java"].forEach [
 			try {
 				val scraper = new GithubRepositorySearchScraper(new File(it + ".csv"), new FirefoxDriver(),
-					new RepositorySearchQuery(it), 100)
+					new RepositorySearchQuery(it), 1000)
 				scraper.run()
 			} catch (Exception e) {
 				e.printStackTrace

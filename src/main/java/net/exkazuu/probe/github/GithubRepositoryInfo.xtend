@@ -7,6 +7,7 @@ import java.io.FileWriter
 import java.lang.reflect.Method
 import java.util.ArrayList
 import org.apache.commons.lang.StringUtils
+import org.eclipse.xtend.lib.annotations.Accessors
 import org.supercsv.cellprocessor.ParseDouble
 import org.supercsv.cellprocessor.ParseInt
 import org.supercsv.io.CsvBeanReader
@@ -48,181 +49,181 @@ class GithubRepositoryInfo {
 	}
 
 	// GitHub
-	@Property String url = ""
-	@Property String mainBranch = ""
-	@Property String latestTag = ""
-	@Property String latestCommitSha = ""
-	@Property String retrievedTime = ""
-	@Property int watchCount = -1
-	@Property int starCount = -1
-	@Property int forkCount = -1
-	@Property int commitCount = -1
-	@Property int branchCount = -1
-	@Property int releaseCount = -1
-	@Property int contributorCount = -1
-	@Property int openIssueCount = -1
-	@Property int closedIssueCount = -1
-	@Property int openPullRequestCount = -1
-	@Property int closedPullRequestCount = -1
-	@Property int searchResultCount = -1
+	@Accessors String url = ""
+	@Accessors String mainBranch = ""
+	@Accessors String latestTag = ""
+	@Accessors String latestCommitSha = ""
+	@Accessors String retrievedTime = ""
+	@Accessors int watchCount = -1
+	@Accessors int starCount = -1
+	@Accessors int forkCount = -1
+	@Accessors int commitCount = -1
+	@Accessors int branchCount = -1
+	@Accessors int releaseCount = -1
+	@Accessors int contributorCount = -1
+	@Accessors int openIssueCount = -1
+	@Accessors int closedIssueCount = -1
+	@Accessors int openPullRequestCount = -1
+	@Accessors int closedPullRequestCount = -1
+	@Accessors int searchResultCount = -1
 
 	// XMutator
-	@Property int killedMutantCountWithXMutator = -1
-	@Property int generatedMutantCountWithXMutator = -1
-	@Property int killedMutantPercentageWithXMutator = -1
+	@Accessors int killedMutantCountWithXMutator = -1
+	@Accessors int generatedMutantCountWithXMutator = -1
+	@Accessors int killedMutantPercentageWithXMutator = -1
 
 	// PIT (INVERT_NEGS)
-	@Property int killedMutantCountWithINVERT_NEGS = -1
-	@Property int generatedMutantCountWithINVERT_NEGS = -1
-	@Property int killedMutantPercentageWithINVERT_NEGS = -1
+	@Accessors int killedMutantCountWithINVERT_NEGS = -1
+	@Accessors int generatedMutantCountWithINVERT_NEGS = -1
+	@Accessors int killedMutantPercentageWithINVERT_NEGS = -1
 
 	// PIT (RETURN_VALS)
-	@Property int killedMutantCountWithRETURN_VALS = -1
-	@Property int generatedMutantCountWithRETURN_VALS = -1
-	@Property int killedMutantPercentageWithRETURN_VALS = -1
+	@Accessors int killedMutantCountWithRETURN_VALS = -1
+	@Accessors int generatedMutantCountWithRETURN_VALS = -1
+	@Accessors int killedMutantPercentageWithRETURN_VALS = -1
 
 	// PIT (INLINE_CONSTS)
-	@Property int killedMutantCountWithINLINE_CONSTS = -1
-	@Property int generatedMutantCountWithINLINE_CONSTS = -1
-	@Property int killedMutantPercentageWithINLINE_CONSTS = -1
+	@Accessors int killedMutantCountWithINLINE_CONSTS = -1
+	@Accessors int generatedMutantCountWithINLINE_CONSTS = -1
+	@Accessors int killedMutantPercentageWithINLINE_CONSTS = -1
 
 	// PIT (MATH)
-	@Property int killedMutantCountWithMATH = -1
-	@Property int generatedMutantCountWithMATH = -1
-	@Property int killedMutantPercentageWithMATH = -1
+	@Accessors int killedMutantCountWithMATH = -1
+	@Accessors int generatedMutantCountWithMATH = -1
+	@Accessors int killedMutantPercentageWithMATH = -1
 
 	// PIT (VOID_METHOD_CALLS)
-	@Property int killedMutantCountWithVOID_METHOD_CALLS = -1
-	@Property int generatedMutantCountWithVOID_METHOD_CALLS = -1
-	@Property int killedMutantPercentageWithVOID_METHOD_CALLS = -1
+	@Accessors int killedMutantCountWithVOID_METHOD_CALLS = -1
+	@Accessors int generatedMutantCountWithVOID_METHOD_CALLS = -1
+	@Accessors int killedMutantPercentageWithVOID_METHOD_CALLS = -1
 
 	// PIT (NEGATE_CONDITIONALS)
-	@Property int killedMutantCountWithNEGATE_CONDITIONALS = -1
-	@Property int generatedMutantCountWithNEGATE_CONDITIONALS = -1
-	@Property int killedMutantPercentageWithNEGATE_CONDITIONALS = -1
+	@Accessors int killedMutantCountWithNEGATE_CONDITIONALS = -1
+	@Accessors int generatedMutantCountWithNEGATE_CONDITIONALS = -1
+	@Accessors int killedMutantPercentageWithNEGATE_CONDITIONALS = -1
 
 	// PIT (CONDITIONALS_BOUNDARY)
-	@Property int killedMutantCountWithCONDITIONALS_BOUNDARY = -1
-	@Property int generatedMutantCountWithCONDITIONALS_BOUNDARY = -1
-	@Property int killedMutantPercentageWithCONDITIONALS_BOUNDARY = -1
+	@Accessors int killedMutantCountWithCONDITIONALS_BOUNDARY = -1
+	@Accessors int generatedMutantCountWithCONDITIONALS_BOUNDARY = -1
+	@Accessors int killedMutantPercentageWithCONDITIONALS_BOUNDARY = -1
 
 	// PIT (INCREMENTS)
-	@Property int killedMutantCountWithINCREMENTS = -1
-	@Property int generatedMutantCountWithINCREMENTS = -1
-	@Property int killedMutantPercentageWithINCREMENTS = -1
+	@Accessors int killedMutantCountWithINCREMENTS = -1
+	@Accessors int generatedMutantCountWithINCREMENTS = -1
+	@Accessors int killedMutantPercentageWithINCREMENTS = -1
 
 	// PIT (REMOVE_INCREMENTS)
-	@Property int killedMutantCountWithREMOVE_INCREMENTS = -1
-	@Property int generatedMutantCountWithREMOVE_INCREMENTS = -1
-	@Property int killedMutantPercentageWithREMOVE_INCREMENTS = -1
+	@Accessors int killedMutantCountWithREMOVE_INCREMENTS = -1
+	@Accessors int generatedMutantCountWithREMOVE_INCREMENTS = -1
+	@Accessors int killedMutantPercentageWithREMOVE_INCREMENTS = -1
 
 	// PIT (NON_VOID_METHOD_CALLS)
-	@Property int killedMutantCountWithNON_VOID_METHOD_CALLS = -1
-	@Property int generatedMutantCountWithNON_VOID_METHOD_CALLS = -1
-	@Property int killedMutantPercentageWithNON_VOID_METHOD_CALLS = -1
+	@Accessors int killedMutantCountWithNON_VOID_METHOD_CALLS = -1
+	@Accessors int generatedMutantCountWithNON_VOID_METHOD_CALLS = -1
+	@Accessors int killedMutantPercentageWithNON_VOID_METHOD_CALLS = -1
 
 	// PIT (CONSTRUCTOR_CALLS)
-	@Property int killedMutantCountWithCONSTRUCTOR_CALLS = -1
-	@Property int generatedMutantCountWithCONSTRUCTOR_CALLS = -1
-	@Property int killedMutantPercentageWithCONSTRUCTOR_CALLS = -1
+	@Accessors int killedMutantCountWithCONSTRUCTOR_CALLS = -1
+	@Accessors int generatedMutantCountWithCONSTRUCTOR_CALLS = -1
+	@Accessors int killedMutantPercentageWithCONSTRUCTOR_CALLS = -1
 
 	// PIT (REMOVE_CONDITIONALS_EQ_IF)
-	@Property int killedMutantCountWithREMOVE_CONDITIONALS_EQ_IF = -1
-	@Property int generatedMutantCountWithREMOVE_CONDITIONALS_EQ_IF = -1
-	@Property int killedMutantPercentageWithREMOVE_CONDITIONALS_EQ_IF = -1
+	@Accessors int killedMutantCountWithREMOVE_CONDITIONALS_EQ_IF = -1
+	@Accessors int generatedMutantCountWithREMOVE_CONDITIONALS_EQ_IF = -1
+	@Accessors int killedMutantPercentageWithREMOVE_CONDITIONALS_EQ_IF = -1
 
 	// PIT (REMOVE_CONDITIONALS_EQ_ELSE)
-	@Property int killedMutantCountWithREMOVE_CONDITIONALS_EQ_ELSE = -1
-	@Property int generatedMutantCountWithREMOVE_CONDITIONALS_EQ_ELSE = -1
-	@Property int killedMutantPercentageWithREMOVE_CONDITIONALS_EQ_ELSE = -1
+	@Accessors int killedMutantCountWithREMOVE_CONDITIONALS_EQ_ELSE = -1
+	@Accessors int generatedMutantCountWithREMOVE_CONDITIONALS_EQ_ELSE = -1
+	@Accessors int killedMutantPercentageWithREMOVE_CONDITIONALS_EQ_ELSE = -1
 
 	// PIT (REMOVE_CONDITIONALS_ORD_IF)
-	@Property int killedMutantCountWithREMOVE_CONDITIONALS_ORD_IF = -1
-	@Property int generatedMutantCountWithREMOVE_CONDITIONALS_ORD_IF = -1
-	@Property int killedMutantPercentageWithREMOVE_CONDITIONALS_ORD_IF = -1
+	@Accessors int killedMutantCountWithREMOVE_CONDITIONALS_ORD_IF = -1
+	@Accessors int generatedMutantCountWithREMOVE_CONDITIONALS_ORD_IF = -1
+	@Accessors int killedMutantPercentageWithREMOVE_CONDITIONALS_ORD_IF = -1
 
 	// PIT (REMOVE_CONDITIONALS_ORD_ELSE)
-	@Property int killedMutantCountWithREMOVE_CONDITIONALS_ORD_ELSE = -1
-	@Property int generatedMutantCountWithREMOVE_CONDITIONALS_ORD_ELSE = -1
-	@Property int killedMutantPercentageWithREMOVE_CONDITIONALS_ORD_ELSE = -1
+	@Accessors int killedMutantCountWithREMOVE_CONDITIONALS_ORD_ELSE = -1
+	@Accessors int generatedMutantCountWithREMOVE_CONDITIONALS_ORD_ELSE = -1
+	@Accessors int killedMutantPercentageWithREMOVE_CONDITIONALS_ORD_ELSE = -1
 
 	// PIT (REMOVE_CONDITIONALS)
-	@Property int killedMutantCountWithREMOVE_CONDITIONALS = -1
-	@Property int generatedMutantCountWithREMOVE_CONDITIONALS = -1
-	@Property int killedMutantPercentageWithREMOVE_CONDITIONALS = -1
+	@Accessors int killedMutantCountWithREMOVE_CONDITIONALS = -1
+	@Accessors int generatedMutantCountWithREMOVE_CONDITIONALS = -1
+	@Accessors int killedMutantPercentageWithREMOVE_CONDITIONALS = -1
 
 	// PIT (EXPERIMENTAL_MEMBER_VARIABLE)
-	@Property int killedMutantCountWithEXPERIMENTAL_MEMBER_VARIABLE = -1
-	@Property int generatedMutantCountWithEXPERIMENTAL_MEMBER_VARIABLE = -1
-	@Property int killedMutantPercentageWithEXPERIMENTAL_MEMBER_VARIABLE = -1
+	@Accessors int killedMutantCountWithEXPERIMENTAL_MEMBER_VARIABLE = -1
+	@Accessors int generatedMutantCountWithEXPERIMENTAL_MEMBER_VARIABLE = -1
+	@Accessors int killedMutantPercentageWithEXPERIMENTAL_MEMBER_VARIABLE = -1
 
 	// PIT (EXPERIMENTAL_SWITCH)
-	@Property int killedMutantCountWithEXPERIMENTAL_SWITCH = -1
-	@Property int generatedMutantCountWithEXPERIMENTAL_SWITCH = -1
-	@Property int killedMutantPercentageWithEXPERIMENTAL_SWITCH = -1
+	@Accessors int killedMutantCountWithEXPERIMENTAL_SWITCH = -1
+	@Accessors int generatedMutantCountWithEXPERIMENTAL_SWITCH = -1
+	@Accessors int killedMutantPercentageWithEXPERIMENTAL_SWITCH = -1
 
 	// PIT (REMOVE_SWITCH)
-	@Property int killedMutantCountWithREMOVE_SWITCH = -1
-	@Property int generatedMutantCountWithREMOVE_SWITCH = -1
-	@Property int killedMutantPercentageWithREMOVE_SWITCH = -1
+	@Accessors int killedMutantCountWithREMOVE_SWITCH = -1
+	@Accessors int generatedMutantCountWithREMOVE_SWITCH = -1
+	@Accessors int killedMutantPercentageWithREMOVE_SWITCH = -1
 
 	// PIT (DEFAULTS)
-	@Property int killedMutantCountWithDEFAULTS = -1
-	@Property int generatedMutantCountWithDEFAULTS = -1
-	@Property int killedMutantPercentageWithDEFAULTS = -1
+	@Accessors int killedMutantCountWithDEFAULTS = -1
+	@Accessors int generatedMutantCountWithDEFAULTS = -1
+	@Accessors int killedMutantPercentageWithDEFAULTS = -1
 
 	// PIT (STRONGER)
-	@Property int killedMutantCountWithSTRONGER = -1
-	@Property int generatedMutantCountWithSTRONGER = -1
-	@Property int killedMutantPercentageWithSTRONGER = -1
+	@Accessors int killedMutantCountWithSTRONGER = -1
+	@Accessors int generatedMutantCountWithSTRONGER = -1
+	@Accessors int killedMutantPercentageWithSTRONGER = -1
 
 	// PIT (ALL)
-	@Property int killedMutantCountWithALL = -1
-	@Property int generatedMutantCountWithALL = -1
-	@Property int killedMutantPercentageWithALL = -1
+	@Accessors int killedMutantCountWithALL = -1
+	@Accessors int generatedMutantCountWithALL = -1
+	@Accessors int killedMutantPercentageWithALL = -1
 
 	//Sonar
-	@Property int loc = -1
-	@Property int lines = -1
-	@Property int statements = -1
-	@Property int files = -1
-	@Property int directories = -1
-	@Property int classes = -1
-	@Property int packages = -1
-	@Property int functions = -1
-	@Property int accessors = -1
-	@Property double publicDocumentedAPIDensity = -1 // 9
-	@Property int publicAPI = -1
-	@Property int publicUndocumentedAPI = -1
-	@Property double commentLinesDensity = -1
-	@Property int commentLines = -1
-	@Property String duplicatedLinesDensity = ""
-	@Property int duplicatedLines = -1 // 15-
-	@Property int duplicatedBlocks = -1
-	@Property int duplicatedFiles = -1
-	@Property double functionComplexity = -1 // 18-
-	@Property double classComplexity = -1
-	@Property double fileComplexity = -1
-	@Property double complexity = -1
-	@Property int violations = -1 // 22
-	@Property String technicalDebt = ""
-	@Property int blockerViolations = -1 // 24
-	@Property int criticalViolations = -1
-	@Property int majorViolations = -1
-	@Property int minorViolations = -1
-	@Property int infoViolations = -1
-	@Property double packageTangleIndex = -1 // 29
-	@Property int packageCycles = -1 // 30-
-	@Property int packageFeedbackEdges = -1
-	@Property int packageTangles = -1
-	@Property double coverage = -1 // 33-
-	@Property double lineCoverage = -1
-	@Property double branchCoverage = -1
-	@Property double testSuccessDensity = -1
-	@Property int testFailures = -1 // 37-
-	@Property int testErrors = -1
-	@Property int tests = -1
-	@Property String testExecutionTime = "" // 40
+	@Accessors int loc = -1
+	@Accessors int lines = -1
+	@Accessors int statements = -1
+	@Accessors int files = -1
+	@Accessors int directories = -1
+	@Accessors int classes = -1
+	@Accessors int packages = -1
+	@Accessors int functions = -1
+	@Accessors int accessors = -1
+	@Accessors double publicDocumentedAPIDensity = -1 // 9
+	@Accessors int publicAPI = -1
+	@Accessors int publicUndocumentedAPI = -1
+	@Accessors double commentLinesDensity = -1
+	@Accessors int commentLines = -1
+	@Accessors String duplicatedLinesDensity = ""
+	@Accessors int duplicatedLines = -1 // 15-
+	@Accessors int duplicatedBlocks = -1
+	@Accessors int duplicatedFiles = -1
+	@Accessors double functionComplexity = -1 // 18-
+	@Accessors double classComplexity = -1
+	@Accessors double fileComplexity = -1
+	@Accessors double complexity = -1
+	@Accessors int violations = -1 // 22
+	@Accessors String technicalDebt = ""
+	@Accessors int blockerViolations = -1 // 24
+	@Accessors int criticalViolations = -1
+	@Accessors int majorViolations = -1
+	@Accessors int minorViolations = -1
+	@Accessors int infoViolations = -1
+	@Accessors double packageTangleIndex = -1 // 29
+	@Accessors int packageCycles = -1 // 30-
+	@Accessors int packageFeedbackEdges = -1
+	@Accessors int packageTangles = -1
+	@Accessors double coverage = -1 // 33-
+	@Accessors double lineCoverage = -1
+	@Accessors double branchCoverage = -1
+	@Accessors double testSuccessDensity = -1
+	@Accessors int testFailures = -1 // 37-
+	@Accessors int testErrors = -1
+	@Accessors int tests = -1
+	@Accessors String testExecutionTime = "" // 40
 
 	def isScrapedFromGitHub() {
 		!(Strings.isNullOrEmpty(url) || Strings.isNullOrEmpty(mainBranch) || Strings.isNullOrEmpty(latestTag) ||
@@ -286,181 +287,181 @@ class GithubRepositoryInfo {
 		if (Strings.isNullOrEmpty(propertyDeclaration)) {
 			propertyDeclaration = '''
 				// GitHub
-				@Property String url = ""
-				@Property String mainBranch = ""
-				@Property String latestTag = ""
-				@Property String latestCommitSha = ""
-				@Property String retrievedTime = ""
-				@Property int watchCount = -1
-				@Property int starCount = -1
-				@Property int forkCount = -1
-				@Property int commitCount = -1
-				@Property int branchCount = -1
-				@Property int releaseCount = -1
-				@Property int contributorCount = -1
-				@Property int openIssueCount = -1
-				@Property int closedIssueCount = -1
-				@Property int openPullRequestCount = -1
-				@Property int closedPullRequestCount = -1
-				@Property int searchResultCount = -1
+				@Accessors String url = ""
+				@Accessors String mainBranch = ""
+				@Accessors String latestTag = ""
+				@Accessors String latestCommitSha = ""
+				@Accessors String retrievedTime = ""
+				@Accessors int watchCount = -1
+				@Accessors int starCount = -1
+				@Accessors int forkCount = -1
+				@Accessors int commitCount = -1
+				@Accessors int branchCount = -1
+				@Accessors int releaseCount = -1
+				@Accessors int contributorCount = -1
+				@Accessors int openIssueCount = -1
+				@Accessors int closedIssueCount = -1
+				@Accessors int openPullRequestCount = -1
+				@Accessors int closedPullRequestCount = -1
+				@Accessors int searchResultCount = -1
 				
 				// XMutator
-				@Property int killedMutantCountWithXMutator = -1
-				@Property int generatedMutantCountWithXMutator = -1
-				@Property int killedMutantPercentageWithXMutator = -1
+				@Accessors int killedMutantCountWithXMutator = -1
+				@Accessors int generatedMutantCountWithXMutator = -1
+				@Accessors int killedMutantPercentageWithXMutator = -1
 				
 				// PIT (INVERT_NEGS)
-				@Property int killedMutantCountWithINVERT_NEGS = -1
-				@Property int generatedMutantCountWithINVERT_NEGS = -1
-				@Property int killedMutantPercentageWithINVERT_NEGS = -1
+				@Accessors int killedMutantCountWithINVERT_NEGS = -1
+				@Accessors int generatedMutantCountWithINVERT_NEGS = -1
+				@Accessors int killedMutantPercentageWithINVERT_NEGS = -1
 				
 				// PIT (RETURN_VALS)
-				@Property int killedMutantCountWithRETURN_VALS = -1
-				@Property int generatedMutantCountWithRETURN_VALS = -1
-				@Property int killedMutantPercentageWithRETURN_VALS = -1
+				@Accessors int killedMutantCountWithRETURN_VALS = -1
+				@Accessors int generatedMutantCountWithRETURN_VALS = -1
+				@Accessors int killedMutantPercentageWithRETURN_VALS = -1
 				
 				// PIT (INLINE_CONSTS)
-				@Property int killedMutantCountWithINLINE_CONSTS = -1
-				@Property int generatedMutantCountWithINLINE_CONSTS = -1
-				@Property int killedMutantPercentageWithINLINE_CONSTS = -1
+				@Accessors int killedMutantCountWithINLINE_CONSTS = -1
+				@Accessors int generatedMutantCountWithINLINE_CONSTS = -1
+				@Accessors int killedMutantPercentageWithINLINE_CONSTS = -1
 				
 				// PIT (MATH)
-				@Property int killedMutantCountWithMATH = -1
-				@Property int generatedMutantCountWithMATH = -1
-				@Property int killedMutantPercentageWithMATH = -1
+				@Accessors int killedMutantCountWithMATH = -1
+				@Accessors int generatedMutantCountWithMATH = -1
+				@Accessors int killedMutantPercentageWithMATH = -1
 				
 				// PIT (VOID_METHOD_CALLS)
-				@Property int killedMutantCountWithVOID_METHOD_CALLS = -1
-				@Property int generatedMutantCountWithVOID_METHOD_CALLS = -1
-				@Property int killedMutantPercentageWithVOID_METHOD_CALLS = -1
+				@Accessors int killedMutantCountWithVOID_METHOD_CALLS = -1
+				@Accessors int generatedMutantCountWithVOID_METHOD_CALLS = -1
+				@Accessors int killedMutantPercentageWithVOID_METHOD_CALLS = -1
 				
 				// PIT (NEGATE_CONDITIONALS)
-				@Property int killedMutantCountWithNEGATE_CONDITIONALS = -1
-				@Property int generatedMutantCountWithNEGATE_CONDITIONALS = -1
-				@Property int killedMutantPercentageWithNEGATE_CONDITIONALS = -1
+				@Accessors int killedMutantCountWithNEGATE_CONDITIONALS = -1
+				@Accessors int generatedMutantCountWithNEGATE_CONDITIONALS = -1
+				@Accessors int killedMutantPercentageWithNEGATE_CONDITIONALS = -1
 				
 				// PIT (CONDITIONALS_BOUNDARY)
-				@Property int killedMutantCountWithCONDITIONALS_BOUNDARY = -1
-				@Property int generatedMutantCountWithCONDITIONALS_BOUNDARY = -1
-				@Property int killedMutantPercentageWithCONDITIONALS_BOUNDARY = -1
+				@Accessors int killedMutantCountWithCONDITIONALS_BOUNDARY = -1
+				@Accessors int generatedMutantCountWithCONDITIONALS_BOUNDARY = -1
+				@Accessors int killedMutantPercentageWithCONDITIONALS_BOUNDARY = -1
 				
 				// PIT (INCREMENTS)
-				@Property int killedMutantCountWithINCREMENTS = -1
-				@Property int generatedMutantCountWithINCREMENTS = -1
-				@Property int killedMutantPercentageWithINCREMENTS = -1
+				@Accessors int killedMutantCountWithINCREMENTS = -1
+				@Accessors int generatedMutantCountWithINCREMENTS = -1
+				@Accessors int killedMutantPercentageWithINCREMENTS = -1
 				
 				// PIT (REMOVE_INCREMENTS)
-				@Property int killedMutantCountWithREMOVE_INCREMENTS = -1
-				@Property int generatedMutantCountWithREMOVE_INCREMENTS = -1
-				@Property int killedMutantPercentageWithREMOVE_INCREMENTS = -1
+				@Accessors int killedMutantCountWithREMOVE_INCREMENTS = -1
+				@Accessors int generatedMutantCountWithREMOVE_INCREMENTS = -1
+				@Accessors int killedMutantPercentageWithREMOVE_INCREMENTS = -1
 				
 				// PIT (NON_VOID_METHOD_CALLS)
-				@Property int killedMutantCountWithNON_VOID_METHOD_CALLS = -1
-				@Property int generatedMutantCountWithNON_VOID_METHOD_CALLS = -1
-				@Property int killedMutantPercentageWithNON_VOID_METHOD_CALLS = -1
+				@Accessors int killedMutantCountWithNON_VOID_METHOD_CALLS = -1
+				@Accessors int generatedMutantCountWithNON_VOID_METHOD_CALLS = -1
+				@Accessors int killedMutantPercentageWithNON_VOID_METHOD_CALLS = -1
 				
 				// PIT (CONSTRUCTOR_CALLS)
-				@Property int killedMutantCountWithCONSTRUCTOR_CALLS = -1
-				@Property int generatedMutantCountWithCONSTRUCTOR_CALLS = -1
-				@Property int killedMutantPercentageWithCONSTRUCTOR_CALLS = -1
+				@Accessors int killedMutantCountWithCONSTRUCTOR_CALLS = -1
+				@Accessors int generatedMutantCountWithCONSTRUCTOR_CALLS = -1
+				@Accessors int killedMutantPercentageWithCONSTRUCTOR_CALLS = -1
 				
 				// PIT (REMOVE_CONDITIONALS_EQ_IF)
-				@Property int killedMutantCountWithREMOVE_CONDITIONALS_EQ_IF = -1
-				@Property int generatedMutantCountWithREMOVE_CONDITIONALS_EQ_IF = -1
-				@Property int killedMutantPercentageWithREMOVE_CONDITIONALS_EQ_IF = -1
+				@Accessors int killedMutantCountWithREMOVE_CONDITIONALS_EQ_IF = -1
+				@Accessors int generatedMutantCountWithREMOVE_CONDITIONALS_EQ_IF = -1
+				@Accessors int killedMutantPercentageWithREMOVE_CONDITIONALS_EQ_IF = -1
 				
 				// PIT (REMOVE_CONDITIONALS_EQ_ELSE)
-				@Property int killedMutantCountWithREMOVE_CONDITIONALS_EQ_ELSE = -1
-				@Property int generatedMutantCountWithREMOVE_CONDITIONALS_EQ_ELSE = -1
-				@Property int killedMutantPercentageWithREMOVE_CONDITIONALS_EQ_ELSE = -1
+				@Accessors int killedMutantCountWithREMOVE_CONDITIONALS_EQ_ELSE = -1
+				@Accessors int generatedMutantCountWithREMOVE_CONDITIONALS_EQ_ELSE = -1
+				@Accessors int killedMutantPercentageWithREMOVE_CONDITIONALS_EQ_ELSE = -1
 				
 				// PIT (REMOVE_CONDITIONALS_ORD_IF)
-				@Property int killedMutantCountWithREMOVE_CONDITIONALS_ORD_IF = -1
-				@Property int generatedMutantCountWithREMOVE_CONDITIONALS_ORD_IF = -1
-				@Property int killedMutantPercentageWithREMOVE_CONDITIONALS_ORD_IF = -1
+				@Accessors int killedMutantCountWithREMOVE_CONDITIONALS_ORD_IF = -1
+				@Accessors int generatedMutantCountWithREMOVE_CONDITIONALS_ORD_IF = -1
+				@Accessors int killedMutantPercentageWithREMOVE_CONDITIONALS_ORD_IF = -1
 				
 				// PIT (REMOVE_CONDITIONALS_ORD_ELSE)
-				@Property int killedMutantCountWithREMOVE_CONDITIONALS_ORD_ELSE = -1
-				@Property int generatedMutantCountWithREMOVE_CONDITIONALS_ORD_ELSE = -1
-				@Property int killedMutantPercentageWithREMOVE_CONDITIONALS_ORD_ELSE = -1
+				@Accessors int killedMutantCountWithREMOVE_CONDITIONALS_ORD_ELSE = -1
+				@Accessors int generatedMutantCountWithREMOVE_CONDITIONALS_ORD_ELSE = -1
+				@Accessors int killedMutantPercentageWithREMOVE_CONDITIONALS_ORD_ELSE = -1
 				
 				// PIT (REMOVE_CONDITIONALS)
-				@Property int killedMutantCountWithREMOVE_CONDITIONALS = -1
-				@Property int generatedMutantCountWithREMOVE_CONDITIONALS = -1
-				@Property int killedMutantPercentageWithREMOVE_CONDITIONALS = -1
+				@Accessors int killedMutantCountWithREMOVE_CONDITIONALS = -1
+				@Accessors int generatedMutantCountWithREMOVE_CONDITIONALS = -1
+				@Accessors int killedMutantPercentageWithREMOVE_CONDITIONALS = -1
 				
 				// PIT (EXPERIMENTAL_MEMBER_VARIABLE)
-				@Property int killedMutantCountWithEXPERIMENTAL_MEMBER_VARIABLE = -1
-				@Property int generatedMutantCountWithEXPERIMENTAL_MEMBER_VARIABLE = -1
-				@Property int killedMutantPercentageWithEXPERIMENTAL_MEMBER_VARIABLE = -1
+				@Accessors int killedMutantCountWithEXPERIMENTAL_MEMBER_VARIABLE = -1
+				@Accessors int generatedMutantCountWithEXPERIMENTAL_MEMBER_VARIABLE = -1
+				@Accessors int killedMutantPercentageWithEXPERIMENTAL_MEMBER_VARIABLE = -1
 				
 				// PIT (EXPERIMENTAL_SWITCH)
-				@Property int killedMutantCountWithEXPERIMENTAL_SWITCH = -1
-				@Property int generatedMutantCountWithEXPERIMENTAL_SWITCH = -1
-				@Property int killedMutantPercentageWithEXPERIMENTAL_SWITCH = -1
+				@Accessors int killedMutantCountWithEXPERIMENTAL_SWITCH = -1
+				@Accessors int generatedMutantCountWithEXPERIMENTAL_SWITCH = -1
+				@Accessors int killedMutantPercentageWithEXPERIMENTAL_SWITCH = -1
 				
 				// PIT (REMOVE_SWITCH)
-				@Property int killedMutantCountWithREMOVE_SWITCH = -1
-				@Property int generatedMutantCountWithREMOVE_SWITCH = -1
-				@Property int killedMutantPercentageWithREMOVE_SWITCH = -1
+				@Accessors int killedMutantCountWithREMOVE_SWITCH = -1
+				@Accessors int generatedMutantCountWithREMOVE_SWITCH = -1
+				@Accessors int killedMutantPercentageWithREMOVE_SWITCH = -1
 				
 				// PIT (DEFAULTS)
-				@Property int killedMutantCountWithDEFAULTS = -1
-				@Property int generatedMutantCountWithDEFAULTS = -1
-				@Property int killedMutantPercentageWithDEFAULTS = -1
+				@Accessors int killedMutantCountWithDEFAULTS = -1
+				@Accessors int generatedMutantCountWithDEFAULTS = -1
+				@Accessors int killedMutantPercentageWithDEFAULTS = -1
 				
 				// PIT (STRONGER)
-				@Property int killedMutantCountWithSTRONGER = -1
-				@Property int generatedMutantCountWithSTRONGER = -1
-				@Property int killedMutantPercentageWithSTRONGER = -1
+				@Accessors int killedMutantCountWithSTRONGER = -1
+				@Accessors int generatedMutantCountWithSTRONGER = -1
+				@Accessors int killedMutantPercentageWithSTRONGER = -1
 				
 				// PIT (ALL)
-				@Property int killedMutantCountWithALL = -1
-				@Property int generatedMutantCountWithALL = -1
-				@Property int killedMutantPercentageWithALL = -1
+				@Accessors int killedMutantCountWithALL = -1
+				@Accessors int generatedMutantCountWithALL = -1
+				@Accessors int killedMutantPercentageWithALL = -1
 				
 				//Sonar
-				@Property int loc = -1
-				@Property int lines = -1
-				@Property int statements = -1
-				@Property int files = -1
-				@Property int directories = -1
-				@Property int classes = -1
-				@Property int packages = -1
-				@Property int functions = -1
-				@Property int accessors = -1
-				@Property double publicDocumentedAPIDensity = -1 // 9
-				@Property int publicAPI = -1
-				@Property int publicUndocumentedAPI = -1
-				@Property double commentLinesDensity = -1
-				@Property int commentLines = -1
-				@Property String duplicatedLinesDensity = ""
-				@Property int duplicatedLines = -1 // 15-
-				@Property int duplicatedBlocks = -1
-				@Property int duplicatedFiles = -1
-				@Property double functionComplexity = -1 // 18-
-				@Property double classComplexity = -1
-				@Property double fileComplexity = -1
-				@Property double complexity = -1
-				@Property int violations = -1 // 22
-				@Property String technicalDebt = ""
-				@Property int blockerViolations = -1 // 24
-				@Property int criticalViolations = -1
-				@Property int majorViolations = -1
-				@Property int minorViolations = -1
-				@Property int infoViolations = -1
-				@Property double packageTangleIndex = -1 // 29
-				@Property int packageCycles = -1 // 30-
-				@Property int packageFeedbackEdges = -1
-				@Property int packageTangles = -1
-				@Property double coverage = -1 // 33-
-				@Property double lineCoverage = -1
-				@Property double branchCoverage = -1
-				@Property double testSuccessDensity = -1
-				@Property int testFailures = -1 // 37-
-				@Property int testErrors = -1
-				@Property int tests = -1
-				@Property String testExecutionTime = "" // 40
+				@Accessors int loc = -1
+				@Accessors int lines = -1
+				@Accessors int statements = -1
+				@Accessors int files = -1
+				@Accessors int directories = -1
+				@Accessors int classes = -1
+				@Accessors int packages = -1
+				@Accessors int functions = -1
+				@Accessors int accessors = -1
+				@Accessors double publicDocumentedAPIDensity = -1 // 9
+				@Accessors int publicAPI = -1
+				@Accessors int publicUndocumentedAPI = -1
+				@Accessors double commentLinesDensity = -1
+				@Accessors int commentLines = -1
+				@Accessors String duplicatedLinesDensity = ""
+				@Accessors int duplicatedLines = -1 // 15-
+				@Accessors int duplicatedBlocks = -1
+				@Accessors int duplicatedFiles = -1
+				@Accessors double functionComplexity = -1 // 18-
+				@Accessors double classComplexity = -1
+				@Accessors double fileComplexity = -1
+				@Accessors double complexity = -1
+				@Accessors int violations = -1 // 22
+				@Accessors String technicalDebt = ""
+				@Accessors int blockerViolations = -1 // 24
+				@Accessors int criticalViolations = -1
+				@Accessors int majorViolations = -1
+				@Accessors int minorViolations = -1
+				@Accessors int infoViolations = -1
+				@Accessors double packageTangleIndex = -1 // 29
+				@Accessors int packageCycles = -1 // 30-
+				@Accessors int packageFeedbackEdges = -1
+				@Accessors int packageTangles = -1
+				@Accessors double coverage = -1 // 33-
+				@Accessors double lineCoverage = -1
+				@Accessors double branchCoverage = -1
+				@Accessors double testSuccessDensity = -1
+				@Accessors int testFailures = -1 // 37-
+				@Accessors int testErrors = -1
+				@Accessors int tests = -1
+				@Accessors String testExecutionTime = "" // 40
 			'''
 		}
 		propertyDeclaration.indexOf(" " + method.propertyName + " ")
