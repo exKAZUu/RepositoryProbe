@@ -15,7 +15,7 @@ import org.openqa.selenium.remote.DesiredCapabilities
  * 
  * @author Ryohei Takasawa
  */
-class SonarExecutor2 {
+class SonarExecutorUsingGhostDriver {
 	protected val File csvFile
 	protected val List<GithubRepositoryInfo> infos
 	val File mvnDir
@@ -54,6 +54,7 @@ class SonarExecutor2 {
 					GithubRepositoryInfo.write(csvFile, infos)
 				}
 			} catch (Exception e) {
+				e.printStackTrace
 			}
 		]
 		driver.close
@@ -67,7 +68,7 @@ class SonarExecutor2 {
 
 		val csvFile = new File(args.get(0))
 		val skipCount = Integer.parseInt(args.get(1))
-		val executor = new SonarExecutor2(csvFile, skipCount, new File("repos"))
+		val executor = new SonarExecutorUsingGhostDriver(csvFile, skipCount, new File("repos"))
 		executor.run()
 	}
 }

@@ -8,6 +8,7 @@ import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 
 import static extension net.exkazuu.probe.extensions.XProcess.*
+import org.openqa.selenium.JavascriptExecutor
 
 class SonarManager {
 	val WebDriver driver
@@ -76,17 +77,10 @@ class SonarManager {
 			val deleteURL = driver.currentUrl.replace("dashboard/index", "project/deletion")
 			driver.get(deleteURL)
 			Thread.sleep(2000)
+			(driver as JavascriptExecutor).executeScript("window.confirm = function(msg){return true;};");
+			Thread.sleep(2000)
 			driver.findElement(By.id("delete_resource")).click()
 			Thread.sleep(2000)
-			Idioms.wait(
-				[ |
-					try {
-						driver.findElement(By.id("delete-project-submit")).click()
-						false
-					} catch (Exception e) {
-						true
-					}
-				], 100)
 		} else {
 			System.out.println("Failed to delete a measurement result.")
 		}

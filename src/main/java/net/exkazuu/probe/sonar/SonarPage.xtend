@@ -74,16 +74,7 @@ class SonarPage {
 
 	private def convertFirstElementToDecimal(List<WebElement> elements) {
 		if (elements.size > 0) {
-			Double.parseDouble(elements.get(0).text.replace(",", ""))
-		} else {
-			-1.0
-		}
-	}
-
-	private def convertFirstPercentageElementToDecimal(List<WebElement> elements) {
-		if (elements.size > 0) {
-			val text = elements.get(0).text.replace(",", "")
-			Double.parseDouble(elements.get(0).text.substring(0, text.length - 1))
+			Double.parseDouble(elements.get(0).text.replace(",", "").replace("%", ""))
 		} else {
 			-1.0
 		}
@@ -101,7 +92,7 @@ class SonarPage {
 
 	private def getPercentageDecimalValueOfElementById(String id) {
 		val elements = getElementsById(id)
-		convertFirstPercentageElementToDecimal(elements)
+		convertFirstElementToDecimal(elements)
 	}
 
 	private def getLoc() {

@@ -1,0 +1,2175 @@
+commit 9fbe9eacbdf12435a911b7f7691f34dc669750cb
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Sat Sep 27 16:21:21 2014 +0900
+
+    Fix compile errors.
+
+commit df12f648de4285a3af53499e026c57802b7653c0
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Thu Sep 25 22:14:46 2014 +0900
+
+    Update pom.xml.
+
+commit b96998ba238ea047deb323b01ab35a03bae35d70
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Sep 4 17:10:01 2014 +0900
+
+    Update pom.csv.
+
+commit 786809467cd03c3584706a4a71443a96ff53a531
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Sep 4 13:11:45 2014 +0900
+
+    Update XMutator.
+
+commit 551cd46822961550e68f66e9665d9846b71b5a01
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Sep 4 12:31:56 2014 +0900
+
+    Update pom.csv.
+
+commit cfb12852099c9e9e00cc8b29a3e9809e87a322d2
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Sep 3 08:48:46 2014 +0900
+
+    Update pom.csv.
+
+commit 86b6cceaacbb2b9b431890b7ce4a4fa724671390
+Merge: 658c506 c85eb0b
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 20:59:09 2014 +0900
+
+    Checkout the specified commit using sha.
+
+commit c85eb0bfdbba30148432a29cdfdaa9bd47200e94
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 20:29:01 2014 +0900
+
+    Update pom.csv.
+
+commit fd7a1bdb64fe999f132d30b5a0136145af98c40d
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 20:17:29 2014 +0900
+
+    Update pom.csv.
+
+commit 658c506e63e695172c29f1359711d64a797ebcaf
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 20:08:31 2014 +0900
+
+    Update pom.csv.
+
+commit 61cf7a42548ce1cb7ff0bb64074cf56e732b86ea
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 19:53:48 2014 +0900
+
+    Update pom.csv.
+
+commit c68fde65628767b78fdc6f81e355a3faa06a1c39
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 19:26:15 2014 +0900
+
+    Update pom.csv.
+
+commit 18d7dfd6a3b742c77a649c98fe1840a28c6e4dfe
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 19:01:04 2014 +0900
+
+    Update pom.csv.
+
+commit a93c341731bef661118c17274598a4fd781ff2a4
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 18:23:57 2014 +0900
+
+    Update pom.csv.
+
+commit e586cacf60dafb847c15bf6b11aae74463a0fd7f
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 18:05:05 2014 +0900
+
+    Update pom.csv.
+
+commit bdc7859b928ab7b1ce5b1e62467d895c795cb7f0
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 17:21:22 2014 +0900
+
+    Add some waiting.
+
+commit 91a0ca83e1ba020d3b79c5eb5829a995b40d5f67
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 17:12:19 2014 +0900
+
+    Update pom.csv.
+
+commit 3564be5a16a28e0bdce4296be58f907d2e2e282b
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 17:03:46 2014 +0900
+
+    Improve SonarManager.
+
+commit ddee3f9a7e5bd8bcdaaad81f3ac740989936139e
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 16:34:47 2014 +0900
+
+    Update pom.csv.
+
+commit a0bcaad07cf4ec90d71af27e1e63f57db222900a
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 16:08:42 2014 +0900
+
+    Update pom.csv.
+
+commit 04a76f00db9b91a089a05dc5850fbb5ea467b319
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 15:34:38 2014 +0900
+
+    Update pom.csv.
+
+commit 4e0c26b7e73de91eaaf67064bcd420808ca109c7
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 15:33:26 2014 +0900
+
+    Update pom.csv.
+
+commit d82cb17b25255884672f281bb016783df58c4758
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 15:27:18 2014 +0900
+
+    Update pom.csv.
+
+commit 17347e8b03224a1d9579f42e5d1eb63665502e41
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 15:25:54 2014 +0900
+
+    Show more information.
+
+commit 151e4ee8d8dabdf8f927764b58cf7e4f83ed7498
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 15:24:23 2014 +0900
+
+    Skip already measured projects.
+
+commit 8d79e4d6fae529c7f157a3abdc1468890a8905f8
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 15:23:29 2014 +0900
+
+    Update pom.csv.
+
+commit 965728044ae33df886088eb66be39e3ab3d94483
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 12:16:37 2014 +0900
+
+    Remove redundant transitions.
+
+commit 5157ab626ed36d259435f00431a36db3771aaded
+Merge: 8150713 1d878e2
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 12:10:42 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+    
+    Conflicts:
+    	pom.csv
+
+commit 8150713359c999ce0450b7080dd1ecdd648257dd
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 12:05:59 2014 +0900
+
+    Update pom.csv.
+
+commit 353a98fea82fdcdedb5f10639c93aa776198513e
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 11:58:25 2014 +0900
+
+    Remove redundant transition.
+
+commit 673c9543dfb5b44abf1d03d182013305324ef7df
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 11:46:48 2014 +0900
+
+    Remove unused imports.
+
+commit 4e4fe2e84b16aa5748cdca7a94e33a8e4c0f25fa
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Sep 2 11:45:22 2014 +0900
+
+    Improve sonar manager.
+
+commit 1d878e219c4802b647e6d78af48ccccee6aa0fa1
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 22:50:18 2014 +0900
+
+    Fix SonarManager.
+
+commit a867088282e17e6b6fb45e62ccf8022443b941cf
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 22:47:11 2014 +0900
+
+    Fix SonarManager.
+
+commit c1b0bb9b9d97df1d03b8f6df1b982a7fc71f4126
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 22:42:56 2014 +0900
+
+    Fix SonarManager.
+
+commit 5723f9806e85a994d5a9b02edaf2af555d7db316
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 22:36:54 2014 +0900
+
+    Fix SonarManager.
+
+commit 40299704d40245aa9301c788f971d255205bcb7e
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 21:07:48 2014 +0900
+
+    Fix SonarManager.
+
+commit 8d0752f4ee0b8d4080d75e6a351f5de7c49052d1
+Merge: f4c872a 2ee48b5
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 18:29:50 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+    
+    Conflicts:
+    	pom.csv
+
+commit f4c872a9e79e0a727b8af3161c52dd6e5d341ef9
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 18:25:10 2014 +0900
+
+    Update pom.csv.
+
+commit 2ee48b5c10de283b9b58639a39ad7650d58b8ac6
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 18:24:14 2014 +0900
+
+    Update SonarExecutor.
+
+commit b32687b3857ef6c8492356fc31722c854d5154c2
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 18:22:50 2014 +0900
+
+    Update pom.csv.
+
+commit 9e161d29b79aef456cd777f22521be4f735247d8
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 18:09:57 2014 +0900
+
+    Update SonarManager.
+
+commit b60fd8998b373be0d62aad2272a6ebaf32fa9e7a
+Merge: c724d91 e3e8963
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 18:03:23 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit c724d91c19ce7d6238ec335159fa4b87b8c28395
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 18:01:21 2014 +0900
+
+    Enhance SonarManager.
+
+commit e3e8963710e97433dd56e8a6382543393b29d7c8
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 17:33:37 2014 +0900
+
+    Fix XMutatorExecutor to use the latest XMutator correctly.
+
+commit c25cedf304ffec9d5968341b015fae0f3c6eaede
+Merge: b4fdf12 9ad3edc
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 17:27:12 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit b4fdf123143094338677157295f16b77199ef878
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 17:27:06 2014 +0900
+
+    Update pom.csv.
+
+commit 9ad3edc422916e7c804d3a5f4e147c4c2a43e9df
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 16:36:57 2014 +0900
+
+    Enhance SonarExecutor.
+
+commit 442c88b36884baf7b2021416b8c0d2c66e1e1419
+Merge: 6bddbe2 162f55a
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 16:18:35 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 6bddbe2753a3c14a811e0a1c82bf3e3818025973
+Merge: d6b8c57 75f5eab
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 16:18:06 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit d6b8c57b390774ed18ffbbeec09e61f047058da1
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 16:17:54 2014 +0900
+
+    Update pom.csv.
+
+commit 162f55aaa7b60541971934387098c93ae00b934f
+Merge: 67d999f 75f5eab
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 16:17:30 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 67d999f2da5be0ad93b78a1a0f59e2badc4e42d5
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 16:16:48 2014 +0900
+
+    Update XMutator.
+
+commit 75f5eabe4617029c9b87234cf4e3a37612d37bb0
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 16:16:13 2014 +0900
+
+    Show more information when executing sonar.
+
+commit 53ea1fdb654bc183b48daf9291979ff3e37c0600
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 13:39:08 2014 +0900
+
+    Update pom.csv.
+
+commit c92061648dca1a386fdfdba23e7f660b2058cf17
+Merge: b63e48f d0bbed4
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 11:30:37 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit d0bbed47605c81ec6de3aa563f213df0180392d7
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 11:30:06 2014 +0900
+
+    Update RepositoryProbe.
+
+commit b63e48f847c9671ff68b40b7aeb5d01587c64db2
+Merge: db87ae9 bc0ee34
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 11:25:48 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 05b98ff033e602e1eb779b6c2b074b822e939119
+Merge: 9c37460 bc0ee34
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 11:24:42 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 9c37460f7bd579fb3a5fc3101151dd9b70a15f82
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 11:24:32 2014 +0900
+
+    Update pom.csv.
+
+commit db87ae9f1347ab19d5ad9ad2c9f6cae33cda1bfe
+Merge: adb1948 4d479ea
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 11:21:06 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit bc0ee34ac47e1394a0228c55ef8102bcefb16ad8
+Merge: d291463 4d479ea
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 11:20:44 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+    
+    Conflicts:
+    	pom.csv
+
+commit adb1948ac1773ce69c0408100a846272bec70575
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 11:16:50 2014 +0900
+
+    Update pom.csv.
+
+commit d291463b2dba6cf0f3ed029c1761f831c1931655
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 11:15:34 2014 +0900
+
+    Update pom.csv.
+
+commit 4d479ea51b3ab3f64a91ed603e62992ad3ac44f3
+Merge: 59b4731 7d5e3e2
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 11:14:26 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 59b47319c340a7ab22161f210d393f7bdebf889f
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Sep 1 11:13:07 2014 +0900
+
+    Update pom.csv.
+
+commit 7d5e3e22ff0a618c0b294c3d6991aa45172e0ef3
+Merge: ec29c0a b9d1aa0
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Sat Aug 30 12:15:12 2014 +0900
+
+    Modify SonarManager.
+
+commit b9d1aa00f4fb816e2ef96d2988e88afcb6197203
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Sat Aug 30 12:07:00 2014 +0900
+
+    Modify SonarManager.
+
+commit ec29c0af63591665bb2448cd9b91ae6dce36ccba
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Fri Aug 29 18:39:54 2014 +0900
+
+    Close web driver after executing SonarExecutor.
+
+commit dbd7cedd6a5e69c01111d74e4e039435e01c7e95
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Fri Aug 29 18:38:47 2014 +0900
+
+    Enhance SonarExecutor.
+
+commit efc0fe0cc033c39b8a7b2595d61342358474743b
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Fri Aug 29 17:11:16 2014 +0900
+
+    Update pom.csv.
+
+commit 0765eca115a83df17f4d38d3aa490d99db31b2ca
+Merge: 0091dda 594a358
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Fri Aug 29 16:51:33 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 594a358e7dccef655613b0ab1c5f42c9478da7e4
+Merge: bf8957c 4e23dff
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Fri Aug 29 16:42:40 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit bf8957c4f68aebcaa82ca61038bc49ccae94895f
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Fri Aug 29 16:41:59 2014 +0900
+
+    Update pom.csv.
+
+commit 4e23dffe577735d8f0f34c478e20c77314010b35
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Fri Aug 29 16:40:47 2014 +0900
+
+    Update pom.csv.
+
+commit 0091dda9126f7be98741f085092abd69d2f71922
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Fri Aug 29 13:00:35 2014 +0900
+
+    Update SonarExecutor.
+
+commit 92b2b909176553f2101ebb3a8c749deaf738016a
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Aug 28 20:36:19 2014 +0900
+
+    Improve print messages of XMutatorExecutor.
+
+commit d859ae14f6bfe548288d9c6f94f2c8e444e280c1
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Aug 28 20:32:48 2014 +0900
+
+    Save the result of PitExecutor frequently.
+
+commit 9f6398acd2e8b8db453d6c521314bcf46e476a67
+Merge: f4b1074 03724af
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Aug 28 20:29:00 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit f4b10747e6b0bd9676f5db1c766d572c20ad8c2d
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Aug 28 20:28:21 2014 +0900
+
+    Update pom.csv.
+
+commit 03724afd8eb7dbe1d9f97a4e7370712ede9e4413
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Aug 28 20:27:31 2014 +0900
+
+    Enhance re-measuring.
+
+commit 9d68eca9fdbfaad40aebf58198dcae7329fca3b4
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Aug 28 20:25:32 2014 +0900
+
+    Update XMutator and pom.csv. Fix a bug.
+
+commit 917b29f4473b036a745e03beadb74277ca062d0c
+Merge: 53b1e2b 0491d8d
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Aug 28 10:30:51 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 53b1e2b0234ad3bafa9136fa4d29a91cf21baf00
+Merge: 9e1d170 7c0a716
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Aug 28 10:29:23 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 0491d8d4e4013e82ba658c6c0e5d802ead45d109
+Merge: f0224d7 1179224
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Aug 28 10:28:56 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit f0224d757b723e20b979e2ce562b8bd7eeb77c37
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Aug 28 10:28:44 2014 +0900
+
+    Update pom.csv.
+
+commit 9e1d170de804e98db7bf6d4f7d07e4cf2b40d4d4
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Aug 28 10:28:06 2014 +0900
+
+    Update pom.csv.
+
+commit 1179224cdd716296138cb38c33f138ab05f9e2f8
+Merge: 9ce2929 7c0a716
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Aug 28 10:27:50 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 9ce29299160812e11ae437c9fb6ccb1676356670
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Aug 28 10:26:22 2014 +0900
+
+    Update XMutator and pom.csv.
+
+commit 7c0a7167381112ca1a6188acc47c838c37e06331
+Merge: b409acc 977d976
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Aug 27 19:17:36 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit b409acc2f686224428b8cbb57f8f83d91319fd99
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Aug 27 19:17:17 2014 +0900
+
+    Add PIT measurement values.
+
+commit 977d9762ee00690ffc90d6949b17a2dbd51649a5
+Merge: 2096f4b f9d024f
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Aug 27 19:05:27 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+    
+    Conflicts:
+    	pom.csv
+
+commit 2096f4ba45d0fe0598a4e7cb9314e23ec712f48b
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Aug 27 19:01:48 2014 +0900
+
+    Update pom.csv.
+
+commit f9d024f02817034ba4523b76340d6b0ec4f0688d
+Merge: 690450d 06ee02f
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Aug 27 18:59:53 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 690450dc8b99d34370dc0361eb909aeeaf58a9ac
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Aug 27 18:59:45 2014 +0900
+
+    Update pom.csv.
+
+commit 06ee02f49e0af2134981e4c0134d4570b227dd5b
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Aug 27 18:58:41 2014 +0900
+
+    Update XMutator.
+
+commit 8c4f4aed194f8fc23a8cf6103ca7db1574fdd38a
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Aug 27 17:52:39 2014 +0900
+
+    Update PitExecutor.
+
+commit 5d5fc2899e0dae9081acf65aade17b690ba268bc
+Merge: 5dd35d8 994de14
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Aug 27 12:02:27 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 5dd35d87614546d59845d0a791e8c81e78a4627e
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Aug 27 12:00:10 2014 +0900
+
+    Update pom.csv.
+
+commit 994de14959cf0e7ab3de3ef2dedce9f4ca1a112c
+Merge: 111d5cc 9c337a8
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Aug 27 11:51:34 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 9c337a8f5644677b2c53a316cdfc4a033d2492fb
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Aug 27 11:47:08 2014 +0900
+
+    Update pom.csv.
+
+commit e293619dd038bee15f230f021376ab9a021f5057
+Merge: bfa78f4 1616d72
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Aug 27 11:31:36 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+    
+    Conflicts:
+    	pom.csv
+
+commit bfa78f484b21828b45e27c9d3a89233c298942fc
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Aug 27 11:22:35 2014 +0900
+
+    Update PitExecutor.
+
+commit 3aba9c1aee08e28a2386af4adc280b21f3a1079a
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Aug 27 11:20:02 2014 +0900
+
+    Update pom.csv.
+
+commit 1616d7279e38309a482b870b72619303a92ab8f7
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Aug 27 10:12:37 2014 +0900
+
+    Update pom.csv.
+
+commit f92e021f623fa2e70ba503e735619a5f77156d8a
+Merge: a0cada2 3d57130
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Aug 27 10:09:49 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit e76c5ff17beacedaac402d97f4a52e853ad75617
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Tue Aug 26 21:26:00 2014 +0900
+
+    Add a snippet of new SonarManager.
+
+commit 111d5cc594c7a467812cdf3a5ad87ed89ed6fc51
+Merge: ecf9071 3d57130
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 26 17:54:27 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 3d571303bf3bf6c3efb514e2c6bb836206dca23f
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 26 17:52:45 2014 +0900
+
+    Update PitExecutor.
+
+commit ecf9071b306a43effab90a8c4616bd9dcd571cb3
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 26 17:49:56 2014 +0900
+
+    Update pom.csv.
+
+commit a0cada255e700ad04258747d54e00013ed8bcfb4
+Merge: 347439b 1876d57
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 26 17:49:38 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 1876d578000436a7d91756592bbfecce74937fde
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 26 17:28:43 2014 +0900
+
+    Update pom.csv.
+
+commit 347439b88c51de90bbf0fa47279f1fecd4359858
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 26 17:24:10 2014 +0900
+
+    Update XMutator.
+
+commit 7bf17e7063af085ef356d41d7fcb6e1d2d9c3a30
+Merge: f991a0c a3de648
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 26 15:16:08 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit a3de6487691820ea00720b8c75fe728bb00b4ede
+Merge: ac7876e b69dc79
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 26 15:15:46 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit f991a0c110232c5353961c8210960f2572bb3e7e
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 26 15:15:42 2014 +0900
+
+    Update pom.csv.
+
+commit ac7876e9ab8ad2db07b4f1acda75f549a7f1235d
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 26 15:15:09 2014 +0900
+
+    Update XMutator
+
+commit b69dc79c6bf70019d766f8374e29be9daf07bd49
+Merge: f374932 5a5fc2a
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 26 13:55:40 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit f3749321cbdec39cc24ae17c383556d143dee5da
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 26 13:55:05 2014 +0900
+
+    Update pom.csv.
+
+commit 5a5fc2a5ae2f06d44d92f225968f60fc0b31e22a
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 26 00:06:52 2014 +0900
+
+    Update XMutator.
+
+commit 0425b6afc5c1554df62dee0b7a491823e48c92ca
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 25 23:58:23 2014 +0900
+
+    Update XMutator.
+
+commit 74d7c7fd8e5e1d56eeaf89decca5e7d6fd6ebddf
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 25 19:24:20 2014 +0900
+
+    Update pom.csv.
+
+commit 53be78a75fd9c9d30e61d15e951c84ad05d0e277
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 25 15:33:32 2014 +0900
+
+    Fix parameter for invoking XMutator.
+
+commit 7801caa650fc8d42ae1216e0a9749a44a15a29c7
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 25 15:32:17 2014 +0900
+
+    Handle nonstop processes.
+
+commit 42b96752f45acc4195483ffc2ed63c3fe582d42f
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 25 11:08:00 2014 +0900
+
+    Update XMutator.
+
+commit c5f9c55a1032305296e5f59793666b01818e5d4c
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 25 11:02:02 2014 +0900
+
+    Update XMutator.
+
+commit ba326a19b3d275bc9ff955d73b6681b386ada657
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 25 10:17:50 2014 +0900
+
+    Fix a guard condition in main method.
+
+commit 81bf87c1e44c1b968796c220c6c5705f5a7369fe
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 25 10:14:15 2014 +0900
+
+    Allow to set skip count.
+
+commit d84623f2c1a1dd8926c7a5d51f0084b1199ee186
+Merge: 04cd6b0 172c612
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 25 10:10:21 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 04cd6b0a0fe082e4164585a22a53d84e51d9c36d
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 25 10:08:40 2014 +0900
+
+    Update XMutator.
+
+commit 172c61230f9cabedd5fb453de017f87aab95b42b
+Merge: a5474b9 4de06bc
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 25 09:54:00 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit a5474b97eb2359b930d4c04359f82433cc601983
+Merge: 44ed88f 322bc76
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 25 09:53:02 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 4de06bca18f6b887c1d9614616c5724a04bf1238
+Merge: c93e400 322bc76
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 25 09:52:48 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 44ed88fbf0c92e2ff28060c967f1416ce52f44b6
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 25 09:52:40 2014 +0900
+
+    Update pom.csv.
+
+commit c93e400b83a5d54c40eb9079d3d7166739b37655
+Merge: 1251a34 a554e32
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 25 09:50:29 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 322bc76e3e8cdeea3eca00da610397f2aa4dfcff
+Merge: a554e32 16108eb
+Author: SAKAMOTO Kazunori <exkazuu@gmail.com>
+Date:   Mon Aug 25 09:50:01 2014 +0900
+
+    Merge pull request #79 from exKAZUu/78_fill_metrics
+    
+    Modify MetricsCollector using list.
+
+commit 1251a34d3ac86db61154ec4b209770bbbf40fd21
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 25 09:49:21 2014 +0900
+
+    Update pom.csv.
+
+commit 16108ebb4ccc9c43eebd8c648e4965dfd7fc650a
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Sat Aug 23 12:12:34 2014 +0900
+
+    Modify MetricsCollector using list.
+
+commit a554e32b1f544b1378a81440dcc744e4ac2f17b2
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Fri Aug 22 18:24:10 2014 +0900
+
+    Update pom.csv.
+
+commit 386b041821f933af5a84e6b2853199a5789f6539
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Fri Aug 22 12:26:54 2014 +0900
+
+    Update pom.csv.
+
+commit 3284be482943b74b2dbb6a6d171746ab44ac51ba
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Fri Aug 22 10:28:27 2014 +0900
+
+    Update pom.csv.
+
+commit 432dfc8a362e1ab4b2b61bdcd4ea19a9682f8708
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Fri Aug 22 10:27:08 2014 +0900
+
+    Update pom.csv.
+
+commit 5017afe804b4024f15b2c767bd26ebce43f7a0c0
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Aug 21 11:25:00 2014 +0900
+
+    Update pom.csv.
+
+commit 7243fd6a54d0721039ff8aa77c2cd9d43ca59f0e
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 19 17:54:10 2014 +0900
+
+    Fix XMutator.
+
+commit 447d0a6d9c22f32a975a9d1945adcfec5e9766a8
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 19 17:53:39 2014 +0900
+
+    Fix XMutator.
+
+commit 053ed0513839d09ee512c2cde4c80758db208af4
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 19 17:52:42 2014 +0900
+
+    Fix XMutator.
+
+commit e249592fe63355f3bb00cf3d39070bec34cacb1e
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 19 17:50:02 2014 +0900
+
+    Fix XMutator.
+
+commit f82be7d07a2ef08cea33d61c6261ace3945622eb
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 18 12:28:32 2014 +0900
+
+    Fix XMutatorExecutor to handle errors.
+
+commit b1b8b9b526b9f60db1c8ff7f8a709ebcf9e05905
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 18 11:45:43 2014 +0900
+
+    Refactor code.
+
+commit 23a705fbcfe89331272b1fdccbac1d922d689e66
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 18 11:42:13 2014 +0900
+
+    Fix PitManager.
+
+commit 13122acebff8859aea5fa4fa952dbe6745d0a4fc
+Merge: 29b09f6 04a49bd
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 18 11:36:00 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 29b09f62ab4974ba6c9943d742927cbfa4d2750b
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 18 11:35:40 2014 +0900
+
+    Fix Travis CI settings.
+
+commit 04a49bd8e63575c47748f4b97eaf5e0c2bd0b60a
+Merge: ee85669 ab0d295
+Author: SAKAMOTO Kazunori <exkazuu@gmail.com>
+Date:   Mon Aug 18 11:33:17 2014 +0900
+
+    Merge pull request #77 from exKAZUu/76_sonar_test
+    
+    76 sonar test
+
+commit ee85669dfe38826cc21fe21733ef2689a7842e0e
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 18 11:28:44 2014 +0900
+
+    Fix tests.
+
+commit 7c8172ba0a5f98b4bfb049d741bea38d644a3784
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 18 11:23:45 2014 +0900
+
+    Use JDK 7 instead of JDK 8.
+
+commit e9616e051709f4fa2fd11c760b3ba76eaf088a27
+Merge: bd4cc6e 3c01b13
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 18 09:46:21 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+    
+    Conflicts:
+    	src/main/java/net/exkazuu/probe/maven/PitManager.xtend
+
+commit bd4cc6e51473ad471518c07d7aa260232da3c63a
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 18 09:08:22 2014 +0900
+
+    Fix PitManager adding debug code.
+
+commit ab0d295125621e195f3e6f165e7c655d0b16ff36
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Thu Aug 14 00:12:06 2014 +0900
+
+    Add a feature to write the results of SonarQube.
+
+commit 40d375dee4f28ee01e5eed363dacb53dc1f35d1e
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Wed Aug 13 20:00:42 2014 +0900
+
+    Add MetricsCollectorUsingSonarManager.
+
+commit 3c01b137b2bee75a664bdaf064889457bcb4455d
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Aug 13 19:22:10 2014 +0900
+
+    Fix XMutatorExecutor.
+
+commit d5838fa7c96bbf3c4d516083da4540398bd12320
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Aug 13 18:19:58 2014 +0900
+
+    Add support of XMutator.
+
+commit 0745620060b699b4df0a99a1af25048b66c13ba1
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Wed Aug 13 17:13:27 2014 +0900
+
+    Modify some commands in SonarManager for SonarQube 4.3.2.
+
+commit a9654c43eb5efe7e6f499c08bccca16001f926a8
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 12 17:28:02 2014 +0900
+
+    Sort pom.xml with start count.
+
+commit 8d0eef61f381603ff8e2ca87c6433794d38c8ce4
+Merge: 2284455 d6326cb
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 12 17:24:37 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 22844553900c37bda448316305a13aae11ee354b
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Aug 12 17:23:57 2014 +0900
+
+    Enhance PitExecutor.
+
+commit d6326cb41a19db802043b3a404f2b64f6f64c475
+Merge: 8ea5a42 d2158fa
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 11 10:50:32 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 8ea5a425be67b4a1f5538969cd1dd379aedba372
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Aug 11 10:50:10 2014 +0900
+
+    Save information of all Maven projects into pom.xml.
+
+commit d2158fad683985af5d2c744a96fadc4c9d1a047c
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Aug 7 18:06:13 2014 +0900
+
+    Fix column order.
+
+commit 3a390d10a33c36e76591578aaff4665cb68c42f3
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Aug 7 17:57:02 2014 +0900
+
+    Update pom.xml.
+
+commit 99f92c8bc5e7dd5aa7713f08d487a399ceabe2f1
+Merge: 8e0a35e 61fcc70
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Sat Aug 2 11:43:48 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+    
+    Conflicts:
+    	src/main/java/net/exkazuu/probe/github/GithubRepositoryInfo.xtend
+
+commit 8e0a35eacd1a02dbcb4bb805540444633ccadf52
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Jul 31 19:06:59 2014 +0900
+
+    Improve GithubRepositoryInfo.
+
+commit 61fcc70da8f94a61d357092a2a884caff48ee921
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Jul 31 17:39:52 2014 +0900
+
+    Enhance PitExecutor.
+
+commit 54869dea3e617f55af15af1a8adfff2a78d6496c
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Jul 30 15:02:23 2014 +0900
+
+    Fix retry routine.
+
+commit 8cee1fd8b455c92dd00cabcf4a241d4caf15a154
+Merge: 4746eaf 1d2b1e5
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Jul 30 13:58:24 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 4746eaf83a8983e3950f9c23334fb8ad1dfbea17
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Jul 30 13:58:17 2014 +0900
+
+    Fix a bug of GitHubScraper.
+
+commit b2e55ab11e01dd8aa4079fb29388ff2ee314cd0b
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Jul 30 11:19:43 2014 +0900
+
+    Fix GitHubScraper for design change in GitHub.
+
+commit 1d2b1e5071d96417d94e45d1ff3a429bc09e2ec2
+Merge: d09bd39 f6a6dcb
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Jul 28 16:36:25 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+    
+    Conflicts:
+    	src/main/java/net/exkazuu/probe/GithubCodeSearchScraper.xtend
+
+commit d09bd39cc16c517bbf984fe6a8fd1e2e31ca14f2
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Jul 28 16:35:24 2014 +0900
+
+    Fix PitExecutor.
+
+commit f6a6dcbba471e63b72da782d3f3be622be2a2ab0
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Sat Jul 26 18:07:55 2014 +0900
+
+    Update csv file.
+
+commit 80438b1aab4bf7569e8aafd600f2cee0ed6aa734
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Jul 24 16:53:39 2014 +0900
+
+    Fix a bug in csv serialization.
+
+commit 9b150c461a8760d264ec498732fcef37a456a62a
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Jul 24 16:51:54 2014 +0900
+
+    Support scraping latest tag.
+
+commit c933d61e36b4024c3ad7dc1435655143737038a3
+Merge: 0d86ee4 0abd907
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Jul 24 14:59:18 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 0d86ee43ea94e1876543414d68b3e024b4467c46
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Jul 24 14:57:35 2014 +0900
+
+    Enhance pit manipulation.
+
+commit 0abd9076f44929434d8ae87701712eb322348715
+Merge: 8ba9080 59a0a37
+Author: SAKAMOTO Kazunori <exkazuu@gmail.com>
+Date:   Thu Jul 24 11:53:27 2014 +0900
+
+    Merge pull request #72 from exKAZUu/67_add_test
+    
+    Add test checking information
+
+commit 59a0a37ed75086e5d106fe6639c1b0a4374fd91b
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Thu Jul 24 11:27:14 2014 +0900
+
+    Modify getSearchResultCount.
+
+commit 8ba9080330463601e7757d304a74025bd85046a3
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Jul 24 11:22:17 2014 +0900
+
+    Change scraper parameters.
+
+commit 2920d752fb19e759d9c5723e7f5f5e3e211250b1
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Jul 24 11:14:26 2014 +0900
+
+    Enhance scraper for GitHub.
+
+commit 1b3d7b498d87be0368bdbfcc6ccc91efe11b7f49
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Wed Jul 23 12:50:01 2014 +0900
+
+    Modify a test case not to use login.
+
+commit 1766b4f4c031a7c640d7040e505ddfe8081e4900
+Merge: 60bdbf7 302c2be
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Wed Jul 23 12:47:42 2014 +0900
+
+    Merge branch 'master' into 67_add_test
+
+commit 302c2be6ffdd13309c5bda5dd8c1945f77d28c30
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Jul 23 12:21:33 2014 +0900
+
+    Fix a bug in reading csv files.
+
+commit 81666a85ddff219eb4cb8a0ca8b0f76f9883bb28
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Jul 23 12:01:37 2014 +0900
+
+    Fix a bug for writing csv files.
+
+commit dec19e06a0ed8d0904ee76bb6a66929c13d77f9e
+Merge: 44799f9 2d41431
+Author: SAKAMOTO Kazunori <exkazuu@gmail.com>
+Date:   Fri Jul 18 10:14:37 2014 +0900
+
+    Merge pull request #70 from exKAZUu/69_fix_closed
+    
+    Fix getClosedPullRequestCount
+
+commit 60bdbf748767bf565b48c31f4b7c539238f76307
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Fri Jul 18 07:42:55 2014 +0900
+
+    Add tests using SampleMavenProject.
+
+commit 2d41431661714bc9ab994aa0acfb591ffd9baedf
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Fri Jul 18 05:09:50 2014 +0900
+
+    Delete an unnecessary file for this branch.
+
+commit d1873692a07d0a0b5255bc4b21699ad3ce697aa8
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Fri Jul 18 05:00:57 2014 +0900
+
+    Modify getClosedPullRequestCount and add tests.
+
+commit 44799f9840146816545ff63db45ec913097bcce2
+Merge: 4fbcd9d cf7463e
+Author: SAKAMOTO Kazunori <exkazuu@gmail.com>
+Date:   Tue Jul 8 17:35:55 2014 +0900
+
+    Merge pull request #68 from exKAZUu/65_depth_option
+    
+    Add a feature to clone shallowly.
+
+commit cf7463e163643c0731a3e5c4791f49c51977ed63
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Tue Jul 8 15:13:23 2014 +0900
+
+    Add a feature to clone shallowly.
+
+commit 4fbcd9d6af2f0d5f208854ed39c910f0423cdbbe
+Merge: 8e5e3d9 878c05b
+Author: SAKAMOTO Kazunori <exkazuu@gmail.com>
+Date:   Tue Jul 8 11:20:41 2014 +0900
+
+    Merge pull request #66 from exKAZUu/61_retrieved_time
+    
+    Add retrieved time in csv
+
+commit 878c05bc51afc140a53ac72d8458131d23831357
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Tue Jul 8 11:17:34 2014 +0900
+
+    Modify the position of retrievedTime in header.
+
+commit b109981d409c2e984423789d1d3bdbe9e489e0bd
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Tue Jul 8 02:38:39 2014 +0900
+
+    Delete unnecessary lines and format.
+
+commit 56bd5836b9f1d2021322699a058a0652b77dab64
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Tue Jul 8 02:34:14 2014 +0900
+
+    Add retrievedTime to GithubRepositoryInfo.
+
+commit 8e5e3d95ae85d37819e144c33c579d1b12820a14
+Merge: 49c9ec3 008b5d9
+Author: SAKAMOTO Kazunori <exkazuu@gmail.com>
+Date:   Mon Jul 7 17:19:56 2014 +0900
+
+    Merge pull request #64 from exKAZUu/59_refactor_sonar
+    
+    Refactor SonarManager
+
+commit 008b5d91f2ae114d587cbe6126aa2ac1efc90b43
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Mon Jul 7 17:02:11 2014 +0900
+
+    Add a checkout feature.
+
+commit ce323fa9fed90338b20a459932f034dfa28caa0b
+Merge: 721a360 49c9ec3
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Jul 7 16:37:33 2014 +0900
+
+    Merge branch 'master' into 59_refactor_sonar
+    
+    Conflicts:
+    	src/main/java/net/exkazuu/probe/github/GithubRepositoryInfo.xtend
+    	src/main/java/net/exkazuu/probe/sonar/SonarInfo.xtend
+
+commit 721a3607970c1a091a9d9aad1145a4657b9693c9
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Mon Jul 7 15:45:39 2014 +0900
+
+    Move a function to new GitManager.
+
+commit 4d6c4530542d58b6c47fd7fc8d2d2d170d7300d5
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Sat Jul 5 08:28:20 2014 +0900
+
+    Add a function to check whether the repository is existing. Close #59
+
+commit badf0a1c34559682e76bf163e957cd4b9bc6856b
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Sat Jul 5 05:16:08 2014 +0900
+
+    Remove copy statements.
+
+commit 49c9ec36ada5b41b0fa8dd1ab45638a6d4b5a6c9
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Fri Jul 4 15:57:37 2014 +0900
+
+    Fix travis setting to notify build errors.
+
+commit 0090db66108ea665b9a027b0360f4bf4c4b49479
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Fri Jul 4 15:53:23 2014 +0900
+
+    Fix Travis setting to use Java 8.
+
+commit bd99f5d0f7d72cb354e6a95992edee7618a069b1
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Fri Jul 4 15:45:45 2014 +0900
+
+    Use Java 8 due to Xtend requirement.
+
+commit b0c3b708a4c843d260033b3728d3dac0b2ece34a
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Fri Jul 4 15:30:03 2014 +0900
+
+    Fix compile errors. Use Xtend 2.6.2.
+
+commit adad592b1c612ab1bda4e8836e6f4887729aba51
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Fri Jul 4 04:21:21 2014 +0900
+
+    Delete SonarInfo.
+
+commit 01037c6a9b5ed35f8b7991507e7f32a917abbb35
+Merge: 2257617 f5cba61
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Jul 3 20:51:01 2014 +0900
+
+    Merge remote-tracking branch 'origin/56_speed_up'
+    
+    Conflicts:
+    	src/main/java/net/exkazuu/probe/github/GithubRepositoryPage.xtend
+
+commit f5cba619b313b710405ef7c6441d7327a2161a5e
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Thu Jul 3 20:10:14 2014 +0900
+
+    Remove the old version of counting closed pull requests.
+
+commit 3c1ba7ad4e9929a74e289895c894af8413534c81
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Thu Jul 3 20:03:33 2014 +0900
+
+    Add new feature to count the number of closed pull requests. Close #56
+
+commit 2257617ed95e60fa174c6e204ea964100943850c
+Merge: 48aec73 a96d663
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Thu Jul 3 19:21:14 2014 +0900
+
+    Merge branch '39_sonar_manager' of github.com:exKAZUu/RepositoryProbe into 39_sonar_manager
+
+commit 48aec73b2f52c656382698f8f5e9079a1a34077e
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Thu Jul 3 19:17:39 2014 +0900
+
+    Add SonarExecutor and modify GithubRepositoryInfo. Close #39
+
+commit a96d6636432f69e4f7fc329b9adc0332abf2db24
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Thu Jul 3 19:17:39 2014 +0900
+
+    Add SonarExecutor and modify GithubRepositoryInfo.
+
+commit ed07c3d61e0749f79a3396455a22125d8c70dd14
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Thu Jul 3 17:43:13 2014 +0900
+
+    Add SonarInfo and SonarManager.
+
+commit f2ad12c710759df73e5e2ccaad2f70442618ea51
+Merge: ef05143 d11a5c7
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Wed Jul 2 00:23:52 2014 +0900
+
+    Merge pull request #55 from exKAZUu/54_login
+    
+    Support login to speed up scraping.
+
+commit d11a5c76568908d14fef98b275f8876ff03f7ada
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Jul 1 23:57:43 2014 +0900
+
+    Support login to speed up scraping.
+
+commit ef05143be7078f1c99b53dd2c21e8acd219ca3c2
+Merge: 93242f2 b78729e
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Tue Jul 1 21:11:43 2014 +0900
+
+    Merge pull request #53 from exKAZUu/51_pit
+    
+    51 pit
+
+commit b78729e46fb702a33db3e86331e7542c572312a0
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Jul 1 21:05:04 2014 +0900
+
+    Fix compile errors.
+
+commit d177db829a8d10220c75e9997b093af6241eff45
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Jul 1 20:55:00 2014 +0900
+
+    Add PitManager. Enhance CodeSearchQuery supporting path query.
+
+commit b5bcb9c39835701a0fdb360e46108df75be2dbfe
+Merge: ed47dad 93242f2
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Jul 1 19:58:35 2014 +0900
+
+    Merge branch 'master' into 51_pit
+
+commit 93242f2351e1310034df260c8e2f58eedd26dc38
+Merge: 0b0736a b797adf
+Author: SAKAMOTO Kazunori <exkazuu@gmail.com>
+Date:   Tue Jul 1 19:58:11 2014 +0900
+
+    Merge pull request #52 from exKAZUu/50_closed_requests
+    
+    Add feature of counting closed pull requests. Close #50
+
+commit ed47dad0fcb44dc3c25d2b8e299b93d9941f5d41
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Jul 1 19:57:54 2014 +0900
+
+    Adding PIT executor.
+
+commit b797adfd52df3d16534db0083783ed083ecdb796
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Tue Jul 1 19:56:02 2014 +0900
+
+    Add feature of counting closed pull requests. Close #50
+
+commit 0b0736a19805fa67138f426d5dd6b5d9d9e0c526
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Jul 1 19:22:39 2014 +0900
+
+    Use GitHub API library developed by Kohsuke.
+
+commit d729e283356684629482fa8c091c594dc579f604
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Jul 1 19:05:02 2014 +0900
+
+    Refactor GitHub scrapers.
+
+commit 59cc49a9ccc2313f1d4a800a71a8d5b6d835b5e2
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Jul 1 18:33:24 2014 +0900
+
+    Fix errors by adding dependency of httpclient.
+
+commit c016e225994c50e876f2c32d4684d930e88400bb
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Tue Jul 1 18:16:17 2014 +0900
+
+    Add ClosedPullRequestCounter.
+
+commit 368684652adaabbcac3429d549f389b61a752b34
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Jul 1 17:13:56 2014 +0900
+
+    Clean up code.
+
+commit 32e0f1f71e7ac927db65eefc5e41605bdc07d3d9
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Jul 1 17:13:09 2014 +0900
+
+    Fix CheckTheNumberOfRepositories.
+
+commit d7086e704cd8874e83819999b7492b1fd145bcdb
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Jul 1 16:32:51 2014 +0900
+
+    Fix all tests.
+
+commit fd36f517338ccc9bd7a50cdef39ba1862a4731ac
+Merge: cef34a4 862fa42
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Jul 1 16:20:20 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe into 47_jcabi
+
+commit cef34a46d04149e1ba117f94e8af09cbffeef128
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Jul 1 16:20:10 2014 +0900
+
+    Refactor extension classes.
+
+commit 862fa42a7546f331ef774a4333c033f6636d53db
+Merge: 73417da eca434f
+Author: SAKAMOTO Kazunori <exkazuu@gmail.com>
+Date:   Tue Jul 1 16:19:43 2014 +0900
+
+    Merge pull request #49 from exKAZUu/48_modify_jenkins
+    
+    Modify GitManagerTest using TestSample.
+
+commit eca434f9fc92347e6fddb037b3c500334fae1099
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Tue Jul 1 16:03:47 2014 +0900
+
+    Modify GitManagerTest using TestSample. Close #48
+
+commit 73417da8ab4364590801703d42a57b7f4bc8796d
+Merge: 95e9038 6674c80
+Author: SAKAMOTO Kazunori <exkazuu@gmail.com>
+Date:   Tue Jul 1 15:44:27 2014 +0900
+
+    Merge pull request #46 from exKAZUu/45_organize_classes
+    
+    Add comments to classes in net.exkazuu.probe.
+
+commit 95e9038e6bc11a766f5f6c0ed793840118ff3595
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Jul 1 15:43:42 2014 +0900
+
+    Clean up dependencies.
+
+commit 6674c80f96a4bcdfba799801d014f707a2bda7a4
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Tue Jul 1 15:27:13 2014 +0900
+
+    Add comments to classes in net.exkazuu.probe.
+
+commit 4cd32bc1e3388f91df74c07b0d54a6964d504254
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Jun 25 18:37:44 2014 +0900
+
+    Restructure code.
+
+commit 558b482785d92bdc7589a15d5703618b5925e91f
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Jun 5 19:49:40 2014 +0900
+
+    Use Xtend 2.6.0.
+
+commit e6e286a9e7fbf8321c3cc487a0b7ce62049abfb8
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Apr 16 15:57:35 2014 +0900
+
+    Regenerate test cases.
+
+commit eb9cfa0c0d598c20fcc657376b4870160fb94857
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Apr 16 12:04:27 2014 +0900
+
+    Update test cases.
+
+commit 95037a151d654d4e9c05a33fa1dec6b7d78b11e5
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Apr 16 12:02:34 2014 +0900
+
+    Update csv files.
+
+commit 46d6ff5b5a79eb78efd03b8aacc9c48af7cc865d
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Apr 15 19:31:26 2014 +0900
+
+    Add testcases of Code2Xml.
+
+commit c60ef5706ce7d654ca7fc1dc30cca88c1f167dc5
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Apr 15 19:30:05 2014 +0900
+
+    Fix tests.
+
+commit dc4ace10aab64fc80cf3474e5fdb887a004ba4fa
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Apr 15 19:25:34 2014 +0900
+
+    Add csharp csv.
+
+commit de081de8ee13c4f73c7d4c073ee7c68b9e58eed8
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Apr 15 12:44:37 2014 +0900
+
+    Enhance Java.csv.
+
+commit c799e49710c207cb3cf0f3d0354d74ceac9b046d
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Apr 15 11:41:51 2014 +0900
+
+    Add repository searching feature.
+
+commit b868b411a6d8742a23d9013a9c1be37eb4640a94
+Merge: 74d1649 e28af89
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Apr 14 22:55:59 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+    
+    Conflicts:
+    	src/main/java/net/exkazuu/scraper/GithubCodeSearchScraper.xtend
+    	src/main/java/net/exkazuu/scraper/GithubProjectPageScraper.xtend
+
+commit 74d16495ae9b5cf398d86ae7deb72b3f2fe7eb9f
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Apr 14 22:53:45 2014 +0900
+
+    Add trending page scraper.
+
+commit e28af8930cee44286c4748e2fad9066b1b2b9006
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Mar 12 15:09:54 2014 +0900
+
+    Fix terminating condition. Add a result of probing repositories.
+
+commit f6ddff636f7a8322952034f8a4c5e226a398ef26
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Thu Mar 6 12:16:39 2014 +0900
+
+    Enhance result counter of repository searching.
+
+commit 376e2333acba40dcc8db1dd810a054482a927482
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Mar 5 18:37:57 2014 +0900
+
+    Fix parameter again.
+
+commit 9978f13de0cfa603ffc78fddecc873c6bfa92211
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Mar 5 18:33:40 2014 +0900
+
+    Improve search algorithm.
+
+commit 220e594d7039869e0f72d09835ddaf4f940d3c3b
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Mar 5 18:06:43 2014 +0900
+
+    Fix parameter.
+
+commit 2c72ff162cac3ea896cc0ce7c546d47f121cbd1b
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Mar 5 18:05:21 2014 +0900
+
+    Fix tests.
+
+commit 16ebbade68a97811283d33eabf47b6fbf39f9749
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Mar 5 17:59:44 2014 +0900
+
+    Fix wrong column name.
+
+commit 7f42361e2eeb3797cd4a8178460ab5f045ad464f
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Mar 5 17:58:28 2014 +0900
+
+    Fix generation of duplicated records. Refactor code.
+
+commit fd935aa1df891ef2a6252b75964bb238d4ad7024
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Mar 5 17:13:37 2014 +0900
+
+    Add a feature to retrieve the number of results of a serach keyword in a repository.
+
+commit bb757c966b59f59bce3adc12f2e65d2353a570c5
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Mar 5 16:05:02 2014 +0900
+
+    Enhance display information.
+
+commit db036d473745c0c656006c327eac86a8b41dbcd4
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Mar 5 15:43:31 2014 +0900
+
+    Use FirefoxDriver instead of HtmlUnitDriver because it cannot retrieve the number of contributors.
+
+commit 1de7b7cac2265e1660255fdce8a081b0dd0c6ad6
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Mar 5 13:12:50 2014 +0900
+
+    Remove unused comments. Update repository.csv.
+
+commit d057ef90939e792e235a8b7a35727fc479e95985
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Mar 5 12:36:08 2014 +0900
+
+    Add a feature to restore GitHub project information from a csv file.
+
+commit cccf0972561bda6bc765fd301b719463e9b53ebd
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Mar 5 11:19:05 2014 +0900
+
+    Use quit method of drivers instead of close.
+
+commit c0e0296ce7cc5a8c6934b238424ff65c8419cb62
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Mar 5 11:15:25 2014 +0900
+
+    Rename main class of scraper.
+
+commit cb3132fb5e121771eae252dfbc9a3bd7fc2bc9ff
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Mar 5 11:05:51 2014 +0900
+
+    Support abbreviated branch name.
+
+commit 8d6aa7e4cae2021e3bf82f35c99ece1a12432ed2
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Mar 5 10:35:32 2014 +0900
+
+    Fix test cases to work on Travis-CI. Fix execution of Maven to work on
+    both Windows and the others.
+
+commit ba03ca5427a4348d3957a27edaf5677b5ba654f8
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Mar 5 10:09:33 2014 +0900
+
+    Fix scraper.
+
+commit 30009fa75893101dec4b4cd34d9f466a6e7cf517
+Merge: 3c78f0f c81c6ff
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Mar 4 20:01:04 2014 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit 3c78f0f40ad3b082a086d45ee1cfa93323e0868f
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Mar 4 20:00:56 2014 +0900
+
+    Fix scrapers.
+
+commit 9a4989013cdd640de48171acb4ede5dcd7213435
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Mar 4 17:41:22 2014 +0900
+
+    Add a scraper for GitHub.
+
+commit c81c6fff9a477fbc5a69fbe963ff48cd14424b21
+Author: SAKAMOTO Kazunori <exkazuu@gmail.com>
+Date:   Tue Mar 4 16:07:48 2014 +0900
+
+    Update README.md
+
+commit 934ede3cd77baa4b8da0555d7afde6478d1aaa86
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Tue Mar 4 16:04:30 2014 +0900
+
+    Fix tests. Use a slash as a separator of file pathes instead of backslash.
+
+commit f452620f75d1440a7cdb00dee74578361795d62b
+Merge: 7c2b3cb be07163
+Author: SAKAMOTO Kazunori <exkazuu@gmail.com>
+Date:   Tue Mar 4 14:33:00 2014 +0900
+
+    Merge pull request #34 from exKAZUu/33_check
+    
+    33 check
+
+commit 7c2b3cb1f9dfdb97e70f0e2417b561db5a7ae4b7
+Merge: 294e2ee 9da6b14
+Author: SAKAMOTO Kazunori <exkazuu@gmail.com>
+Date:   Tue Mar 4 14:32:47 2014 +0900
+
+    Merge pull request #37 from exKAZUu/30_sonar
+    
+    30 sonar
+
+commit 9da6b14165ed4a74cfccc6a0f02a31ccae748089
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Thu Jan 9 19:53:31 2014 +0900
+
+    Add GetMavenData.
+
+commit dcb340f7a455b9c5e3f7bc7d383cede5b8173e8a
+Merge: 3c5fbc2 1d470d6
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Mon Dec 30 23:37:08 2013 +0900
+
+    Solve conflict.
+
+commit 3c5fbc2baf6ae15453af9afc45633080a1e9b0b9
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Mon Dec 30 23:35:14 2013 +0900
+
+    Modify for automating.
+
+commit d0821b2b842210535618726b7ceed3bae634651c
+Merge: 9da7235 294e2ee
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Mon Dec 30 20:18:43 2013 +0900
+
+    Merge branch 'master' into 30_sonar
+
+commit 294e2ee79e0110bc0b6778a1499d19a72d3d8f7d
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Mon Dec 30 15:43:58 2013 +0900
+
+    Update dependencies.
+
+commit 1d470d658c87621eeac714d124bb4e9faf0aef23
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Wed Dec 25 21:32:06 2013 +0900
+
+    Add GetRepositoryInformation.
+
+commit ba201516182ae4bbe7f2c60ed43619e9ff116a5f
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Tue Dec 24 18:30:53 2013 +0900
+
+    Revert "Refactor."
+    
+    This reverts commit d25ef4d58e89941d10ca6ffbb542e740c436b1e9.
+
+commit 9da7235232029cec2460a1ccc348f27d2702d1c2
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Thu Dec 5 13:38:58 2013 +0900
+
+    Add GetRepositoryInformation
+
+commit d25ef4d58e89941d10ca6ffbb542e740c436b1e9
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Wed Oct 23 19:59:26 2013 +0900
+
+    Refactor.
+
+commit 2343b2d037bfde1b4a25962993699d0beaf7324b
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Fri Oct 11 13:15:47 2013 +0900
+
+    Add sonar and pit function.
+
+commit da149e3aaf67d414a417280682f2b0516c72fd92
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Thu Oct 10 15:08:16 2013 +0900
+
+    Add GetInformationSample.
+
+commit be07163e46398b6dbc0a683d0913ea5bf3742f41
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Fri Oct 4 13:11:57 2013 +0900
+
+    Modify get number of repositories algorithm. Close #33
+
+commit 7789485c2acda80ba8ec17cec7f9769c9565c99a
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Mon Aug 26 21:10:28 2013 +0900
+
+    Add CheckTheNumberOfRepositories.xtend.
+
+commit 26a8685d71d4a5d03f992e77d69fa528e8afe9c2
+Merge: a026e2f 8c34a0b
+Author: SAKAMOTO Kazunori <exkazuu@gmail.com>
+Date:   Tue Jul 30 07:43:23 2013 -0700
+
+    Merge pull request #31 from exKAZUu/24_author_correctly
+    
+    24 author correctly
+
+commit a026e2f250b9791ed3cc72f7315a61690dde68c7
+Author: SAKAMOTO Kazunori <exkazuu@gmail.com>
+Date:   Tue Jul 30 14:49:38 2013 +0900
+
+    Update pom.xml
+
+commit 8c34a0b7b72fcdead539c7b9bcb3363eb772dfbf
+Merge: 69fffa7 9915303
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Sun Jul 21 16:19:19 2013 +0900
+
+    Merged.
+
+commit 69fffa789add41213449c7da1b4216b359a9df72
+Merge: fae8b1f eadeb4c
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Sun Jul 21 16:14:41 2013 +0900
+
+    Modify some code, but now exeption threw...
+
+commit 9915303fb492864906de2ba604b10cefaece3977
+Merge: fae8b1f eadeb4c
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Sun Jul 21 16:14:41 2013 +0900
+
+    Modify position of HashSet.
+
+commit fae8b1ff4cbb1e8c4367e42a9c6c4915c2019093
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Sun Jul 21 16:10:05 2013 +0900
+
+    Add function to get data. Close #24
+
+commit eadeb4c6e82e004821a2a58f64c1a47eda549aed
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Sun Jul 21 16:10:05 2013 +0900
+
+    Add function to get data. Close #24
+
+commit 0d1340a56adc6429eafcec7cefa3dcac2e2a3d18
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Sun Jul 21 14:29:19 2013 +0900
+
+    Modify GitManager.getAuthorNames.
+
+commit 5aac0c3c54e52556b9b7f6509e2bb138e8895fa3
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Jul 10 16:55:19 2013 +0900
+
+    Fix PomModifier. Add CoberturaResultAnalyzer.
+
+commit 0fd9e05f2c67d38d7f42f267e33e7a6162a82b74
+Author: Kazunori SAKAMOTO <exkazuu@gmail.com>
+Date:   Wed Jul 10 15:44:31 2013 +0900
+
+    Add PomModifier project.
+
+commit 855ad86d3505313295741584b85fe96abd144f86
+Merge: 75342e7 abb0c46
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Mon Jul 8 08:35:44 2013 -0700
+
+    Merge pull request #29 from exKAZUu/28_count_LOC
+    
+    Add FileManager and function to count LOC.
+
+commit 75342e7254be0a00db3cf33a5bf26b0f24efa814
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Mon Jul 8 13:47:18 2013 +0900
+
+    Modify code by the comment. Close #28
+
+commit abb0c4643d56a16ef60b0f29b08407ac6378e043
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Mon Jul 8 13:47:18 2013 +0900
+
+    Modify code by the comment.
+
+commit 2c7619edac59a46dfa411c0ad9d87c6f57add735
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Mon Jul 8 12:29:37 2013 +0900
+
+    Add FileManager and function to count LOC.
+
+commit 365ec6b2900567ccf6740f9733d40f4e8922c624
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Tue Jul 2 18:42:33 2013 +0900
+
+    Modify README.md.
+
+commit 1c8ac70a3f0ae18d3fef95ce7e24a17bf35d93f7
+Merge: 321f020 48e6166
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Sat Jun 29 21:47:58 2013 +0900
+
+    Merge branch '17_get_author'
+
+commit 48e616698428d15652af1cbda11ecbec032229be
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Wed Jun 26 20:36:35 2013 +0900
+
+    Use git blame master and modified. Close #20
+
+commit c8464c1b91ae07b9d3b14ac2fd77f96715803ab4
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Mon Jun 24 18:57:55 2013 +0900
+
+    Delete unnecessary files and modify .gitignore.
+
+commit f1dcb3dfd69473b27e50427cfbe572cce53eecbc
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Mon Jun 24 04:26:09 2013 +0900
+
+    Add function to get author name from git blame. Close #17
+
+commit 321f020d93353dda8476748f06e1862ab900ac20
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Fri Jun 21 16:38:41 2013 +0900
+
+    Add address.txt and modified.
+
+commit 1e7b070a1c1851dbc033976217a5fb4175103f96
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Thu Jun 20 17:59:48 2013 +0900
+
+    Add GetTestAuthorNumberOfRepos.xtend.
+
+commit a484757cb76ebb348a8895468531d4ee6e6c1fa7
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Wed Jun 19 20:38:53 2013 +0900
+
+    Add SearchTestedRepos.xtend.
+
+commit 4154885dbc7799f23abf0b6af05dd9a7aa36d1b0
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Thu Jun 13 21:26:52 2013 +0900
+
+    Add new main function to clone all repository.
+
+commit 9921c7f168c60f252f4164fee078423e4e83bb4f
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Wed Jun 5 16:19:35 2013 +0900
+
+    add function getAuthorName.
+
+commit 45bfae5ddc2ab8cc77147cdc6c9e227b7b94d6e2
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Sat Jun 1 16:30:50 2013 +0900
+
+    Modify MvnManager and Add test.
+
+commit 1e237c439a897e14745defe4bdd9d4cf3dff521c
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Wed May 29 12:23:32 2013 +0900
+
+    add function to find test method.
+
+commit 5efdc5f98bb3ddcfad531323d99add8389d22f54
+Author: Kazunori Sakamoto <exkazuu@gmail.com>
+Date:   Fri May 10 19:47:45 2013 +0900
+
+    Add a test case. Reformat production code. Fix bug of reading input and error streams.
+
+commit 8644c213e19109c32711cbab54066ad129982403
+Merge: bb93c3c 506f003
+Author: SAKAMOTO Kazunori <exkazuu@gmail.com>
+Date:   Fri May 10 03:10:18 2013 -0700
+
+    Merge pull request #8 from exKAZUu/7_mvn_manager
+    
+    Create new class for managing mvn.
+
+commit 506f003507e11b1c3bc33797405deaf1ec3e0dce
+Author: Kazunori Sakamoto <exkazuu@gmail.com>
+Date:   Fri May 10 19:09:38 2013 +0900
+
+    Refactor code.
+
+commit bb93c3c14f0473fa0a0f52a8ebc47ed54f17ca26
+Merge: dc01d71 160b03e
+Author: Kazunori Sakamoto <exkazuu@gmail.com>
+Date:   Fri May 10 18:56:57 2013 +0900
+
+    Merge branch 'master' of github.com:exKAZUu/RepositoryProbe
+
+commit dc01d718a42bc9d8bfd2d45bd83ec9974a502e25
+Author: Kazunori Sakamoto <exkazuu@gmail.com>
+Date:   Fri May 10 18:56:32 2013 +0900
+
+    Update the version of Apache Commons CLI.
+
+commit a0ca9f4652078dbb14f5774b6e10ed70aadffce3
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Thu May 2 23:47:29 2013 +0900
+
+    Create new class for managing mvn.
+
+commit 160b03e0d5a0a3e102880a2041a3ff0f14e0ed40
+Merge: a4499bc 8ad61e1
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Thu Apr 25 19:17:27 2013 -0700
+
+    Merge pull request #6 from exKAZUu/5_mvn_test
+    
+    Add feature to invoke mvn test. Close #5
+
+commit 8ad61e138d259826a1e2d212709e6b4e4a9f683f
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Fri Apr 26 11:15:53 2013 +0900
+
+    Change for statement to forEach method.
+
+commit 44e190e46776b2aead27d3564516b252c5e0c963
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Fri Apr 26 11:12:45 2013 +0900
+
+    Add feature to invoke mvn test. Close #5
+
+commit a4499bc502ea2d56b779da8b579a535082362ce2
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Thu Apr 25 13:56:03 2013 +0900
+
+    Rewrite GitManager in Xtend.
+
+commit 975e9d82b528ef442a72866eae1916b1e821fe12
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Thu Apr 25 10:24:46 2013 +0900
+
+    Modify GitManager to designate current directory.
+
+commit fa8fee8481b76a7e10c5995f239177b108554828
+Author: Kazunori Sakamoto <exkazuu@gmail.com>
+Date:   Fri Apr 19 22:38:57 2013 +0900
+
+    Update Xtend version to 2.4.1.
+
+commit 4df0081f990d6af3c3194e0530ee0214569ea659
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Fri Apr 19 15:08:49 2013 +0900
+
+    Create new class for using git and maven.
+
+commit 2016ea847ec9c367235d0f22d1903a7e2c338fdc
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Wed Apr 17 20:19:16 2013 +0900
+
+    Create new main method for finding maven projects. Close #2
+
+commit 1e9642bb5c4344eedaa2f6bc830dbc2c503e0f4a
+Author: Ryohei Takasawa <henshinfukanou@gmail.com>
+Date:   Thu Apr 11 08:14:55 2013 +0900
+
+    Use property file. Close #1
+
+commit ae4a2c21b821c2b9d8cbb1527723a811c2f9d1d8
+Author: SAKAMOTO Kazunori <exkazuu@gmail.com>
+Date:   Thu Apr 4 12:55:44 2013 +0900
+
+    Update README.md
+
+commit a3891112aeed3c0105af73810127c5a683c233ae
+Author: Kazunori Sakamoto <exkazuu@gmail.com>
+Date:   Thu Apr 4 12:51:24 2013 +0900
+
+    Enhance README. Update Xtend version.
+
+commit a882803529d02b61f686132ef72ae0b6bf9bfade
+Author: SAKAMOTO Kazunori <exkazuu@gmail.com>
+Date:   Tue Feb 26 22:24:52 2013 +0900
+
+    Add initial files.
+
+commit 73fa005fdacb879dd6718e716f9ff4406b2dafdb
+Author: SAKAMOTO Kazunori <exkazuu@gmail.com>
+Date:   Mon Feb 25 20:47:36 2013 -0800
+
+    Initial commit
