@@ -1,6 +1,7 @@
 package net.exkazuu.probe
 
 import java.io.File
+import java.util.ArrayList
 import java.util.List
 import net.exkazuu.probe.git.GitManager
 import net.exkazuu.probe.github.GithubRepositoryInfo
@@ -31,10 +32,11 @@ class SonarExecutorUsingGhostDriver {
 
 	def run() {
 		val caps = new DesiredCapabilities
-		caps.setCapability(
-			PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
-			"C:/Program Files/phantomjs-1.9.7-windows/phantomjs.exe"
-		)
+		val cliArgsCap = new ArrayList<String>();
+		cliArgsCap.add("--web-security=false");
+		cliArgsCap.add("--ssl-protocol=any");
+		cliArgsCap.add("--ignore-ssl-errors=true");
+		caps.setCapability(PhantomJSDriverService.PHANTOMJS_CLI_ARGS, cliArgsCap);
 
 		val driver = new PhantomJSDriver(caps)
 		val sonar = new SonarManager(driver)
