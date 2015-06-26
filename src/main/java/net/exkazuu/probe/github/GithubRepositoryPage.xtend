@@ -15,7 +15,7 @@ import static extension net.exkazuu.probe.extensions.XWebElement.*
 class GithubRepositoryPage {
 	var WebDriver driver
 	val String topUrl
-	val CodeSearchQuery[] queries
+	val CodeSearchQuery[] queries	
 
 	new(WebDriver driver, String url, CodeSearchQuery... queries) {
 		this.driver = driver
@@ -61,12 +61,12 @@ class GithubRepositoryPage {
 
 	private def getIssueElements() {
 		moveToIssuePage()
-		driver.findElements(By.className("button-link"))
+		driver.findElements(By.className("btn-link")).filter[it.tagName == "a"]
 	}
 
 	private def getPullRequestElements() {
 		moveToPullRequestPage()
-		driver.findElements(By.className("button-link"))
+		driver.findElements(By.className("btn-link")).filter[it.tagName == "a"]
 	}
 
 	private def getNumElements() {
@@ -114,10 +114,9 @@ class GithubRepositoryPage {
 
 	def getMainBranchName() {
 		moveToTopPage()
-		val selected = driver.findElements(By.className("selected"))
-		val candidates = selected.filter[it.getAttribute("class") == "select-menu-item js-navigation-item selected"]
-		val url = candidates.last.findElement(By.tagName("a")).getAttribute("href")
-		url.split('/').drop(6).join('/')
+		val selected = driver.findElements(By.tagName("span"))
+		val candidates = selected.filter[it.getAttribute("data-ref") != null]
+		candidates.head.getAttribute("data-ref")
 	}
 
 	def getLatestTag() {

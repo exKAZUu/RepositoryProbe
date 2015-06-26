@@ -1,29 +1,28 @@
 package net.exkazuu.probe.github
 
+import java.util.ArrayList
 import org.junit.After
+import org.junit.Before
 import org.junit.Test
-
-import static org.hamcrest.Matchers.*
-import static org.junit.Assert.*
+import org.openqa.selenium.WebDriver
 import org.openqa.selenium.phantomjs.PhantomJSDriver
 import org.openqa.selenium.phantomjs.PhantomJSDriverService
 import org.openqa.selenium.remote.DesiredCapabilities
-import org.junit.Before
-import org.openqa.selenium.OutputType
-import java.io.File
-import org.openqa.selenium.TakesScreenshot
-import org.apache.commons.io.FileUtils
+
+import static org.hamcrest.Matchers.*
+import static org.junit.Assert.*
 
 class GithubProjectPageScraperTest {
-	var PhantomJSDriver driver
+	var WebDriver driver
 
 	@Before
 	def void before() {
 		val caps = new DesiredCapabilities
-		caps.setCapability(
-			PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
-			"C:/Program Files/phantomjs-2.0.0-windows/bin/phantomjs.exe"
-		)
+		val cliArgsCap = new ArrayList<String>();
+		cliArgsCap.add("--web-security=false");
+		cliArgsCap.add("--ssl-protocol=any");
+		cliArgsCap.add("--ignore-ssl-errors=true");
+		caps.setCapability(PhantomJSDriverService.PHANTOMJS_CLI_ARGS, cliArgsCap);
 		driver = new PhantomJSDriver(caps)
 	}
 
